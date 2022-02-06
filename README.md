@@ -13,7 +13,6 @@ Aqui você insere uma descrição curta do projeto, no máximo dois parágrafos.
   - [Instruções de instalação](#instruções-de-instalação)
   - [Executando o projeto localmente](#executando-o-projeto-localmente)
     - [Front-end](#front-end)
-    - [Back-end](#back-end)
   - [Uso das branches](#uso-das-branches)
 - [Cronograma](#cronograma)
 
