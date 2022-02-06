@@ -12,7 +12,6 @@ Aqui você insere uma descrição curta do projeto, no máximo dois parágrafos.
   - [Tecnologias utilizadas](#tecnologias-utilizadas)
   - [Instruções de instalação](#instruções-de-instalação)
   - [Executando o projeto localmente](#executando-o-projeto-localmente)
-    - [Front-end](#front-end)
   - [Uso das branches](#uso-das-branches)
 - [Cronograma](#cronograma)
 
