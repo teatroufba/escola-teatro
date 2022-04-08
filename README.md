@@ -1,6 +1,6 @@
 # Projeto 2: O Inimigo agora é outro
 
-[Proposta](https://drive.google.com/file/d/103lmaiM0H3XMy8mB7EBKlL17CBfzB4Ho/view?usp=sharing) | [Site Atual](https://youtu.be/Yw6u6YkTgQ4) | [Versão de Testes](https://youtu.be/MaNW4bPX0Iw) | [Versão Final](https://youtu.be/dQw4w9WgXcQ)
+[Proposta](https://drive.google.com/file/d/103lmaiM0H3XMy8mB7EBKlL17CBfzB4Ho/view?usp=sharing) | [Site Atual](https://http.cat/204) | [Versão de Testes](https://http.cat/204) | [Versão Final](https://http.cat/204)
 
 Site institucional para a Escola de Teatro da UFBA.
 
@@ -112,11 +112,11 @@ Periodicamente, o revisor deverá fazer o merge da `dev` com a `staging` para qu
 
 ## Cronograma Provisório
 
-- [ ] **Milestone 01** - Primeiros passos: Header, Footer e Home. [??/??/2022 - ??/??/2022, ? sprints]
+- [ ] **Milestone 01** - Primeiros passos: Header, Footer, Home e Páginas de Erro. [??/??/2022 - ??/??/2022, ? sprints]
   - [ ] Header
   - [ ] Footer
-  - [ ] Banners
-  - [ ] ...
+  - [ ] Home
+  - [ ] Páginas de Erro
 
 ---
 
