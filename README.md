@@ -32,9 +32,9 @@ Site institucional para a Escola de Teatro da UFBA.
 ## Equipe
 
 - **Coordenador**: [Rafael Pondé](@Ralph_1307)
-- **Revisor:** [Nome do revisor](@gitlab_revisor)
-- **Front-end:** [Membro 1](@gitlab_m1), [Membro 2](@gitlab_m2)
-- **Designer**: [Nome do designer](@gitlab_designer)
+- **Revisor:**
+- **Front-end:** [Laíne Andrade](@laineandrade), [Lucas Azevedo](@LucasAzoli)
+- **Designer**: [Joab Guimarães](@joab_pgb)
 
 ## Especificações técnicas
 
@@ -112,7 +112,7 @@ Periodicamente, o revisor deverá fazer o merge da `dev` com a `staging` para qu
 
 ## Cronograma Provisório
 
-- [ ] **Milestone 01** - Primeiros passos: Header, Footer, Home e Páginas de Erro. [??/??/2022 - ??/??/2022, ? sprints]
+- [ ] **Milestone 01** - Primeiros passos: Header, Footer, Home e Páginas de Erro. [28/02/2022 - 10/03/2022, 2 sprints]
   - [ ] Header
   - [ ] Footer
   - [ ] Home
