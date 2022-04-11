@@ -1,8 +1,8 @@
 # Projeto 2: O Inimigo agora é outro
 
-[Proposta](https://youtu.be/nno89cd6wWY) | [Site Atual](https://youtu.be/Yw6u6YkTgQ4) | [Versão de Testes](https://youtu.be/MaNW4bPX0Iw) | [Versão Final](https://youtu.be/dQw4w9WgXcQ)
+[Proposta](https://drive.google.com/file/d/103lmaiM0H3XMy8mB7EBKlL17CBfzB4Ho/view?usp=sharing) | [Site Atual](https://http.cat/204) | [Versão de Testes](https://http.cat/204) | [Versão Final](https://http.cat/204)
 
-Aqui você insere uma descrição curta do projeto, no máximo dois parágrafos. As informações devem ser claras e objetivas.
+Site institucional para a Escola de Teatro da UFBA.
 
 ## Sumário
 
@@ -19,22 +19,22 @@ Aqui você insere uma descrição curta do projeto, no máximo dois parágrafos.
 
 ### Cliente
 
-- **Nome:** Mark Zuckerberg
-- **Telefone:** 256-712-4078
-- **E-mail:** zucc@meta.com
+- **Nome:** André Ricardo Araujo Virgens
+- **Telefone:** (71) 98765-6668
+- **E-mail:** 
 
 ### Datas
 
-- **Início do desenvolvimento:** ----
-- **Prazo de entrega:** ----
+- **Início do desenvolvimento:** 28/02/2022
+- **Prazo de entrega:** 08/05/2022
 - **Fim do período de manutenção:** ----
 
 ## Equipe
 
-- **Coordenador**: [Nome do coordenador](@gitlab_coordenador)
-- **Revisor:** [Nome do revisor](@gitlab_revisor)
-- **Front-end:** [Membro 1](@gitlab_m1), [Membro 2](@gitlab_m2)
-- **Designer**: [Nome do designer](@gitlab_designer)
+- **Coordenador**: [Rafael Pondé](@Ralph_1307)
+- **Revisor:**
+- **Front-end:** [Laíne Andrade](@laineandrade), [Lucas Azevedo](@LucasAzoli)
+- **Designer**: [Joab Guimarães](@joab_pgb)
 
 ## Especificações técnicas
 
@@ -112,14 +112,15 @@ Periodicamente, o revisor deverá fazer o merge da `dev` com a `staging` para qu
 
 ## Cronograma Provisório
 
-- [ ] **Milestone 01** - Colocar aqui informações sobre a primeira milestone. [01/01/2022 - 01/02/2022, _x_ sprints]
-  - [ ] Tarefa 1
-  - [ ] Tarefa 2
-  - [ ] Tarefa 3
+- [ ] **Milestone 01** - Primeiros passos: Header, Footer, Home e Páginas de Erro. [28/02/2022 - 10/03/2022, 2 sprints]
+  - [ ] Header
+  - [ ] Footer
+  - [ ] Home
+  - [ ] Páginas de Erro
 
 ---
 
-- [ ] **Milestone 02** - Meia-noite te conto. [02/02/2022 - 01/03/2022, _y_ sprints]
+- [ ] **Milestone 02** - Meia-noite te conto. [??/??/2022 - ??/??/2022, ? sprints]
   - [ ] Tarefa 1
   - [ ] Tarefa 2
   - [ ] Tarefa 3
