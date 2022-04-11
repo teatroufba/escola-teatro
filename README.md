@@ -26,7 +26,7 @@ Site institucional para a Escola de Teatro da UFBA.
 ### Datas
 
 - **Início do desenvolvimento:** 28/02/2022
-- **Prazo de entrega:** ----
+- **Prazo de entrega:** 08/05/2022
 - **Fim do período de manutenção:** ----
 
 ## Equipe
