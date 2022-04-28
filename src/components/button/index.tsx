@@ -10,11 +10,6 @@ const ButtonStyled = styled.button`
   border-radius: 5px;
   font-family: 'Arial', serif;
   cursor: pointer;
-
-  &:hover {
-    background-color: #9a1a4b;
-    transition: 0.7s;
-  }
 `
 
 type ButtonProps = {
