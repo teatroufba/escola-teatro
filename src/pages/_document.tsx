@@ -41,6 +41,10 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <meta charSet="utf-8" />
+          <meta
+            property="creator.productor"
+            content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/10320"
+          />
         </Head>
         <body>
           <Main />
