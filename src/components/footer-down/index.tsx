@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from 'styled-components'
 
 const FooterStyled = styled.div`
@@ -31,6 +32,10 @@ const FooterStyled = styled.div`
 
         li {
           font-size: 1rem;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
         }
       }
     }
@@ -44,56 +49,156 @@ function FooterDown() {
         <div>
           <h1>A Escola</h1>
           <ul>
-            <li>Apresentação</li>
-            <li>Organograma/Contatos</li>
-            <li>Corpo Docente</li>
-            <li>Corpo Técnico-Administrativo</li>
-            <li>Ingresso</li>
-            <li>Como Chegar</li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Apresentação</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Organograma/Contatos</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Corpo Docente</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Corpo Técnico-Administrativo</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Ingresso</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Como Chegar</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h1>Ensino e Pesquisa</h1>
           <ul>
-            <li>Graduação</li>
-            <li>Pós-Graduação</li>
-            <li>Grupos de Pesquisa</li>
-            <li>Produção Acadêmica</li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Graduação</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Pós-Graduação</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Grupos de Pesquisa</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Produção Acadêmica</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h1>Extensão</h1>
           <ul>
-            <li>Cia de Teatro</li>
-            <li>Curso Livre</li>
-            <li>Ato de 4</li>
-            <li>Outros projetos</li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Cia de Teatro</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Curso Livre</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Ato de 4</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Outros projetos</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h1>Espaços</h1>
           <ul>
-            <li>Casarão</li>
-            <li>Pavilhão de Aulas</li>
-            <li>Teatro Martim Gonçalves</li>
-            <li>Sala 05</li>
-            <li>Galeria Nilda Spencer</li>
-            <li>Carpintaria</li>
-            <li>Rouparia</li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Casarão</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Pavilhão de Aulas</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Teatro Martim Gonçalves</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Sala 05</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Galeria Nilda Spencer</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Carpintaria</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Rouparia</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h1>Agenda</h1>
           <ul>
-            <li>Eventos</li>
-            <li>Espetáculos</li>
-            <li>Seminários</li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Eventos</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Espetáculos</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Seminários</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
           <h1>Galeria Virtual</h1>
           <ul>
-            <li>Galeria Virtual</li>
+            <li>
+              <Link href="/" passHref>
+                <a href="replace">Galeria Virtual</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
