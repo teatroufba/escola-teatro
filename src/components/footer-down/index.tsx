@@ -5,12 +5,17 @@ const FooterStyled = styled.div`
   background-color: #282b62;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   div {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     color: white;
-    padding: 50px 0;
+    padding: 50px 20px;
 
     div {
       display: flex;
