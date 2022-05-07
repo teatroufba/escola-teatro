@@ -1,12 +1,10 @@
-import FooterDown from '@/components/footer-down'
-import FooterUp from '@/components/footer-up'
+import Footer from '@/components/footer'
 
 function Home() {
   return (
     <div>
       <h1>Hello, world</h1>
-      <FooterUp />
-      <FooterDown />
+      <Footer />
     </div>
   )
 }
