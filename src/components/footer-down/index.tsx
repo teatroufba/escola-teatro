@@ -40,6 +40,9 @@ const FooterStyled = styled.div`
           a {
             text-decoration: none;
             color: inherit;
+            &:hover {
+              color: #9a1a4b;
+            }
           }
         }
       }
