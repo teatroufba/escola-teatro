@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Script
         defer
-        src="//barra.brasil.gov.br/barra_2.0.js"
+        src="//barra.brasil.gov.br/barra.js"
         type="text/javascript"
       />
       <GlobalStyles />
