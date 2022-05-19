@@ -58,8 +58,13 @@ function Header() {
       </HeaderSuperior>
 
       <HeaderInferior>
+        <div className="mobile-menu">
+          <div className="line1" />
+          <div className="line2" />
+          <div className="line3" />
+        </div>
+
         <div>
-          <button className="btn-mobile">Menu</button>
           <ul className="menu">
             <li>
               <a href="http://www.google.com.br">Início</a>
