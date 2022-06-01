@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 export const HeaderSuperior = styled.div`
+  @media (max-width: 700px) {
+    display: none;
+  }
+
   .social {
     display: flex;
     float: right;
@@ -28,6 +32,9 @@ export const HeaderSuperior = styled.div`
 `
 
 export const HeaderInferior = styled.div`
+  @media (max-width: 700px) {
+    display: none;
+  }
   .menu {
     font-size: 24px;
     line-height: 30px;

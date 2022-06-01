@@ -1,7 +1,12 @@
+import Header from '@/components/Header'
+
+import StyledDropdown from '../components/menumobile'
+
 function Home() {
   return (
     <div>
-      <h1>Hello, world</h1>
+      <StyledDropdown />
+      <Header />
     </div>
   )
 }
