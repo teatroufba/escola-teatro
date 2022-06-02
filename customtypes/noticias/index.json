@@ -1,0 +1,28 @@
+{
+  "id": "noticias",
+  "label": "noticias ",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "pageTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Page Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "post": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
