@@ -4,11 +4,8 @@ import { PrismicRichText } from '@prismicio/react'
 const Post = ({ slice }) => (
   <section>
     <span className="title">
-      {
         slice.primary.title ?
         <PrismicRichText field={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
     </span>
     {
       slice.primary.description ?
@@ -25,6 +22,7 @@ const Post = ({ slice }) => (
           color: #8592e0;
         }
     `}</style>
+    <img src={slice.primary.Image.url} alt={slice.primary.Image.alt} />
   </section>
 )
 

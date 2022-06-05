@@ -9,6 +9,13 @@
         "type": "Text",
         "config": {
           "label": "Page Title",
+          "placeholder": "Título da material"
+        }
+      },
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "Uid",
           "placeholder": ""
         }
       },

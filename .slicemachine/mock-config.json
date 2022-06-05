@@ -3,6 +3,10 @@
     "noticias": {}
   },
   "slices": {
-    "Post": {}
+    "Post": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

@@ -5,7 +5,7 @@ import { SliceSimulator } from '@prismicio/slice-simulator-react'
 import state from '../../.slicemachine/libraries-state.json'
 import { components } from '../../slices/index'
 
-function Noticias() {
+function SliceSimulatorPage() {
   return (
     <SliceSimulator
       sliceZone={({ slices }) => (
@@ -16,4 +16,4 @@ function Noticias() {
   )
 }
 
-export default Noticias
+export default SliceSimulatorPage
