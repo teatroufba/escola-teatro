@@ -2,18 +2,16 @@ import * as prismic from '@prismicio/client'
 import { CreateClientConfig, enableAutoPreviews } from '@prismicio/next'
 import { FilledLinkToDocumentField } from '@prismicio/types'
 
-import smConfi from './sm.json'
+import smConfig from './sm.json'
 
-export const endpoint = smConfi.apiEndpoint
-export const repositoryName = 'escola-teatro'
+export const endpoint = smConfig.apiEndpoint
+export const repositoryName = 'escola-de-teatro'
 
 export function linkResolver(
   doc: Omit<FilledLinkToDocumentField, 'url'>
 ): string {
   // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-  if (doc.type === 'noticia') return `/${doc.uid}`
-  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-  if (doc.type === 'noticia-post') return `/post/${doc.uid}`
+  if (doc.type === 'homepage') return `/${doc.uid}`
   return '/'
 }
 
@@ -25,5 +23,6 @@ export function createClient(config?: CreateClientConfig): prismic.Client {
     previewData: config?.previewData,
     req: config?.req,
   })
+
   return client
 }

@@ -1,0 +1,21 @@
+{
+  "id": "6de3d72b-ac72-45b6-a8a0-928952435b10",
+  "uid": "voluptatem-impedit-voluptatem",
+  "type": "post-de-noticias",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Reprehenderit velit enim officia mollit. Id incididunt aliqua culpa nostrud est culpa Lorem est nulla laboris deserunt ipsum proident commodo nostrud.",
+        "spans": []
+      }
+    ],
+    "subtitle": [
+      {
+        "type": "paragraph",
+        "text": "Fugiat amet nulla Lorem do anim in incididunt anim nostrud dolor incididunt sunt est aliqua.",
+        "spans": []
+      }
+    ]
+  }
+}

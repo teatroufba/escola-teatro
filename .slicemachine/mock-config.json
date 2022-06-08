@@ -1,12 +1,6 @@
 {
   "_cts": {
-    "noticias": {}
-  },
-  "slices": {
-    "Post": {
-      "default": {
-        "primary": {}
-      }
-    }
+    "pagina-de-noticias": {},
+    "post-de-noticias": {}
   }
 }

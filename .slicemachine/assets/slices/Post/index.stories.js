@@ -1,9 +1,0 @@
-import MyComponent from '../../../../slices/Post';
-
-export default {
-  title: 'slices/Post'
-}
-
-
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"post","items":[],"primary":{"title":[{"type":"heading1","text":"Transition efficient web-readiness","spans":[]}],"description":[{"type":"paragraph","text":"Qui elit minim enim magna enim. Dolor tempor sunt ipsum ea nisi laborum. Sint duis eu ullamco et commodo enim fugiat veniam incididunt laboris pariatur deserunt minim nostrud cupidatat.","spans":[]}],"Image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"}},"id":"_Default"}} />
-_Default.storyName = 'Default'

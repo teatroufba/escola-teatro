@@ -10,7 +10,7 @@ export async function getStaticProps({
 }) {
   const client = createClient({ previewData })
 
-  const noticias = await client.getAllByType('noticias')
+  const noticias = await client.getByType('pagina-de-noticias')
 
   return {
     props: { noticias },
