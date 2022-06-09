@@ -27,7 +27,7 @@ const Container = styled.div`
   }
 `
 
-function ErrorPage404() {
+function ErrorPage502() {
   return (
     <Container>
       <Image
@@ -36,9 +36,9 @@ function ErrorPage404() {
         height={110}
         alt="Brasão da Escola de teatro"
       />
-      <h1>Erro 404</h1>
+      <h1>Erro 502</h1>
       <p>
-        A página solicitada não existe ou não se encontra mais em nossa base.
+        Ocorreu um erro em nosso servidor, tente novamente ou volte mais tarde.
       </p>
       <Link href="/" passHref>
         <a href="replace">
@@ -49,4 +49,4 @@ function ErrorPage404() {
   )
 }
 
-export default ErrorPage404
+export default ErrorPage502
