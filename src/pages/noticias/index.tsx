@@ -1,4 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { PrismicDocument } from '@prismicio/types'
+import Noticias from 'Components/Noticias/Noticias'
 import { PreviewData } from 'next'
 
 import { createClient } from '../../../prismic'
@@ -24,11 +26,13 @@ function Page({
   posts: PrismicDocument<Record<string, any>, string, string>[]
 }) {
   return (
-    <>
-      {posts.map(items => ({
-        items,
+    <Noticias
+      post={posts.map(value => ({
+        uid: value.data.uid,
+        title: value.data.title,
+        subtitle: value.data.subtitle,
       }))}
-    </>
+    />
   )
 }
 
