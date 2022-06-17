@@ -1,21 +1,9 @@
 {
-  "id": "6de3d72b-ac72-45b6-a8a0-928952435b10",
-  "uid": "voluptatem-impedit-voluptatem",
+  "id": "fff609ea-6a01-44d3-9fe0-d8ace67597df",
+  "uid": "dolor-molestias-inventore",
   "type": "post-de-noticias",
   "data": {
-    "title": [
-      {
-        "type": "paragraph",
-        "text": "Reprehenderit velit enim officia mollit. Id incididunt aliqua culpa nostrud est culpa Lorem est nulla laboris deserunt ipsum proident commodo nostrud.",
-        "spans": []
-      }
-    ],
-    "subtitle": [
-      {
-        "type": "paragraph",
-        "text": "Fugiat amet nulla Lorem do anim in incididunt anim nostrud dolor incididunt sunt est aliqua.",
-        "spans": []
-      }
-    ]
+    "title": "envisioneer killer blockchains",
+    "subtitle": "repurpose cross-media portals"
   }
 }

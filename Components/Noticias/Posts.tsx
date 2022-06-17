@@ -2,8 +2,8 @@ import { StyledPosts } from './styles'
 
 interface IPosts {
   uid: string
-  title: any
-  subtitle: any
+  title: string
+  subtitle: string
 }
 
 export default function Posts({ uid, title, subtitle }: IPosts) {
