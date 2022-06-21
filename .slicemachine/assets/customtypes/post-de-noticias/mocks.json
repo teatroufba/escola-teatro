@@ -1,9 +1,18 @@
 {
-  "id": "fff609ea-6a01-44d3-9fe0-d8ace67597df",
-  "uid": "dolor-molestias-inventore",
+  "id": "7bd6d793-7926-406e-8123-6e82e68da33f",
+  "uid": "enim-voluptas-corporis",
   "type": "post-de-noticias",
   "data": {
-    "title": "envisioneer killer blockchains",
-    "subtitle": "repurpose cross-media portals"
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?w=900&h=500&fit=crop"
+    },
+    "title": "disintermediate seamless e-services",
+    "subtitle": "unleash front-end e-tailers"
   }
 }
