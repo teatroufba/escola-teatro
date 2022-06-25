@@ -33,6 +33,13 @@
           "label": "Subtitle",
           "placeholder": ""
         }
+      },
+      "text": {
+        "type": "Text",
+        "config": {
+          "label": "Text",
+          "placeholder": ""
+        }
       }
     }
   }
