@@ -20,12 +20,24 @@ interface IPosts {
 export default function Noticias({ post }: INoticias) {
   const [currentPage, setCurrentPage] = useState(1)
   const [ordering, setOrdering] = useState('desc')
+  const [filter, setFilter] = useState('todos')
 
   function filterPosts(itens: IPosts[], pagePosts: number, page: number) {
     // eslint-disable-next-line no-param-reassign
     page -= 1
     const inicio = pagePosts * page
     const limite = inicio + pagePosts
+    if (filter !== 'todos') {
+      const res = itens.filter(
+        value =>
+          value.tags.map(item => item.toString()).toString() ===
+          filter.toString()
+      )
+
+      if (ordering === 'asc') return res.slice(inicio, limite).reverse()
+      if (ordering === 'a-z') return res.slice(inicio, limite).sort()
+      return res.slice(inicio, limite)
+    }
 
     if (ordering === 'asc') return itens.slice(inicio, limite).reverse()
     if (ordering === 'a-z') return itens.slice(inicio, limite).sort()
@@ -38,6 +50,19 @@ export default function Noticias({ post }: INoticias) {
 
   return (
     <>
+      <div>
+        <h1>Notícias</h1>
+        <p>As últimas notícias da Escola de Teatro</p>
+      </div>
+      <div>
+        <button onClick={() => setFilter('todos')}> Todos </button>
+        <button onClick={() => setFilter('acadêmico')}> Acadêmico </button>
+        <button onClick={() => setFilter('avisos')}> Avisos </button>
+        <button onClick={() => setFilter('concursos')}> Concursos </button>
+        <button onClick={() => setFilter('eventos')}> Eventos </button>
+        <button onClick={() => setFilter('notas')}> Notas </button>
+        <button onClick={() => setFilter('parcerias')}> Parcerias </button>
+      </div>
       <StyledFiltros>
         <div className="filter-button">
           <button onClick={() => setOrdering('desc')}> Mais antigas </button>
