@@ -1,10 +1,11 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Image from 'next/image'
 import { useState } from 'react'
 
 import PostCard from './PostCard'
-import { StyledFiltros, StyledPage } from './styles'
+import { StyledButton, StyledPage, StyledTags, StyledTitlePage } from './styles'
 
 interface INoticias {
   post: IPosts[]
@@ -23,20 +24,28 @@ export default function Noticias({ post }: INoticias) {
   const [filter, setFilter] = useState('todos')
 
   function filterPosts(itens: IPosts[], pagePosts: number, page: number) {
-    // eslint-disable-next-line no-param-reassign
     page -= 1
     const inicio = pagePosts * page
     const limite = inicio + pagePosts
+
+    if (ordering === 'a-z') {
+      itens.sort((a, b) => {
+        if (a.title < b.title) return -1
+        return 1
+      })
+    }
     if (filter !== 'todos') {
-      const res = itens.filter(
+      itens = itens.filter(
         value =>
           value.tags.map(item => item.toString()).toString() ===
           filter.toString()
       )
 
-      if (ordering === 'asc') return res.slice(inicio, limite).reverse()
+      console.log(itens)
+
+      /* if (ordering === 'asc') return res.slice(inicio, limite).reverse()
       if (ordering === 'a-z') return res.slice(inicio, limite).sort()
-      return res.slice(inicio, limite)
+      return res.slice(inicio, limite) */
     }
 
     if (ordering === 'asc') return itens.slice(inicio, limite).reverse()
@@ -46,24 +55,38 @@ export default function Noticias({ post }: INoticias) {
   function setPaginationBtn(itensLength: number, postsPage: number) {
     return Math.ceil(itensLength / postsPage)
   }
-  const paginationBtn = setPaginationBtn(post.length, 9)
+  const paginationBtn = setPaginationBtn(post.length, 4)
 
   return (
     <>
-      <div>
+      <StyledTitlePage>
         <h1>Notícias</h1>
-        <p>As últimas notícias da Escola de Teatro</p>
-      </div>
-      <div>
-        <button onClick={() => setFilter('todos')}> Todos </button>
-        <button onClick={() => setFilter('acadêmico')}> Acadêmico </button>
-        <button onClick={() => setFilter('avisos')}> Avisos </button>
-        <button onClick={() => setFilter('concursos')}> Concursos </button>
-        <button onClick={() => setFilter('eventos')}> Eventos </button>
-        <button onClick={() => setFilter('notas')}> Notas </button>
-        <button onClick={() => setFilter('parcerias')}> Parcerias </button>
-      </div>
-      <StyledFiltros>
+        <h3>Veja as últimas notícias da Escola de Teatro da UFBA</h3>
+      </StyledTitlePage>
+      <StyledTags filter={filter}>
+        <button className="todos" onClick={() => setFilter('todos')}>
+          Todos
+        </button>
+        <button className="acadêmico" onClick={() => setFilter('acadêmico')}>
+          Acadêmico
+        </button>
+        <button className="avisos" onClick={() => setFilter('avisos')}>
+          Avisos
+        </button>
+        <button className="concursos" onClick={() => setFilter('concursos')}>
+          Concursos
+        </button>
+        <button className="eventos" onClick={() => setFilter('eventos')}>
+          Eventos
+        </button>
+        <button className="notas" onClick={() => setFilter('notas')}>
+          Notas
+        </button>
+        <button className="parcerias" onClick={() => setFilter('parcerias')}>
+          Parcerias
+        </button>
+      </StyledTags>
+      <StyledButton>
         <div className="filter-button">
           <button onClick={() => setOrdering('desc')}> Mais antigas </button>
           <button onClick={() => setOrdering('asc')}> Mais recentes </button>
@@ -72,15 +95,15 @@ export default function Noticias({ post }: INoticias) {
         <form className="filter-input">
           <span>
             <p>Filtrar por data</p>
-            <input placeholder="Data de inicio" />
+            <input type="date" placeholder="Data de inicio" />
           </span>
-          <input placeholder="Data final" />
+          <input type="date" placeholder="Data final" />
           <button> Filtrar </button>
         </form>
-      </StyledFiltros>
+      </StyledButton>
       <StyledPage>
         <div className="posts-flex">
-          {filterPosts(post, 9, currentPage).map(value => (
+          {filterPosts(post, 4, currentPage).map(value => (
             <PostCard
               uid={value.uid}
               title={value.title}
@@ -91,7 +114,12 @@ export default function Noticias({ post }: INoticias) {
           ))}
         </div>
         <div className="pagination-btn">
-          <button type="button" onClick={() => setCurrentPage(currentPage - 1)}>
+          <button
+            type="button"
+            onClick={() => {
+              if (currentPage >= paginationBtn) setCurrentPage(currentPage - 1)
+            }}
+          >
             <Image
               src="/icon-left.png"
               alt="página anterior"
@@ -109,7 +137,12 @@ export default function Noticias({ post }: INoticias) {
               {paginationBtn}
             </button>
           </div>
-          <button type="button" onClick={() => setCurrentPage(currentPage + 1)}>
+          <button
+            type="button"
+            onClick={() => {
+              if (currentPage < paginationBtn) setCurrentPage(currentPage + 1)
+            }}
+          >
             <Image
               src="/icon-right.png"
               alt="próxima página"

@@ -37,11 +37,11 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
   const postagem = {
     uid: posts.uid,
     id: posts.id,
-    tile: posts.data.title,
+    title: posts.data.title,
     subtitle: posts.data.subtitle,
     imageUrl: posts.data.image.url,
     imageAlt: posts.data.image.alt,
-    last_publication_date: posts.last_publication_date,
+    last_publication_date: posts.last_publication_date || '',
     first_publication_date: posts.first_publication_date,
     text: posts.data.text,
   }

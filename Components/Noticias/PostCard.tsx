@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { StyledPosts } from './styles'
 
@@ -23,9 +22,10 @@ export default function PostCard({
       <Image src={imageUrl} alt={imageAlt} width={240} height={160} />
       <h3>{title}</h3>
       <p>{subtitle}</p>
-      <Link href={`/noticias/${uid}`} passHref>
+      <a href={`/noticias/${uid}`}>
         Saiba mais
-      </Link>
+        <Image src="/arrow.png" alt={imageAlt} width={10} height={10} />
+      </a>
     </StyledPosts>
   )
 }

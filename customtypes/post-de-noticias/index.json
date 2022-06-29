@@ -40,6 +40,13 @@
           "label": "Text",
           "placeholder": ""
         }
+      },
+      "author": {
+        "type": "Text",
+        "config": {
+          "label": "Author",
+          "placeholder": ""
+        }
       }
     }
   }

@@ -1,9 +1,51 @@
 import styled from 'styled-components'
 
+interface Props {
+  filter: string
+}
+
+export const StyledTitlePage = styled.div`
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200&display=swap');
+  font-family: 'Merriweather'
+  font-weight: 400;
+  color: white;
+  padding: 5%;
+  background-color: #24233A;
+  h3 {
+    font-family: arial;
+    font-weight: 400;
+    font-size: 14px
+  }
+`
+
+export const StyledTags = styled.div`
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  gap: 1.2%;
+
+  button {
+    background-color: white;
+    border: none;
+    font-weight: 400;
+    font-family: arial;
+    color: #757575;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    border-bottom: 2px solid #757575;
+  }
+  button.${(props: Props) => props.filter} {
+    border-bottom: 2px solid #757575;
+  }
+`
 export const StyledPage = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200&display=swap');
   display: flex;
   flex-direction: column;
+  padding: 10%;
   align-items: center;
 
   .posts-flex {
@@ -61,12 +103,11 @@ export const StyledPosts = styled.div`
   }
 `
 
-export const StyledFiltros = styled.div`
+export const StyledButton = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 5%;
   gap: 5%;
 
   button {
@@ -86,9 +127,9 @@ export const StyledFiltros = styled.div`
   input {
     border: 1px solid silver;
     font-family: arial;
-    font-weight: 600;
+    font-weight: 400;
     color: rgba(0, 0, 0, 0.35);
-    font-size: 10px;
+    font-size: 9px;
     padding: 5px;
     margin: 3px;
     border-radius: 5px;
