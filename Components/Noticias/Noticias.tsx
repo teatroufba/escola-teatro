@@ -1,6 +1,5 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -13,50 +12,58 @@ interface INoticias {
 
 interface IPosts {
   uid: string
-  title: any
-  subtitle: any
+  title: string
+  subtitle: string
   image: any
   tags: string[]
+  date: string
 }
+
 export default function Noticias({ post }: INoticias) {
   const [currentPage, setCurrentPage] = useState(1)
-  const [ordering, setOrdering] = useState('desc')
+  const [sort, setSort] = useState('desc')
   const [filter, setFilter] = useState('todos')
 
-  function filterPosts(itens: IPosts[], pagePosts: number, page: number) {
-    page -= 1
-    const inicio = pagePosts * page
-    const limite = inicio + pagePosts
+  function setPaginationBtn(posts: number, maxPage: number) {
+    return Math.ceil(posts / maxPage)
+  }
+  const paginationBtn = setPaginationBtn(post.length, 4)
 
-    if (ordering === 'a-z') {
-      itens.sort((a, b) => {
+  function filtered(itens: IPosts[], maxPost: number, current: number) {
+    let ctPage = current
+    let posts = itens
+
+    ctPage -= 1
+    const first = maxPost * ctPage
+    const last = first + maxPost
+
+    if (sort === 'date') {
+      const finput = new Date(
+        (document.querySelector('#idate') as HTMLInputElement).value
+      ).toDateString()
+      const linput = new Date(
+        (document.querySelector('#fdate') as HTMLInputElement).value
+      ).toDateString()
+
+      posts = posts.filter(value => value.date > finput && value.date < linput)
+    }
+    if (sort === 'a-z') {
+      posts.sort((a, b) => {
         if (a.title < b.title) return -1
         return 1
       })
     }
-    if (filter !== 'todos') {
-      itens = itens.filter(
+    if (sort !== 'todos') {
+      posts = posts.filter(
         value =>
           value.tags.map(item => item.toString()).toString() ===
           filter.toString()
       )
-
-      console.log(itens)
-
-      /* if (ordering === 'asc') return res.slice(inicio, limite).reverse()
-      if (ordering === 'a-z') return res.slice(inicio, limite).sort()
-      return res.slice(inicio, limite) */
     }
+    if (sort === 'asc') return posts.slice(first, last).reverse()
 
-    if (ordering === 'asc') return itens.slice(inicio, limite).reverse()
-    if (ordering === 'a-z') return itens.slice(inicio, limite).sort()
-    return itens.slice(inicio, limite)
+    return posts.slice(first, last)
   }
-  function setPaginationBtn(itensLength: number, postsPage: number) {
-    return Math.ceil(itensLength / postsPage)
-  }
-  const paginationBtn = setPaginationBtn(post.length, 4)
-
   return (
     <>
       <StyledTitlePage>
@@ -88,22 +95,24 @@ export default function Noticias({ post }: INoticias) {
       </StyledTags>
       <StyledButton>
         <div className="filter-button">
-          <button onClick={() => setOrdering('desc')}> Mais antigas </button>
-          <button onClick={() => setOrdering('asc')}> Mais recentes </button>
-          <button onClick={() => setOrdering('a-z')}> De A -Z </button>
+          <button onClick={() => setSort('desc')}> Mais antigas </button>
+          <button onClick={() => setSort('asc')}> Mais recentes </button>
+          <button onClick={() => setSort('a-z')}> De A -Z </button>
         </div>
         <form className="filter-input">
           <span>
             <p>Filtrar por data</p>
-            <input type="date" placeholder="Data de inicio" />
+            <input type="date" placeholder="Data de inicio" id="idate" />
           </span>
-          <input type="date" placeholder="Data final" />
-          <button> Filtrar </button>
+          <input type="date" placeholder="Data final" id="fdate" />
+          <button type="button" onClick={() => setSort('date')}>
+            Filtrar
+          </button>
         </form>
       </StyledButton>
       <StyledPage>
         <div className="posts-flex">
-          {filterPosts(post, 4, currentPage).map(value => (
+          {filtered(post, 4, currentPage).map(value => (
             <PostCard
               uid={value.uid}
               title={value.title}

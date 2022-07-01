@@ -35,6 +35,8 @@ export default function Page({
     subtitle: items.data.subtitle,
     image: items.data.image,
     tags: items.tags,
+    date: new Date(items.first_publication_date).toISOString(),
   }))
+  console.log(posts)
   return <Noticias post={posts} />
 }
