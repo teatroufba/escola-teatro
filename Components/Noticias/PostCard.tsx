@@ -23,7 +23,7 @@ export default function PostCard({
       <h3>{title}</h3>
       <p>{subtitle}</p>
       <a href={`/noticias/${uid}`}>
-        Saiba mais
+        Saiba mais{'  '}
         <Image src="/arrow.png" alt={imageAlt} width={10} height={10} />
       </a>
     </StyledPosts>
