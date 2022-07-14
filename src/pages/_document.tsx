@@ -45,10 +45,15 @@ export default class MyDocument extends Document {
             property="creator.productor"
             content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/10320"
           />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />
           <NextScript />
+          <script src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
         </body>
       </Html>
     )

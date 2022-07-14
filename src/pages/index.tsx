@@ -1,10 +1,14 @@
-import NavBar from '@/components/navbar/inde'
+import NavBar from '@/components/navbar'
+import Header from '@/components/Header'
+
+import StyledDropdown from '../components/menumobile'
 
 function Home() {
   return (
     <div>
       <NavBar />
-      <h1>Hello, world</h1>
+      <StyledDropdown />
+      <Header />
     </div>
   )
 }
