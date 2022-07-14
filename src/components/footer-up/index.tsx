@@ -20,53 +20,53 @@ const FooterStyled = styled.div`
 function FooterUp() {
   return (
     <FooterStyled>
-      <Link href="https://www.facebook.com/ufba.escoladeteatro/" passHref>
-        <a href="replace" className="desktop">
+      <Link passHref href="https://www.facebook.com/ufba.escoladeteatro/">
+        <a className="desktop" href="replace">
           <Image
+            alt="Icone do Facebook"
+            height={50}
             src="/face-icon.svg"
             width={50}
-            height={50}
-            alt="Icone do Facebook"
           />
         </a>
       </Link>
-      <Link href="https://www.instagram.com/escoladeteatro.ufba/" passHref>
-        <a href="replace" className="desktop">
+      <Link passHref href="https://www.instagram.com/escoladeteatro.ufba/">
+        <a className="desktop" href="replace">
           <Image
+            alt="Icone do Instagram"
+            height={50}
             src="/insta-icon.svg"
             width={50}
-            height={50}
-            alt="Icone do Instagram"
           />
         </a>
       </Link>
-      <Link href="/" passHref>
+      <Link passHref href="/">
         <a href="replace">
           <Image
-            src="/brasao.svg"
-            width={71}
-            height={80}
             alt="Brasão da Escola de Teatro"
+            height={80}
+            src="/brasao.png"
+            width={71}
           />
         </a>
       </Link>
-      <Link href="https://www.youtube.com/user/teatroufba" passHref>
-        <a href="replace" className="desktop">
+      <Link passHref href="https://www.youtube.com/user/teatroufba">
+        <a className="desktop" href="replace">
           <Image
+            alt="Icone do Youtube"
+            height={50}
             src="/youtube-icon.svg"
             width={50}
-            height={50}
-            alt="Icone do Youtube"
           />
         </a>
       </Link>
-      <Link href="https://www.flickr.com/photos/128786324@N02/sets/" passHref>
-        <a href="replace" className="desktop">
+      <Link passHref href="https://www.flickr.com/photos/128786324@N02/sets/">
+        <a className="desktop" href="replace">
           <Image
+            alt="Icone do Flickr"
+            height={50}
             src="/flickr-icon.svg"
             width={50}
-            height={50}
-            alt="Icone do Flickr"
           />
         </a>
       </Link>

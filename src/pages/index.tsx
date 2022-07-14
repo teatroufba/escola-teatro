@@ -1,5 +1,5 @@
+import Header from '@/components/header'
 import NavBar from '@/components/navbar'
-import Header from '@/components/Header'
 
 import StyledDropdown from '../components/menumobile'
 

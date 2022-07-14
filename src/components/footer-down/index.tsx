@@ -58,32 +58,32 @@ function FooterDown() {
           <h1>A Escola</h1>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Apresentação</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Organograma/Contatos</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Corpo Docente</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Corpo Técnico-Administrativo</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Ingresso</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Como Chegar</a>
               </Link>
             </li>
@@ -93,22 +93,22 @@ function FooterDown() {
           <h1>Ensino e Pesquisa</h1>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Graduação</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Pós-Graduação</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Grupos de Pesquisa</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Produção Acadêmica</a>
               </Link>
             </li>
@@ -118,22 +118,22 @@ function FooterDown() {
           <h1>Extensão</h1>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Cia de Teatro</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Curso Livre</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Ato de 4</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Outros projetos</a>
               </Link>
             </li>
@@ -143,37 +143,37 @@ function FooterDown() {
           <h1>Espaços</h1>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Casarão</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Pavilhão de Aulas</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Teatro Martim Gonçalves</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Sala 05</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Galeria Nilda Spencer</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Carpintaria</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Rouparia</a>
               </Link>
             </li>
@@ -183,17 +183,17 @@ function FooterDown() {
           <h1>Agenda</h1>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Eventos</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Espetáculos</a>
               </Link>
             </li>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Seminários</a>
               </Link>
             </li>
@@ -203,7 +203,7 @@ function FooterDown() {
           <h1>Galeria Virtual</h1>
           <ul>
             <li>
-              <Link href="/" passHref>
+              <Link passHref href="/">
                 <a href="replace">Galeria Virtual</a>
               </Link>
             </li>

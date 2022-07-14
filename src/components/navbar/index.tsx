@@ -4,26 +4,26 @@ function NavBar() {
       id="barra-brasil"
       style={{
         background: '#7F7F7F',
+        display: 'block',
         height: '20px',
         padding: '0 0 0 10px',
-        display: 'block',
       }}
     >
       <ul id="menu-barra-temp" style={{ listStyle: 'none' }}>
         <li
           style={{
-            float: 'left',
-            paddingRight: '10px',
-            marginRight: '10px',
             borderRight: '1px solid #EDEDED',
+            float: 'left',
+            marginRight: '10px',
+            paddingRight: '10px',
           }}
         >
           <a
             href="http://brasil.gov.br"
             style={{
+              color: 'white',
               fontFamily: 'sans,sans-serif',
               textDecoration: 'none',
-              color: 'white',
             }}
           >
             Portal do Governo Brasileiro
@@ -33,9 +33,9 @@ function NavBar() {
           <a
             href="http://epwg.governoeletronico.gov.br/barra/atualize.html"
             style={{
+              color: 'white',
               fontFamily: 'sans,sans-serif',
               textDecoration: 'none',
-              color: 'white',
             }}
           >
             Atualize sua Barra de Governo

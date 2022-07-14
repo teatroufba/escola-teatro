@@ -62,28 +62,28 @@ function Footer() {
           <ul>
             <li>
               <Image
+                alt="Icone de Email"
+                height={20}
                 src="/email.svg"
                 width={20}
-                height={20}
-                alt="Icone de Email"
               />
               <p>escoladeteatro@ufba.br</p>
             </li>
             <li>
               <Image
+                alt="Icone de Telefone"
+                height={20}
                 src="/phone.svg"
                 width={20}
-                height={20}
-                alt="Icone de Telefone"
               />
               <p>71 3200-0000</p>
             </li>
             <li>
               <Image
+                alt="Icone de Endereço"
+                height={20}
                 src="/location.svg"
                 width={20}
-                height={20}
-                alt="Icone de Endereço"
               />
               <p>Av. Araújo Pinho, 292 - Canela, Salvador - BA</p>
             </li>

@@ -1,4 +1,7 @@
+import Image from 'next/image'
 import React from 'react'
+
+import image from '@/public/brasao.png'
 
 import { HeaderInferior, HeaderSuperior } from './styles'
 
@@ -7,7 +10,7 @@ function Header() {
     <div>
       <HeaderSuperior>
         <div className="header">
-          <img src="./brasao.svg" alt="brasao" />
+          <Image alt="brasao" src={image} /> 
           <p>Escola de Teatro da UFBA</p>
         </div>
 
@@ -15,41 +18,41 @@ function Header() {
           <ul className="social">
             <a href="http://www.facebook.com.br">
               <input
-                type="image"
-                src="./icon-facebook.svg"
                 alt="facebook"
                 className="facebook"
                 height={50}
+                src="./icon-facebook.svg"
+                type="image"
                 width={50}
               />
             </a>
             <a href="http://www.instagram.com.br">
               <input
-                type="image"
-                src="./icon-instagram.svg"
                 alt="instagram"
                 className="instagram"
                 height={50}
+                src="./icon-instagram.svg"
+                type="image"
                 width={50}
               />
             </a>
             <a href="http://www.youtube.com.br">
               <input
-                type="image"
-                src="./icon-youtube.svg"
                 alt="youtube"
                 className="youtube"
                 height={50}
+                src="./icon-youtube.svg"
+                type="image"
                 width={50}
               />
             </a>
             <a href="http://www.flickr.com.br">
               <input
-                type="image"
-                src="./icon-flickr.svg"
                 alt="flickr"
                 className="flickr"
                 height={50}
+                src="./icon-flickr.svg"
+                type="image"
                 width={50}
               />
             </a>

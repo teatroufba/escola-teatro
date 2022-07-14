@@ -12,7 +12,7 @@ function StyledDropdown() {
       menuButton={
         <ContainerButton>
           <MenuButton>
-            <GoThreeBars color="white" width={100} height={100} />
+            <GoThreeBars color="white" height={100} width={100} />
           </MenuButton>
         </ContainerButton>
       }
