@@ -2,6 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { PreviewData } from 'next'
 
+import Agenda from '@/components/agenda'
+
 import { createClient } from '../../prismic'
 
 export async function getStaticProps({
@@ -66,9 +68,9 @@ export default function Home({
   mural,
   agenda,
 }: {
-  mural: IMural
-  agenda: IAgenda
+  mural: IMural[]
+  agenda: IAgenda[]
 }) {
-  console.log(mural, agenda)
-  return null
+  console.log(agenda)
+  return <Agenda mural={mural} />
 }
