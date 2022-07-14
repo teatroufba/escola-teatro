@@ -1,25 +1,26 @@
 import styled from 'styled-components'
 
+// TODO - Ajustar responsividade
 export const HeaderSuperior = styled.div`
   @media (max-width: 700px) {
     display: none;
   }
 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3%;
+
   .social {
+    gap: 25px;
     display: flex;
-    float: right;
-    margin-right: 16%;
-    margin-top: -5.5%;
-    width: 20%;
     justify-content: space-between;
   }
 
   .header {
+    gap: 34px;
     display: flex;
     align-items: center;
-    margin-top: 3%;
-    margin-left: 5%;
-    width: 50%;
     justify-content: space-evenly;
   }
 
