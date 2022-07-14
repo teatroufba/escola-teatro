@@ -192,6 +192,7 @@ function Agenda({ mural }: { mural: IMural[] }) {
         <div className="list" ref={carousel}>
           {mural.map(value => (
             <CardAgenda
+              key={value.uid}
               date={value.date}
               description={value.title}
               time="14:00"

@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import Noticias from 'Components/Home/Noticias'
 import { PreviewData } from 'next'
 
 import Agenda from '@/components/agenda'
+import Banner from '@/components/banner'
+import Noticias from '@/components/noticias/Noticias'
 
 import { createClient } from '../../prismic'
 
@@ -97,6 +98,7 @@ export default function Home({
   console.log(agenda)
   return (
     <>
+      <Banner />
       <Agenda mural={mural} />
       <Noticias noticias={noticias} />
     </>

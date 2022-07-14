@@ -1,4 +1,4 @@
-import NoticiaCard from 'Components/Home/NoticiaCard'
+import NoticiaCard from '@/components/noticias/NoticiaCard'
 
 import { StyledNoticias } from './styles'
 
@@ -17,6 +17,7 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
       <h1>Notícias</h1>
       {noticias.slice(0, 4).map(value => (
         <NoticiaCard
+          key={value.uid}
           uid={value.uid}
           title={value.title}
           subtitle={value.subtitle}
