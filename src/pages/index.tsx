@@ -13,7 +13,7 @@ export async function getStaticProps({
   const client = createClient({ previewData })
   const items = await client.getAllByType('agenda')
 
-  const mural = items.map(value => ({
+  const agenda = items.map(value => ({
     uid: value.uid || '',
     title: value.data.titulo,
     imageUrl: value.data.imagem.url,
@@ -23,14 +23,14 @@ export async function getStaticProps({
     local: value.data.local,
   }))
 
-  const itemsAgenda = await client.getAllByType('mural-estudantil', {
+  const itemsMural = await client.getAllByType('mural-estudantil', {
     orderings: {
       field: 'document.first_publication_date',
       direction: 'desc',
     },
   })
 
-  const agenda = itemsAgenda.map(value => ({
+  const mural = itemsMural.map(value => ({
     uid: value.uid || '',
     title: value.data.titulo,
     imageUrl: value.data.imagem.url || '',

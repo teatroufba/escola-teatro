@@ -23,14 +23,16 @@ export default function NoticiaCard({
   const publication = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
   return (
     <StyledNoticiaCard>
-      <Image src={imageUrl} alt={imageAlt} width={240} height={160} />
-      <p>{publication}</p>
-      <h3>{title}</h3>
-      <p>{subtitle}</p>
-      <a href={`/noticias/${uid}`}>
-        Saiba mais{'  '}
-        <Image src="/arrow.png" alt={imageAlt} width={10} height={10} />
-      </a>
+      <Image src={imageUrl} alt={imageAlt} width={290} height={200} />
+      <div className="text-post">
+        <p className="data">{publication}</p>
+        <h3>{title}</h3>
+        <p>{subtitle}</p>
+        <a href={`/noticias/${uid}`}>
+          Saiba mais{'  '}
+          <Image src="/arrow.svg" alt={imageAlt} width={10} height={10} />
+        </a>
+      </div>
     </StyledNoticiaCard>
   )
 }
