@@ -1,3 +1,8 @@
+/* eslint-disable no-alert */
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { SubmitHandler, useForm } from 'react-hook-form'
 import styled from 'styled-components'
 
 const ContatoStyled = styled.div`
@@ -39,6 +44,24 @@ const ContatoStyled = styled.div`
 
       @media screen and (max-width: 768px) {
         width: 86.667vw;
+      }
+
+      .inputError {
+        border: 1px solid red;
+
+        &::-webkit-input-placeholder {
+          /* Edge */
+          color: red;
+        }
+
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          color: red;
+        }
+
+        &::placeholder {
+          color: red;
+        }
       }
 
       input,
@@ -88,7 +111,29 @@ const ContatoStyled = styled.div`
   }
 `
 
+type FormData = {
+  name: string
+  email: string
+  message: string
+}
+
 function Contato() {
+  const { register, handleSubmit, reset } = useForm<FormData>()
+  const onSubmit: SubmitHandler<FormData> = data => {
+    fetch('/api/mail', { method: 'post', body: JSON.stringify(data) }).then(
+      res => {
+        if (res.status === 200) {
+          reset()
+          alert('Email enviado!')
+        } else {
+          alert(
+            'Ocorreu um erro inesperado. Por favor, tente novamente mais tarde.'
+          )
+        }
+      }
+    )
+  }
+
   return (
     <ContatoStyled>
       <h1>Contato</h1>
@@ -100,11 +145,27 @@ function Contato() {
           height="336"
           loading="lazy"
         />
-        <form>
-          <input type="text" placeholder="Nome" />
-          <input type="text" placeholder="Email" />
-          <textarea name="" id="" placeholder="Mensagem" />
-          <button>Enviar</button>
+        <form method="post" onSubmit={handleSubmit(onSubmit)}>
+          <input
+            type="text"
+            {...register('name', { required: true })}
+            placeholder="Nome"
+          />
+          <input
+            type="text"
+            {...register('email', {
+              required: true,
+              pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}/i,
+            })}
+            placeholder="Email"
+          />
+          <textarea
+            {...register('message', {
+              required: true,
+            })}
+            placeholder="Mensagem"
+          />
+          <button type="submit">Enviar</button>
         </form>
       </div>
     </ContatoStyled>
