@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import Noticias from 'Components/Home/Noticias'
 import { PreviewData } from 'next'
+
+import Agenda from '@/components/agenda'
+import Banner from '@/components/banner'
+import Noticias from '@/components/noticias/Noticias'
 
 import { createClient } from '../../prismic'
 
@@ -66,6 +69,38 @@ interface INoticias {
   date: string
 }
 
-export default function Home({ noticias }: { noticias: INoticias[] }) {
-  return <Noticias noticias={noticias} />
+interface IAgenda {
+  uid: string
+  title: string
+  imageUrl: string
+  imageAlt: string
+}
+
+interface IMural {
+  uid: string
+  title: string
+  imageUrl: string
+  imageAlt: string
+  date: string
+  tipo: string
+  local: string
+}
+
+export default function Home({
+  mural,
+  agenda,
+  noticias,
+}: {
+  mural: IMural[]
+  agenda: IAgenda[]
+  noticias: INoticias[]
+}) {
+  console.log(agenda)
+  return (
+    <>
+      <Banner />
+      <Agenda mural={mural} />
+      <Noticias noticias={noticias} />
+    </>
+  )
 }

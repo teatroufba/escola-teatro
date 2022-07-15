@@ -1,4 +1,4 @@
-import NoticiaCard from 'Components/Home/NoticiaCard'
+import NoticiaCard from '@/components/noticias/NoticiaCard'
 
 import { StyledNoticias } from './styles'
 
