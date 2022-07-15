@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import Noticias from 'Components/Home/Noticias'
+import Mural from 'components/mural/Mural'
 import { PreviewData } from 'next'
 
 import { createClient } from '../../prismic'
@@ -57,15 +57,13 @@ export async function getStaticProps({
   }
 }
 
-interface INoticias {
+interface IMural {
   uid: string
   title: string
-  subtitle: string
   imageUrl: string
   imageAlt: string
-  date: string
 }
 
-export default function Home({ noticias }: { noticias: INoticias[] }) {
-  return <Noticias noticias={noticias} />
+export default function Home({ mural }: { mural: IMural[] }) {
+  return <Mural mural={mural} />
 }
