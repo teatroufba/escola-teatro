@@ -1,10 +1,5 @@
-import Document, {
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document'
-import Script from 'next/script'
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default class MyDocument extends Document {
   render() {
@@ -24,9 +19,12 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <Script src="http://barra.brasil.gov.br/barra.js" type="text/javascript"/>
+          <Script
+            src="http://barra.brasil.gov.br/barra.js"
+            type="text/javascript"
+          />
         </body>
       </Html>
-    )
+    );
   }
 }

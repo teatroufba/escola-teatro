@@ -31,16 +31,16 @@ function ErrorPage502() {
   return (
     <Container>
       <Image
+        alt="Brasão da Escola de teatro"
+        height={110}
         src="/logo-fundo-claro.png"
         width={123}
-        height={110}
-        alt="Brasão da Escola de teatro"
       />
       <h1>Erro 502</h1>
       <p>
         Ocorreu um erro em nosso servidor, tente novamente ou volte mais tarde.
       </p>
-      <Link href="/" passHref>
+      <Link passHref href="/">
         <a href="replace">
           <Button>Voltar para o início</Button>
         </a>

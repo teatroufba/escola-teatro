@@ -1,0 +1,33 @@
+[
+  {
+    "variation": "default",
+    "name": "Default",
+    "slice_type": "post",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Seize web-enabled models",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Reprehenderit officia tempor qui aute excepteur sint aliquip consequat laboris officia. Duis ut Lorem do magna minim ea laboris qui.",
+          "spans": []
+        }
+      ],
+      "Image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+      }
+    }
+  }
+]

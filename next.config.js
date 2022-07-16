@@ -3,4 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = module.exports = {
+  images: {
+    domains: ['images.prismic.io'],
+  },
+  compiler: {
+    styledComponents: true    
+  }
+}
