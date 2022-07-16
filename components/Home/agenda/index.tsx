@@ -124,7 +124,7 @@ const AgendaStyled = styled.div`
   }
 `
 
-interface IMural {
+interface IAgenda {
   uid: string
   title: string
   imageUrl: string
@@ -134,7 +134,7 @@ interface IMural {
   local: string
 }
 
-function Agenda({ mural }: { mural: IMural[] }) {
+function Agenda({ agenda }: { agenda: IAgenda[] }) {
   const carousel = useRef<HTMLInputElement>(null)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
@@ -190,7 +190,7 @@ function Agenda({ mural }: { mural: IMural[] }) {
           />
         </button>
         <div className="list" ref={carousel}>
-          {mural.map(value => (
+          {agenda.map(value => (
             <CardAgenda
               key={value.uid}
               date={value.date}

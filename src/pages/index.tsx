@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-
 import { PreviewData } from 'next'
 
+import Agenda from '../../components/Home/agenda'
+import Banner from '../../components/Home/banner'
+import Mural from '../../components/Home/mural/Mural'
+import Noticias from '../../components/Home/noticias/Noticias'
 import { createClient } from '../../prismic'
 
 export async function getStaticProps({
@@ -57,6 +60,13 @@ export async function getStaticProps({
   }
 }
 
+interface IMural {
+  uid: string
+  title: string
+  imageUrl: string
+  imageAlt: string
+}
+
 interface INoticias {
   uid: string
   title: string
@@ -67,13 +77,6 @@ interface INoticias {
 }
 
 interface IAgenda {
-  uid: string
-  title: string
-  imageUrl: string
-  imageAlt: string
-}
-
-interface IMural {
   uid: string
   title: string
   imageUrl: string
@@ -92,6 +95,12 @@ export default function Home({
   agenda: IAgenda[]
   noticias: INoticias[]
 }) {
-  console.log(agenda, noticias, mural)
-  return null
+  return (
+    <>
+      <Banner />
+      <Noticias noticias={noticias} />
+      <Agenda agenda={agenda} />
+      <Mural mural={mural} />
+    </>
+  )
 }

@@ -9,16 +9,17 @@ export const StyledNoticias = styled.div`
   h1 {
     font-family: 'Merriweather';
     color: #282b62;
-    font-width: 400;
+    font-size: 48px;
+    font-weight: 400;
     display: inline-block;
-    border-bottom: 2px solid #282b62;
+    border-bottom: 5px solid #282b62;
   }
 
   .noticias-flex {
     display: flex;
     flex-direction: row;
     gap: 3%;
-    margin: 5%;
+    margin: 4%;
   }
 
   button {
@@ -39,7 +40,8 @@ export const StyledNoticias = styled.div`
 export const StyledNoticiaCard = styled.div`
   h3 {
     font-family: 'Merriweather';
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 24px;
   }
 
   .text-post {
@@ -61,11 +63,15 @@ export const StyledNoticiaCard = styled.div`
     }
 
     .data {
-      font-size: 12px;
+      font-size: 14px;
     }
 
     a:hover {
       color: #9a1a4b;
+
+      svg {
+        fill: #282b62;
+      }
     }
   }
 `
