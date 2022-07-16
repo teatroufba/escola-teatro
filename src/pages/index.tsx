@@ -1,10 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { PreviewData } from 'next'
 
-import Agenda from '@/components/agenda'
-import Banner from '@/components/banner'
-import Noticias from '@/components/noticias/Noticias'
+import { PreviewData } from 'next'
 
 import { createClient } from '../../prismic'
 
@@ -95,12 +92,6 @@ export default function Home({
   agenda: IAgenda[]
   noticias: INoticias[]
 }) {
-  console.log(agenda)
-  return (
-    <>
-      <Banner />
-      <Agenda mural={mural} />
-      <Noticias noticias={noticias} />
-    </>
-  )
+  console.log(agenda, noticias, mural)
+  return null
 }
