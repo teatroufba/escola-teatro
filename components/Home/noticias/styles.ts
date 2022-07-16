@@ -65,13 +65,5 @@ export const StyledNoticiaCard = styled.div`
     .data {
       font-size: 14px;
     }
-
-    a:hover {
-      color: #9a1a4b;
-
-      svg {
-        fill: #282b62;
-      }
-    }
   }
 `

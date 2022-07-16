@@ -50,4 +50,11 @@ export const StyledMural = styled.div`
       border-radius: 0% 0% 10px 10px;
     }
   }
+
+  .mural-card:hover {
+    .textover figcaption {
+      background-color: #24233a;
+      color: #9a1a4b;
+    }
+  }
 `
