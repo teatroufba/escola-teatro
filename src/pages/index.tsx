@@ -1,7 +1,16 @@
+import Header from '@/components/header'
+import NavBar from '@/components/navbar'
+import GoToTop from '@/components/TopButton'
+
+import StyledDropdown from '../components/menumobile'
+
 function Home() {
   return (
     <div>
-      <h1>Hello, world</h1>
+      <GoToTop />
+      <NavBar />
+      <StyledDropdown />
+      <Header />
     </div>
   )
 }
