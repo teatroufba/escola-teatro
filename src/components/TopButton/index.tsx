@@ -17,8 +17,8 @@ function GoToTop() {
 
   function handleGoToTop() {
     window.scrollTo({
-      top: 0,
       behavior: 'smooth',
+      top: 0,
     })
   }
 
@@ -26,7 +26,7 @@ function GoToTop() {
     <Container>
       {scrolled && (
         <button className="goToTop" onClick={() => handleGoToTop()}>
-          <IoIosArrowUp color="white" width={50} height={50} />
+          <IoIosArrowUp color="white" height={50} width={50} />
         </button>
       )}
     </Container>

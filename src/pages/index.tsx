@@ -1,6 +1,6 @@
-import GoToTop from '../components/TopButton'
 import Header from '@/components/header'
 import NavBar from '@/components/navbar'
+import GoToTop from '@/components/TopButton'
 
 import StyledDropdown from '../components/menumobile'
 
