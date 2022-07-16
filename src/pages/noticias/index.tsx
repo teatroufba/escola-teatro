@@ -15,8 +15,8 @@ export async function getStaticProps({
   const client = createClient({ previewData })
   const noticias = await client.getAllByType('post-de-noticias', {
     orderings: {
-      field: 'document.first_publication_date',
       direction: 'desc',
+      field: 'document.first_publication_date',
     },
   })
 
@@ -31,13 +31,13 @@ export default function Page({
   noticias: PrismicDocument<Record<string, any>, string, string>[]
 }) {
   const posts = noticias.map(items => ({
-    uid: items.uid || '',
-    title: items.data.title,
-    subtitle: items.data.subtitle,
-    imageUrl: items.data.image.url,
-    imageAlt: items.data.image.alt,
-    tags: items.tags,
     date: new Date(items.first_publication_date).toISOString(),
+    imageAlt: items.data.image.alt,
+    imageUrl: items.data.image.url,
+    subtitle: items.data.subtitle,
+    tags: items.tags,
+    title: items.data.title,
+    uid: items.uid || '',
   }))
   return <Noticias post={posts} />
 }

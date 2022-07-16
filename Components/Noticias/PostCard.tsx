@@ -3,11 +3,11 @@ import Image from 'next/image'
 import { StyledPosts } from './styles'
 
 interface IPostCard {
-  uid: string
+  imageAlt: string,
   imageUrl: string
-  imageAlt: string
+  subtitle: string,
   title: string
-  subtitle: string
+  uid: string
 }
 
 export default function PostCard({
@@ -19,12 +19,12 @@ export default function PostCard({
 }: IPostCard) {
   return (
     <StyledPosts>
-      <Image src={imageUrl} alt={imageAlt} width={240} height={160} />
+      <Image alt={imageAlt} height={160} src={imageUrl} width={240} />
       <h3>{title}</h3>
       <p>{subtitle}</p>
       <a href={`/noticias/${uid}`}>
         Saiba mais{'  '}
-        <Image src="/arrow.png" alt={imageAlt} width={10} height={10} />
+        <Image alt={imageAlt} height={10} src="/arrow.png" width={10} />
       </a>
     </StyledPosts>
   )

@@ -3,6 +3,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { PrismicProvider } from '@prismicio/react'
 import type { AppProps } from 'next/app'
 import Link from 'next/link'
+import Script from 'next/script'
 
 import { GlobalStyles } from '@/styles/global'
 
@@ -19,6 +20,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         </Link>
       )}
     >
+      <Script
+        defer
+        src="//barra.brasil.gov.br/barra.js"
+        type="text/javascript"
+      />
       <GlobalStyles />
       <PrismicPreview repositoryName={repositoryName}>
         <Component {...pageProps} />

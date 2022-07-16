@@ -15,13 +15,13 @@ interface INoticias {
 }
 
 interface IPosts {
+  date: string,
+  imageAlt: string,
+  imageUrl: string,
+  subtitle: string,
+  tags: string[],
+  title: string,
   uid: string
-  title: string
-  subtitle: string
-  imageUrl: string
-  imageAlt: string
-  tags: string[]
-  date: string
 }
 
 export default function Noticias({ post }: INoticias) {
@@ -101,19 +101,19 @@ export default function Noticias({ post }: INoticias) {
           <span>
             <p>Filtrar por data</p>
             <input
-              type="date"
-              placeholder="Data de inicio"
               id="idate"
-              onChange={e => setIDate(e.target.value)}
+              placeholder="Data de inicio"
+              type="date"
               value={idate}
+              onChange={e => setIDate(e.target.value)}
             />
           </span>
           <input
-            type="date"
-            placeholder="Data final"
             id="fdate"
-            onChange={e => setFDate(e.target.value)}
+            placeholder="Data final"
+            type="date"
             value={fdate}
+            onChange={e => setFDate(e.target.value)}
           />
           <button type="button" onClick={() => setSort('date')}>
             Filtrar
@@ -124,11 +124,11 @@ export default function Noticias({ post }: INoticias) {
         <div className="posts-flex">
           {filtered(post, 9, currentPage).map(value => (
             <PostCard
-              uid={value.uid}
-              title={value.title}
-              subtitle={value.subtitle}
-              imageUrl={value.imageUrl}
               imageAlt={value.imageAlt}
+              imageUrl={value.imageUrl}
+              subtitle={value.subtitle}
+              title={value.title}
+              uid={value.uid}
             />
           ))}
         </div>
@@ -140,10 +140,10 @@ export default function Noticias({ post }: INoticias) {
             }}
           >
             <Image
-              src="/icon-left.png"
               alt="página anterior"
-              width={5}
               height={9}
+              src="/icon-left.png"
+              width={5}
             />
           </button>
           <div className="pages-btn">
@@ -163,10 +163,10 @@ export default function Noticias({ post }: INoticias) {
             }}
           >
             <Image
-              src="/icon-right.png"
               alt="próxima página"
-              width={5}
               height={9}
+              src="/icon-right.png"
+              width={5}
             />
           </button>
         </div>
