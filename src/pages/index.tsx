@@ -6,6 +6,7 @@ import { PreviewData } from 'next'
 import AcessoRapido from '../../components/Home/acesso-rapido'
 import Agenda from '../../components/Home/agenda'
 import Banner from '../../components/Home/banner'
+import Contato from '../../components/Home/contato'
 import Mural from '../../components/Home/mural/Mural'
 import Noticias from '../../components/Home/noticias/Noticias'
 import { createClient } from '../../prismic'
@@ -104,6 +105,7 @@ export default function Home({
       <Agenda agenda={agenda} />
       <Mural mural={mural} />
       <AcessoRapido />
+      <Contato />
     </>
   )
 }

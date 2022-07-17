@@ -58,10 +58,15 @@ export const StyledNoticiaCard = styled.div`
       color: #282b62;
       font-size: 18px;
       cursor: pointer;
-      display: inline-block;
-      margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2%;
     }
 
+    a:hover {
+      color: #9a1a4b;
+    }
     .data {
       font-size: 14px;
     }
