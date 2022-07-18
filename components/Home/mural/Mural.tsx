@@ -18,12 +18,16 @@ export default function Mural({ mural }: { mural: IMural[] }) {
           <div className="mural-card">
             <a href={`/mural/${value.uid}`}>
               <figure className="textover">
-                <Image
-                  src={value.imageUrl}
-                  width={380}
-                  height={270}
-                  alt={value.imageAlt}
-                />
+                {value.imageUrl ? (
+                  <Image
+                    src={value.imageUrl}
+                    width={380}
+                    height={270}
+                    alt={value.imageAlt}
+                  />
+                ) : (
+                  ''
+                )}
                 <figcaption>{value.title}</figcaption>
               </figure>
             </a>

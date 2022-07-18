@@ -20,6 +20,8 @@ export const StyledMural = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3%;
+    text-align: center;
+    justify-content: center;
   }
 
   .mural-card {

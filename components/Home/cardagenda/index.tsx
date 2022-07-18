@@ -56,6 +56,7 @@ const CardStyle = styled.div`
       font-weight: 400;
       color: #282b62;
       line-height: 120%;
+      font-size: 18px;
     }
 
     div {
@@ -73,11 +74,10 @@ const CardStyle = styled.div`
 type CardProps = {
   date: string
   description: string
-  time: string
-  eventType: string
+  local: string
 }
 
-function CardAgenda({ date, description, time, eventType }: CardProps) {
+function CardAgenda({ date, description, local }: CardProps) {
   const meses = [
     'JAN',
     'FEV',
@@ -103,25 +103,31 @@ function CardAgenda({ date, description, time, eventType }: CardProps) {
     setHover(false)
   }
 
+  const month = new Date(date).getMonth()
+  const time = new Date(date).getHours()
   return (
     <CardStyle onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <div className="img">
         <div className="date">
           <h3>{date ? `${date[0]}${date[1]}` : ''}</h3>
-          <small>
-            {date ? meses[10 * Number(date[3]) + Number(date[4])] : ''}
-          </small>
+          <small>{date ? meses[month] : ''}</small>
         </div>
       </div>
       <div className="info">
-        <h4>{description}</h4>
+        <h4 className="container-title">{description}</h4>
         <div className="time">
           <ClockIcon hover={hover} size={30} />
-          <h4>{time}</h4>
+          <h4>{time}:00</h4>
         </div>
         <div className="eventType">
-          <LocationIcon hover={hover} size={30} />
-          <h4>{eventType}</h4>
+          {local ? (
+            <>
+              <LocationIcon hover={hover} size={30} />
+              <h4>{local}</h4>
+            </>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </CardStyle>

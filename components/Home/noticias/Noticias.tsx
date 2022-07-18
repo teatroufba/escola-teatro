@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import NoticiaCard from './NoticiaCard'
 import { StyledNoticias } from './styles'
 
@@ -26,9 +28,9 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
           />
         ))}
       </div>
-      <a href="/noticias">
+      <Link href="/noticias" passHref>
         <button>Notícias anteriores</button>
-      </a>
+      </Link>
     </StyledNoticias>
   )
 }
