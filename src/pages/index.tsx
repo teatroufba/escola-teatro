@@ -64,29 +64,29 @@ export async function getStaticProps({
 }
 
 interface IMural {
+  imageAlt: string,
+  imageUrl: string,
+  title: string,
   uid: string
-  title: string
-  imageUrl: string
-  imageAlt: string
 }
 
 interface INoticias {
+  date: string,
+  imageAlt: string,
+  imageUrl: string,
+  subtitle: string,
+  title: string,
   uid: string
-  title: string
-  subtitle: string
-  imageUrl: string
-  imageAlt: string
-  date: string
 }
 
 interface IAgenda {
-  uid: string
-  title: string
+  date: string,
+  imageAlt: string,
   imageUrl: string
-  imageAlt: string
-  date: string
-  tipo: string
-  local: string
+  local: string,
+  tipo: string,
+  title: string,
+  uid: string
 }
 
 export default function Home({
@@ -94,8 +94,8 @@ export default function Home({
   agenda,
   noticias,
 }: {
-  mural: IMural[]
-  agenda: IAgenda[]
+  agenda: IAgenda[],
+  mural: IMural[],
   noticias: INoticias[]
 }) {
   return (

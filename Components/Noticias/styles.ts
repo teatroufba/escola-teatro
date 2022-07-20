@@ -56,6 +56,7 @@ export const StyledNoticias = styled.div`
       font-family: arial;
       font-weight: 400;
       font-size: 24px;
+
     }
   } 
 
