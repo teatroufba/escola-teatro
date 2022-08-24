@@ -23,7 +23,7 @@ type ButtonProps = {
 function Button(props: ButtonProps) {
   const { children } = props
 
-  return <ButtonStyled>{children.toUpperCase()}</ButtonStyled>
+  return <ButtonStyled>{children}</ButtonStyled>
 }
 
 export default Button
