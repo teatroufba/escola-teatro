@@ -1,3 +1,7 @@
+/* eslint-disable sonarjs/no-use-of-empty-return-value */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import { useState } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -28,6 +32,14 @@ const Container = styled.div`
                     background-color: #9A1A4B;
                     color: white;
                     padding: 1.5rem;
+                    cursor: auto;
+                }
+                .disable {
+                    background-color: #9A1A4B;
+                    color: white;
+                    padding: 1.5rem;
+                    opacity: 0.3;
+                    cursor: pointer;
                 }
             }
         }
@@ -45,6 +57,14 @@ const Container = styled.div`
 
                 .description {
                     color: #2B2B2B;
+
+                    button {
+                        margin-top: 0.5rem;
+                        background-color: transparent;
+                        cursor: pointer;
+                        border: none;
+                        text-decoration: underline;
+                    }
                 }
             }
 
@@ -54,6 +74,22 @@ const Container = styled.div`
 
                 div {
                     width: calc(25% - 1.125rem);
+                    padding: 1rem;
+                    border: 1px solid rgba(45, 43, 120, 0.3);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    button {
+                        color: #2D2B78;
+                        padding: 0;
+                        margin: 0;
+                        background-color: transparent;
+                        cursor: pointer;
+                        border: none;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
@@ -67,6 +103,8 @@ const Container = styled.div`
 `
 
 function Graduacao() {
+  const [cardSelect, setCardSelect] = useState(0)
+
   return (
     <Container>
         <h1>Graduação</h1>
@@ -74,15 +112,15 @@ function Graduacao() {
             <div className='menu'>
                 <h2>Nossos Cursos</h2>
                 <div className='courses'>
-                    <div className='card'>
+                    <div className={cardSelect === 0 ? 'card' : 'disable'} onClick={() => setCardSelect(0)}>
                         <h3>Bacharelado em Artes Cênicas</h3>
                         <p>Duração: 4 anos</p>
                     </div>
-                    <div className='card'>
+                    <div className={cardSelect === 1 ? 'card' : 'disable'} onClick={() => setCardSelect(1)}>
                         <h3>Licenciatura em Teatro</h3>
                         <p>Duração: 4 anos</p>
                     </div>
-                    <div className='card'>
+                    <div className={cardSelect === 2 ? 'card' : 'disable'} onClick={() => setCardSelect(2)}>
                         <h3>Licenciatura em Teatro - EAD</h3>
                         <p>Duração: 4 anos</p>
                     </div>
