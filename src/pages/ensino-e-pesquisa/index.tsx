@@ -1,3 +1,7 @@
+/* eslint-disable typescript-sort-keys/interface */
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable sort-keys */
+import GruposPesquisa from 'Components/ensiono-e-escola/grupos-pesquisa'
 import styled from 'styled-components'
 
 import Graduacao from '@/components/graduacao'
@@ -22,6 +26,9 @@ function EnsinoePesquisa() {
       </section>
       <section>
         <PosGraduacao />
+      </section>
+      <section>
+        <GruposPesquisa />
       </section>
     </Container>
   )
