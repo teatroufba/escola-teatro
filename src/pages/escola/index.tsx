@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import ComoChegar from 'Components/Escola/como-chegar/ComoChegar';
 import Docentes from 'Components/Escola/corpo-docente/Docentes';
 import { PreviewData } from 'next'
 
@@ -14,6 +15,13 @@ interface IDocente {
   interests: string,
   link: string,
   name: string,
+  uid: string
+}
+
+interface IInformacoes {
+  address: string,
+  email: string,
+  phoneNumber: string,
   uid: string
 }
 
@@ -35,16 +43,35 @@ export async function getStaticProps({
       uid: item.uid || ''
     }))
 
+  const info = await client.getAllByType('como-chegar');
+
+  let informacoes: IInformacoes[] = info.map(item => ({
+      address: item.data.address,
+      email: item.data.email,
+      phoneNumber: item.data.phone,
+      uid: item.uid || ''
+    }));
+
+  informacoes = informacoes.slice(0, 1);
+
   return {
-    props: { docentes },
+    props: { docentes, informacoes },
   }
+}
+
+const info = {
+  address: 'Av. Araújo Pinho, 292 - Canela, Salvador - BA, 40110-150', 
+  email: 'email@ufba.br',
+  phoneNumber: '71 1234-1234'
 }
 
 export default function Page({
   docentes,
-}: {docentes: IDocente[]}) {
+  informacoes
+}: {docentes: IDocente[], informacoes: IInformacoes}) {
   return( <div>
     <Docentes docentes={docentes} />
+    <ComoChegar email={info.email} endereco={info.address} numero={info.phoneNumber}/>
   </div>)
 
 }

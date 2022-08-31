@@ -73,7 +73,6 @@ export const StyledStaffContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: #2d2b78;
-	margin-bottom: 10rem;
 
 	h1 {
 		font-family: "Merriweather";
@@ -106,7 +105,7 @@ export const StyledPagination = styled.div`
 	display: flex;
 	justify-content: space-between;
 	font-family: "Merriweather";
-	margin-bottom: 2rem;
+	margin-bottom: 80px;
 
 	.pagination-container {
 		display: flex;
