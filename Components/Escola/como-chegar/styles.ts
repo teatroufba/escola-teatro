@@ -31,7 +31,7 @@ export const StyledComoChegarContent = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 80px;
+		gap: 95px;
 		width: 80%;
 	}
 
