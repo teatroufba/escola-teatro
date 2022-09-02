@@ -4,6 +4,7 @@
 
 import ComoChegar from 'Components/Escola/como-chegar/ComoChegar';
 import Docentes from 'Components/Escola/corpo-docente/Docentes';
+import CorpoTecnico from 'Components/Escola/corpo-tecnico/CorpoTecnico';
 import { PreviewData } from 'next'
 
 import { createClient } from '../../../prismic'
@@ -23,6 +24,12 @@ interface IInformacoes {
   email: string,
   phoneNumber: string,
   uid: string
+}
+
+interface ICorpoTecnico {
+  email: string, 
+  name: string,
+  role: string
 }
 
 export async function getStaticProps({
@@ -65,11 +72,20 @@ const info = {
   phoneNumber: '71 1234-1234'
 }
 
+const funcionario : ICorpoTecnico = {
+  name: 'Funcionario',
+  role: 'Administrativo',
+  email: 'ufba@ufba.com.br'
+}
+
+const corpoTecnico: ICorpoTecnico[] = [funcionario, funcionario, funcionario, funcionario, funcionario, funcionario, funcionario];
+
 export default function Page({
   docentes,
   informacoes
 }: {docentes: IDocente[], informacoes: IInformacoes}) {
   return( <div>
+    <CorpoTecnico corpoTecnico={corpoTecnico} />
     <Docentes docentes={docentes} />
     <ComoChegar email={info.email} endereco={info.address} numero={info.phoneNumber}/>
   </div>)
