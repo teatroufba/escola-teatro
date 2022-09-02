@@ -7,10 +7,17 @@
     "como-chegar": {},
     "corpo-tecnico": {},
     "setores": {},
-    "setor": {}
+    "setor": {},
+    "forma-de-ingresso": {}
   },
   "slices": {
     "Membro": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "FormaIngresso": {},
+    "ConteudoFormaIngresso": {
       "default": {
         "primary": {}
       }

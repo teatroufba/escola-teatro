@@ -5,6 +5,7 @@
 import ComoChegar from 'Components/Escola/como-chegar/ComoChegar';
 import Docentes from 'Components/Escola/corpo-docente/Docentes';
 import CorpoTecnico from 'Components/Escola/corpo-tecnico/CorpoTecnico';
+import FormasDeIngresso from 'Components/Escola/formas-de-ingresso/Ingresso';
 import SetoresInstancias from 'Components/Escola/setores-e-instancias/Setores';
 
 interface IDocente {
@@ -45,6 +46,33 @@ interface ISetor {
   membros: IMembro[];
   nome: string 
 }
+interface IFormaIngresso {
+  conteudo: string,
+  titulo: string
+}
+
+interface IFormasIngresso {
+  formas: IFormaIngresso[];
+}
+
+const formaIngresso1: IFormaIngresso = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  titulo: 'Ingresso UFBA'
+}
+const formaIngresso2: IFormaIngresso = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  titulo: 'Vagas Residuais UFBA'
+}
+const formaIngresso3: IFormaIngresso = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  titulo: 'PPGAC-UFBA'
+}
+const formaIngresso4: IFormaIngresso = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  titulo: 'Engressos do B.I.'
+}
+
+const formasIngresso = { formas: [formaIngresso1, formaIngresso2, formaIngresso3, formaIngresso4]};
 
 const membro1: IMembro = {
   name: 'Membro do setor',
@@ -98,6 +126,7 @@ export default function Page({
   informacoes
 }: {docentes: IDocente[], informacoes: IInformacoes}) {
   return( <div>
+    <FormasDeIngresso formas={formasIngresso.formas}/>
     <SetoresInstancias setores={setores}/>
     <CorpoTecnico corpoTecnico={corpoTecnico} />
     <Docentes docentes={listaDocentes} />
