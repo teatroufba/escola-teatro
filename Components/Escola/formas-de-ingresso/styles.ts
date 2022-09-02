@@ -40,6 +40,7 @@ export const StyledIngressoContainer = styled.div`
 	}
 
 	.ingresso button {
+		cursor: pointer;
 		border: none;
 		background-color: transparent;
 		color: #fff;
