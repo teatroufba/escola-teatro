@@ -15,18 +15,23 @@ export default function CorpoTecnico ({ corpoTecnico } : ICorpoTecnicoArray) {
         <StyledStaffTableContainer>
             <h1>Corpo Técnico</h1>
             <StyledStaffTable>
-                <tr>
-                    <th>Nome</th>
-                    <th>Função</th>
-                    <th>E-mail</th>
-                </tr>
-                {corpoTecnico.map(item => (
+                <thead>
                     <tr>
-                        <td>{item.name}</td>
-                        <td>{item.role}</td>
-                        <td>{item.email}</td>
+                        <th>Nome</th>
+                        <th>Função</th>
+                        <th>E-mail</th>
                     </tr>
-                ))}
+                </thead>
+
+                <tbody>
+                    {corpoTecnico.map(item => (
+                        <tr>
+                            <td>{item.name}</td>
+                            <td>{item.role}</td>
+                            <td>{item.email}</td>
+                        </tr>
+                    ))}
+                </tbody>
             </StyledStaffTable>
         </StyledStaffTableContainer>
     )

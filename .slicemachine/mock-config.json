@@ -5,6 +5,15 @@
     "card-staff": {},
     "card-docente": {},
     "como-chegar": {},
-    "corpo-tecnico": {}
+    "corpo-tecnico": {},
+    "setores": {},
+    "setor": {}
+  },
+  "slices": {
+    "Membro": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }
