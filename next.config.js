@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = module.exports = {
     images: {
-        domains: ['images.prismic.io', 'images.pexels.com'],
+        domains: ['images.prismic.io'],
     },
     compiler: {
         styledComponents: true

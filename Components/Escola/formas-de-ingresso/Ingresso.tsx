@@ -1,44 +1,43 @@
 
-import { useRef, useState } from 'react';
+import Link from 'next/link';
+import { useState } from 'react';
 
 import Pagination from './Pagination';
 import { StyledIngressoContainer } from './styles';
   
   interface IFormaIngresso {
+    link: string,
+    titulo: string
+  }
+  interface IConteudo {
     conteudo: string,
     titulo: string
   }
-  
-  interface IFormasIngresso {
-    formas: IFormaIngresso[];
+  interface FormasDeIngressoProps {
+    conteudos: IConteudo[],
+    formas: IFormaIngresso[],
   }
 
-export default function FormasDeIngresso ({ formas }: IFormasIngresso) {
+export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngressoProps) {
     const [currentPage, setCurrentPage] = useState(1)
     const [contentPerPage] = useState(1)
 
-    const conteudos = formas.map(forma =>
-        forma.conteudo
-    )
-
     const lastContent = currentPage * contentPerPage; 
     const firstContent = lastContent - contentPerPage; 
-    const currentContent = formas.slice(firstContent, lastContent); 
+    const currentContent = conteudos.slice(firstContent, lastContent); 
 
     const pages = [...Array(Math.ceil(conteudos.length / contentPerPage)).keys()];
-
-    function setCurrentPageOnClick(index: number) {
-        setCurrentPage(index);
-    }
 
      return (
         <StyledIngressoContainer>
             <h1>Formas de Ingresso</h1>
             <div className="ingresso-content">
                 <div className="left-column">
-                    {formas.map((forma, index) => 
+                    {formas.map((forma) => 
                         <div className="ingresso">
-                            <button onClick={() => setCurrentPageOnClick(index + 1)}><h3>{forma.titulo}</h3></button>
+                            <Link passHref href={forma.link}>
+                                <a href={forma.link} rel='noopener noreferrer' target='_blank'><h3>{forma.titulo}</h3></a>
+                            </Link>
                         </div>
                     )}
                 </div>

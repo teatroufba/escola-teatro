@@ -39,12 +39,12 @@ export const StyledIngressoContainer = styled.div`
 		background-color: #9a1a4b;
 	}
 
-	.ingresso button {
+	.ingresso a {
 		cursor: pointer;
 		border: none;
 		background-color: transparent;
 		color: #fff;
-		padding: 24px;
+		text-decoration: none;
 	}
 
 	.ingresso h3 {
@@ -54,6 +54,7 @@ export const StyledIngressoContainer = styled.div`
 		text-decoration: underline;
 		text-align: left;
 		margin-bottom: 10px;
+		padding: 24px;
 	}
 
 	.right-column {
@@ -87,6 +88,7 @@ export const StyledIngressoContainer = styled.div`
 		letter-spacing: 0em;
 		text-align: left;
 		color: #2d2b78;
+		margin-bottom: 24px;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -125,7 +127,7 @@ export const StyledIngressoContainer = styled.div`
 `;
 
 export const StyledPagination = styled.div`
-	width: 100%;
+	width: 60%;
 	display: flex;
 	justify-content: space-between;
 	font-family: "Merriweather";

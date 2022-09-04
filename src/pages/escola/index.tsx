@@ -47,7 +47,7 @@ interface ISetor {
   nome: string 
 }
 interface IFormaIngresso {
-  conteudo: string,
+  link: string,
   titulo: string
 }
 
@@ -55,24 +55,47 @@ interface IFormasIngresso {
   formas: IFormaIngresso[];
 }
 
+interface IConteudo {
+  conteudo: string,
+  titulo: string
+}
+
+interface IConteudos {
+  conteudos: IConteudo[], 
+}
+
 const formaIngresso1: IFormaIngresso = {
-  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  link: 'https://ingresso.ufba.br/',
   titulo: 'Ingresso UFBA'
 }
 const formaIngresso2: IFormaIngresso = {
-  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  link: 'https://ingresso.ufba.br/vagas-residuais',
   titulo: 'Vagas Residuais UFBA'
 }
 const formaIngresso3: IFormaIngresso = {
-  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  link: 'http://www.ppgac.tea.ufba.br/pt/home/',
   titulo: 'PPGAC-UFBA'
 }
 const formaIngresso4: IFormaIngresso = {
-  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi. Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  link: 'https://ingresso.ufba.br/egressos-bi',
   titulo: 'Engressos do B.I.'
 }
 
-const formasIngresso = { formas: [formaIngresso1, formaIngresso2, formaIngresso3, formaIngresso4]};
+const conteudo1: IConteudo = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi.Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.'.repeat(2),
+  titulo: 'Pagina 01'
+}
+const conteudo2: IConteudo = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi.Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  titulo: 'Pagina 02'
+}
+const conteudo3: IConteudo = {
+  conteudo: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi.Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.',
+  titulo: 'Pagina 03'
+}
+
+const formasIngresso: IFormasIngresso = { formas: [formaIngresso1, formaIngresso2, formaIngresso3, formaIngresso4]};
+const conteudo: IConteudos = { conteudos: [conteudo1, conteudo2, conteudo3]};
 
 const membro1: IMembro = {
   name: 'Membro do setor',
@@ -126,7 +149,7 @@ export default function Page({
   informacoes
 }: {docentes: IDocente[], informacoes: IInformacoes}) {
   return( <div>
-    <FormasDeIngresso formas={formasIngresso.formas}/>
+    <FormasDeIngresso conteudos={conteudo.conteudos} formas={formasIngresso.formas}/>
     <SetoresInstancias setores={setores}/>
     <CorpoTecnico corpoTecnico={corpoTecnico} />
     <Docentes docentes={listaDocentes} />
