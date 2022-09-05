@@ -1,3 +1,4 @@
+/* eslint-disable typescript-sort-keys/interface */
 import Image from 'next/image'
 
 import { StyledMural } from './styles'

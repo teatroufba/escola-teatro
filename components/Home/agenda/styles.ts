@@ -66,6 +66,7 @@ export const AgendaStyled = styled.div`
     display: flex;
     gap: 43px;
     align-items: center;
+    min-height: 490px;
 
     button {
       width: 40px;
