@@ -189,7 +189,7 @@ export default function Page({
     <Apresentacao conteudos={conteudosApresentacao} />
     <FormasDeIngresso conteudos={conteudo.conteudos} formas={formasIngresso.formas}/>
     <SetoresInstancias setores={setores}/>
-    {/* <Docentes docentes={listaDocentes} /> */}
+    <Docentes docentes={listaDocentes} />
     <CorpoTecnico corpoTecnico={corpoTecnico} />
     <ComoChegar email={info.email} endereco={info.address} numero={info.phoneNumber}/>
   </div>)

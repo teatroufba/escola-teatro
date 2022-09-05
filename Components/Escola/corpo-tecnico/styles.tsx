@@ -21,13 +21,15 @@ export const StyledStaffTableContainer = styled.div`
 
     .table-container {
         width: min(1236px, 80%);
-        overflow: scroll;
     }
 
     @media screen and (max-width: 768px) {
         h1 {
             font-size: 36px;
             width: 80%;
+        }
+        .table-container {
+            overflow: scroll;
         }
     }
 `;

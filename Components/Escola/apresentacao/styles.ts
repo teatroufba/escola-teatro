@@ -12,7 +12,6 @@ export const StyledApresentacaoContainer = styled.section`
 		align-items: center;
 		gap: 80px;
 		width: 100%;
-		/* width: min(1236px, 100%); */
 	}
 
 	.left-column {
@@ -118,7 +117,7 @@ export const StyledApresentacaoContainer = styled.section`
 `;
 
 export const StyledPagination = styled.div`
-	width: 400px;
+	width: 70%;
 	display: flex;
 	gap: 10px;
 	justify-content: space-between;
@@ -145,13 +144,27 @@ export const StyledPagination = styled.div`
 		background-color: #24233a;
 	}
 
+	@media screen and (min-width: 768px) {
+		width: min(1236px, 80%);
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1024px) {
+		.pagination-btn {
+			font-size: 14px;
+			padding: 7px 16px;
+		}
+		.pagination-container {
+			width: 100%;
+			justify-content: center;
+			gap: 10px;
+			padding: 0;
+		}
+	}
+
 	@media screen and (max-width: 768px) {
-		width: 80%;
+		width: 100%;
 		margin-bottom: 80px;
 
-		.pagination-container {
-			display: none;
-		}
 		.pagination-btn {
 			font-size: 14px;
 			padding: 7px 16px;
@@ -160,7 +173,10 @@ export const StyledPagination = styled.div`
 
 	@media screen and (max-width: 425px) {
 		.pagination-container {
-			display: none;
+			width: 100%;
+			justify-content: center;
+			gap: 10px;
+			padding: 0;
 		}
 	}
 `;

@@ -4,8 +4,9 @@ export const StyledComoChegarContainer = styled.section`
 	@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
 	display: flex;
 	flex-direction: column;
-	padding: 40px 0;
-	margin-bottom: 48px;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 80px;
 	width: 100%;
 	background-color: #f7f6f5;
 `;
@@ -14,6 +15,7 @@ export const StyledComoChegarContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 
 	h1 {
 		box-sizing: border-box;
@@ -29,10 +31,10 @@ export const StyledComoChegarContent = styled.div`
 
 	.localization-content {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		gap: 95px;
-		width: 80%;
+		width: min(1236px, 80%);
 	}
 
 	iframe {
@@ -47,11 +49,13 @@ export const StyledComoChegarContent = styled.div`
 		}
 
 		h1 {
-			font-size: 32px;
+			width: 80%;
+			text-align: left;
+			font-size: 36px;
 		}
 
 		iframe {
-			width: 80%;
+			width: 100%;
 			height: auto;
 		}
 	}
@@ -70,6 +74,7 @@ export const LocalizationInfo = styled.div`
 	flex-direction: column;
 	align-items: center;
 	gap: 24px;
+	width: 100%;
 
 	.info-tile-title {
 		display: flex;
@@ -99,29 +104,15 @@ export const LocalizationInfo = styled.div`
 
 	@media screen and (max-width: 768px) {
 		.info-tile {
-			width: 80%;
+			width: 100%;
 		}
 
 		.info-tile-title > h2 {
-			font-size: 18px;
+			font-size: 24px;
 		}
 
 		.info-tile > p {
 			font-size: 16px;
-		}
-	}
-
-	@media screen and (min-width: 769px) and (max-width: 900px) {
-		.info-tile-title > h2 {
-			font-size: 18px;
-		}
-
-		.info-tile > p {
-			font-size: 16px;
-		}
-
-		.info-tile-title {
-			gap: 8px;
 		}
 	}
 `;

@@ -127,7 +127,7 @@ export const StyledIngressoContainer = styled.div`
 `;
 
 export const StyledPagination = styled.div`
-	width: 60%;
+	width: 70%;
 	display: flex;
 	justify-content: space-between;
 	font-family: "Merriweather";
@@ -158,7 +158,12 @@ export const StyledPagination = styled.div`
 		width: 920px;
 	}
 
+	@media screen and (min-width: 768px) and (max-width: 1440px) {
+		width: 90%;
+	}
+
 	@media screen and (max-width: 768px) {
+		width: 100%;
 		.pagination-container {
 			gap: 10px;
 			padding: 24px;

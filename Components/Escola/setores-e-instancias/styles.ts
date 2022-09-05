@@ -35,13 +35,15 @@ export const StyledAccordionContainer = styled.div`
     width: min(1236px, 80%);
     display: flex;
     flex-direction: column;
-    border: 2px solid #E6E6EF;
 
     .accordion-content {
+        width: 100%;
+        border: 2px solid #E6E6EF;
         padding: 24px 8px 24px 24px;
     }
 
     .accordion-header h2 {
+        text-align: left;
         font-size: 36px; 
         font-weight: 700;
         color: #2D2B78;
@@ -92,10 +94,10 @@ export const StyledAccordionContainer = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-        width: 90%;
+        width: 80%;
 
         .accordion-content {
-            padding: 24px;
+            padding: 12px;
         }
 
         .accordion-header h2{
