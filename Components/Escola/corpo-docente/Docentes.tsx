@@ -1,9 +1,8 @@
+import { useEffect, useState } from 'react';
 
-import { useState } from 'react';
-
-import StaffCard from './DocenteCard';
-import Pagination from './Pagination';
-import { StyledStaff, StyledStaffContainer } from './styles'
+import DocentesGrid from './DocenteGrid';
+import DocentesCarousel from './DocentesCarousel';
+import { StyledStaff, StyledStaffCarousel, StyledStaffContainer } from './styles'
 
 interface IDocente {
     altImage: string,
@@ -21,33 +20,27 @@ interface IDocentes {
 
 
 export default function Docentes ({ docentes }: IDocentes) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const [cardsPerPage] = useState(6)
+  const [width, setWidth] = useState(0);
 
-  const lastCard = currentPage * cardsPerPage; 
-  const firstCard = lastCard - cardsPerPage; 
-  const currentCards = docentes.slice(firstCard, lastCard); 
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
 
-  const pages = [...Array(Math.ceil(docentes.length / cardsPerPage)).keys()];
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); 
 
   return (
     <StyledStaffContainer>
       <div className="wrap-staff-container">
         <h1>Corpo Docente</h1>
-        <StyledStaff>
-            {currentCards.map(docente => (
-            <StaffCard key={docente.uid}
-                altImage={docente.altImage} 
-                email={docente.email} 
-                imageUrl={docente.imageUrl}
-                interests={docente.interests} 
-                link={docente.link}
-                name={docente.name}
-                uid={docente.uid}
-            /> )   
-            )}
-        </StyledStaff>
-        <Pagination currentPage = {currentPage} pages={pages} paginationFunction={setCurrentPage} />    
+        {width > 768 
+        ? <DocentesGrid docentes={docentes} largura={width}/>
+        : <DocentesCarousel docentes={docentes} />
+        }
       </div>
     </StyledStaffContainer>
   )

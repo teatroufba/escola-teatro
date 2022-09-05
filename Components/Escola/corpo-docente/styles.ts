@@ -84,11 +84,26 @@ export const StyledStaffContainer = styled.div`
 	}
 
 	.wrap-staff-container {
-		width: min(1200px, 80%);
+		width: 80%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+	}
+
+	@media screen and (max-width: 768px) {
+		h1 {
+			font-size: 36px;
+			font-weight: 400;
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	@media screen and (min-width: 1560px) {
+		.wrap-staff-container {
+			width: min(1236px, 80%);
+		}
 	}
 `;
 
@@ -96,14 +111,14 @@ export const StyledStaff = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
-
 	flex-wrap: wrap;
 	gap: 24px;
 `;
 
 export const StyledPagination = styled.div`
+	width: min(1250, 80%);
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	font-family: "Merriweather";
 	margin-bottom: 80px;
 
@@ -130,6 +145,79 @@ export const StyledPagination = styled.div`
 	.width {
 		display: flex;
 		justify-content: space-between;
-		width: 920px;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1150px) {
+		.width {
+			width: 610px;
+		}
+	}
+
+	@media screen and (min-width: 1150px) and (max-width: 1560px) {
+		.width {
+			width: 930px;
+		}
+	} ;
+`;
+
+export const StyledStaffCarousel = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+	gap: 24px;
+`;
+
+export const StyledDocenteCardCarrossel = styled.div`
+	display: flex;
+	flex-direction: column;
+	font-family: "Merriweather";
+	max-width: 241.5px;
+	margin-bottom: 80px;
+
+	.image-container {
+		position: relative;
+		width: 241.5px;
+		height: 140px;
+	}
+
+	.docente-description {
+		display: flex;
+		flex-direction: column;
+		background-color: #ffffff;
+		padding: 12px;
+		gap: 12px;
+	}
+
+	.docente-description h2 {
+		width: 70%;
+		font-size: 16px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-bottom: 4px;
+		color: #2d2b78;
+	}
+
+	.docente-description p {
+		font-family: "Merriweather";
+		font-weight: 400;
+		font-size: 14px;
+		color: #2d2b78;
+	}
+
+	.docente-description button {
+		cursor: pointer;
+		font-family: "Merriweather";
+		font-size: 14px;
+		font-weight: 400;
+		width: 70%;
+		color: #ffff;
+		background-color: #9a1a4b;
+		border: none;
+		border-radius: 4px;
+		padding: 8px 12px;
 	}
 `;

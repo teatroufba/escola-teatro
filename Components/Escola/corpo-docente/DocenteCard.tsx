@@ -1,4 +1,5 @@
 import Image from 'next/image'; 
+import Link from 'next/link';
 
 import { StyledStaffCard, StyledStaffDescription, StyledStaffDescriptionContainer } from './styles'
 
@@ -22,9 +23,11 @@ export default function StaffCard({name, email, link, interests, imageUrl, altIm
                 <p> Email: {email} </p>
                 <p> Áreas de Interesse: {interests} </p>
             </StyledStaffDescription>
-            <a href={link} rel="noreferrer noopener" target="_blank">
+            <Link passHref href={link}>
+              <a href={link} rel='noopener noreferrer' target='_blank'>
                 <button>Currículo Lattes</button>
-            </a>
+              </a>
+            </Link>
         </StyledStaffDescriptionContainer> 
     </StyledStaffCard>
   )

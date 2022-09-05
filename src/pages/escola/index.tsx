@@ -173,8 +173,8 @@ const docente = {
   email: 'ufba@ufba.com.br',
   imageUrl: 'https://images.pexels.com/photos/5473391/pexels-photo-5473391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   interests: 'lorem ipsum,lorem ipsum,lorem ipsum,lorem ipsum ',
-  link: 'www.google.com.br',
-  name: 'Docente',
+  link: 'https://www.google.com.br',
+  name: 'Docente de nome gigantesco',
   uid: '123'
 }
 

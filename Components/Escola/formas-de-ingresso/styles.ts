@@ -8,6 +8,7 @@ export const StyledIngressoContainer = styled.div`
 	align-items: center;
 	background-color: #ffffff;
 	margin-bottom: 80px;
+	margin-top: 80px;
 
 	h1 {
 		box-sizing: border-box;
@@ -15,7 +16,7 @@ export const StyledIngressoContainer = styled.div`
 		font-weight: 400;
 		font-size: 48px;
 		color: #282b62;
-		margin: 3rem;
+		margin: 0 3rem 3rem 3rem;
 		margin-bottom: 64px;
 		border-bottom: 5px solid #282b62;
 		text-align: center;

@@ -101,8 +101,11 @@ export const StyledApresentacaoContainer = styled.section`
 		#image-container {
 			position: relative;
 			/* width: 868px; */
-			width: 300px;
+			width: 400px;
 			height: 100%;
+		}
+		.presentation-content {
+			gap: 40px;
 		}
 	}
 
@@ -110,7 +113,7 @@ export const StyledApresentacaoContainer = styled.section`
 		#image-container {
 			position: relative;
 			/* width: 868px; */
-			width: 400px;
+			width: 500px;
 			height: 100%;
 		}
 	}
