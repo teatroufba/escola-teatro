@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
+import AcessoRapido from "components/Home/acesso-rapido";
+import Agenda from "components/Home/agenda";
+import Banner from "components/Home/banner";
+import Contato from "components/Home/contato";
+import Mural from "components/Home/mural/Mural";
+import Noticias from "components/Home/noticias/Noticias";
 import { PreviewData } from "next";
 
-import AcessoRapido from "Components/Home/acesso-rapido";
-import Agenda from "Components/Home/agenda";
-import Banner from "Components/Home/banner";
-import Contato from "Components/Home/contato";
-import Mural from "Components/Home/mural/Mural";
-import Noticias from "Components/Home/noticias/Noticias";
 import { createClient } from "../../prismic";
 
 export async function getStaticProps({
