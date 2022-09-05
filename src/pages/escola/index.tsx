@@ -2,11 +2,16 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import Apresentacao from 'Components/Escola/apresentacao/Apresentacao';
 import ComoChegar from 'Components/Escola/como-chegar/ComoChegar';
 import Docentes from 'Components/Escola/corpo-docente/Docentes';
 import CorpoTecnico from 'Components/Escola/corpo-tecnico/CorpoTecnico';
 import FormasDeIngresso from 'Components/Escola/formas-de-ingresso/Ingresso';
 import SetoresInstancias from 'Components/Escola/setores-e-instancias/Setores';
+
+const conteudoLongo = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi.Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a. Mauris scelerisque adipiscing tellus velit mauris placerat pellentesque a. Nibh sodales amet faucibus quam nulla mauris.'.repeat(2);
+const conteudoCurto = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus amet, eget facilisis enim, felis pellentesque. Mus risus, varius in tincidunt varius pretium non egestas. Odio placerat diam fringilla ultricies. Dolor eget hendrerit donec ipsum convallis pretium, neque nisi.Porta placerat id sit quis diam augue. Nibh purus morbi nec tortor. Pharetra phasellus consequat, turpis enim amet, etiam. Aliquam orci mauris quis amet fermentum. At in orci a molestie. Sit vitae, egestas pellentesque a.';
+
 
 interface IDocente {
   altImage: string,
@@ -63,6 +68,38 @@ interface IConteudo {
 interface IConteudos {
   conteudos: IConteudo[], 
 }
+
+interface IApresentacaoItem {
+  conteudo: string,
+  imageAlt: string,
+  imageUrl: string,
+  titulo: string
+}
+
+interface IApresentacao {
+  conteudos: IApresentacaoItem[]
+}
+
+const apresentacaoItem1 = {
+  conteudo: conteudoLongo,
+  imageAlt: 'mulher sorrindo',
+  imageUrl: 'https://images.pexels.com/photos/5473391/pexels-photo-5473391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  titulo: 'Pagina 01',
+}
+const apresentacaoItem2 = {
+  conteudo: conteudoLongo,
+  imageAlt: 'mulher sorrindo',
+  imageUrl: 'https://images.pexels.com/photos/13187759/pexels-photo-13187759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  titulo: 'Pagina 02',
+}
+const apresentacaoItem3 = {
+  conteudo: conteudoCurto,
+  imageAlt: 'mulher sorrindo',
+  imageUrl: 'https://images.pexels.com/photos/5473391/pexels-photo-5473391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  titulo: 'Pagina 03',
+}
+
+const conteudosApresentacao = [apresentacaoItem1, apresentacaoItem2, apresentacaoItem3];
 
 const formaIngresso1: IFormaIngresso = {
   link: 'https://ingresso.ufba.br/',
@@ -149,6 +186,7 @@ export default function Page({
   informacoes
 }: {docentes: IDocente[], informacoes: IInformacoes}) {
   return( <div>
+    <Apresentacao conteudos={conteudosApresentacao} />
     <FormasDeIngresso conteudos={conteudo.conteudos} formas={formasIngresso.formas}/>
     <SetoresInstancias setores={setores}/>
     <CorpoTecnico corpoTecnico={corpoTecnico} />
