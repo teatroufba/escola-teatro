@@ -90,12 +90,13 @@ export const StyledAccordionContainer = styled.div`
         }
 
         .accordion-header h2{
-            max-width: 80%;
+            width: 80%;
             font-size: 20px;
             text-overflow: ellipsis;
+            text-align: left;
         }
 
-        .accordion-header button {
+        .accordion-header button svg {
             width: 32px; 
             height: 32px;
         }
