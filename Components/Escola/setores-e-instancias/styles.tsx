@@ -20,6 +20,15 @@ export const StyledSetoresContainer = styled.div`
 		border-bottom: 5px solid #282b62;
 		text-align: center;
 	}
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 36px;
+            text-align: left;
+            width: 80%;
+        }
+        
+    }
 `
 
 export const StyledAccordionContainer = styled.div`

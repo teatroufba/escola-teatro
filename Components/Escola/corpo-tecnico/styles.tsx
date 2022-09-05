@@ -16,22 +16,35 @@ export const StyledStaffTableContainer = styled.div`
 		color: #282b62;
 		margin: 3rem;
 		border-bottom: 5px solid #282b62;
-		text-align: center;
+		text-align: left;
 	}
+
+    .table-container {
+        width: min(1236px, 80%);
+        overflow: scroll;
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 36px;
+            width: 80%;
+        }
+    }
 `;
 
 export const StyledStaffTable = styled.table`
+    width: 100%;
     font-family: "Merriweather", sans-serif;
     font-size: 20px;
-    width: min(1236px, 80%);
     text-align: left;
     vertical-align: middle;
     border-collapse: separate;
     border-spacing: 0px;
     border-left: 1px solid #958FA0;
     border-right: 1px solid #958FA0;
-    margin-bottom: 80px;  
-    
+    margin-bottom: 80px; 
+    line-height: 33.1px;
+
 
     th {
         color: #9A1A4B;
@@ -43,5 +56,9 @@ export const StyledStaffTable = styled.table`
     td {
         border-bottom: 1px solid #958FA0;
         padding: 10px 10px 10px 34px;
+    }
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
     }
 `;
