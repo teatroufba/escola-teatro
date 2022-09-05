@@ -4,7 +4,10 @@ export const StyledMural = styled.div`
   @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
   text-align: center;
   padding: 5%;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   h1 {
     color: #282b62;
     display: inline-block;
@@ -16,7 +19,10 @@ export const StyledMural = styled.div`
   }
 
   .mural-posts {
+    max-width: 1600px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3%;

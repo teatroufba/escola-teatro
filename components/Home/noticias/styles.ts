@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const StyledNoticias = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
   padding: 5%;
   text-align: center;
 
@@ -17,9 +22,19 @@ export const StyledNoticias = styled.div`
 
   .noticias-flex {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     flex-direction: row;
     gap: 3%;
     margin: 4%;
+  }
+
+  .noticias-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   button {
@@ -29,7 +44,6 @@ export const StyledNoticias = styled.div`
     border: none;
     border-radius: 5%;
     padding: 0.5% 4%;
-    margin-right: 5%;
     font-size: 18px;
     cursor: pointer;
     color: white;
@@ -38,13 +52,21 @@ export const StyledNoticias = styled.div`
 `
 
 export const StyledNoticiaCard = styled.div`
+  max-width: 290px;
   h3 {
     font-family: 'Merriweather';
     font-weight: 400;
     font-size: 24px;
   }
 
+  .noticia-img {
+    width: 100%;
+  }
+
   .text-post {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     text-align: left;
     font-family: arial;
 

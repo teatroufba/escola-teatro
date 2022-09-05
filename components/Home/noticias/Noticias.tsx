@@ -15,7 +15,9 @@ interface INoticias {
 export default function Noticias({ noticias }: { noticias: INoticias[] }) {
   return (
     <StyledNoticias>
+
       <h1>Notícias</h1>
+
       <div className="noticias-flex">
         {noticias.slice(0, 4).map(value => (
           <NoticiaCard
@@ -28,9 +30,12 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
           />
         ))}
       </div>
-      <Link href="/noticias" passHref>
-        <button>Notícias anteriores</button>
-      </Link>
+      <div className='noticias-btn'>
+          <Link href="/noticias" passHref>
+            <button>Notícias anteriores</button>
+          </Link>
+      </div>
+      
     </StyledNoticias>
   )
 }

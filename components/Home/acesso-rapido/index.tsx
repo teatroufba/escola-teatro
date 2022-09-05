@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import { useState } from 'react'
-import styled from 'styled-components'
+import Link from "next/link";
+import { useState } from "react";
+import styled from "styled-components";
 
-import { ConcursoIcon, GaleriaIcon, SolicitacoesIcon } from './icons'
+import { ConcursoIcon, GaleriaIcon, SolicitacoesIcon } from "./icons";
 
 const AcessoRapidoStyled = styled.div`
   background-color: #282b62;
@@ -18,7 +18,7 @@ const AcessoRapidoStyled = styled.div`
     align-items: center;
 
     h3 {
-      font-family: 'Merriweather';
+      font-family: "Merriweather";
       color: white;
     }
   }
@@ -26,26 +26,26 @@ const AcessoRapidoStyled = styled.div`
   div:hover h3 {
     color: #9a1a4b;
   }
-`
+`;
 
 function AcessoRapido() {
-  const [hover, setHover] = useState([false, false, false])
+  const [hover, setHover] = useState([false, false, false]);
 
   const handleMouseEnterS = () => {
-    setHover([true, false, false])
-  }
+    setHover([true, false, false]);
+  };
 
   const handleMouseEnterC = () => {
-    setHover([false, true, false])
-  }
+    setHover([false, true, false]);
+  };
 
   const handleMouseEnterG = () => {
-    setHover([false, false, true])
-  }
+    setHover([false, false, true]);
+  };
 
   const handleMouseLeave = () => {
-    setHover([false, false, false])
-  }
+    setHover([false, false, false]);
+  };
 
   return (
     <AcessoRapidoStyled>
@@ -68,7 +68,7 @@ function AcessoRapido() {
         </div>
       </Link>
     </AcessoRapidoStyled>
-  )
+  );
 }
 
-export default AcessoRapido
+export default AcessoRapido;
