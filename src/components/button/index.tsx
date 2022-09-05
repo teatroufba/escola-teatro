@@ -1,14 +1,15 @@
+import { MouseEventHandler } from 'react'
 import styled from 'styled-components'
 
 const ButtonStyled = styled.button`
   background-color: #2d2b78;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 400;
   padding: 10px 20px;
   color: white;
   border: none;
   border-radius: 5px;
-  font-family: 'Arial', serif;
+  font-family: 'Merriweather';
   cursor: pointer;
 
   &:hover {
@@ -17,13 +18,16 @@ const ButtonStyled = styled.button`
 `
 
 type ButtonProps = {
-  children: string
+  children: string,
+  className?: string;
+  disable?: boolean | undefined,
+  onClick?: MouseEventHandler<HTMLButtonElement>
 }
 
 function Button(props: ButtonProps) {
-  const { children } = props
+  const { children, onClick, disable, className } = props
 
-  return <ButtonStyled>{children}</ButtonStyled>
+  return <ButtonStyled className={className} disabled={disable} onClick={onClick}>{children}</ButtonStyled>
 }
 
 export default Button

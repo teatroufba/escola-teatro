@@ -18,6 +18,7 @@ const Container = styled.div`
   }
 
   h1 {
+    font-family: 'Merriweather';
     color: #2D2B78;
     border-bottom: 5px solid #282b62;
     display: inline-block;

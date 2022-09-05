@@ -2,6 +2,7 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 /* eslint-disable sort-keys */
 import GruposPesquisa from 'Components/ensiono-e-escola/grupos-pesquisa'
+import ProducaoAcademica from 'Components/ensiono-e-escola/producao-academica'
 import styled from 'styled-components'
 
 import Graduacao from '@/components/graduacao'
@@ -27,8 +28,11 @@ function EnsinoePesquisa() {
       <section>
         <PosGraduacao />
       </section>
-      <section>
+      <section className='grey'>
         <GruposPesquisa />
+      </section>
+      <section>
+        <ProducaoAcademica />
       </section>
     </Container>
   )

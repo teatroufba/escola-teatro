@@ -14,6 +14,10 @@ const Container = styled.div`
     background: #F7F6F5;
     border: 2px solid #E6E6EF;
 
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+
 
     .header {
         padding: 1.5rem;

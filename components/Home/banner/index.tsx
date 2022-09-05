@@ -91,6 +91,7 @@ const BannerStyled = styled.div`
 
 function Banner() {
   const carousel = useRef<HTMLInputElement>(null)
+  const [scrolling, setScrolling] = useState(false)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
   const [carouselPagination, setCarouselPagination] = useState([
@@ -127,7 +128,7 @@ function Banner() {
   }, [carouselScrollLeft])
 
   const scroll = () => {
-    if (carousel.current != null) {
+    if (carousel.current != null && !scrolling) {
       if (carousel.current.scrollLeft < 12 * carousel.current.clientWidth) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
@@ -160,53 +161,53 @@ function Banner() {
 
   return (
     <BannerStyled>
-      <div ref={carousel} className="carousel">
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
-        <img src="/banner-1.jpg" alt="" />
+      <div ref={carousel} className="carousel" onScroll={() => setScrolling(true)}>
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
+        <img alt="" src="/banner-1.jpg" />
       </div>
       <div className="banner-control">
         <div className="pagination">
           <p>01</p>
           {carouselPagination.map((page: boolean, index: number) => (
             <div key={Number(index)} className={index > 6 ? 'desktop' : ''}>
-              <LineIcon size={20} hover={page} />
+              <LineIcon hover={page} size={20} />
             </div>
           ))}
           <p className="desktop">13</p>
           <p className="mobile">07</p>
         </div>
         <button
-          onClick={scroll}
           className={
             carouselScrollLeft >= carouselTotalScroll
               ? 'desktop desactive'
               : 'desktop'
           }
+          onClick={scroll}
         >
           <Image
-            src="/arrow-right.svg"
             alt="ícone de seta para esquerda"
-            width={7}
             height={14}
+            src="/arrow-right.svg"
+            width={7}
           />
         </button>
-        <button onClick={scrollMobile} className="mobile">
+        <button className="mobile" onClick={scrollMobile}>
           <Image
-            src="/arrow-right.svg"
             alt="ícone de seta para esquerda"
-            width={7}
             height={14}
+            src="/arrow-right.svg"
+            width={7}
           />
         </button>
       </div>

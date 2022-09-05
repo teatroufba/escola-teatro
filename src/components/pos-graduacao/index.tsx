@@ -6,18 +6,25 @@ const Container = styled.div`
     color: #2D2B78;
     background-color: white;
     font-family: 'Merriweather', serif;
-    padding: 130px 0 80px 0;
-    text-align: center;
+    display: flex;
+    gap: 5rem;
+
+    .img {
+        width: 45%;
+        max-width: 868px;
+        background-color: #D6D6D6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     .graduation {
         text-align: left;
-        display: flex;
-        justify-content: center;
-        width: 65.17vw;
-        gap: 1.5rem;
+        width: 55%;
+        padding: 130px 0 80px 0;
 
         .content {
-            width: 57%;
+            width: 70%;
             display: flex;
             flex-direction: column;
             gap: 3.25rem;
@@ -58,8 +65,11 @@ const Container = styled.div`
 function PosGraduacao() {
   return (
     <Container>
-        <h1>Pós-Graduação</h1>
+        <div className='img'>
+            <p>CONTAINER IMAGEM AQUI</p>
+        </div>
         <div className='graduation'>
+            <h1>Pós-Graduação</h1>
             <div className='content'>
                 <div className='courseInfo'>
                     <div className='description'>
