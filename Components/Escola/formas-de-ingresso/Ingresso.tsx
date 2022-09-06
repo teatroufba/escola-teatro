@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 import Pagination from './Pagination';
-import { StyledIngressoContainer } from './styles';
+import { StyledEntryFormsContainer } from './styles';
   
   interface IFormaIngresso {
     link: string,
@@ -29,12 +29,12 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
     const pages = [...Array(Math.ceil(conteudos.length / contentPerPage)).keys()];
 
      return (
-        <StyledIngressoContainer>
+        <StyledEntryFormsContainer>
             <h1>Formas de Ingresso</h1>
-            <div className="ingresso-content">
+            <div className="entry-content">
                 <div className="left-column">
                     {formas.map((forma) => 
-                        <div className="ingresso">
+                        <div className="entry-form">
                             <Link passHref href={forma.link}>
                                 <a href={forma.link} rel='noopener noreferrer' target='_blank'><h3>{forma.titulo}</h3></a>
                             </Link>
@@ -44,8 +44,8 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
 
                 <div className="right-column">
                     {currentContent.map((forma) => 
-                        <div className="ingresso-info">
-                            <div className="ingresso-info-content">
+                        <div className="entry-form-info">
+                            <div className="entry-form-info-content">
                                 <h3>{ forma.titulo }</h3>
                                 <p>{ forma.conteudo }</p>
                             </div>
@@ -54,6 +54,6 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
                     )}
                 </div>
             </div>
-        </StyledIngressoContainer>
+        </StyledEntryFormsContainer>
     )
 }

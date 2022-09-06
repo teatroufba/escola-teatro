@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledSetoresContainer = styled.div`
+export const StyledDepartmentsContainer = styled.div`
 	font-family: "Merriweather", sans-serif;
 	display: flex;
 	flex-direction: column;

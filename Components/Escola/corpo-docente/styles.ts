@@ -116,7 +116,7 @@ export const StyledStaff = styled.div`
 `;
 
 export const StyledPagination = styled.div`
-	width: min(1250, 80%);
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	font-family: "Merriweather";
@@ -145,18 +145,23 @@ export const StyledPagination = styled.div`
 	.width {
 		display: flex;
 		justify-content: space-between;
-		width: 100%;
+		width: min(1250px, 100%);
 	}
 
-	@media screen and (min-width: 768px) and (max-width: 1150px) {
+	@media screen and (min-width: 768px) and (max-width: 1190px) {
 		.width {
 			width: 610px;
 		}
 	}
 
-	@media screen and (min-width: 1150px) and (max-width: 1560px) {
+	@media screen and (min-width: 1190px) and (max-width: 1560px) {
 		.width {
 			width: 930px;
+		}
+	}
+	@media screen and (min-width: 1560px) {
+		.width {
+			width: 1250px;
 		}
 	} ;
 `;

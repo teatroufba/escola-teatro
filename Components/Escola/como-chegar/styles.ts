@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledComoChegarContainer = styled.section`
+export const StyledLocationContainer = styled.section`
 	@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
 	display: flex;
 	flex-direction: column;
@@ -11,7 +11,7 @@ export const StyledComoChegarContainer = styled.section`
 	background-color: #f7f6f5;
 `;
 
-export const StyledComoChegarContent = styled.div`
+export const StyledLocationContent = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -67,7 +67,7 @@ export const StyledComoChegarContent = styled.div`
 	}
 `;
 
-export const LocalizationInfo = styled.div`
+export const LocationInfo = styled.div`
 	font-family: "Merriweather", sans-serif;
 	color: #282b62;
 	display: flex;

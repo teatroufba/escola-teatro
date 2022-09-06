@@ -1,11 +1,11 @@
 import SetorAccordion from './Accordion';
-import { StyledSetoresContainer } from './styles';
+import { StyledDepartmentsContainer } from './styles';
 
 interface IMembro {
-    email: string,
-    name: string,
-    phone: string,
-    role: string
+	email: string;
+	nome: string;
+	telefone: string;
+	funcao: string;
 }
   
 interface ISetor {
@@ -20,12 +20,12 @@ interface ISetores {
 
 export default function SetoresInstancias ({ setores }: ISetores) {
     return (
-        <StyledSetoresContainer>
+        <StyledDepartmentsContainer>
             <h1>Setores e Instâncias</h1>
             {setores.map(setor => 
                 <SetorAccordion membros={setor.membros} nome={setor.nome}/>
             )}
 
-        </StyledSetoresContainer>
+        </StyledDepartmentsContainer>
     )
 }

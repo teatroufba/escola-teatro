@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import Pagination from './Pagination';
-import { StyledApresentacaoContainer } from './styles';
+import { StyledPresentationContainer } from './styles';
 
 interface IApresentacaoItem {
     conteudo: string,
@@ -26,7 +26,7 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
     const pages = [...Array(Math.ceil(conteudos.length / contentPerPage)).keys()];
 
     return (
-    <StyledApresentacaoContainer>
+    <StyledPresentationContainer>
         {currentContent.map(item =>
             <div className="presentation-content">
                 <div className="left-column" id='content'>
@@ -46,9 +46,9 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
                         <h2>{item.titulo}</h2>
                         <p>{item.conteudo}</p>
                     </div>
-                    <Pagination currentPage={currentPage} pages={pages} paginationFunction={setCurrentPage}/>
+                    <Pagination isDarkVersion currentPage={currentPage} pages={pages} paginationFunction={setCurrentPage}/>
                 </div>
             </div>
         )}
-    </StyledApresentacaoContainer>);
+    </StyledPresentationContainer>);
 }

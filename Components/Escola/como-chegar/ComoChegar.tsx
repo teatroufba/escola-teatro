@@ -1,16 +1,16 @@
 import { CallIcon, EmailIcon, LocationIcon } from './icons';
-import { LocalizationInfo, StyledComoChegarContainer, StyledComoChegarContent } from './styles';
+import { LocationInfo, StyledLocationContainer, StyledLocationContent } from './styles';
 
 interface IInformacoes {
-    email: string,
-    endereco: string,
-    numero: string,
+	endereco: string;
+	email: string;
+	telefone: string;
 }
 
-export default function ComoChegar({email, endereco, numero}: IInformacoes) {
+export default function ComoChegar({email, endereco, telefone}: IInformacoes) {
     return (
-        <StyledComoChegarContainer>
-            <StyledComoChegarContent>
+        <StyledLocationContainer>
+            <StyledLocationContent>
                 <h1>Como chegar</h1>
                 <div className="localization-content">
                     <iframe
@@ -21,7 +21,7 @@ export default function ComoChegar({email, endereco, numero}: IInformacoes) {
                     width="605"
                     />
 
-                    <LocalizationInfo>
+                    <LocationInfo>
                         <div className="info-tile">
                             <div className="info-tile-title">
                                 <LocationIcon hover size={32}/>
@@ -41,11 +41,11 @@ export default function ComoChegar({email, endereco, numero}: IInformacoes) {
                                 <CallIcon hover size={32}/>
                                 <h2>Telefone</h2>
                             </div>
-                            <p>{numero}</p>
+                            <p>{telefone}</p>
                         </div>
-                    </LocalizationInfo>
+                    </LocationInfo>
                 </div>
-            </StyledComoChegarContent>
-        </StyledComoChegarContainer>
+            </StyledLocationContent>
+        </StyledLocationContainer>
     )
 }

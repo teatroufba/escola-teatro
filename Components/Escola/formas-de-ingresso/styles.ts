@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledIngressoContainer = styled.div`
+export const StyledEntryFormsContainer = styled.div`
 	font-family: "Merriweather", sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -22,7 +22,7 @@ export const StyledIngressoContainer = styled.div`
 		text-align: center;
 	}
 
-	.ingresso-content {
+	.entry-content {
 		width: min(1236px, 80%);
 		display: flex;
 		gap: 80px;
@@ -36,11 +36,11 @@ export const StyledIngressoContainer = styled.div`
 		width: 100%;
 	}
 
-	.ingresso {
+	.entry-form {
 		background-color: #9a1a4b;
 	}
 
-	.ingresso a {
+	.entry-form a {
 		cursor: pointer;
 		border: none;
 		background-color: transparent;
@@ -48,7 +48,7 @@ export const StyledIngressoContainer = styled.div`
 		text-decoration: none;
 	}
 
-	.ingresso h3 {
+	.entry-form h3 {
 		font-size: 24px;
 		font-weight: 400;
 		margin-bottom: 1px solid #fff;
@@ -62,26 +62,26 @@ export const StyledIngressoContainer = styled.div`
 		max-width: 65%;
 	}
 
-	.ingresso-info-content {
+	.entry-form-info-content {
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
 	}
 
-	.ingresso-info {
+	.entry-form-info {
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 	}
 
-	.ingresso-info h3 {
+	.entry-form-info h3 {
 		color: #2d2b78;
 		font-size: 32px;
 		font-weight: 700;
 	}
 
-	.ingresso-info p {
+	.entry-form-info p {
 		font-family: Arial;
 		font-size: 20px;
 		font-weight: 400;
@@ -98,18 +98,18 @@ export const StyledIngressoContainer = styled.div`
 			width: 80%;
 			font-size: 36px;
 		}
-		.ingresso-content {
+		.entry-content {
 			flex-direction: column-reverse;
 			justify-content: center;
 			align-items: center;
 		}
-		.ingresso-info {
+		.entry-form-info {
 			align-items: center;
 		}
-		.ingresso-info h3 {
+		.entry-form-info h3 {
 			width: 100%;
 		}
-		.ingresso-info p {
+		.entry-form-info p {
 			margin: 28px 0 48px 0;
 		}
 		.right-column {
@@ -121,7 +121,7 @@ export const StyledIngressoContainer = styled.div`
 		.right-column {
 			max-width: 90%;
 		}
-		.ingresso-content {
+		.entry-content {
 			gap: 40px;
 		}
 	}

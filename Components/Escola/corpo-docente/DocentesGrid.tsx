@@ -5,15 +5,14 @@ import Pagination from './Pagination';
 import { StyledStaff } from './styles';
 
 interface IDocente {
-    altImage: string,
-    email: string,
-    imageUrl: string,
-    interests: string,
-    link: string,
-    name: string,
-    uid: string
+	imagemAlt: string;
+	email: string;
+	imagemUrl: string;
+	interesses: string;
+	link: string;
+	nome: string;
+	uid: string;
 }
-
 interface DocentesProps {
     docentes: IDocente[],
     largura: number,
@@ -40,16 +39,16 @@ export default function DocentesGrid ({ docentes, largura }: DocentesProps) {
             setCardsPerPage(8);
         };
 
-        if(largura < 1560 && largura > 1150) {
+        if(largura < 1560 && largura > 1190) {
             if(element!= null) {
                 element.style.gap = '40px'
             }
             setCardsPerPage(6)
         };
         
-        if(largura < 1150) {  
+        if(largura < 1190) {  
             if(element!= null) {
-                element.style.gap = '30px'
+                element.style.gap = '40px'
             }
             setCardsPerPage(4)
         }
@@ -60,12 +59,12 @@ export default function DocentesGrid ({ docentes, largura }: DocentesProps) {
         <StyledStaff id='staff-container'>
             {currentCards.map(docente => (
             <StaffCard key={docente.uid}
-                altImage={docente.altImage} 
+                altImage={docente.imagemAlt} 
                 email={docente.email} 
-                imageUrl={docente.imageUrl}
-                interests={docente.interests} 
+                imageUrl={docente.imagemUrl}
+                interests={docente.interesses} 
                 link={docente.link}
-                name={docente.name}
+                name={docente.nome}
                 uid={docente.uid}
             /> )   
             )}
