@@ -9,6 +9,11 @@ const Container = styled.div`
     display: flex;
     gap: 5rem;
 
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
     .img {
         width: 45%;
         max-width: 868px;
@@ -16,18 +21,33 @@ const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            height: 100vw;
+        }
     }
 
     .graduation {
         text-align: left;
         width: 55%;
-        padding: 130px 0 80px 0;
+        padding: 24px 0;
+
+        @media (max-width: 1024px) {
+            width: 86.67%;
+            margin: auto;
+        }
 
         .content {
             width: 70%;
             display: flex;
             flex-direction: column;
             gap: 3.25rem;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+                justify-content: center;
+            }
 
             .courseInfo {
                 display: flex;
@@ -43,6 +63,8 @@ const Container = styled.div`
                         cursor: pointer;
                         border: none;
                         text-decoration: underline;
+                        font-weight: 700;
+                        font-size: 20px;
                     }
                 }
             }

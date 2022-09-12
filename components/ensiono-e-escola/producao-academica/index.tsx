@@ -11,6 +11,11 @@ const Container = styled.div`
   padding: 130px 0 200px 0;
   background-color: white;
 
+  @media (max-width: 1024px) {
+    padding: 40px 0;
+    width: 86.67%;
+  }
+
   .groups {
     display: flex;
     flex-direction: column;
@@ -25,6 +30,10 @@ const Container = styled.div`
     display: inline-block;
     margin-bottom: 3rem;
     font-size: 3rem;
+
+    @media (max-width: 1024px) {
+      text-align: left;
+    }
   }
 
   .groups .tcc {
@@ -42,7 +51,7 @@ const Container = styled.div`
     }
 
     @media screen and (max-width: 600px) {
-      width: calc(100vw - 50px);
+      width: 100%;
       margin: 0 auto;
     }
 
@@ -59,6 +68,10 @@ const Container = styled.div`
       display: flex;
       gap: 25px;
 
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+
       .link {
         width: calc((100% - 75px)/4);
         height: 290px;
@@ -67,6 +80,12 @@ const Container = styled.div`
         justify-content: center;
         align-items: center;
         cursor: pointer;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+          padding: 1rem;
+          height: auto;
+        }
         
         &:hover {
           background-color: #9A1A4B;
@@ -79,11 +98,20 @@ const Container = styled.div`
           width: 100%;
           height: 100%;
           text-decoration: none;
+
+          @media (max-width: 1024px) {
+            justify-content: left;
+          }
+
           p {
             color: #F7F6F5;
             font-family: 'Merriweather';
             font-style: normal;
             font-size: 2rem;
+
+            @media (max-width: 1024px) {
+              font-size: 1.25rem;
+            }
           }
         }
       }

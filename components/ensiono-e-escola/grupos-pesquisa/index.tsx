@@ -10,6 +10,11 @@ const Container = styled.div`
   padding: 130px 0 80px 0;
   background-color: #F7F6F5;
 
+  @media (max-width: 1024px) {
+    width: 86.67%;
+    padding: 40px 0;
+  }
+
   .groups {
     display: flex;
     flex-direction: column;
@@ -24,6 +29,10 @@ const Container = styled.div`
     display: inline-block;
     margin-bottom: 3rem;
     font-size: 3rem;
+
+    @media (max-width: 1024px) {
+      text-align: left;
+    }
   }
 `
 type AccordionProps = {

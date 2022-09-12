@@ -34,6 +34,7 @@ const Container = styled.div`
             font-size: 1.75rem;
             line-height: 120%;
             color: #2D2B78;
+            text-align: left;
         }
     }
 

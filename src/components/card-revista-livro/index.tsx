@@ -11,6 +11,10 @@ const Container = styled.div`
     border: 1px solid rgba(45, 43, 120, 0.3);
     font-family: 'Merriweather';
 
+    @media screen and (max-width: 600px) {
+        min-width: 315px;
+    }
+
     .img {
         height: 42.5%;
         background-color: #F7F6F5;

@@ -39,6 +39,10 @@ const Container = styled.div`
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+
         .desactive {
             opacity: 0.3;
 
@@ -48,25 +52,34 @@ const Container = styled.div`
         }
 
         .pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
         }
     }
 
     .carousel {
-        width: 100%;
-        display: flex;
-        gap: 25px;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+      width: 100%;
+      display: flex;
+      gap: 25px;
+      padding-right: 25px;
+      overflow-x: scroll;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
+      @media screen and (max-width: 600px) {
+        width: 100vw;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 `
 

@@ -12,6 +12,15 @@ const Container = styled.div`
     padding: 130px 0 80px 0;
     text-align: center;
 
+    @media (max-width: 1024px) {
+        width: 86.67%;
+        padding: 36px 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
     .graduation {
         text-align: left;
         display: flex;
@@ -19,11 +28,20 @@ const Container = styled.div`
         width: 65.17vw;
         gap: 1.5rem;
 
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            width: 100%;
+        }
+
         .menu {
             width: 40%;
             display: flex;
             flex-direction: column;
             gap: 2rem;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
 
             .courses {
                 display: flex;
@@ -52,6 +70,10 @@ const Container = styled.div`
             flex-direction: column;
             gap: 3.25rem;
 
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
             .courseInfo {
                 display: flex;
                 flex-direction: column;
@@ -78,6 +100,10 @@ const Container = styled.div`
                 display: flex;
                 gap: 1.5rem;
 
+                @media (max-width: 1024px) {
+                    flex-direction: column;
+                }
+
                 div {
                     width: calc(25% - 1.125rem);
                     padding: 1rem;
@@ -86,6 +112,11 @@ const Container = styled.div`
                     flex-direction: column;
                     justify-content: space-between;
                     align-items: flex-start;
+                    gap: 0.75rem;
+
+                    @media (max-width: 1024px) {
+                        width: 100%;
+                    }
 
                     button {
                         color: #2D2B78;
@@ -95,6 +126,10 @@ const Container = styled.div`
                         cursor: pointer;
                         border: none;
                         text-decoration: underline;
+                    }
+
+                    p {
+                        font-weight: 700;
                     }
                 }
             }
