@@ -1,0 +1,28 @@
+{
+  "id": "forma-de-ingresso",
+  "label": "Forma de Ingresso",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "conteudo_forma_ingresso": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

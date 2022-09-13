@@ -1,6 +1,26 @@
 {
   "_cts": {
     "pagina-de-noticias": {},
-    "post-de-noticias": {}
+    "post-de-noticias": {},
+    "card-staff": {},
+    "card-docente": {},
+    "como-chegar": {},
+    "corpo-tecnico": {},
+    "setores": {},
+    "setor": {},
+    "forma-de-ingresso": {}
+  },
+  "slices": {
+    "Membro": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "FormaIngresso": {},
+    "ConteudoFormaIngresso": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }
