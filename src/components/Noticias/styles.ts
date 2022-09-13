@@ -1,12 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 interface Props {
-  filter: string
-  sort: string
+  filter: string;
+  sort: string;
 }
 
 export const StyledPosts = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -14,7 +14,7 @@ export const StyledPosts = styled.div`
   max-width: 370px;
 
   h3 {
-    font-family: 'Merriweather';
+    font-family: "Merriweather";
     font-weight: 400;
     font-size: 24px;
   }
@@ -28,24 +28,24 @@ export const StyledPosts = styled.div`
 
   a {
     text-decoration: none;
-    font-family: 'Merriweather';
+    font-family: "Merriweather";
     color: black;
     font-weight: 400;
     font-size: 18px;
     margin-top: 5%;
   }
-`
+`;
 
 export const StyledNoticias = styled.div`
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200&display=swap");
 
   .container-title {
-    font-family: 'Merriweather'
+    font-family: "Merriweather";
     font-weight: 400;
     color: white;
     padding: 5%;
-    background-color: #24233A;
+    background-color: #24233a;
 
     h1 {
       font-size: 48px;
@@ -56,9 +56,8 @@ export const StyledNoticias = styled.div`
       font-family: arial;
       font-weight: 400;
       font-size: 24px;
-
     }
-  } 
+  }
 
   .posts-flex {
     display: flex;
@@ -91,7 +90,7 @@ export const StyledNoticias = styled.div`
       padding: 5px;
       cursor: pointer;
       color: #958fa0;
-      font-family: 'Inter';
+      font-family: "Inter";
       width: 50px;
       height: 50px;
       align-items: center;
@@ -104,28 +103,28 @@ export const StyledNoticias = styled.div`
 
       span {
         margin: 9%;
-        font-family: 'Inter';
+        font-family: "Inter";
         font-size: 16.8px;
         font-weight: 800;
       }
     }
 
     button:hover {
-        background-color: #2D2B78;
-        font-weight: 800;
-        border: 1px solid #958fa0;
-        border-radius: 5px;
-        padding: 5px;
-        cursor: pointer;
-        color: white;
-        font-family: 'Inter';
-        width: 50px;
-        height: 50px;
-        align-items: center;
-        text-transform: uppercase;
+      background-color: #2d2b78;
+      font-weight: 800;
+      border: 1px solid #958fa0;
+      border-radius: 5px;
+      padding: 5px;
+      cursor: pointer;
+      color: white;
+      font-family: "Inter";
+      width: 50px;
+      height: 50px;
+      align-items: center;
+      text-transform: uppercase;
     }
   }
-`
+`;
 
 export const StyledFilter = styled.div`
   .containter-filter-button {
@@ -246,4 +245,4 @@ export const StyledFilter = styled.div`
       margin-left: 10px;
     }
   }
-`
+`;
