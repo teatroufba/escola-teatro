@@ -1,8 +1,8 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import styled from 'styled-components'
+import Image from "next/image";
+import Link from "next/link";
+import styled from "styled-components";
 
-import Button from '@/components/button'
+import Button from "@/components/basics/button";
 
 const Container = styled.div`
   height: calc(100vh - 370px);
@@ -14,18 +14,18 @@ const Container = styled.div`
   gap: 24px;
 
   h1 {
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     font-weight: 400;
     font-size: 3rem;
     color: black;
   }
 
   p {
-    font-family: 'Arial';
+    font-family: "Arial";
     font-weight: 400;
     font-size: 1rem;
   }
-`
+`;
 
 function ErrorPage404() {
   return (
@@ -46,7 +46,7 @@ function ErrorPage404() {
         </a>
       </Link>
     </Container>
-  )
+  );
 }
 
-export default ErrorPage404
+export default ErrorPage404;

@@ -1,27 +1,26 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { createClient } from 'prismic'
-
-import Postagem from '../../../Components/Post/Post'
+import Postagem from "@/components/Noticias/Post/Post";
+import { createClient } from "prismic";
 
 interface IPostagem {
-  author: string
-  first_publication_date: string
-  id: string
-  imageAlt: string
-  imageHeight: string
-  imageUrl: string
-  imageWidth: string
-  last_publication_date: Date
-  subtitle: string
-  text: string
-  title: string
-  uid: string
+  author: string;
+  first_publication_date: string;
+  id: string;
+  imageAlt: string;
+  imageHeight: string;
+  imageUrl: string;
+  imageWidth: string;
+  last_publication_date: Date;
+  subtitle: string;
+  text: string;
+  title: string;
+  uid: string;
 }
 export default function Post({ postagem }: { postagem: IPostagem }) {
-  const d = new Date(postagem.first_publication_date)
-  const publication = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`
-  const lastPublication = new Date(postagem.last_publication_date)
+  const d = new Date(postagem.first_publication_date);
+  const publication = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
+  const lastPublication = new Date(postagem.last_publication_date);
 
   return (
     <Postagem
@@ -36,12 +35,12 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
       text={postagem.text}
       title={postagem.title}
     />
-  )
+  );
 }
 
 export async function getStaticProps({ params }: { params: { uid: string } }) {
-  const client = createClient()
-  const posts = await client.getByUID('post-de-noticias', params.uid)
+  const client = createClient();
+  const posts = await client.getByUID("post-de-noticias", params.uid);
 
   const postagem = {
     author: posts.data.author,
@@ -56,20 +55,20 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
     text: posts.data.text,
     title: posts.data.title,
     uid: posts.uid,
-  }
+  };
   return {
     props: { postagem },
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const client = createClient()
+  const client = createClient();
 
-  const posts = await client.getAllByType('post-de-noticias')
-  const paths = posts.map(post => ({ params: { uid: post.uid } }))
+  const posts = await client.getAllByType("post-de-noticias");
+  const paths = posts.map((post) => ({ params: { uid: post.uid } }));
 
   return {
     fallback: false,
     paths,
-  }
+  };
 }

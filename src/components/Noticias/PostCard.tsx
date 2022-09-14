@@ -1,13 +1,13 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-import { StyledPosts } from './styles'
+import { StyledPosts } from "./styles";
 
 interface IPostCard {
-  imageAlt: string
-  imageUrl: string
-  subtitle: string
-  title: string
-  uid: string
+  imageAlt: string;
+  imageUrl: string;
+  subtitle: string;
+  title: string;
+  uid: string;
 }
 
 export default function PostCard({
@@ -25,9 +25,9 @@ export default function PostCard({
       <h3>{title}</h3>
       <p>{subtitle}</p>
       <a href={`/noticias/${uid}`}>
-        Saiba mais{'  '}
+        Saiba mais{"  "}
         <Image alt={imageAlt} height={10} src="/arrow.png" width={10} />
       </a>
     </StyledPosts>
-  )
+  );
 }
