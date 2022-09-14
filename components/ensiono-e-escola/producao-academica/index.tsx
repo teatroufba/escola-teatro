@@ -13,7 +13,7 @@ const Container = styled.div`
 
   @media (max-width: 1024px) {
     padding: 40px 0;
-    width: 86.67%;
+    width: calc(100vw - 40px);
   }
 
   .groups {
@@ -43,16 +43,8 @@ const Container = styled.div`
     gap: 2.5rem;
 
     @media screen and (max-width: 1400px) {
-      width: 815px;
-    }
-
-    @media screen and (max-width: 1000px) {
-      width: 395px;
-    }
-
-    @media screen and (max-width: 600px) {
+      max-width: 815px;
       width: 100%;
-      margin: 0 auto;
     }
 
     h2 {
@@ -68,7 +60,7 @@ const Container = styled.div`
       display: flex;
       gap: 25px;
 
-      @media (max-width: 1024px) {
+      @media (max-width: 1400px) {
         flex-direction: column;
       }
 
@@ -81,7 +73,7 @@ const Container = styled.div`
         align-items: center;
         cursor: pointer;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1400px) {
           width: 100%;
           padding: 1rem;
           height: auto;
@@ -99,7 +91,7 @@ const Container = styled.div`
           height: 100%;
           text-decoration: none;
 
-          @media (max-width: 1024px) {
+          @media (max-width: 1400px) {
             justify-content: left;
           }
 

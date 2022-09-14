@@ -12,35 +12,33 @@ const Container = styled.div`
     flex-direction: column;
     gap: 2.5rem;
     justify-content: center;
+    overflow-x: hidden;
 
     @media screen and (max-width: 1400px) {
       width: 815px;
     }
 
-    @media screen and (max-width: 1000px) {
-      width: 395px;
-    }
-
-    @media screen and (max-width: 600px) {
-      width: calc(100vw - 50px);
-      margin: 0 auto;
+    @media screen and (max-width: 868px) {
+      width: calc(100vw - 20px);
+      padding: 0 20px;
     }
 
     h2 {
-        font-family: 'Merriweather';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 2rem;
-        color: #2D2B78;
-        text-align: left;
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #2D2B78;
+      text-align: left;
+      width: 100%;
     }
 
     .controls {
         display: flex;
         justify-content: space-between;
 
-        @media screen and (max-width: 600px) {
-          width: 100%;
+        @media screen and (max-width: 868px) {
+          display: none;
         }
 
         .desactive {
@@ -57,7 +55,7 @@ const Container = styled.div`
           align-items: center;
           gap: 1rem;
 
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 1400px) {
             display: none;
           }
         }
@@ -67,14 +65,14 @@ const Container = styled.div`
       width: 100%;
       display: flex;
       gap: 25px;
-      padding-right: 25px;
       overflow-x: scroll;
       scroll-behavior: smooth;
       -ms-overflow-style: none;
       scrollbar-width: none;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 868px) {
         width: 100vw;
+        padding-right: 50px;
       }
 
       &::-webkit-scrollbar {
@@ -82,29 +80,100 @@ const Container = styled.div`
       }
     }
 `
-
+type CardProps = {
+  desc: string,
+  img: string,
+  link: string,
+  title: string,
+}
 
 function CarouselRevistaLivro() {
   const carousel = useRef<HTMLInputElement>(null)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
   const [scrolling, setScrolling] = useState(false)
-  const [carouselPagination, setCarouselPagination] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ])
+  const [carouselPagination, setCarouselPagination] = useState(0)
 
+  const cards: CardProps[] = [
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  },
+  {
+    desc: 'asdsad',
+    img: 'sadasdsa',
+    link: 'sadjbfasdbvas',
+    title: 'asbvdajsbdasd'
+  }
+  ]
 
   useEffect(() => {
     if (carousel.current != null) {
@@ -116,13 +185,18 @@ function CarouselRevistaLivro() {
 
   const scrollLeft = () => {
     if (carousel.current != null && carousel.current.scrollLeft > 0) {
-    setScrolling(true)
-      setCarouselScrollLeft(Number(carousel.current.scrollLeft) - 420)
-      carousel.current.scrollLeft -= 420
-    }
-    setTimeout(() => {
+      let numberOfElements = Math.floor(carousel.current.clientWidth/395);
+      setScrolling(true)
+      setCarouselScrollLeft(Number(carousel.current.scrollLeft) - (numberOfElements*420))
+      carousel.current.scrollLeft -= (numberOfElements*420)
+      if (carouselPagination > 0) {
+        setCarouselPagination( carouselPagination - 1 )
+      }
+
+      setTimeout(() => {
         setScrolling(false)
-    }, 500);
+      }, numberOfElements*240);
+    }
   }
 
   const scrollRight = () => {
@@ -130,33 +204,37 @@ function CarouselRevistaLivro() {
       carousel.current != null &&
       carousel.current.scrollLeft < carousel.current.scrollWidth
     ) {
+      let numberOfElements = Math.floor(carousel.current.clientWidth/395);
       setScrolling(true)
-      setCarouselScrollLeft(Number(carousel.current.scrollLeft) + 420)
-      carousel.current.scrollLeft += 420
-    }
-    setTimeout(() => {
+      setCarouselScrollLeft(Number(carousel.current.scrollLeft) + (numberOfElements*420))
+      carousel.current.scrollLeft += (numberOfElements*420)
+      if (carouselPagination < Math.floor(cards.length/3)) {
+        setCarouselPagination( carouselPagination + 1 )
+      }
+
+      setTimeout(() => {
         setScrolling(false)
-    }, 500);
+      }, numberOfElements*240);
+    }
   }
 
   return (
     <Container>
         <h2>titulo</h2>
         <div ref={carousel} className='carousel'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {cards.map((value: CardProps, index: number, array: CardProps[]) => (
+              <Card desc={value.desc} img={value.img} link={value.link} title={value.title}/>
+            ))}
         </div>
         <div className='controls'>
             <Button className={carouselScrollLeft <= 0 ? 'desactive' : ''} disable={scrolling} onClick={scrollLeft}>Anterior</Button>
             <div className='pagination'>
-                {carouselPagination.map((page: boolean, index: number) => (
-                    <div key={Number(index)} className={index > 6 ? 'desktop' : ''}>
-                        <LineIcon hover={page} size={20} />
-                    </div>
+                {cards.map((value: CardProps, index: number, array: CardProps[]) => (
+                  index%3 == 0
+                    ? <div key={Number(index)}>
+                        <LineIcon hover={Math.floor(index/3) == carouselPagination} size={20} />
+                      </div>
+                    : null
                 ))}
             </div>
             <Button disable={scrolling} className={

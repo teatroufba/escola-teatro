@@ -10,16 +10,27 @@ const Container = styled.div`
   padding: 130px 0 80px 0;
   background-color: #F7F6F5;
 
-  @media (max-width: 1024px) {
-    width: 86.67%;
-    padding: 40px 0;
+  @media screen and (max-width: 1024px) {
+    padding: 40px 20px 80px 20px;
   }
 
   .groups {
+    width: 1235px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
+
+    @media screen and (max-width: 1400px) {
+      width: 815px;
+    }
+
+    @media screen and (max-width: 880px) {
+      width: calc(100vw - 40px);
+    }
+
+
   }
 
   h1 {
@@ -30,7 +41,7 @@ const Container = styled.div`
     margin-bottom: 3rem;
     font-size: 3rem;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       text-align: left;
     }
   }

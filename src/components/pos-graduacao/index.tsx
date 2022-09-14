@@ -16,14 +16,17 @@ const Container = styled.div`
 
     .img {
         width: 45%;
-        max-width: 868px;
         background-color: #D6D6D6;
         display: flex;
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 1500px) {
+            width: 50%;
+        }
+
         @media (max-width: 1024px) {
-            width: 100%;
+            width: 100vw;
             height: 100vw;
         }
     }
@@ -32,6 +35,10 @@ const Container = styled.div`
         text-align: left;
         width: 55%;
         padding: 24px 0;
+
+        @media (max-width: 1500px) {
+            width: 50%;
+        }
 
         @media (max-width: 1024px) {
             width: 86.67%;

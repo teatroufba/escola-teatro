@@ -12,9 +12,9 @@ const Container = styled.div`
     padding: 130px 0 80px 0;
     text-align: center;
 
-    @media (max-width: 1024px) {
-        width: 86.67%;
-        padding: 36px 0;
+    @media (max-width: 1300px) {
+        width: 100vw;
+        padding: 36px 25px;
     }
 
     h2 {
@@ -25,10 +25,11 @@ const Container = styled.div`
         text-align: left;
         display: flex;
         justify-content: center;
-        width: 65.17vw;
+        width: 100vw;
+        max-width: 1235px;
         gap: 1.5rem;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1300px) {
             flex-direction: column;
             width: 100%;
         }
@@ -39,7 +40,7 @@ const Container = styled.div`
             flex-direction: column;
             gap: 2rem;
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1300px) {
                 width: 100%;
             }
 
@@ -70,7 +71,7 @@ const Container = styled.div`
             flex-direction: column;
             gap: 3.25rem;
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1300px) {
                 width: 100%;
             }
 
@@ -100,12 +101,18 @@ const Container = styled.div`
                 display: flex;
                 gap: 1.5rem;
 
-                @media (max-width: 1024px) {
+                @media (max-width: 1300px) {
+                    margin: auto;
+                }
+
+                @media (max-width: 768px) {
                     flex-direction: column;
+                    margin: 0;
                 }
 
                 div {
                     width: calc(25% - 1.125rem);
+                    max-width: 160px;
                     padding: 1rem;
                     border: 1px solid rgba(45, 43, 120, 0.3);
                     display: flex;
@@ -114,8 +121,9 @@ const Container = styled.div`
                     align-items: flex-start;
                     gap: 0.75rem;
 
-                    @media (max-width: 1024px) {
+                    @media (max-width: 768px) {
                         width: 100%;
+                        max-width: 768px;
                     }
 
                     button {

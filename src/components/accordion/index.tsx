@@ -8,16 +8,11 @@ import styled from 'styled-components'
 import { ArrowIcon } from './icons'
 
 const Container = styled.div`
-    width: 64%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background: #F7F6F5;
     border: 2px solid #E6E6EF;
-
-    @media (max-width: 768px) {
-        width: 90%;
-    }
-
 
     .header {
         padding: 1.5rem;
