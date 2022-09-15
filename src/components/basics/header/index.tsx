@@ -21,7 +21,18 @@ function Header() {
           <p>Escola de Teatro da UFBA</p>
         </div>
 
-        <div>
+        <div className='social-navbar'>
+
+          <div  
+              id="ham-btn"
+          >
+            <div className="ham-btn-bar" />
+            <div className="ham-btn-bar" />
+            <div className="ham-btn-bar" />
+          </div>
+
+
+
           <ul className="social">
             <a href="http://www.facebook.com.br">
               <input
