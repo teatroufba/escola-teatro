@@ -1,6 +1,84 @@
 {
   "slices": {
     "components": {
+      "membro": {
+        "library": "slices",
+        "id": "membro",
+        "name": "Membro",
+        "description": "Membro",
+        "model": {
+          "id": "membro",
+          "type": "SharedSlice",
+          "name": "Membro",
+          "description": "Membro",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Membro",
+              "primary": {
+                "name": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Name",
+                    "placeholder": ""
+                  }
+                },
+                "role": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Role",
+                    "placeholder": ""
+                  }
+                },
+                "email": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Email",
+                    "placeholder": ""
+                  }
+                },
+                "phone": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Phone",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "membro",
+            "items": [],
+            "primary": {
+              "name": "harness next-generation schemas",
+              "role": "reintermediate compelling ROI",
+              "email": "utilize bleeding-edge users",
+              "phone": "recontextualize vertical ROI"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "D:\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\Membro\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
       "post": {
         "library": "slices",
         "id": "post",

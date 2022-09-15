@@ -1,36 +1,38 @@
 /* eslint-disable react/no-unstable-nested-components */
-import { PrismicPreview } from '@prismicio/next'
-import { PrismicProvider } from '@prismicio/react'
-import type { AppProps } from 'next/app'
-import Link from 'next/link'
-import Script from 'next/script'
+import { PrismicPreview } from "@prismicio/next";
+import { PrismicProvider } from "@prismicio/react";
+import type { AppProps } from "next/app";
+import Link from "next/link";
+import Script from "next/script";
 
-import { GlobalStyles } from '@/styles/global'
+import { GlobalStyles } from "@/styles/global";
 
-import { linkResolver, repositoryName } from '../../prismic'
+import { linkResolver, repositoryName } from "../../prismic";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <PrismicProvider
-      linkResolver={linkResolver}
-      internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <Link href={href} />
-          <a {...props}> {children} </a>
-        </Link>
-      )}
-    >
-      <Script
-        defer
-        src="//barra.brasil.gov.br/barra.js"
-        type="text/javascript"
-      />
-      <GlobalStyles />
-      <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
-      </PrismicPreview>
-    </PrismicProvider>
-  )
+    <>
+      <PrismicProvider
+        linkResolver={linkResolver}
+        internalLinkComponent={({ href, children, ...props }) => (
+          <Link href={href}>
+            <Link href={href} />
+            <a {...props}> {children} </a>
+          </Link>
+        )}
+      >
+        <Script
+          defer
+          src="//barra.brasil.gov.br/barra.js"
+          type="text/javascript"
+        />
+        <PrismicPreview repositoryName={repositoryName}>
+          <GlobalStyles />
+          <Component {...pageProps} />
+        </PrismicPreview>
+      </PrismicProvider>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;
