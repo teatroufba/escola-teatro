@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import PostCard from './PostCard'
 import { StyledFilter, StyledNoticias } from './styles'
@@ -20,11 +20,26 @@ interface IPosts {
 }
 
 export default function Noticias({ post }: INoticias) {
+  const [Width, setWidth] = useState<number>(0)
   const [currentPage, setCurrentPage] = useState(1)
   const [sort, setSort] = useState('desc')
+  const [TopicoActive, setTopicoActive] = useState<boolean>(false)
   const [filter, setFilter] = useState('todos')
   const [idate, setIDate] = useState('')
   const [fdate, setFDate] = useState('')
+
+  useEffect(() => {
+    function resize() {
+      setWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', resize)
+    resize()
+
+    return () => {
+      window.removeEventListener('resize', resize)
+    }
+  }, [])
 
   function setPaginationBtn(posts: number, maxPage: number) {
     return Math.ceil(posts / maxPage)
@@ -63,70 +78,188 @@ export default function Noticias({ post }: INoticias) {
       </div>
 
       <StyledFilter filter={filter} sort={sort}>
-        <div className="containter-filter-button">
-          <button id="todos" onClick={() => setFilter('todos')}>
-            Todos
-          </button>
-          <button id="acadêmico" onClick={() => setFilter('acadêmico')}>
-            Acadêmico
-          </button>
-          <button id="avisos" onClick={() => setFilter('avisos')}>
-            Avisos
-          </button>
-          <button id="concursos" onClick={() => setFilter('concursos')}>
-            Concursos
-          </button>
-          <button id="eventos" onClick={() => setFilter('eventos')}>
-            Eventos
-          </button>
-          <button id="notas" onClick={() => setFilter('notas')}>
-            Notas
-          </button>
-          <button id="parcerias" onClick={() => setFilter('parcerias')}>
-            Parcerias
-          </button>
-        </div>
+        {Width <= 1080 ? (
+          <>
+            <div className="categoria-container-inputs">
+              <span>
+                <p>Filtrar por data</p>
+              </span>
+            </div>
+            <div id="topico-select-container">
+              <button
+                type="button"
+                className={`${TopicoActive ? 'active' : ''} ${
+                  filter !== 'todos' ? 'selected' : ''
+                }`}
+                onClick={() => {
+                  setTopicoActive(!TopicoActive)
+                }}>
+                {filter[0].toUpperCase() + filter.substring(1)}
+                <div className="seta-select" />
+              </button>
+              <div className={`select-window ${TopicoActive ? 'active' : ''}`}>
+                <label htmlFor="topico0">
+                  <input
+                    id="topico0"
+                    name="topico"
+                    type="radio"
+                    value="todos"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                    }}
+                  />
+                  Todos
+                </label>
+                <label htmlFor="topico1">
+                  <input
+                    id="topico1"
+                    name="topico"
+                    type="radio"
+                    value="acadêmico"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                    }}
+                  />
+                  Acadêmico
+                </label>
+                <label htmlFor="topico2">
+                  <input
+                    id="topico2"
+                    name="topico"
+                    type="radio"
+                    value="avisos"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                      }}
+                  />
+                  Avisos
+                </label>
+                <label htmlFor="topico3">
+                  <input
+                    id="topico3"
+                    name="topico"
+                    type="radio"
+                    value="concursos"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                    }}
+                  />
+                  Concursos
+                </label>
+                <label htmlFor="topico4">
+                  <input
+                    id="topico4"
+                    name="topico"
+                    type="radio"
+                    value="eventos"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                    }}
+                  />
+                  Eventos
+                </label>
+                <label htmlFor="topico5">
+                  <input
+                    id="topico5"
+                    name="topico"
+                    type="radio"
+                    value="notas"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                    }}
+                  />
+                  Notas
+                </label>
+                <label htmlFor="topico6">
+                  <input
+                    id="topico6"
+                    name="topico"
+                    type="radio"
+                    value="parcerias"
+                    onClick={event => {
+                      setFilter(event.currentTarget.value)
+                      setTopicoActive(false)
+                    }}
+                  />
+                  Parcerias
+                </label>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="containter-filter-button">
+              <button id="todos" onClick={() => setFilter('todos')}>
+                Todos
+              </button>
+              <button id="acadêmico" onClick={() => setFilter('acadêmico')}>
+                Acadêmico
+              </button>
+              <button id="avisos" onClick={() => setFilter('avisos')}>
+                Avisos
+              </button>
+              <button id="concursos" onClick={() => setFilter('concursos')}>
+                Concursos
+              </button>
+              <button id="eventos" onClick={() => setFilter('eventos')}>
+                Eventos
+              </button>
+              <button id="notas" onClick={() => setFilter('notas')}>
+                Notas
+              </button>
+              <button id="parcerias" onClick={() => setFilter('parcerias')}>
+                Parcerias
+              </button>
+            </div>
+            
+            <div className="sort-container">
+              <div className="sort-container-buttons">
+                <button id="desc" onClick={() => setSort('desc')}>
+                  Mais antigas
+                </button>
+                <button id="asc" onClick={() => setSort('asc')}>
+                  Mais recentes
+                </button>
+                <button id="a-z" onClick={() => setSort('a-z')}>
+                  De A -Z
+                </button>
+              </div>
 
-        <div className="sort-container">
-          <div className="sort-container-buttons">
-            <button id="desc" onClick={() => setSort('desc')}>
-              Mais antigas
-            </button>
-            <button id="asc" onClick={() => setSort('asc')}>
-              Mais recentes
-            </button>
-            <button id="a-z" onClick={() => setSort('a-z')}>
-              De A -Z
-            </button>
-          </div>
-
-          <div className="sort-container-inputs">
-            <span>
-              <p>Filtrar por data</p>
-              <input
-                id="idate"
-                placeholder="Data de inicio"
-                type="date"
-                value={idate}
-                onChange={e => setIDate(e.target.value)}
-              />
-            </span>
-            <input
-              id="fdate"
-              placeholder="Data final"
-              type="date"
-              value={fdate}
-              onChange={e => setFDate(e.target.value)}
-            />
-            <button
-              id="button-date"
-              type="button"
-              onClick={() => setSort('date')}
-            >
-              Filtrar
-            </button>
-          </div>
-        </div>
+              <div className="sort-container-inputs">
+                <span>
+                  <p>Filtrar por data</p>
+                  <input
+                    id="idate"
+                    placeholder="Data de inicio"
+                    type="date"
+                    value={idate}
+                    onChange={e => setIDate(e.target.value)}
+                  />
+                </span>
+                <input
+                  id="fdate"
+                  placeholder="Data final"
+                  type="date"
+                  value={fdate}
+                  onChange={e => setFDate(e.target.value)}
+                />
+                <button
+                  id="button-date"
+                  type="button"
+                  onClick={() => setSort('date')}
+                >
+                  Filtrar
+                </button>
+              </div>
+            </div>
+          </>
+        )}
       </StyledFilter>
 
       <div className="posts-flex">
