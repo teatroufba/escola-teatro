@@ -191,6 +191,50 @@ export default function Noticias({ post }: INoticias) {
                 </label>
               </div>
             </div>
+
+            <div className="sort-container">
+              <div className="sort-container-inputs">
+                <span>
+                  <p>Filtrar por data</p>
+                  <input
+                    id="idate"
+                    placeholder="Data de inicio"
+                    type="date"
+                    value={idate}
+                    onChange={e => setIDate(e.target.value)}
+                  />
+                </span>
+                <input
+                  id="fdate"
+                  placeholder="Data final"
+                  type="date"
+                  value={fdate}
+                  onChange={e => setFDate(e.target.value)}
+                />
+                <button
+                  id="button-date"
+                  type="button"
+                  onClick={() => setSort('date')}
+                >
+                  Filtrar
+                </button>
+              </div>
+
+              <div className="sort-container-buttons">
+                <button id="desc" onClick={() => setSort('desc')}>
+                  Mais antigas
+                </button>
+                <button id="asc" onClick={() => setSort('asc')}>
+                  Mais recentes
+                </button>
+                <button id="a-z" onClick={() => setSort('a-z')}>
+                  De A -Z
+                </button>
+                <button id="z-a" onClick={() => setSort('a-z')}>
+                  De Z -A
+                </button>
+              </div>
+            </div>
           </>
         ) : (
           <>
@@ -217,7 +261,7 @@ export default function Noticias({ post }: INoticias) {
                 Parcerias
               </button>
             </div>
-            
+
             <div className="sort-container">
               <div className="sort-container-buttons">
                 <button id="desc" onClick={() => setSort('desc')}>
