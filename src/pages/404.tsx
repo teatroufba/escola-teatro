@@ -10,7 +10,9 @@ export default function Error() {
             <Image alt="brasao" src={image} /> 
             <h1>Error 404</h1>
             <p>A página solicitada não existe ou não se encontra mais em nossa base.</p>
-            <button>Voltar para o início</button>
+            <button>
+                <a href="/">Voltar para o início</a>
+            </button>
         </div>
     </ErrorContainer>
     
@@ -22,6 +24,7 @@ const ErrorContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 26px 0;
 
     width: 100%;
     height: 50vh;
@@ -36,7 +39,6 @@ const ErrorContainer = styled.div`
         
         flex-direction: column;
 
-        border: 1px solid red;
         
         gap: 24px;
 
@@ -59,6 +61,10 @@ const ErrorContainer = styled.div`
             padding: 10px 20px ;
             border-radius: 5px;
             line-height: 20px;
+            a {
+                color: #fff;
+                text-decoration:none;
+            }
             &:hover {
                 cursor: pointer;
                 filter: brightness(0.85);
