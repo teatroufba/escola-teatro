@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AgendaCard from "./AgendaCard";
 import { StyledAgenda } from "./styles";
 
 export default function AgendaMain() {
@@ -42,7 +43,7 @@ export default function AgendaMain() {
                 </button>
             </div>
             <div id="container-cards-agenda">
-                
+                <AgendaCard />
             </div>
         </StyledAgenda>
     )
