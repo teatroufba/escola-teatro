@@ -379,6 +379,65 @@ export const StyledFilter = styled.div`
   }
 
   @media (min-width: 1081px) {
-    
+    .containter-filter-button {
+      padding: 0;
+      margin-top: 100px;
+      margin-bottom: 98px;
+      gap: 48px;
+    }
+
+    .sort-container {
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      gap: 68px;
+      
+      .sort-container-buttons {
+        margin: 0;
+        width: unset;
+        flex-wrap: nowrap;
+
+        .btn-cima {
+          width: unset;
+        }
+
+        button {
+          height: 40px;
+          white-space: nowrap;
+          padding: 10px 20px;
+        }
+
+        button: hover {
+          height: 40px;
+          white-space: nowrap;
+          padding: 10px 20px;
+        }
+      }
+
+      .sort-container-inputs {
+        margin: 0;
+        flex-wrap: nowrap;
+        column-gap: 25px;
+        align-items: flex-end;
+        
+        span {
+          width: unset;
+        }
+
+        p {
+          margin-bottom: 8px;
+        }
+
+        input {
+          height: 40px;
+          width: 200px;
+        }
+
+        button {
+          padding: 9px 20px;
+          width: unset;
+          line-height: 20px;
+        }
+      }
+    }
   }
 `;

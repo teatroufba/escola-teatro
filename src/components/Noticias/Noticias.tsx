@@ -221,10 +221,10 @@ export default function Noticias({ post }: INoticias) {
               </div>
 
               <div className="sort-container-buttons">
-                <button id="desc" className='btn-cima' onClick={() => setSort('desc')}>
+                <button id="asc" className='btn-cima' onClick={() => setSort('asc')}>
                   Mais antigas
                 </button>
-                <button id="asc" className='btn-cima' onClick={() => setSort('asc')}>
+                <button id="desc" className='btn-cima' onClick={() => setSort('desc')}>
                   Mais recentes
                 </button>
                 <button id="a-z" onClick={() => setSort('a-z')}>
@@ -265,13 +265,16 @@ export default function Noticias({ post }: INoticias) {
             <div className="sort-container">
               <div className="sort-container-buttons">
                 <button id="desc" onClick={() => setSort('desc')}>
-                  Mais antigas
+                  Mais recentes
                 </button>
                 <button id="asc" onClick={() => setSort('asc')}>
-                  Mais recentes
+                  Mais antigas
                 </button>
                 <button id="a-z" onClick={() => setSort('a-z')}>
                   De A -Z
+                </button>
+                <button id="z-a" onClick={() => setSort('z-a')}>
+                  De Z -A
                 </button>
               </div>
 
