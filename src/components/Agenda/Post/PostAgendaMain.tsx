@@ -23,7 +23,7 @@ export default function PostAgendaMain() {
                         <p>18:00</p>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium hendrerit curabitur eget eu feugiat enim. Vitae id vitae consequat, orci venenatis vestibulum, egestas dolor sit. Vulputate diam sit augue adipiscing purus. Cras pretium senectus in eu. Massa pharetra luctus purus sed eget tellus nibh. At lectus malesuada cursus sed in dolor. Viverra aliquam amet, auctor quis aliquet. Donec auctor tristique lectus nisl magna quis suscipit lectus in. Massa nullam suspendisse et porttitor scelerisque nibh scelerisque viverra libero. Consectetur diam sit volutpat nulla sodales.</p>
+                <p id="conteudo-post-agenda">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pretium hendrerit curabitur eget eu feugiat enim. Vitae id vitae consequat, orci venenatis vestibulum, egestas dolor sit. Vulputate diam sit augue adipiscing purus. Cras pretium senectus in eu. Massa pharetra luctus purus sed eget tellus nibh. At lectus malesuada cursus sed in dolor. Viverra aliquam amet, auctor quis aliquet. Donec auctor tristique lectus nisl magna quis suscipit lectus in. Massa nullam suspendisse et porttitor scelerisque nibh scelerisque viverra libero. Consectetur diam sit volutpat nulla sodales.</p>
             </div>
         </StyledPostAgendaMain>
     )
