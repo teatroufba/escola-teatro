@@ -406,7 +406,7 @@ export const StyledFilter = styled.div`
           padding: 10px 20px;
         }
 
-        button: hover {
+        button:hover {
           height: 40px;
           white-space: nowrap;
           padding: 10px 20px;

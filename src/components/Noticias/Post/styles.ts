@@ -8,10 +8,17 @@ export const StyledPost = styled.div`
   flex-direction: column;
   align-items: center;
 
+  #img-post {
+    position: relative;
+    width: 100%;
+    height: 68.53vw;
+  }
+
   h1 {
     font-family: 'Merriweather';
     font-weight: 400;
-    font-size: 48px;
+    font-size: 24px;
+    margin-bottom: 11px;
   }
 
   button {
@@ -20,8 +27,8 @@ export const StyledPost = styled.div`
     border-radius: 5px;
     padding: 10px;
     margin: 3px;
-    font-size: 18x;
-    width: 30%;
+    font-size: 16x;
+    width: 100%;
     cursor: pointer;
     font-family: 'Merriweather';
   }
@@ -31,7 +38,8 @@ export const StyledPost = styled.div`
     font-family: 'Merriweather';
     color: #ffffff;
     font-family: arial;
-    font-weight: 700;
+    font-weight: 400;
+    font-size: 16px;
   }
 
   .post-header {
@@ -41,34 +49,86 @@ export const StyledPost = styled.div`
     font-size: 18px;
 
     span {
-      margin: 5%;
+      margin-top: 11px;
+      margin-bottom: 36px;
       font-size: 14px;
     }
   }
 
   .post-content {
     width: 100%;
-    padding: 10%;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
   }
 
   .post-text {
-    margin-top: 3%;
-    margin-bottom: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 
   .btn-align-left {
-    text-align: right;
+    width: 100%;
   }
 
   pre {
     font-family: arial;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 16px;
     overflow-x: auto;
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
+  }
+
+  @media (min-width: 1081px) {
+    #img-post {
+      height: 39.06vw;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      width: 350px;
+      font-size: 18px;
+      padding: 15px;
+    }
+
+    a {
+      font-size: 18px;
+    }
+
+    .post-header {
+      padding-bottom: 30px;
+
+      span {
+        margin-top: 25px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .post-content {
+      max-width: 1026px;
+      padding: 60px;
+      align-items: center;
+    }
+
+    .post-text {
+      margin-top: 60px;
+      margin-bottom: 50px;
+    }
+
+    .btn-align-left {
+      width: unset;
+    }
+
+    pre {
+      font-size: 22px;
+    }
   }
 `
