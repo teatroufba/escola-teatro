@@ -61,6 +61,44 @@ export const StyledAgenda = styled.section`
         margin-bottom: 2.5rem;
         gap: 1.5625rem;
     }
+
+    @media (min-width: 736px) {
+        #container-cards-agenda {
+            width: 43.4375rem;
+        }
+    }
+
+    @media (min-width: 1081px) {
+        #agenda-topo {
+            padding: 8.75rem 21.375rem;
+            margin-bottom: 5rem;
+
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        #container-seletores {
+            padding: 0;
+            margin-bottom: 3.9375rem;
+
+            button:hover {
+                transition: transform 0.1s;
+                transform: scale(1.03);
+            }
+        }
+
+        #container-cards-agenda {
+            width: 50.9375rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    @media (min-width: 1276px) {
+        #container-cards-agenda {
+            width: 77.1875rem;
+        }
+    }
 `
 
 export const StyledAgendaCard = styled.div`
