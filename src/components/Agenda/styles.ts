@@ -70,7 +70,7 @@ export const StyledAgenda = styled.section`
 
     @media (min-width: 1081px) {
         #agenda-topo {
-            padding: 8.75rem 21.375rem;
+            padding: 8.75rem 13.375rem;
             margin-bottom: 5rem;
 
             h1 {
@@ -95,6 +95,10 @@ export const StyledAgenda = styled.section`
     }
 
     @media (min-width: 1276px) {
+        #agenda-topo {
+            padding: 8.75rem 21.375rem;
+        }
+
         #container-cards-agenda {
             width: 77.1875rem;
         }

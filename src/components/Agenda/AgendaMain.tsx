@@ -2,7 +2,21 @@ import { useState } from "react";
 import AgendaCard from "./AgendaCard";
 import { StyledAgenda } from "./styles";
 
-export default function AgendaMain() {
+interface IAgenda {
+    date: string;
+    imageAlt: string;
+    imageUrl: string;
+    local: string;
+    tipo: string;
+    title: string;
+    uid: string;
+}
+
+interface IAgendaMainProps {
+    agenda: IAgenda[]
+}
+
+export default function AgendaMain({ agenda }: IAgendaMainProps) {
     const [Categoria, setCategoria] = useState<string>('Todos')
 
     return (
@@ -43,7 +57,9 @@ export default function AgendaMain() {
                 </button>
             </div>
             <div id="container-cards-agenda">
-                <AgendaCard />
+                {agenda.map((item, index) => (
+                    <AgendaCard key={`agenda-card-${index}`} uid={item.uid} imageUrl={item.imageUrl} imageAlt={item.imageAlt} title={item.title} date={item.date} local={item.local} tipo={item.tipo} />
+                ))}
             </div>
         </StyledAgenda>
     )
