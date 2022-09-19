@@ -82,7 +82,7 @@ export default function Noticias({ post }: INoticias) {
           <>
             <div className="categoria-container-inputs">
               <span>
-                <p>Filtrar por data</p>
+                <p>Filtrar por categoria</p>
               </span>
             </div>
             <div id="topico-select-container">
@@ -196,14 +196,14 @@ export default function Noticias({ post }: INoticias) {
               <div className="sort-container-inputs">
                 <span>
                   <p>Filtrar por data</p>
-                  <input
+                </span>
+                <input
                     id="idate"
                     placeholder="Data de inicio"
                     type="date"
                     value={idate}
                     onChange={e => setIDate(e.target.value)}
                   />
-                </span>
                 <input
                   id="fdate"
                   placeholder="Data final"
@@ -221,16 +221,16 @@ export default function Noticias({ post }: INoticias) {
               </div>
 
               <div className="sort-container-buttons">
-                <button id="desc" onClick={() => setSort('desc')}>
+                <button id="desc" className='btn-cima' onClick={() => setSort('desc')}>
                   Mais antigas
                 </button>
-                <button id="asc" onClick={() => setSort('asc')}>
+                <button id="asc" className='btn-cima' onClick={() => setSort('asc')}>
                   Mais recentes
                 </button>
                 <button id="a-z" onClick={() => setSort('a-z')}>
                   De A -Z
                 </button>
-                <button id="z-a" onClick={() => setSort('a-z')}>
+                <button id="z-a" onClick={() => setSort('z-a')}>
                   De Z -A
                 </button>
               </div>
