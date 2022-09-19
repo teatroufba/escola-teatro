@@ -207,4 +207,8 @@ export const StyledAgendaCard = styled.div`
             width: fit-content;
         }
     }
+
+    @media (min-width: 1081px) {
+        width: 24.6875rem;
+    }
 `
