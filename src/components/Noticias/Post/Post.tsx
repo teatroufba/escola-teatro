@@ -51,13 +51,14 @@ export default function Postagem({
 
   return (
     <StyledPost>
-      <div>
+      <div id='img-post'>
         {imageUrl ? (
           <Image
             alt={imageAlt}
-            height={imageHeight}
             src={imageUrl}
-            width={imageWidth}
+            layout='fill'
+            objectFit='cover'
+            objectPosition='center'
           />
         ) : null}
       </div>
