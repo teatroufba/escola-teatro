@@ -8,6 +8,8 @@ import Script from "next/script";
 import { GlobalStyles } from "@/styles/global";
 
 import { linkResolver, repositoryName } from "../../prismic";
+import Header from "@/components/basics/header";
+import Footer from "@/components/basics/footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -27,8 +29,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           type="text/javascript"
         />
         <PrismicPreview repositoryName={repositoryName}>
+          <Header/>
           <GlobalStyles />
           <Component {...pageProps} />
+          <Footer/>
         </PrismicPreview>
       </PrismicProvider>
     </>

@@ -52,6 +52,8 @@ const BannerStyled = styled.div`
       align-items: center;
       gap: 10px;
 
+      
+
       p {
         font-family: 'Merriweather';
         font-weight: 700;
@@ -177,6 +179,8 @@ function Banner() {
       </div>
       <div className="banner-control">
         <div className="pagination">
+
+        
           <p>01</p>
           {carouselPagination.map((page: boolean, index: number) => (
             <div key={Number(index)} className={index > 6 ? 'desktop' : ''}>

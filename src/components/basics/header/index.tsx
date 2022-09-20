@@ -3,18 +3,36 @@ import React from 'react'
 
 import image from '@/public/brasao.png'
 
-import { HeaderInferior, HeaderSuperior } from './styles'
+import { HeaderContainer, HeaderInferior, HeaderSuperior } from './styles'
 
 function Header() {
   return (
-    <div>
+    <HeaderContainer>
       <HeaderSuperior>
         <div className="header">
-          <Image alt="brasao" src={image} /> 
+          <div className='logo-img'>
+            <Image 
+              alt="brasao" 
+              src={image} 
+             
+            />
+          </div>
+           
           <p>Escola de Teatro da UFBA</p>
         </div>
 
-        <div>
+        <div className='social-navbar'>
+
+          <div  
+              id="ham-btn"
+          >
+            <div className="ham-btn-bar" />
+            <div className="ham-btn-bar" />
+            <div className="ham-btn-bar" />
+          </div>
+
+
+
           <ul className="social">
             <a href="http://www.facebook.com.br">
               <input
@@ -61,39 +79,33 @@ function Header() {
       </HeaderSuperior>
 
       <HeaderInferior>
-        <div className="mobile-menu">
-          <div className="line1" />
-          <div className="line2" />
-          <div className="line3" />
-        </div>
+           <ul className="menu">
+              <li>
+                <a href="/">Início</a>
+              </li>
+              <li>
+                <a href="/escola">A Escola</a>
+              </li>
+              <li>
+                <a href="/ensino">Ensino e Pesquisa</a>
+              </li>
+              <li>
+                <a href="/extensao">Extensão</a>
+              </li>
+              <li>
+                <a href="/espacos">Espaços</a>
+              </li>
+              <li>
+                <a href="/agenda">Agenda</a>
+              </li>
+              <li>
+                <a href="/galeria">Galeria Virtual</a>
+              </li>
+          </ul> 
 
-        <div>
-          <ul className="menu">
-            <li>
-              <a href="http://www.google.com.br">Início</a>
-            </li>
-            <li>
-              <a href="http://www.google.com.br">A Escola</a>
-            </li>
-            <li>
-              <a href="http://www.google.com.br">Ensino e Pesquisa</a>
-            </li>
-            <li>
-              <a href="http://www.google.com.br">Extensão</a>
-            </li>
-            <li>
-              <a href="http://www.google.com.br">Espaços</a>
-            </li>
-            <li>
-              <a href="http://www.google.com.br">Agenda</a>
-            </li>
-            <li>
-              <a href="http://www.google.com.br">Galeria Virtual</a>
-            </li>
-          </ul>
-        </div>
+         
       </HeaderInferior>
-    </div>
+    </HeaderContainer>
   )
 }
 export default Header
