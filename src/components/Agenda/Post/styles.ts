@@ -8,7 +8,7 @@ export const StyledPostAgendaMain = styled.section`
     #container-img-agenda {
         position: relative;
         width: 100%;
-        height: 16.0625rem;
+        height: 68.53vw;
         margin-bottom: 2.5rem;
     }
 
@@ -47,6 +47,33 @@ export const StyledPostAgendaMain = styled.section`
             font-size: 1rem;
             margin-bottom: 2.5rem;
             line-height: 1.5rem;
+        }
+    }
+
+    @media (min-width: 769px) {
+        #container-img-agenda {
+            height: 39.06vw;
+            margin-bottom: 5rem;
+        }
+
+        #container-baixo-agenda {
+            max-width: 77.1875rem;
+
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+
+            #container-info-agenda {
+                padding: 1.5rem;
+                gap: 1.3125rem;
+                margin-bottom: 4rem;
+            }
+
+            #conteudo-post-agenda {
+                font-size: 1.375rem;
+                line-height: 2.0625rem;
+            }
         }
     }
 `
