@@ -24,9 +24,9 @@ export default Agenda
 
 export async function getServerSideProps({
     previewData,
-  }: {
+}: {
     previewData: PreviewData;
-  }) {
+}) {
     const client = createClient({ previewData });
     const items = await client.getAllByType("agenda");
 
@@ -43,4 +43,4 @@ export async function getServerSideProps({
     return {
         props: { agenda },
     }
-  }
+}
