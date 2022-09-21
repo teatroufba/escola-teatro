@@ -44,12 +44,17 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
                     window.innerWidth < 768 
                     ? '100%' 
                     : '800px';
+                text.style.height = 
+                    window.innerWidth < 768 
+                    ? '100%' 
+                    : '330px';
             }
             else {
                 setIsShowingText(true); 
                 setIsClampedText(true);
                 text.classList.remove('hidden-text'); 
                 mainContainer.style.height = '100%';
+                text.style.height = '90%';
             }
 
             if(window.innerWidth < 768) {

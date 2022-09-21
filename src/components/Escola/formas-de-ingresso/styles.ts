@@ -89,7 +89,26 @@ export const StyledEntryFormsContainer = styled.div`
 		letter-spacing: 0em;
 		text-align: left;
 		color: #2d2b78;
-		margin-bottom: 24px;
+		height: 300px;
+	}
+
+	#entry-form-show-text-btn {
+		font-family: "Merriweather";
+		font-size: 16px;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		color: #e3598e;
+		width: fit-content;
+		margin: 24px 0;
+	}
+
+	.entry-form-hidden-text {
+		display: -webkit-box;
+		line-clamp: 10;
+		-webkit-line-clamp: 10;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -110,10 +129,10 @@ export const StyledEntryFormsContainer = styled.div`
 			width: 100%;
 		}
 		.entry-form-info p {
-			margin: 28px 0 48px 0;
+			margin: 28px 0 0px 0;
 		}
 		.right-column {
-			max-width: 90%;
+			max-width: 100%;
 		}
 	}
 
@@ -132,6 +151,7 @@ export const StyledPagination = styled.div`
 	display: flex;
 	justify-content: space-between;
 	font-family: "Merriweather";
+	margin-top: 40px;
 
 	.pagination-container {
 		display: flex;
@@ -167,7 +187,7 @@ export const StyledPagination = styled.div`
 		width: 100%;
 		.pagination-container {
 			gap: 10px;
-			padding: 24px;
+			padding: 7px 16px;
 		}
 		.pagination-btn {
 			font-size: 14px;
