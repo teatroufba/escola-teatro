@@ -12,7 +12,7 @@ import {
   listaDocentes,
   corpoTecnico,
   info,
-} from "./mocks";
+} from "../../components/Escola/mocks";
 interface IDocente {
   imagemAlt: string;
   email: string;
