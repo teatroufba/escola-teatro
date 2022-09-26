@@ -11,6 +11,11 @@ const AcessoRapidoStyled = styled.div`
   justify-content: center;
   gap: 17.55%;
 
+  @media(max-width:1000px) {
+    flex-direction: column;
+    gap: 64px;
+  }
+
   div {
     cursor: pointer;
     display: flex;
