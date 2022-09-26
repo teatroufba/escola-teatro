@@ -19,6 +19,20 @@
     "FormaIngresso": {},
     "ConteudoFormaIngresso": {
       "default": {
+        "items": {
+          "content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "primary": {}
+      }
+    },
+    "LinksFormaIngresso": {
+      "default": {
+        "items": {},
         "primary": {}
       }
     }
