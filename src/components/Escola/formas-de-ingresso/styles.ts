@@ -92,7 +92,8 @@ export const StyledEntryFormsContainer = styled.div`
 		height: 300px;
 	}
 
-	#entry-form-show-text-btn {
+	#entry-form-show-text-btn,
+	#show-text-btn {
 		font-family: "Merriweather";
 		font-size: 16px;
 		cursor: pointer;
@@ -103,12 +104,13 @@ export const StyledEntryFormsContainer = styled.div`
 		margin: 24px 0;
 	}
 
-	.entry-form-hidden-text {
+	.hidden-text {
 		display: -webkit-box;
 		line-clamp: 10;
 		-webkit-line-clamp: 10;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+		-webkit-box-pack: end;
 	}
 
 	@media screen and (max-width: 768px) {

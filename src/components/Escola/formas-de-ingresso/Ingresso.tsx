@@ -1,4 +1,5 @@
 
+import ReadMore from '@/components/basics/read-more/ReadMore';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -32,16 +33,14 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
 
     const pages = [...Array(Math.ceil(conteudos.length / contentPerPage)).keys()];
 
-    function showText() {
-        const text = document.getElementById('entry-form-text-content'); 
-        const mainContainer = document.getElementById('entry-form-main-container');
-        const button = document.getElementById('entry-form-show-text-btn'); 
-        
-        if(text && mainContainer && button) {
-            if(isShowingText) {
+    function hideText() {
+        if(isShowingText) {
+            const text = document.getElementById('entry-form-text-content'); 
+            const mainContainer = document.getElementById('entry-form-main-container');
+
+            if(text && mainContainer) {
                 setIsShowingText(false);
-                setIsClampedText(true);
-                text.classList.add('entry-form-hidden-text');
+                text.classList.add('hidden-text');
                 mainContainer.style.height = 
                     window.innerWidth < 768 
                     ? '100%' 
@@ -50,68 +49,19 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
                     window.innerWidth < 768 
                     ? '100%' 
                     : '300px';
-            }
-            else {
-                setIsShowingText(true); 
-                setIsClampedText(true);
-                text.classList.remove('entry-form-hidden-text'); 
-                mainContainer.style.height = '100%';
-                text.style.height = '90%';
-            }
 
-            if(window.innerWidth < 768) {
                 window.scrollTo({
-                    top: document.getElementById('entry-form-title')?.offsetTop,
+                    top: document.getElementById('title')?.offsetTop,
                     behavior: 'smooth',
                 }); 
-            }
-
+                    
+            }; 
         }
     }
-
-    function hideText() {
-        if(isShowingText) {
-            setIsShowingText(false);
-            showText(); 
-        }
-    }
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const text = document.getElementById('entry-form-text-content');
-            const button = document.getElementById('entry-form-show-text-btn');   
-            
-            if(text && button) {
-
-                if(window.innerWidth > 320 && window.innerWidth <= 425) setIsLongText(text.innerHTML.length >= 250);
-                if(window.innerWidth > 425 && window.innerWidth <= 768) setIsLongText(text.innerHTML.length >= 350);
-                if(window.innerWidth > 768 && window.innerWidth <= 1200) setIsLongText(text.innerHTML.length >= 400);
-                if(window.innerWidth > 1200) setIsLongText(text.innerHTML.length >= 735);
-
-                
-                setIsClampedText(!(text.scrollHeight == text.clientHeight))
-
-                if(isLongText) {
-                    isClampedText 
-                    ? button.innerHTML = isShowingText ? 'Ver menos' : 'Ver mais'
-                    : button.innerHTML = 'Ver menos' 
-                } else {
-                    isClampedText ? null : button.innerHTML = ''
-                }
-            }
-        }
-    })
-
-    useEffect(() => {
-        if(isClampedText) {
-            const button = document.getElementById('entry-form-show-text-btn');
-            if(button) button.innerHTML = 'Ver mais';
-        } 
-    }, [])
 
      return (
         <StyledEntryFormsContainer id='entry-form-main-container'>
-            <h1>Formas de Ingresso</h1>
+            <h1 id='entry-form-title'>Formas de Ingresso</h1>
             <div className="entry-content">
                 <div className="left-column">
                     {formas.map((forma) => 
@@ -129,10 +79,20 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
                             <div className="entry-form-info-content">
                                 <h3 id='entry-form-title'>{ forma.titulo }</h3>
                                 <div className="text-content">
-                                    <p id='entry-form-text-content' className='entry-form-hidden-text'>{ forma.conteudo }</p>
-                                    <button id='entry-form-show-text-btn' onClick={() => showText()}>
-                                    {'oi'}
-                                    </button>
+                                    <p id='entry-form-text-content' className='hidden-text'>{ forma.conteudo }</p>
+                                    <ReadMore 
+                                        textID='entry-form-text-content'
+                                        mainContainerID='entry-form-main-container'
+                                        buttonID='entry-form-show-text-btn'
+                                        titleID='entry-form-title'
+                                        textHeight={300}
+                                        isShowingText={isShowingText}
+                                        isClampedText={isClampedText}
+                                        isLongText={isLongText}
+                                        setIsShowingText={setIsShowingText}
+                                        setIsClampedText={setIsClampedText}
+                                        setIsLongText={setIsLongText}
+                                    />
                                 </div>
                             </div>
                             <Pagination 

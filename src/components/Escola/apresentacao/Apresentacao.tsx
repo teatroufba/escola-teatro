@@ -1,5 +1,6 @@
+import ReadMore from '@/components/basics/read-more/ReadMore';
 import Image from 'next/image'; 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import Pagination from './Pagination';
 import { StyledPresentationContainer } from './styles';
@@ -17,7 +18,7 @@ interface IApresentacao {
 
 export default function Apresentacao({ conteudos }: IApresentacao) {
     const [isShowingText, setIsShowingText] = useState(false) 
-    const [isClampedText, setIsClampedText] = useState(true)
+    const [isClampedText, setIsClampedText] = useState(false)
     const [isLongText, setIsLongText] = useState(false)
     
     const [currentPage, setCurrentPage] = useState(1)
@@ -29,16 +30,13 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 
     const pages = [...Array(Math.ceil(conteudos.length / contentPerPage)).keys()];
 
-    function showText() {
-        const text = document.getElementById('text-content'); 
-        const mainContainer = document.getElementById('main-container');
-        const button = document.getElementById('show-text-btn'); 
-        
-        if(text && mainContainer && button) {
-            
-            if(isShowingText) {
+    function hideText() {
+        if(isShowingText) {
+            const text = document.getElementById('text-content'); 
+            const mainContainer = document.getElementById('main-container');
+
+            if(text && mainContainer) {
                 setIsShowingText(false);
-                setIsClampedText(true);
                 text.classList.add('hidden-text');
                 mainContainer.style.height = 
                     window.innerWidth < 768 
@@ -48,64 +46,16 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
                     window.innerWidth < 768 
                     ? '100%' 
                     : '330px';
-            }
-            else {
-                setIsShowingText(true); 
-                setIsClampedText(true);
-                text.classList.remove('hidden-text'); 
-                mainContainer.style.height = '100%';
-                text.style.height = '90%';
-            }
 
-            if(window.innerWidth < 768) {
                 window.scrollTo({
                     top: document.getElementById('title')?.offsetTop,
                     behavior: 'smooth',
                 }); 
-            }
-
+                    
+            }; 
         }
     }
 
-    function hideText() {
-        if(isShowingText) {
-            setIsShowingText(false);
-            showText(); 
-        }
-    }
-
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            const text = document.getElementById('text-content');
-            const button = document.getElementById('show-text-btn');   
-            
-            if(text && button) {
-
-                if(window.innerWidth > 320 && window.innerWidth <= 425) setIsLongText(text.innerHTML.length >= 250);
-                if(window.innerWidth > 425 && window.innerWidth <= 768) setIsLongText(text.innerHTML.length >= 350);
-                if(window.innerWidth > 768 && window.innerWidth <= 1200) setIsLongText(text.innerHTML.length >= 400);
-                if(window.innerWidth > 1200) setIsLongText(text.innerHTML.length >= 735);
-
-                
-                setIsClampedText(!(text.scrollHeight == text.clientHeight))
-
-                if(isLongText) {
-                    isClampedText 
-                    ? button.innerHTML = isShowingText ? 'Ver menos' : 'Ver mais'
-                    : button.innerHTML = 'Ver menos' 
-                } else {
-                    isClampedText ? null : button.innerHTML = ''
-                }
-            }
-        }
-    })
-
-    useEffect(() => {
-        if(isClampedText) {
-            const button = document.getElementById('show-text-btn');
-            if(button) button.innerHTML = 'Ver mais';
-        } 
-    }, [])
 
     return (
     <StyledPresentationContainer id='main-container'>
@@ -128,9 +78,19 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
                         <h2>{item.titulo}</h2>
                         <div className="text-content">
                             <p id='text-content' className='hidden-text'>{item.conteudo}</p>
-                            <button id='show-text-btn' onClick={() => showText()}>
-                                {''}
-                            </button>
+                            <ReadMore 
+                                textID='text-content'
+                                mainContainerID='main-container'
+                                buttonID='show-text-btn'
+                                titleID='title'
+                                textHeight={330}
+                                isShowingText={isShowingText}
+                                isClampedText={isClampedText}
+                                isLongText={isLongText}
+                                setIsShowingText={setIsShowingText}
+                                setIsClampedText={setIsClampedText}
+                                setIsLongText={setIsLongText}
+                            />
                         </div>
                     </div>
                     <Pagination 
