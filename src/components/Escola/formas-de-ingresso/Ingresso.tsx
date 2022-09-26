@@ -51,7 +51,7 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
                     : '300px';
 
                 window.scrollTo({
-                    top: document.getElementById('title')?.offsetTop,
+                    top: document.getElementById('entry-form-title')?.offsetTop,
                     behavior: 'smooth',
                 }); 
                     
@@ -77,7 +77,7 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
                     {currentContent.map((forma) => 
                         <div className="entry-form-info">
                             <div className="entry-form-info-content">
-                                <h3 id='entry-form-title'>{ forma.titulo }</h3>
+                                <h3>{ forma.titulo }</h3>
                                 <div className="text-content">
                                     <p id='entry-form-text-content' className='hidden-text'>{ forma.conteudo }</p>
                                     <ReadMore 
