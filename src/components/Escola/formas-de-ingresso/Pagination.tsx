@@ -37,9 +37,10 @@ export function LineIcon({ size, hover }: IconProps) {
 export default function Pagination({currentPage, pages, paginationFunction, hideTextFunction} : PaginationProps) {
 
     function handlePagination (page: number) {
-        if(page > 0 && page <= pages.length)
-        hideTextFunction();
-        paginationFunction(page);
+        if(page >= 1 && page <= pages.length) {
+          hideTextFunction();
+          paginationFunction(page);
+        }
       }
 
       function isLastPage () {
