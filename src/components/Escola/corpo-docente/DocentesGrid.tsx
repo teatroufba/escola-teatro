@@ -16,10 +16,11 @@ interface IDocente {
 interface DocentesProps {
     docentes: IDocente[],
     largura: number,
+    tituloID: string
 }
 
 
-export default function DocentesGrid ({ docentes, largura }: DocentesProps) {
+export default function DocentesGrid ({ docentes, largura, tituloID }: DocentesProps) {
     const [currentPage, setCurrentPage] = useState(1)
     const [cardsPerPage, setCardsPerPage] = useState(6);
 
@@ -69,7 +70,11 @@ export default function DocentesGrid ({ docentes, largura }: DocentesProps) {
             /> )   
             )}
         </StyledStaff>
-        <Pagination currentPage = {currentPage} pages={pages} paginationFunction={setCurrentPage} />    
+        <Pagination 
+            currentPage = {currentPage} 
+            pages={pages} 
+            sectionTitleID = {tituloID}
+            paginationFunction={setCurrentPage} />    
     </div>
     )
 }

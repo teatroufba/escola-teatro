@@ -9,7 +9,8 @@ type IconProps = {
 
 type PaginationProps = {
     currentPage: number,
-    pages: number[], 
+    pages: number[],
+    sectionTitleID: string, 
     paginationFunction: Dispatch<SetStateAction<number>>
 }
 
@@ -33,11 +34,16 @@ export function LineIcon({ size, hover }: IconProps) {
     )
   }
 
-export default function Pagination({currentPage, pages, paginationFunction} : PaginationProps) {
+export default function Pagination({currentPage, pages, sectionTitleID, paginationFunction} : PaginationProps) {
 
     function handlePagination (page: number) {
         if(page > 0 && page <= pages.length)
         paginationFunction(page);
+
+        window.scrollTo({
+          top: document.getElementById(sectionTitleID)?.offsetTop,
+          behavior: 'smooth',
+      }); 
       }
 
       function isLastPage () {
