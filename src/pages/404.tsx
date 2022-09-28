@@ -9,6 +9,7 @@ export default function Error() {
         <div className='content'>
             <Image alt="brasao" src={image} /> 
             <h1>Error 404</h1>
+            
             <p>A página solicitada não existe ou não se encontra mais em nossa base.</p>
             <button>
                 <a href="/">Voltar para o início</a>

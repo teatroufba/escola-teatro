@@ -1,4 +1,4 @@
-function NavBar() {
+function BarraGoverno() {
   return (
     <div
       id="barra-brasil"
@@ -46,4 +46,4 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export default BarraGoverno
