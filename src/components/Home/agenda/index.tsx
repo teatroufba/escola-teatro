@@ -20,6 +20,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
   const carousel = useRef<HTMLInputElement>(null)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
+  const [scrolling, setScrolling] = useState(false)
   const [filter, setFilter] = useState('Tudo')
 
   useEffect(() => {
@@ -32,8 +33,14 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
 
   const scrollLeft = () => {
     if (carousel.current != null && carousel.current.scrollLeft > 0) {
+      let numberOfElements = Math.floor(carousel.current.clientWidth/395);
+      setScrolling(true)
       setCarouselScrollLeft(Number(carousel.current.scrollLeft) - 278)
       carousel.current.scrollLeft -= 278
+
+      setTimeout(() => {
+        setScrolling(false)
+      }, numberOfElements*240);
     }
   }
 
@@ -46,8 +53,14 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
       carousel.current != null &&
       carousel.current.scrollLeft < carousel.current.scrollWidth
     ) {
+      let numberOfElements = Math.floor(carousel.current.clientWidth/395);
+      setScrolling(true)
       setCarouselScrollLeft(Number(carousel.current.scrollLeft) + 278)
       carousel.current.scrollLeft += 278
+
+      setTimeout(() => {
+        setScrolling(false)
+      }, numberOfElements*240);
     }
   }
 
@@ -108,6 +121,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
       </div>
       <div className="eventos">
         <button
+          disabled={scrolling}
           onClick={scrollLeft}
           className={carouselScrollLeft <= 0 ? 'desactive' : ''}
         >
@@ -131,6 +145,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             ))}
         </div>
         <button
+          disabled={scrolling}
           onClick={scrollRight}
           className={
             carouselScrollLeft >= carouselTotalScroll ? 'desactive' : ''
