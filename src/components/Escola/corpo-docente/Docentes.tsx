@@ -35,9 +35,9 @@ export default function Docentes ({ docentes }: IDocentes) {
   return (
     <StyledStaffContainer>
       <div className="wrap-staff-container">
-        <h1>Corpo Docente</h1>
+        <h1 id='staff-title'>Corpo Docente</h1>
         {width > 775 
-        ? <DocentesGrid docentes={docentes} largura={width}/>
+        ? <DocentesGrid docentes={docentes} largura={width} tituloID={'staff-title'}/>
         : <DocentesCarousel docentes={docentes} />
         }
       </div>

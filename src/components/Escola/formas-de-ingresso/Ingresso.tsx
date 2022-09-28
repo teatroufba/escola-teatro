@@ -1,6 +1,7 @@
 
+import ReadMore from '@/components/basics/read-more/ReadMore';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Pagination from './Pagination';
 import { StyledEntryFormsContainer } from './styles';
@@ -19,6 +20,10 @@ import { StyledEntryFormsContainer } from './styles';
   }
 
 export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngressoProps) {
+    const [isShowingText, setIsShowingText] = useState(false) 
+    const [isClampedText, setIsClampedText] = useState(true)
+    const [isLongText, setIsLongText] = useState(false)
+
     const [currentPage, setCurrentPage] = useState(1)
     const [contentPerPage] = useState(1)
 
@@ -28,9 +33,35 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
 
     const pages = [...Array(Math.ceil(conteudos.length / contentPerPage)).keys()];
 
+    function hideText() {
+        if(isShowingText) {
+            const text = document.getElementById('entry-form-text-content'); 
+            const mainContainer = document.getElementById('entry-form-main-container');
+
+            if(text && mainContainer) {
+                setIsShowingText(false);
+                text.classList.add('hidden-text');
+                mainContainer.style.height = 
+                    window.innerWidth < 768 
+                    ? '100%' 
+                    : '800px';
+                text.style.height = 
+                    window.innerWidth < 768 
+                    ? '100%' 
+                    : '300px';
+
+                window.scrollTo({
+                    top: document.getElementById('entry-form-title')?.offsetTop,
+                    behavior: 'smooth',
+                }); 
+                    
+            }; 
+        }
+    }
+
      return (
-        <StyledEntryFormsContainer>
-            <h1>Formas de Ingresso</h1>
+        <StyledEntryFormsContainer id='entry-form-main-container'>
+            <h1 id='entry-form-title'>Formas de Ingresso</h1>
             <div className="entry-content">
                 <div className="left-column">
                     {formas.map((forma) => 
@@ -47,9 +78,28 @@ export default function FormasDeIngresso ({ conteudos, formas }: FormasDeIngress
                         <div className="entry-form-info">
                             <div className="entry-form-info-content">
                                 <h3>{ forma.titulo }</h3>
-                                <p>{ forma.conteudo }</p>
+                                <div className="text-content">
+                                    <p id='entry-form-text-content' className='hidden-text'>{ forma.conteudo }</p>
+                                    <ReadMore 
+                                        textID='entry-form-text-content'
+                                        mainContainerID='entry-form-main-container'
+                                        buttonID='entry-form-show-text-btn'
+                                        titleID='entry-form-title'
+                                        textHeight={300}
+                                        isShowingText={isShowingText}
+                                        isClampedText={isClampedText}
+                                        isLongText={isLongText}
+                                        setIsShowingText={setIsShowingText}
+                                        setIsClampedText={setIsClampedText}
+                                        setIsLongText={setIsLongText}
+                                    />
+                                </div>
                             </div>
-                            <Pagination currentPage={currentPage} pages={pages} paginationFunction={setCurrentPage} />
+                            <Pagination 
+                                currentPage={currentPage} 
+                                pages={pages} 
+                                paginationFunction={setCurrentPage}
+                                hideTextFunction={hideText} />
                     </div>
                     )}
                 </div>

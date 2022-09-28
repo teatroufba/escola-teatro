@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/ConteudoFormaIngresso';
+
+export default {
+  title: 'slices/ConteudoFormaIngresso'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"conteudo_forma_ingresso","items":[{"title":"innovate web-enabled schemas","content":[{"type":"paragraph","text":"Magna mollit incididunt nisi ex non nulla consectetur ex do aute consequat ea. Ullamco non id Lorem incididunt veniam eiusmod exercitation sint consequat ut pariatur.","spans":[]}]},{"title":"innovate 24/365 ROI","content":[{"type":"paragraph","text":"Amet irure elit proident nulla est sit aliqua incididunt enim minim in elit reprehenderit. Fugiat anim culpa exercitation aute sunt nulla cupidatat deserunt esse elit esse do ea.","spans":[]}]},{"title":"envisioneer cutting-edge users","content":[{"type":"paragraph","text":"Proident magna voluptate sint irure pariatur et fugiat aliquip dolor incididunt sit. Deserunt anim et ipsum pariatur.","spans":[]}]}],"primary":{},"id":"_Default"}} />
+_Default.storyName = 'Default'

@@ -5,6 +5,7 @@ export const StyledPresentationContainer = styled.section`
 	display: flex;
 	width: 100%;
 	background-color: #2d2b78;
+	height: 800px;
 
 	.presentation-content {
 		display: flex;
@@ -63,15 +64,40 @@ export const StyledPresentationContainer = styled.section`
 		font-size: 32px;
 	}
 
-	.content-column p {
-		margin-top: 24px;
+	.text-content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 		margin-bottom: 48px;
+	}
+
+	.text-content p {
+		margin-top: 24px;
 		line-height: 33.1px;
 		font-size: 20px;
 		font-weight: 400;
+		height: 330px;
+	}
+
+	.hidden-text {
+		display: -webkit-box;
+		line-clamp: 10;
+		-webkit-line-clamp: 10;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+	.text-content button {
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		color: #e3598e;
+		width: fit-content;
 	}
 
 	@media screen and (max-width: 768px) {
+		height: 100%;
+
 		.presentation-content {
 			flex-direction: column;
 			gap: 0;

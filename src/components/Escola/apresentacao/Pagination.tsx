@@ -11,6 +11,7 @@ type PaginationProps = {
     currentPage: number,
     pages: number[], 
     paginationFunction: Dispatch<SetStateAction<number>>,
+    hideTextFunction: Function,
 }
 
 export function LineIcon({ size, hover }: IconProps) {
@@ -33,11 +34,13 @@ export function LineIcon({ size, hover }: IconProps) {
     )
   }
 
-export default function Pagination({currentPage, pages, paginationFunction} : PaginationProps) {
+export default function Pagination({currentPage, pages, paginationFunction, hideTextFunction} : PaginationProps) {
 
     function handlePagination (page: number) {
-        if(page > 0 && page <= pages.length)
-        paginationFunction(page);
+        if(page >= 1 && page <= pages.length) {
+          hideTextFunction();
+          paginationFunction(page);
+        }
       }
 
       function isLastPage () {
