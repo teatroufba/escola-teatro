@@ -28,6 +28,18 @@ export const StyledNoticias = styled.div`
     flex-direction: row;
     gap: 3%;
     margin: 4%;
+
+    @media screen and (max-width: 1000px) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+
+      .mobile{
+        display: none;
+      }
+    }
   }
 
   .noticias-btn {

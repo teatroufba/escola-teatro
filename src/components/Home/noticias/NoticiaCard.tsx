@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { StyledNoticiaCard } from './styles'
 
 interface INoticiaCard {
+  className:string
   uid: string
   imageUrl: string
   imageAlt: string
@@ -18,6 +19,7 @@ type Props = {
 }
 
 export default function NoticiaCard({
+  className,
   uid,
   imageAlt,
   imageUrl,
@@ -41,7 +43,7 @@ export default function NoticiaCard({
   const data = new Date(date)
   const publication = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
   return (
-    <StyledNoticiaCard>
+    <StyledNoticiaCard className={className}>
       <div className="noticia-img">
       <Image src={imageUrl} alt={imageAlt} width={290} height={250} layout={'responsive'}/>
       </div>
