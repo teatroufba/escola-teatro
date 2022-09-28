@@ -1,3 +1,4 @@
+import BarraGoverno from "@/components/basics/BarraGoverno";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -5,6 +6,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
+        <BarraGoverno/>
         <Head>
           <meta charSet="utf-8" />
           <meta
