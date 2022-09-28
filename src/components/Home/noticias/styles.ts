@@ -52,11 +52,16 @@ export const StyledNoticias = styled.div`
 `
 
 export const StyledNoticiaCard = styled.div`
-  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 290px;
+
   h3 {
     font-family: 'Merriweather';
     font-weight: 400;
     font-size: 24px;
+    height: 87px;
   }
 
   .noticia-img {
@@ -69,9 +74,15 @@ export const StyledNoticiaCard = styled.div`
     gap: 15px;
     text-align: left;
     font-family: arial;
+    height: 274px;
 
     p {
       font-size: 16px;
+    }
+
+    .titles {
+      gap: 15px;
+      height: 204px;
     }
 
     a {
