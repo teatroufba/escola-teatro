@@ -29,7 +29,7 @@ const BannerStyled = styled.div`
     justify-content: right;
     left: 0;
     right: 0;
-    top: min(calc(100vw / 3), 698px);
+    top: min(calc(100vw), 798px);
     bottom: 0;
     margin: auto;
 
@@ -83,6 +83,7 @@ const BannerStyled = styled.div`
       width: 40px;
       height: 40px;
       border: none;
+      cursor: pointer;
     }
   }
 
@@ -130,8 +131,9 @@ function Banner() {
   }, [carouselScrollLeft])
 
   const scroll = () => {
-    if (carousel.current != null && !scrolling) {
-      if (carousel.current.scrollLeft < 12 * carousel.current.clientWidth) {
+    if (carousel.current != null) {
+      setScrolling(true)
+      if (carousel.current.scrollLeft < 12*carousel.current.clientWidth) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
@@ -142,12 +144,16 @@ function Banner() {
         carousel.current.scrollLeft = 0
         pagination(-12)
       }
+      setTimeout(() => {
+        setScrolling(false)
+      }, carousel.current.clientWidth -160);
     }
   }
 
   const scrollMobile = () => {
     if (carousel.current != null) {
-      if (carousel.current.scrollLeft < 6 * carousel.current.clientWidth) {
+      setScrolling(true)
+      if (carousel.current.scrollLeft < 6*carousel.current.clientWidth) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
@@ -158,12 +164,15 @@ function Banner() {
         carousel.current.scrollLeft = 0
         pagination(-6)
       }
+      setTimeout(() => {
+        setScrolling(false)
+      }, carousel.current.clientWidth -100);
     }
   }
 
   return (
     <BannerStyled>
-      <div ref={carousel} className="carousel" onScroll={() => setScrolling(true)}>
+      <div ref={carousel} className="carousel">
         <img alt="" src="/banner-1.jpg" />
         <img alt="" src="/banner-1.jpg" />
         <img alt="" src="/banner-1.jpg" />
@@ -198,6 +207,7 @@ function Banner() {
               : 'desktop'
           }
           onClick={scroll}
+          disabled={scrolling}
         >
           <Image
             alt="ícone de seta para esquerda"
@@ -206,7 +216,7 @@ function Banner() {
             width={7}
           />
         </button>
-        <button className="mobile" onClick={scrollMobile}>
+        <button className="mobile" onClick={scrollMobile} disabled={scrolling}>
           <Image
             alt="ícone de seta para esquerda"
             height={14}
