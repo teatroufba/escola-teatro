@@ -6,7 +6,9 @@ import { LineIcon } from './icons'
 
 const BannerStyled = styled.div`
   display: block;
-  height: calc(100% - 1000px);
+  max-height: 750px;
+  height: 40vw;
+  min-height: 200px;
 
   .carousel {
     max-width: 1920px;
@@ -130,6 +132,8 @@ const BannerStyled = styled.div`
     }
 
     @media screen and (max-width: 1000px) {
+      height: auto;
+
       .mobile {
         display: block;
       }
