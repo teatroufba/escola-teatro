@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { StyledNoticiaCard } from './styles'
 
 interface INoticiaCard {
+  className:string
   uid: string
   imageUrl: string
   imageAlt: string
@@ -18,6 +19,7 @@ type Props = {
 }
 
 export default function NoticiaCard({
+  className,
   uid,
   imageAlt,
   imageUrl,
@@ -32,18 +34,26 @@ export default function NoticiaCard({
   const handleMouseLeave = () => {
     setHover(false)
   }
+  const maxChar = (text: string, numberMaxOfChars: number) => {
+    if (text.length >= numberMaxOfChars) {
+      return text.slice(0, numberMaxOfChars-3) + '...'
+    }
+    return text
+  }
   const data = new Date(date)
   const publication = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
   return (
-    <StyledNoticiaCard>
+    <StyledNoticiaCard className={className}>
       <div className="noticia-img">
       <Image src={imageUrl} alt={imageAlt} width={290} height={250} layout={'responsive'}/>
       </div>
       
       <div className="text-post">
-        <p className="data">{publication}</p>
-        <h3>{title}</h3>
-        <p>{subtitle}</p>
+      <p className="data">{publication}</p>
+        <div className='titles'>
+          <h3>{maxChar(title, 30)}</h3>
+          <p>{maxChar(subtitle, 95)}</p>
+        </div>
         <a
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

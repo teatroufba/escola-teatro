@@ -19,8 +19,9 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
       <h1>Notícias</h1>
 
       <div className="noticias-flex">
-        {noticias.slice(0, 4).map(value => (
+        {noticias.slice(0, 4).map((value, index) => (
           <NoticiaCard
+            className={index > 1 ? 'mobile' : ''}
             uid={value.uid}
             title={value.title}
             subtitle={value.subtitle}
