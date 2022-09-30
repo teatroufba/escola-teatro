@@ -44,6 +44,7 @@ export const StyledPost = styled.div`
 
   .post-header {
     border-bottom: 2px solid #757575;
+    width: 100%;
 
     font-family: arial;
     font-size: 18px;
