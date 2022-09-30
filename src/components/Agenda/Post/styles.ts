@@ -57,6 +57,7 @@ export const StyledPostAgendaMain = styled.section`
         }
 
         #container-baixo-agenda {
+            width: 100%;
             max-width: 77.1875rem;
 
             h1 {

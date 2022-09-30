@@ -64,24 +64,15 @@ export const StyledPost = styled.div`
   }
 
   .post-text {
+    font-family: Arial;
     margin-top: 30px;
     margin-bottom: 30px;
+    font-size: 16px;
+    width: 100%;
   }
 
   .btn-align-left {
     width: 100%;
-  }
-
-  pre {
-    font-family: arial;
-    font-weight: 400;
-    font-size: 16px;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
   }
 
   @media (min-width: 1081px) {
@@ -89,7 +80,7 @@ export const StyledPost = styled.div`
       height: 39.06vw;
     }
 
-    h1 {
+    .post-header h1 {
       font-size: 48px;
       margin-bottom: 25px;
     }
@@ -122,14 +113,11 @@ export const StyledPost = styled.div`
     .post-text {
       margin-top: 60px;
       margin-bottom: 50px;
+      font-size: 22px;
     }
 
     .btn-align-left {
       width: unset;
-    }
-
-    pre {
-      font-size: 22px;
     }
   }
 `

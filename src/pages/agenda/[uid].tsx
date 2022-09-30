@@ -8,12 +8,13 @@ interface IAgenda {
     imageUrl: string;
     local: string;
     title: string;
+    text: [];
 }
 
 function PostAgenda({ post }: { post: IAgenda }) {
     return (
         <>
-            <PostAgendaMain date={post.date} imageAlt={post.imageAlt} imageUrl={post.imageUrl} local={post.local} title={post.title} />
+            <PostAgendaMain date={post.date} imageAlt={post.imageAlt} imageUrl={post.imageUrl} local={post.local} title={post.title} text={post.text} />
         </>
     )
 }
@@ -34,11 +35,12 @@ export async function getServerSideProps({
     const item = items.find(item => item.uid === uid)
 
     const post = {
-        title: item?.data.titulo,
-        imageUrl: item?.data.imagem.url,
-        imageAlt: item?.data.imagem.alt,
-        date: item?.data.data,
-        local: item?.data.local,
+        title: item ? item?.data.titulo : undefined,
+        imageUrl: item ? item?.data.imagem.url : undefined,
+        imageAlt: item ? item?.data.imagem.alt : undefined,
+        date: item ? item?.data.data : undefined,
+        local: item ? item?.data.local : undefined,
+        text: item ? item?.data.text : undefined,
     }
 
     return {
