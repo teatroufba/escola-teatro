@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import DocentesGrid from './DocentesGrid';
-import DocentesCarousel from './DocentesCarousel';
-import { StyledStaff, StyledStaffCarousel, StyledStaffContainer } from './styles'
+import DocentesGrid from "./DocentesGrid";
+import DocentesCarousel from "./DocentesCarousel";
+import {
+	StyledStaff,
+	StyledStaffCarousel,
+	StyledStaffContainer,
+} from "./styles";
 
 interface IDocente {
 	imagemAlt: string;
@@ -14,33 +18,33 @@ interface IDocente {
 	uid: string;
 }
 interface IDocentes {
-    docentes: IDocente[];
+	docentes: IDocente[];
 }
 
+export default function Docentes({ docentes }: IDocentes) {
+	const [width, setWidth] = useState(0);
 
-export default function Docentes ({ docentes }: IDocentes) {
-  const [width, setWidth] = useState(0);
+	useEffect(() => {
+		function handleResize() {
+			setWidth(window.innerWidth);
+		}
 
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
+		window.addEventListener("resize", handleResize);
+		handleResize();
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
 
-    return () => window.removeEventListener('resize', handleResize);
-  }, []); 
-
-  return (
-    <StyledStaffContainer>
-      <div className="wrap-staff-container">
-        <h1 id='staff-title'>Corpo Docente</h1>
-        {width > 775 
-        ? <DocentesGrid docentes={docentes} largura={width} tituloID={'staff-title'}/>
-        : <DocentesCarousel docentes={docentes} />
-        }
-      </div>
-    </StyledStaffContainer>
-  )
+	return (
+		<StyledStaffContainer>
+			<div className="wrap-staff-container">
+				<h1 id="staff-title">Corpo Docente</h1>
+				{width > 775 ? (
+					<DocentesGrid docentes={docentes} tituloID={"staff-title"} />
+				) : (
+					<DocentesCarousel docentes={docentes} />
+				)}
+			</div>
+		</StyledStaffContainer>
+	);
 }

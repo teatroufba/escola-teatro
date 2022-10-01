@@ -79,17 +79,25 @@ export default function ReadMore({
 				if (window.innerWidth > 1200)
 					setIsLongText(text.innerHTML.length >= maxCharacters);
 
-				setIsClampedText(!(text.scrollHeight == text.clientHeight));
+				setIsClampedText(
+					!(
+						text.scrollHeight >= text.clientHeight - 10 &&
+						text.scrollHeight <= text.clientHeight + 10
+					)
+				);
 
-				if (longText || isLongText) {
-					button.innerHTML =
-						isClampedText && !isShowingText ? "Ver mais" : "Ver menos";
+				if (isLongText) {
+					if (!isClampedText)
+						button.innerHTML = isShowingText ? "Ver menos" : "";
+					else {
+						button.innerHTML = !isShowingText ? "Ver mais" : "Ver menos";
+					}
 				} else {
 					button.innerHTML = "";
 				}
 			}
 		}
-	}, [showing, isClampedText, currentPage]);
+	}, [isClampedText, currentPage]);
 
 	useEffect(() => {
 		const text = document.getElementById(textID);
