@@ -10,20 +10,36 @@ export const StyledPosts = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-bottom: 5%;
-  max-width: 370px;
+  width: 325px;
 
-  h3 {
-    font-family: "Merriweather";
-    font-weight: 400;
-    font-size: 24px;
+  .noticias-post-img {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
   }
 
-  p {
-    font-family: arial;
-    font-weight: 400;
-    font-size: 16px;
-    margin-top: 2%;
+  .noticias-post-text {
+    display: flex;
+    flex-direction: column;
+    height: 224px;
+    margin-bottom: 25px;
+    overflow: hidden;
+
+    h3 {
+      font-family: "Merriweather";
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 8px;
+      max-height: 100%;
+    }
+
+    p {
+      font-family: arial;
+      font-weight: 400;
+      font-size: 16px;
+      max-height: 100%;
+    }
   }
 
   a {
@@ -34,14 +50,27 @@ export const StyledPosts = styled.div`
     font-size: 18px;
     margin-top: 5%;
   }
+
+  @media (min-width: 1081px) {
+    width: 395px;
+
+    .noticias-post-text {
+      height: 172px;
+    }
+  }
 `;
 
 export const StyledNoticias = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,100;1,200&display=swap");
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .container-title {
     display: flex;
+    width: 100%;
     flex-direction: column;
     font-family: "Merriweather";
     font-weight: 400;
@@ -67,11 +96,10 @@ export const StyledNoticias = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
-    align-items: stretch;
-    gap: 3%;
+    width: 325px;
+    column-gap: 25px;
+    row-gap: 60px;
+    margin-bottom: 60px;
   }
 
   .container-pag-btn {
@@ -80,11 +108,11 @@ export const StyledNoticias = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 5%;
     align-items: stretch;
     color: #958fa0;
     font-size: 16px;
-    gap: 1%;
+    gap: 17px;
+    margin-bottom: 120px;
 
     button {
       background-color: white;
@@ -95,8 +123,8 @@ export const StyledNoticias = styled.div`
       cursor: pointer;
       color: #958fa0;
       font-family: "Inter";
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       align-items: center;
       text-transform: uppercase;
     }
@@ -104,9 +132,14 @@ export const StyledNoticias = styled.div`
     .pages-btn {
       display: flex;
       flex-direction: row;
+      gap: 17px;
 
       span {
-        margin: 9%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45px;
+        height: 45px;
         font-family: "Inter";
         font-size: 16.8px;
         font-weight: 800;
@@ -122,14 +155,24 @@ export const StyledNoticias = styled.div`
       cursor: pointer;
       color: white;
       font-family: "Inter";
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       align-items: center;
       text-transform: uppercase;
     }
   }
 
+  @media (min-width: 725px) and (max-width: 1080px) {
+    .posts-flex {
+      width: 675px;
+    }
+  }
+
   @media (min-width: 1081px) {
+    .posts-flex {
+      width: 815px;
+    }
+
     .container-title {
       padding: 79px 15.3%;
 
@@ -142,12 +185,19 @@ export const StyledNoticias = styled.div`
       }
     }
   }
+
+  @media (min-width: 1285px) {
+    .posts-flex {
+      width: 1235px;
+    }
+  }
 `;
 
 export const StyledFilter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
 
   .categoria-container-inputs {
     margin-top: 2rem;
@@ -387,9 +437,10 @@ export const StyledFilter = styled.div`
     }
 
     .sort-container {
+      flex-direction: column;
       align-items: flex-end;
       flex-wrap: nowrap;
-      gap: 68px;
+      gap: 33px;
       
       .sort-container-buttons {
         margin: 0;
@@ -438,6 +489,15 @@ export const StyledFilter = styled.div`
           line-height: 20px;
         }
       }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .sort-container {
+      flex-direction: row;
+      align-items: flex-end;
+      flex-wrap: nowrap;
+      gap: 68px;
     }
   }
 `;

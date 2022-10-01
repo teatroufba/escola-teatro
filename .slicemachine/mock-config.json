@@ -1,14 +1,29 @@
 {
   "_cts": {
     "pagina-de-noticias": {},
-    "post-de-noticias": {},
+    "post-de-noticias": {
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "card-staff": {},
     "card-docente": {},
     "como-chegar": {},
     "corpo-tecnico": {},
     "setores": {},
     "setor": {},
-    "forma-de-ingresso": {}
+    "forma-de-ingresso": {},
+    "agenda": {
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "Membro": {

@@ -5,6 +5,7 @@ import { ptBR} from 'date-fns/locale'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { PrismicRichText } from "@prismicio/react"
 
 import { StyledPost } from './styles';
 
@@ -17,7 +18,7 @@ interface IPostagem {
   imageWidth: string
   last_publication_date: Date
   subtitle: string
-  text: string
+  text: []
   title: string
 }
 export default function Postagem({
@@ -74,7 +75,14 @@ export default function Postagem({
             </p>
           </span>
         </div>
-        <pre className="post-text">{text}</pre>
+        <div className='post-text'>
+          <PrismicRichText
+            field={text}
+            components={{
+              paragraph: ({ children }) => <p>{children}</p>,
+            }}
+          />
+        </div>
         <div className="btn-align-left">
           <button type="button">
             <Link passHref href="/noticias">

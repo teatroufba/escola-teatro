@@ -10,6 +10,7 @@ interface IAgendaCardProps {
     tipo: string;
     title: string;
     uid: string;
+    subtitulo: string;
 }
 
 enum meses {
@@ -27,7 +28,7 @@ enum meses {
     'DEZ',
 }
 
-export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, title, uid }: IAgendaCardProps) {
+export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, title, uid, subtitulo }: IAgendaCardProps) {
     const data = new Date(date)
     let dia = data.getDate().toString()
     const mes = data.getMonth()
@@ -62,7 +63,7 @@ export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, titl
                     <p>{local}</p>
                 </div>
                 <p className="conteudo-agenda">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor
+                    {subtitulo}
                 </p>
                 <Link href={`/agenda/${uid}`} passHref>
                     <a>Acesse</a>
