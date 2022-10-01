@@ -325,7 +325,7 @@ export default function Noticias({ post }: INoticias) {
         <button
           type="button"
           onClick={() => {
-            if (currentPage > paginationBtn) setCurrentPage(currentPage - 1)
+            if (currentPage > 1) setCurrentPage(currentPage - 1)
           }}
         >
           <Image
@@ -341,7 +341,7 @@ export default function Noticias({ post }: INoticias) {
           <span>de</span>
           <button
             type="button"
-            onClick={() => setCurrentPage(currentPage + paginationBtn - 1)}
+            onClick={() => setCurrentPage(paginationBtn)}
           >
             {paginationBtn}
           </button>

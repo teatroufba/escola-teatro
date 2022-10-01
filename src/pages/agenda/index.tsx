@@ -10,6 +10,7 @@ interface IAgenda {
     tipo: string;
     title: string;
     uid: string;
+    subtitulo: string;
 }
 
 function Agenda({ agenda }: { agenda: IAgenda[] }) {
@@ -38,6 +39,7 @@ export async function getServerSideProps({
         date: item.data.data,
         tipo: item.data.tipo,
         local: item.data.local,
+        subtitulo: item.data.subtitulo,
     }))
 
     return {

@@ -13,7 +13,7 @@ interface IPostagem {
   imageWidth: string;
   last_publication_date: Date;
   subtitle: string;
-  text: string;
+  text: [];
   title: string;
   uid: string;
 }

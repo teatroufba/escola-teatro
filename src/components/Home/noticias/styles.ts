@@ -28,6 +28,18 @@ export const StyledNoticias = styled.div`
     flex-direction: row;
     gap: 3%;
     margin: 4%;
+
+    @media screen and (max-width: 1000px) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+
+      .mobile{
+        display: none;
+      }
+    }
   }
 
   .noticias-btn {
@@ -52,11 +64,16 @@ export const StyledNoticias = styled.div`
 `
 
 export const StyledNoticiaCard = styled.div`
-  max-width: 290px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 290px;
+
   h3 {
     font-family: 'Merriweather';
     font-weight: 400;
     font-size: 24px;
+    height: 87px;
   }
 
   .noticia-img {
@@ -69,9 +86,15 @@ export const StyledNoticiaCard = styled.div`
     gap: 15px;
     text-align: left;
     font-family: arial;
+    height: 274px;
 
     p {
       font-size: 16px;
+    }
+
+    .titles {
+      gap: 15px;
+      height: 204px;
     }
 
     a {
