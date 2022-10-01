@@ -1,3 +1,4 @@
+import { MenuItem } from "@szhsin/react-menu";
 import { useState } from "react";
 import AgendaCard from "./AgendaCard";
 import { StyledAgenda } from "./styles";
@@ -64,7 +65,7 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
 
                     return item.tipo === Categoria
                 }).map((item, index) => (
-                    <AgendaCard key={`agenda-card-${index}`} uid={item.uid} imageUrl={item.imageUrl} imageAlt={item.imageAlt} title={item.title} date={item.date} local={item.local} tipo={item.tipo} />
+                    <AgendaCard key={`agenda-card-${index}`} uid={item.uid} imageUrl={item.imageUrl} imageAlt={item.imageAlt} title={item.title} date={item.date} local={item.local} tipo={item.tipo}/>
                 ))}
             </div>
         </StyledAgenda>

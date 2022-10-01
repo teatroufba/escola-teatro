@@ -10,7 +10,7 @@ interface IAgendaCardProps {
     tipo: string;
     title: string;
     uid: string;
-    subtitulo: string;
+    subtitulo?: string;
 }
 
 enum meses {

@@ -82,9 +82,7 @@ export default function PostAgendaMain({ date, imageAlt, imageUrl, local, title,
                     <PrismicRichText
                         field={text}
                         components={
-                            {paragraph: ({ children }) => <p className="">{children}</p>,
-                            embed : ({children})=> console.log(children)
-                        }
+                            {paragraph: ({ children }) => <p className="">{children}</p>}
                     }
                     />
                 </div>
