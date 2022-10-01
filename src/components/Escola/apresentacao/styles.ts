@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledPresentationContainer = styled.section`
+export const StyledPresentationContainer = styled.div`
 	font-family: "Merriweather";
 	display: flex;
 	width: 100%;

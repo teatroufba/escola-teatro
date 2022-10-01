@@ -15,15 +15,10 @@ interface IDocente {
 }
 interface DocentesProps {
 	docentes: IDocente[];
-	largura: number;
 	tituloID: string;
 }
 
-export default function DocentesGrid({
-	docentes,
-	largura,
-	tituloID,
-}: DocentesProps) {
+export default function DocentesGrid({ docentes, tituloID }: DocentesProps) {
 	const [width, setWidth] = useState(0);
 
 	const [currentPage, setCurrentPage] = useState(1);
@@ -51,21 +46,21 @@ export default function DocentesGrid({
 	useEffect(() => {
 		const element = document.getElementById("staff-container");
 
-		if (largura > 1560) {
+		if (width > 1560) {
 			if (element != null) {
 				element.style.gap = "24px";
 			}
 			setCardsPerPage(8);
 		}
 
-		if (largura < 1560 && largura > 1190) {
+		if (width < 1560 && width > 1190) {
 			if (element != null) {
 				element.style.gap = "40px";
 			}
 			setCardsPerPage(6);
 		}
 
-		if (largura < 1190) {
+		if (width < 1190) {
 			if (element != null) {
 				element.style.gap = "40px";
 			}
