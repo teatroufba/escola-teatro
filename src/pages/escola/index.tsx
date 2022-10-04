@@ -5,92 +5,96 @@ import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
 import FormasDeIngresso from "@/components/Escola/formas-de-ingresso/Ingresso";
 import SetoresInstancias from "@/components/Escola/setores-e-instancias/Setores";
 import {
-  conteudosApresentacao,
-  conteudo,
-  formasIngresso,
-  setores,
-  listaDocentes,
-  corpoTecnico,
-  info,
+	conteudosApresentacao,
+	conteudo,
+	formasIngresso,
+	setores,
+	listaDocentes,
+	corpoTecnico,
+	info,
 } from "../../components/Escola/mocks";
 interface IDocente {
-  imagemAlt: string;
-  email: string;
-  imagemUrl: string;
-  interesses: string;
-  link: string;
-  nome: string;
-  uid: string;
+	imagemAlt: string;
+	email: string;
+	imagemUrl: string;
+	interesses: string;
+	link: string;
+	nome: string;
+	uid: string;
 }
 
 interface IInformacoes {
-  endereco: string;
-  email: string;
-  telefone: string;
-  uid: string;
+	endereco: string;
+	email: string;
+	telefone: string;
+	uid: string;
 }
 
 interface ICorpoTecnico {
-  email: string;
-  nome: string;
-  funcao: string;
+	uid: string;
+	email: string;
+	nome: string;
+	funcao: string;
 }
 
 interface IMembro {
-  email: string;
-  nome: string;
-  telefone: string;
-  funcao: string;
+	email: string;
+	nome: string;
+	telefone: string;
+	funcao: string;
 }
 interface ISetor {
-  membros: IMembro[];
-  nome: string;
+	membros: IMembro[];
+	nome: string;
 }
 interface IFormaIngresso {
-  link: string;
-  titulo: string;
+	uid: string;
+	link: string;
+	titulo: string;
 }
 
 interface IFormasIngresso {
-  formas: IFormaIngresso[];
+	formas: IFormaIngresso[];
 }
 
 interface IConteudo {
-  conteudo: string;
-  titulo: string;
+	uid: string;
+	conteudo: string;
+	titulo: string;
 }
 
 interface IConteudos {
-  conteudos: IConteudo[];
+	conteudos: IConteudo[];
 }
 
 interface IApresentacaoItem {
-  conteudo: string;
-  imageAlt: string;
-  imageUrl: string;
-  titulo: string;
+	uid: string;
+	conteudo: string;
+	imageAlt: string;
+	imageUrl: string;
+	titulo: string;
 }
 
 interface IApresentacao {
-  conteudos: IApresentacaoItem[];
+	conteudos: IApresentacaoItem[];
 }
 
 export default function Page() {
-  return (
-    <div>
-      <Apresentacao conteudos={conteudosApresentacao} />
-      <FormasDeIngresso
-        conteudos={conteudo.conteudos}
-        formas={formasIngresso.formas}
-      />
-      <SetoresInstancias setores={setores} />
-      <Docentes docentes={listaDocentes} />
-      <CorpoTecnico corpoTecnico={corpoTecnico} />
-      <ComoChegar
-        email={info.email}
-        endereco={info.endereco}
-        telefone={info.telefone}
-      />
-    </div>
-  );
+	return (
+		<div>
+			<Apresentacao conteudos={conteudosApresentacao} />
+			<FormasDeIngresso
+				conteudos={conteudo.conteudos}
+				formas={formasIngresso.formas}
+			/>
+			<SetoresInstancias setores={setores} />
+			<Docentes docentes={listaDocentes} />
+			<CorpoTecnico corpoTecnico={corpoTecnico} />
+			<ComoChegar
+				email={info.email}
+				endereco={info.endereco}
+				telefone={info.telefone}
+			/>
+		</div>
+	);
 }

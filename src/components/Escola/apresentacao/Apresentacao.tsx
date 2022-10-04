@@ -6,6 +6,7 @@ import Pagination from "./Pagination";
 import { StyledPresentationContainer } from "./styles";
 
 interface IApresentacaoItem {
+	uid: string;
 	conteudo: string;
 	imageAlt: string;
 	imageUrl: string;
@@ -52,11 +53,10 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 	return (
 		<StyledPresentationContainer id="main-container">
 			{currentContent.map((item) => (
-				<div className="presentation-content">
+				<div className="presentation-content" key={item.uid}>
 					<div className="left-column" id="content">
 						<div className="image-container" id="image-container">
 							<Image
-								priority
 								alt={item.imageAlt}
 								className="image"
 								layout="fill"
@@ -83,7 +83,7 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 									isClampedText={isClampedText}
 									isLongText={isLongText}
 									currentPage={currentPage}
-									maxCharacters={535}
+									maxCharacters={490}
 									setIsShowingText={setIsShowingText}
 									setIsClampedText={setIsClampedText}
 									setIsLongText={setIsLongText}

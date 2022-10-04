@@ -12,31 +12,31 @@ import Header from "@/components/basics/header";
 import Footer from "@/components/basics/footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <PrismicProvider
-        linkResolver={linkResolver}
-        internalLinkComponent={({ href, children, ...props }) => (
-          <Link href={href}>
-            <Link href={href} />
-            <a {...props}> {children} </a>
-          </Link>
-        )}
-      >
-        <Script
-          defer
-          src="//barra.brasil.gov.br/barra.js"
-          type="text/javascript"
-        />
-        <PrismicPreview repositoryName={repositoryName}>
-          <Header/>
-          <GlobalStyles />
-          <Component {...pageProps} />
-          <Footer/>
-        </PrismicPreview>
-      </PrismicProvider>
-    </>
-  );
+	return (
+		<>
+			<PrismicProvider
+				linkResolver={linkResolver}
+				internalLinkComponent={({ href, children, ...props }) => (
+					<Link href={href}>
+						<Link href={href} />
+						<a {...props}> {children} </a>
+					</Link>
+				)}
+			>
+				<Script
+					defer
+					src="//barra.brasil.gov.br/barra.js"
+					type="text/javascript"
+				/>
+				<PrismicPreview repositoryName={repositoryName}>
+					<Header />
+					<GlobalStyles />
+					<Component {...pageProps} />
+					<Footer />
+				</PrismicPreview>
+			</PrismicProvider>
+		</>
+	);
 }
 
 export default MyApp;
