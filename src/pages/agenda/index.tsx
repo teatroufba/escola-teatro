@@ -23,7 +23,7 @@ function Agenda({ agenda }: { agenda: IAgenda[] }) {
 
 export default Agenda
 
-export async function getServerSideProps({
+export async function getStaticProps({
     previewData,
 }: {
     previewData: PreviewData;

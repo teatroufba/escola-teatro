@@ -21,7 +21,7 @@ function PostAgenda({ post }: { post: IAgenda }) {
 
 export default PostAgenda
 
-export async function getServerSideProps({
+export async function getStaticProps({
     previewData,
     params
 }: {
