@@ -47,3 +47,15 @@ export async function getStaticProps({
         props: { post }
     }
 }
+
+export async function getStaticPaths() {
+    const client = createClient();
+  
+    const posts = await client.getAllByType("agenda");
+    const paths = posts.map((post) => ({ params: { uid: post.uid } }));
+  
+    return {
+      fallback: false,
+      paths,
+    };
+  }
