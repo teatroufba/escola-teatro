@@ -10,6 +10,7 @@ interface IAgenda {
     tipo: string;
     title: string;
     uid: string;
+    subtitulo: string;
 }
 
 interface IAgendaMainProps {
@@ -64,7 +65,7 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
 
                     return item.tipo === Categoria
                 }).map((item, index) => (
-                    <AgendaCard key={`agenda-card-${index}`} uid={item.uid} imageUrl={item.imageUrl} imageAlt={item.imageAlt} title={item.title} date={item.date} local={item.local} tipo={item.tipo} />
+                    <AgendaCard key={`agenda-card-${index}`} uid={item.uid} imageUrl={item.imageUrl} imageAlt={item.imageAlt} title={item.title} date={item.date} local={item.local} tipo={item.tipo} subtitulo={item.subtitulo} />
                 ))}
             </div>
         </StyledAgenda>
