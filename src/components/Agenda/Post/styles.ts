@@ -47,16 +47,23 @@ export const StyledPostAgendaMain = styled.section`
             font-size: 1rem;
             margin-bottom: 2.5rem;
             line-height: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             p {
                     margin: 16px 0;
                 }
 
                 h1 , h2 , h3, h4 , h5 {
-                    margin: 32px 0;
+                    margin: 8px 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
                 }
                 div[data-oembed-type=video] {
-
+                    margin: 8px 0 ;
                    
                     iframe {
                         width: calc(100vw - 40px);
@@ -96,12 +103,19 @@ export const StyledPostAgendaMain = styled.section`
             #conteudo-post-agenda {
                 font-size: 1.375rem;
                 line-height: 2.0625rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 p {
                     margin: 16px 0;
                 }
 
                 h1 , h2 , h3, h4 , h5 {
                     margin: 32px 0;
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
                 }
                 div[data-oembed-type=video] {
 

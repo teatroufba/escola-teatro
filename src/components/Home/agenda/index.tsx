@@ -14,6 +14,7 @@ interface IAgenda {
   date: string
   tipo: string
   local: string
+  subtitle: string
 }
 
 export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
@@ -136,12 +137,20 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
           {agenda
             .filter(value => filterArray(value.tipo))
             .map(value => (
-              <CardAgenda
-                key={value.uid}
-                date={value.date}
-                description={value.title}
-                local={value.local}
-              />
+              <>
+                
+                <CardAgenda
+                  key={value.uid}
+                  date={value.date}
+                  title={value.title}
+                  local={value.local}
+                  imageUrl={value.imageUrl}
+                  imageAlt={value.imageAlt}
+                  uid = {value.uid}
+                  subtitle = {value.subtitle}
+                  
+                />
+              </>
             ))}
         </div>
         <button

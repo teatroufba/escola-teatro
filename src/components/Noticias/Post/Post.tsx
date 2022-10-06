@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { PrismicRichText } from "@prismicio/react"
 
-import { StyledPost } from './styles';
+import { StyledPost, StyledPostNoticiaMain } from './styles';
 
 interface IPostagem {
   author: string
@@ -51,7 +51,8 @@ export default function Postagem({
   }, [])
 
   return (
-    <StyledPost>
+    <>
+    {/* <StyledPost>
       <div id='img-post'>
         {imageUrl ? (
           <Image
@@ -91,6 +92,57 @@ export default function Postagem({
           </button>
         </div>
       </div>
-    </StyledPost>
+    </StyledPost> */}
+    
+    <StyledPostNoticiaMain>
+      <div id="container-img-noticia">
+        <Image
+          src={imageUrl}
+          alt={imageAlt}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
+      <div id="container-baixo-noticia">
+        <div id="container-info-noticia">
+          <div id="container-header-noticia">
+            <h1 className='title'>{title}</h1>
+            <p className='subtitle'>{subtitle}</p>
+
+            <span>
+              <p>
+                Por <b>{author}</b> <br />
+                {first_publication_date} &nbsp;&nbsp;Atualizado {lastAtt}
+              </p>
+            </span>
+
+            <span className="hr-line"></span>
+          </div>
+        </div>
+
+        <div id="conteudo-post-noticia">
+          <PrismicRichText
+            field={text}
+            components={{
+              paragraph: ({ children }) => <p className="">{children}</p>,
+            }}
+          />
+        </div>
+      </div>
+
+        <div className="btn-align-left">
+            <button type="button">
+              <Link passHref href="/noticias">
+                Ver outras notícias
+              </Link>
+            </button>
+        </div>
+    </StyledPostNoticiaMain>
+
+
+
+      
+    </>
   );
 }

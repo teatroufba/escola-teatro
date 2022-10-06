@@ -10,10 +10,14 @@ import { GlobalStyles } from "@/styles/global";
 import { linkResolver, repositoryName } from "../../prismic";
 import Header from "@/components/basics/header";
 import Footer from "@/components/basics/footer";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<>
+		<>	
+			<Head>
+				<title> {` Noticias - Escola de Teatro da UFBA`} </title>
+			</Head>
 			<PrismicProvider
 				linkResolver={linkResolver}
 				internalLinkComponent={({ href, children, ...props }) => (

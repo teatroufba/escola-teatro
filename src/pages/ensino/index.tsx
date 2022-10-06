@@ -7,6 +7,7 @@ import styled from 'styled-components'
 
 import Graduacao from '@/components/EnsinoPesquisa/graduacao'
 import PosGraduacao from '@/components/EnsinoPesquisa/pos-graduacao'
+import Head from 'next/head'
 
 const Container = styled.div`
   section {
@@ -20,7 +21,12 @@ const Container = styled.div`
 `
 
 function EnsinoePesquisa() {
+
   return (
+    <>
+      <Head>
+            <title> Ensino e Pesquisa - Escola de Teatro da UFBA</title>
+      </Head>
     <Container>
       <section className='grey'>
         <Graduacao />
@@ -35,6 +41,7 @@ function EnsinoePesquisa() {
         <ProducaoAcademica />
       </section>
     </Container>
+    </>
   )
 }
 
