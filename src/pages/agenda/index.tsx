@@ -1,5 +1,6 @@
 import AgendaMain from "@/components/Agenda/AgendaMain"
 import { PreviewData } from "next";
+import Head from "next/head";
 import { createClient } from "../../../prismic";
 
 interface IAgenda {
@@ -16,6 +17,10 @@ interface IAgenda {
 function Agenda({ agenda }: { agenda: IAgenda[] }) {
     return (
         <>
+            <Head>
+				<title> Agenda - Escola de Teatro da UFBA</title>
+			</Head>
+            
             <AgendaMain agenda={agenda} />
         </>
     )

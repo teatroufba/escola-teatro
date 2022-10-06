@@ -4,6 +4,7 @@ import Docentes from "@/components/Escola/corpo-docente/Docentes";
 import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
 import FormasDeIngresso from "@/components/Escola/formas-de-ingresso/Ingresso";
 import SetoresInstancias from "@/components/Escola/setores-e-instancias/Setores";
+import Head from "next/head";
 import {
 	conteudosApresentacao,
 	conteudo,
@@ -81,7 +82,12 @@ interface IApresentacao {
 
 export default function Page() {
 	return (
-		<div>
+		<>
+			<Head>
+				<title> A Escola - Escola de Teatro da UFBA</title>
+			</Head>
+		
+			<div>
 			<Apresentacao conteudos={conteudosApresentacao} />
 			<FormasDeIngresso
 				conteudos={conteudo.conteudos}
@@ -95,6 +101,7 @@ export default function Page() {
 				endereco={info.endereco}
 				telefone={info.telefone}
 			/>
-		</div>
+			</div>
+		</>
 	);
 }
