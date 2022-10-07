@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Postagem from "@/components/Noticias/Post/Post";
-import { maxChar } from "@/utils/maxChar";
-import Head from "next/head";
 import { createClient } from "prismic";
 
 interface IPostagem {
