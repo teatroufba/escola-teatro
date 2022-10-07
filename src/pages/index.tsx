@@ -102,9 +102,7 @@ export default function Home({
 }) {
   return (
     <>
-      <Head>
-        <title>Início - Escola de Teatro da UFBA</title>
-      </Head>
+     
 
       <Banner />
       <Noticias noticias={noticias} />

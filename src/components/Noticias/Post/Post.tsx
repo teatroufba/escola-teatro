@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { PrismicRichText } from "@prismicio/react"
 
-import { StyledPost, StyledPostNoticiaMain } from './styles';
+import { StyledPostNoticiaMain } from './styles';
 
 interface IPostagem {
   author: string

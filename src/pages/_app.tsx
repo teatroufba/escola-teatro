@@ -15,9 +15,7 @@ import Head from "next/head";
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<>	
-			<Head>
-				<title> {` Noticias - Escola de Teatro da UFBA`} </title>
-			</Head>
+		
 			<PrismicProvider
 				linkResolver={linkResolver}
 				internalLinkComponent={({ href, children, ...props }) => (

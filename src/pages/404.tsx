@@ -6,9 +6,7 @@ import Head from "next/head"
 export default function Error() {
   return (
     <>
-        <Head>
-            <title>Error 404 - Escola de Teatro da UFBA</title>
-        </Head>
+       
         <ErrorContainer>
             <div className='content'>
                 <Image alt="brasao" src={image} /> 
