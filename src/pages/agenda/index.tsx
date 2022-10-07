@@ -17,9 +17,6 @@ interface IAgenda {
 function Agenda({ agenda }: { agenda: IAgenda[] }) {
     return (
         <>
-            <Head>
-				<title> Agenda - Escola de Teatro da UFBA</title>
-			</Head>
             
             <AgendaMain agenda={agenda} />
         </>
