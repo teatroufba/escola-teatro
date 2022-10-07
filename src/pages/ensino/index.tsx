@@ -7,7 +7,6 @@ import styled from 'styled-components'
 
 import Graduacao from '@/components/EnsinoPesquisa/graduacao'
 import PosGraduacao from '@/components/EnsinoPesquisa/pos-graduacao'
-import Head from 'next/head'
 
 const Container = styled.div`
   section {

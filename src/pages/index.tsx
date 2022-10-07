@@ -103,7 +103,6 @@ export default function Home({
   return (
     <>
      
-
       <Banner />
       <Noticias noticias={noticias} />
       <Agenda agenda={agenda} />
