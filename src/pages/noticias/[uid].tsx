@@ -26,9 +26,7 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
 
   return (
     <>
-      <Head>
-        <title> {` ${maxChar(postagem.title , 32)}- Escola de Teatro da UFBA`} </title>
-      </Head>
+     
       <Postagem
         author={postagem.author}
         first_publication_date={publication}

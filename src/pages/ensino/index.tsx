@@ -24,9 +24,6 @@ function EnsinoePesquisa() {
 
   return (
     <>
-      <Head>
-            <title> Ensino e Pesquisa - Escola de Teatro da UFBA</title>
-      </Head>
     <Container>
       <section className='grey'>
         <Graduacao />
