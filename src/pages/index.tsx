@@ -8,7 +8,6 @@ import Contato from "@/components/Home/contato";
 import Mural from "@/components/Home/mural/Mural";
 import Noticias from "@/components/Home/noticias/Noticias";
 import { PreviewData } from "next";
-import Head from "next/Head"
 import { createClient } from "../../prismic";
 
 export async function getStaticProps({
@@ -27,7 +26,7 @@ export async function getStaticProps({
     date: value.data.data,
     tipo: value.data.tipo,
     local: value.data.local,
-    descricao : value.data.subtitulo
+    descricao: value.data.subtitulo,
   }));
 
   const itemsMural = await client.getAllByType("mural-estudantil", {
@@ -88,7 +87,7 @@ interface IAgenda {
   tipo: string;
   title: string;
   uid: string;
-  subtitle:string
+  subtitle: string;
 }
 
 export default function Home({
@@ -102,7 +101,6 @@ export default function Home({
 }) {
   return (
     <>
-     
       <Banner />
       <Noticias noticias={noticias} />
       <Agenda agenda={agenda} />
