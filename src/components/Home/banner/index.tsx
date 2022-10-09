@@ -66,6 +66,10 @@ const BannerStyled = styled.div`
     bottom: 0;
   }
 
+  .contentMobile {
+    display: none;
+  }
+
   &:hover {
     .layer {
       display: block;
@@ -84,6 +88,7 @@ const BannerStyled = styled.div`
         position: relative;
         background-color: #282b62;
         width: 100vw;
+        height: 40px;
         padding: 0 25px;
         justify-content: center;
 
@@ -100,11 +105,94 @@ const BannerStyled = styled.div`
         position: relative;
         background-color: #282b62;
         width: 100vw;
+        height: 40px;
         padding: 0 25px;
         justify-content: center;
 
         .content {
           display: none;
+        }
+      }
+    }
+
+    .contentMobile {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+        h1 {
+          font-family: 'Merriweather';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 3rem;
+        }
+
+        p {
+          font-family: 'Arial';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 1rem;
+          max-width: 500px;
+        }
+
+        .content-button {
+          display: none;
+          justify-content: right;
+
+          a {
+            background-color: #9a1a4b;
+            width: 40px;
+            height: 40px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+          }
+
+          small {
+            background-color: #282b62;
+            display: flex;
+            justify-content: center;
+            padding: 10px 20px;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.875rem;
+          }
+        }
+
+      @media (min-width: 768px) and (max-width: 1300px) {
+        position: relative;
+        top: calc(-39.06vw - 266px);
+        display: flex;
+        width: 86.667vw;
+        max-width: 500px;
+        margin: 0 auto;
+
+        .content-button {
+          display: flex;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        position: relative;
+        top: calc(-100vw - 266px);
+        display: flex;
+        width: 86.667vw;
+        max-width: 500px;
+        margin: 0 auto;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 0.875rem;
+        }
+
+        .content-button {
+          display: flex;
         }
       }
     }
@@ -419,6 +507,21 @@ function Banner() {
               width={7}
             />
           </button>
+        </div>
+      </div>
+      <div className='contentMobile'>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie elit vitae odio blandit mauris ac aenean pellentesque.</p>
+        <div className='content-button'>
+          <a className='desktop'>
+            <Image
+              alt="ícone de seta para esquerda"
+              height={14}
+              src="/arrow-right.svg"
+              width={7}
+            />
+          </a>
+          <small>Ver mais</small>
         </div>
       </div>
     </BannerStyled>
