@@ -49,10 +49,11 @@ export default function NoticiaCard({
       </div>
       
       <div className="text-post">
-      <p className="data">{publication}</p>
+      <p className="data">{publication}
+      </p>
         <div className='titles'>
-          <h3>{maxChar(title, 30)}</h3>
-          <p>{maxChar(subtitle, 95)}</p>
+          <h3 className='card-title'>{maxChar(title, 32)}</h3>
+          <p>{maxChar(subtitle, 128)}</p>
         </div>
         <a
           onMouseEnter={handleMouseEnter}

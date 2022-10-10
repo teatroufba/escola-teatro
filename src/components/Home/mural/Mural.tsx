@@ -16,16 +16,21 @@ export default function Mural({ mural }: { mural: IMural[] }) {
       <h1>Mural Estudantil</h1>
       <div className="mural-posts">
         {mural.slice(0, 6).map(value => (
-          <div className="mural-card">
+          <div className="mural-card" key={value.uid}>
             <a href={`/mural/${value.uid}`}>
               <figure className="textover">
                 {value.imageUrl ? (
-                  <Image
-                    src={value.imageUrl}
-                    width={380}
-                    height={270}
-                    alt={value.imageAlt}
-                  />
+                  <div className="img-container">
+                      <Image
+                      src={value.imageUrl}
+                      width={395}
+                      height={270}
+                      alt={value.imageAlt}
+                      layout="fill"
+                      
+                    />
+                  </div>
+                  
                 ) : (
                   ''
                 )}

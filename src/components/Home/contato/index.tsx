@@ -10,13 +10,17 @@ const ContatoStyled = styled.div`
   margin: 100px 0;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 60px;
 
-  h1 {
+  .title {
+    font-family: 'Merriweather';
     color: #282b62;
-    text-decoration: underline;
-    font-size: 3rem;
+    font-size: 48px;
+    font-weight: 400;
+    display: inline-block;
+    border-bottom: 5px solid #282b62;
   }
 
   div {
@@ -136,7 +140,7 @@ function Contato() {
 
   return (
     <ContatoStyled>
-      <h1>Contato</h1>
+      <h1 className='title'>Contato</h1>
       <div>
         <iframe
           title="Escola de Teatro da UFBA"

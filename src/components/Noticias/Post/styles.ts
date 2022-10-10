@@ -87,6 +87,7 @@ export const StyledPostNoticiaMain = styled.section`
             justify-content: center;
             font-size: 1.375rem;
             line-height: 2.0625rem;
+            font-family: 'Arial';
 
               p {
                     margin: 16px 0;
