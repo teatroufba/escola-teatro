@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Submenu } from "./styles";
 
 interface SubmenuOption {
-	id: string;
+	href: string;
 	option: string;
 }
 
@@ -63,7 +63,7 @@ export default function SubmenuHeader({
 			>
 				{options.map((item) => (
 					<li>
-						<a href="/">{item.option}</a>
+						<a href={item.href}>{item.option}</a>
 					</li>
 				))}
 			</ul>

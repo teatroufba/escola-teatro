@@ -36,7 +36,7 @@ export default function Docentes({ docentes }: IDocentes) {
 	}, []);
 
 	return (
-		<StyledStaffContainer>
+		<StyledStaffContainer id="corpo-docente">
 			<div className="wrap-staff-container">
 				<h1 id="staff-title">Corpo Docente</h1>
 				{width > 775 ? (

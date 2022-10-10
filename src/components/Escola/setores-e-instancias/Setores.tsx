@@ -21,7 +21,7 @@ interface ISetores {
 
 export default function SetoresInstancias({ setores }: ISetores) {
 	return (
-		<StyledDepartmentsContainer>
+		<StyledDepartmentsContainer id="setores-e-instancias">
 			<h1>Setores e Instâncias</h1>
 			{setores.map((setor) => (
 				<SetorAccordion

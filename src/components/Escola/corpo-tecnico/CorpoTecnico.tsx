@@ -14,7 +14,7 @@ interface ICorpoTecnicoArray {
 export default function CorpoTecnico({ corpoTecnico }: ICorpoTecnicoArray) {
 	return (
 		<StyledStaffTableContainer>
-			<h1>Corpo Técnico</h1>
+			<h1 id="corpo-tecnico">Corpo Técnico</h1>
 			<div className="table-container">
 				<StyledStaffTable>
 					<thead>

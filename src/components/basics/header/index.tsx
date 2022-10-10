@@ -9,7 +9,7 @@ import StyledDropdown from "../menumobile";
 import MenuMobile from "../menu-mobile";
 
 interface SubmenuOption {
-	id: string;
+	href: string;
 	option: string;
 }
 
@@ -30,43 +30,46 @@ function Header() {
 		switch (section) {
 			case "escola":
 				setOptions([
-					{ id: "", option: "Apresentação" },
-					{ id: "", option: "Ingresso" },
-					{ id: "", option: "Setores e Instâncias" },
-					{ id: "", option: "Corpo Docente" },
-					{ id: "", option: "Corpo Técnico" },
-					{ id: "", option: "Contato" },
+					{ href: "/escola/#apresentacao", option: "Apresentação" },
+					{ href: "/escola/#formas-de-ingresso", option: "Ingresso" },
+					{
+						href: "/escola/#setores-e-instancias",
+						option: "Setores e Instâncias",
+					},
+					{ href: "/escola/#corpo-docente", option: "Corpo Docente" },
+					{ href: "/escola/#corpo-tecnico", option: "Corpo Técnico" },
+					{ href: "/escola/#como-chegar", option: "Contato" },
 				]);
 				break;
 
 			case "ensino":
 				setOptions([
-					{ id: "", option: "Graduação" },
-					{ id: "", option: "Pós Graduação" },
-					{ id: "", option: "Grupos de Pesquisa" },
-					{ id: "", option: "Produção Acadêmica" },
+					{ href: "/ensino/#graduacao", option: "Graduação" },
+					{ href: "/ensino/#pos-graduacao", option: "Pós Graduação" },
+					{ href: "/ensino/#grupos-de-pesquisa", option: "Grupos de Pesquisa" },
+					{ href: "/ensino/#producao-academica", option: "Produção Acadêmica" },
 				]);
 				break;
 
 			case "extensao":
 				setOptions([
-					{ id: "", option: "Cia de Teatro" },
-					{ id: "", option: "Curso Livre" },
-					{ id: "", option: "Ato de 4" },
-					{ id: "", option: "Outros Projetos" },
+					{ href: "", option: "Cia de Teatro" },
+					{ href: "", option: "Curso Livre" },
+					{ href: "", option: "Ato de 4" },
+					{ href: "", option: "Outros Projetos" },
 				]);
 				break;
 
 			case "espacos":
 				setOptions([
-					{ id: "", option: "Teatro Martin Gonçalves" },
-					{ id: "", option: "Pavilhão de Aulas" },
-					{ id: "", option: "Casarão" },
-					{ id: "", option: "Sala 05" },
-					{ id: "", option: "Galeria Nilda Spencer" },
-					{ id: "", option: "Carpintaria" },
-					{ id: "", option: "Rouparia" },
-					{ id: "", option: "Biblioteca" },
+					{ href: "", option: "Teatro Martin Gonçalves" },
+					{ href: "", option: "Pavilhão de Aulas" },
+					{ href: "", option: "Casarão" },
+					{ href: "", option: "Sala 05" },
+					{ href: "", option: "Galeria Nilda Spencer" },
+					{ href: "", option: "Carpintaria" },
+					{ href: "", option: "Rouparia" },
+					{ href: "", option: "Biblioteca" },
 				]);
 				break;
 		}
