@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import image from "@/public/brasao.png";
 
@@ -9,6 +9,7 @@ import {
 	HeaderSuperior,
 	Submenu,
 } from "./styles";
+import SubmenuHeader from "../submenu-header";
 
 interface SubmenuOption {
 	id: string;
@@ -25,13 +26,11 @@ function Header() {
 	const [isShowing, setIsShowing] = useState(false);
 
 	function showSubmenu(section: string) {
+		setIsShowing(true);
+		setSection(section);
+
 		switch (section) {
 			case "escola":
-				if (typeof document != "undefined") {
-					document.getElementById("escola")?.classList.add("hover-state");
-				}
-				setIsShowing(true);
-				setSection("escola");
 				setOptions([
 					{ id: "", option: "Apresentação" },
 					{ id: "", option: "Ingresso" },
@@ -43,11 +42,6 @@ function Header() {
 				break;
 
 			case "ensino":
-				if (typeof document != "undefined") {
-					document.getElementById("ensino")?.classList.add("hover-state");
-				}
-				setIsShowing(true);
-				setSection("ensino");
 				setOptions([
 					{ id: "", option: "Graduação" },
 					{ id: "", option: "Pós Graduação" },
@@ -57,11 +51,6 @@ function Header() {
 				break;
 
 			case "extensao":
-				if (typeof document != "undefined") {
-					document.getElementById("extensao")?.classList.add("hover-state");
-				}
-				setIsShowing(true);
-				setSection("extensao");
 				setOptions([
 					{ id: "", option: "Cia de Teatro" },
 					{ id: "", option: "Curso Livre" },
@@ -71,11 +60,6 @@ function Header() {
 				break;
 
 			case "espacos":
-				if (typeof document != "undefined") {
-					document.getElementById("espacos")?.classList.add("hover-state");
-				}
-				setIsShowing(true);
-				setSection("espacos");
 				setOptions([
 					{ id: "", option: "Teatro Martin Gonçalves" },
 					{ id: "", option: "Pavilhão de Aulas" },
@@ -96,6 +80,8 @@ function Header() {
 		}
 		setIsShowing(false);
 	}
+
+	useEffect(() => {}, [isShowing]);
 
 	return (
 		<HeaderContainer>
@@ -215,19 +201,11 @@ function Header() {
 			</HeaderInferior>
 
 			{isShowing ? (
-				<Submenu>
-					<ul
-						className="submenu"
-						onMouseEnter={() => showSubmenu(section)}
-						onMouseLeave={() => hideSubmenu(section)}
-					>
-						{options.map((item) => (
-							<li>
-								<a href="/">{item.option}</a>
-							</li>
-						))}
-					</ul>
-				</Submenu>
+				<SubmenuHeader
+					options={options}
+					menuSection={section}
+					setIsShowingFunction={setIsShowing}
+				/>
 			) : null}
 		</HeaderContainer>
 	);
