@@ -3,13 +3,10 @@ import React, { useEffect, useState } from "react";
 
 import image from "@/public/brasao.png";
 
-import {
-	HeaderContainer,
-	HeaderInferior,
-	HeaderSuperior,
-	Submenu,
-} from "./styles";
+import { HeaderContainer, HeaderInferior, HeaderSuperior } from "./styles";
 import SubmenuHeader from "../submenu-header";
+import StyledDropdown from "../menumobile";
+import MenuMobile from "../menu-mobile";
 
 interface SubmenuOption {
 	id: string;
@@ -24,6 +21,7 @@ function Header() {
 	const [options, setOptions] = useState<SubmenuOption[]>([]);
 	const [section, setSection] = useState<string>("");
 	const [isShowing, setIsShowing] = useState(false);
+	const [isShowingMobile, setIsShowingMobile] = useState(false);
 
 	function showSubmenu(section: string) {
 		setIsShowing(true);
@@ -81,7 +79,14 @@ function Header() {
 		setIsShowing(false);
 	}
 
-	useEffect(() => {}, [isShowing]);
+	function showSubmenuMobile() {
+		const body = document.querySelector("body");
+		setIsShowingMobile(isShowingMobile ? false : true);
+
+		if (body) {
+			body.style.overflow = !isShowingMobile ? "hidden" : "scroll";
+		}
+	}
 
 	return (
 		<HeaderContainer>
@@ -95,7 +100,7 @@ function Header() {
 				</div>
 
 				<div className="social-navbar">
-					<div id="ham-btn">
+					<div id="ham-btn" onClick={() => showSubmenuMobile()}>
 						<div className="ham-btn-bar" />
 						<div className="ham-btn-bar" />
 						<div className="ham-btn-bar" />
@@ -207,6 +212,8 @@ function Header() {
 					setIsShowingFunction={setIsShowing}
 				/>
 			) : null}
+
+			{isShowingMobile ? <MenuMobile></MenuMobile> : null}
 		</HeaderContainer>
 	);
 }

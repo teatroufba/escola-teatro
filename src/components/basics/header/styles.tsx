@@ -27,6 +27,9 @@ export const HeaderSuperior = styled.div`
 		justify-content: start;
 		flex-direction: column-reverse;
 		gap: 25px;
+
+		position: relative;
+		//position: fixed;
 	}
 
 	.social-navbar {
@@ -40,6 +43,7 @@ export const HeaderSuperior = styled.div`
 			padding: 18px 25px;
 
 			width: 100%;
+			//position: relative;
 		}
 	}
 
@@ -68,8 +72,10 @@ export const HeaderSuperior = styled.div`
 		display: flex;
 		flex-direction: column;
 		gap: 5px;
+		cursor: pointer;
 
 		display: none;
+
 		.ham-btn-bar {
 			width: 30px;
 			height: 3px;
