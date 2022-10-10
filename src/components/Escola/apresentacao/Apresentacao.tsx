@@ -34,7 +34,7 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 	function hideText() {
 		if (isShowingText) {
 			const text = document.getElementById("text-content");
-			const mainContainer = document.getElementById("main-container");
+			const mainContainer = document.getElementById("apresentacao");
 
 			if (text && mainContainer) {
 				setIsShowingText(false);
@@ -51,7 +51,7 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 	}
 
 	return (
-		<StyledPresentationContainer id="main-container">
+		<StyledPresentationContainer id="apresentacao">
 			{currentContent.map((item) => (
 				<div className="presentation-content" key={item.uid}>
 					<div className="left-column" id="content">
@@ -75,7 +75,7 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 								</p>
 								<ReadMore
 									textID="text-content"
-									mainContainerID="main-container"
+									mainContainerID="apresentacao"
 									buttonID="show-text-btn"
 									titleID="title"
 									textHeight={330}

@@ -40,9 +40,7 @@ export default function FormasDeIngresso({
 	function hideText() {
 		if (isShowingText) {
 			const text = document.getElementById("entry-form-text-content");
-			const mainContainer = document.getElementById(
-				"entry-form-main-container"
-			);
+			const mainContainer = document.getElementById("formas-de-ingresso");
 
 			if (text && mainContainer) {
 				setIsShowingText(false);
@@ -59,7 +57,7 @@ export default function FormasDeIngresso({
 	}
 
 	return (
-		<StyledEntryFormsContainer id="entry-form-main-container">
+		<StyledEntryFormsContainer id="formas-de-ingresso">
 			<h1 id="entry-form-title">Formas de Ingresso</h1>
 			<div className="entry-content">
 				<div className="left-column">
@@ -85,7 +83,7 @@ export default function FormasDeIngresso({
 									</p>
 									<ReadMore
 										textID="entry-form-text-content"
-										mainContainerID="entry-form-main-container"
+										mainContainerID="formas-de-ingresso"
 										buttonID="entry-form-show-text-btn"
 										titleID="entry-form-title"
 										textHeight={300}
