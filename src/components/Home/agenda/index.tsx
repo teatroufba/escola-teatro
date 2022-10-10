@@ -68,7 +68,10 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
   return (
     <AgendaStyled>
       <div className="header">
-        <h1>Agenda</h1>
+        <div className="title-box">
+          <h1 className='title'>Agenda</h1>
+        </div>
+        
         <div className="filtro">
           <button
             id="Tudo"
@@ -137,7 +140,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
           {agenda
             .filter(value => filterArray(value.tipo))
             .map(value => (
-              <>
+              
                 
                 <CardAgenda
                   key={value.uid}
@@ -150,7 +153,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
                   subtitle = {value.subtitle}
                   
                 />
-              </>
+              
             ))}
         </div>
         <button

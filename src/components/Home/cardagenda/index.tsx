@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { ClockIcon, LocationIcon } from './icons'
 import { StyledAgendaCard } from '@/components/Agenda/styles'
 import Link from "next/link";
+
 const CardStyle = styled.div`
   width: 235px;
   height: 450px;
@@ -25,31 +26,30 @@ const CardStyle = styled.div`
     }
   }
 
-  .img-area {
+  .container-img{
     height: 250px;
     background-color: #d9d9d9;
     border-radius: 5px 5px 0 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     width: 100%;
 
     .img-content {
-      width: 250px;
+      min-width: 235px;
+      height: 250px;
+      position: relative;
+      z-index: 0;
 
     }
 
    
-    .date {
+    .img-date {
       background-color: #9a1a4b;
       padding: 15px;
-      position: relative;
       z-index: 1;
       color: #ffffff;
-      left: -176.5px;
-      right: 150px;
-      top: 134px;
-      bottom: 0;
+     
       h3 {
         font-family: 'Merriweather', serif;
       }
@@ -60,7 +60,7 @@ const CardStyle = styled.div`
     }
   }
 
-  .info {
+  .container-baixo {
     padding: 0 15px 15px 15px;
     display: flex;
     flex-direction: column;
@@ -69,7 +69,7 @@ const CardStyle = styled.div`
     gap: 10px;
 
 
-    h4 {
+    .title {
       font-family: 'Merriweather', serif;
       font-weight: 400;
       color: #282b62;
@@ -149,18 +149,23 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
   return (
 
     
-    <StyledAgendaCard>
+    <CardStyle>
       <Link href={`/agenda/${uid}`} passHref>
         <div className="card">
-            <div className="container-img">
-                <Image src={imageUrl} alt={imageAlt} layout="fill" objectFit="cover" objectPosition='center' />
-                <p>
+            <div className="container-img"> 
+              <div className="img-content"> 
+                <Image src={imageUrl} alt={imageAlt} width={235} height={250} layout="responsive" objectFit="cover"  />
+              </div>
+            
+              <p className='img-date'>
                     {dia}<br />
                     <span>{meses[mes]}</span>
-                </p>
+              </p>
+                
+
             </div>
             <div className="container-baixo">
-                <h4>{title}</h4>
+                <h4 className='title'>{title}</h4>
                 <div className="container-data">
                     <Image src='/calendar.svg' alt="" width={24} height={24} />
                     <p>{`${dia}/${mesNumero}/${ano}`}</p>
@@ -178,7 +183,7 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
             </div>
             </div>
             </Link>
-        </StyledAgendaCard>
+        </CardStyle>
   )
 }
 
