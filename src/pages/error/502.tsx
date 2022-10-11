@@ -3,7 +3,6 @@ import Link from "next/link";
 import styled from "styled-components";
 
 import Button from "@/components/basics/button";
-import Head from "next/head";
 
 const Container = styled.div`
   height: calc(100vh - 370px);
@@ -30,29 +29,23 @@ const Container = styled.div`
 
 function ErrorPage502() {
   return (
-    <>
-      <Head>
-        <title>Error 404 - Escola de Teatro da UFBA</title>
-      </Head>
-      <Container>
-        <Image
-          alt="Brasão da Escola de teatro"
-          height={110}
-          src="/logo-fundo-claro.png"
-          width={123}
-        />
-        <h1>Erro 502</h1>
-        <p>
-          Ocorreu um erro em nosso servidor, tente novamente ou volte mais
-          tarde.
-        </p>
-        <Link passHref href="/">
-          <a href="replace">
-            <Button>Voltar para o início</Button>
-          </a>
-        </Link>
-      </Container>
-    </>
+    <Container>
+      <Image
+        alt="Brasão da Escola de teatro"
+        height={110}
+        src="/logo-fundo-claro.png"
+        width={123}
+      />
+      <h1>Erro 502</h1>
+      <p>
+        Ocorreu um erro em nosso servidor, tente novamente ou volte mais tarde.
+      </p>
+      <Link passHref href="/">
+        <a href="replace">
+          <Button>Voltar para o início</Button>
+        </a>
+      </Link>
+    </Container>
   );
 }
 
