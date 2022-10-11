@@ -24,7 +24,6 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
 
   return (
     <>
-     
       <Postagem
         author={postagem.author}
         first_publication_date={publication}
