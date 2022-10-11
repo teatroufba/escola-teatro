@@ -1,7 +1,6 @@
 import PostAgendaMain from "@/components/Agenda/Post/PostAgendaMain";
 import { maxChar } from "@/utils/maxChar";
 import { PreviewData } from "next";
-import Head from "next/head";
 import { createClient } from "../../../prismic";
 
 interface IAgenda {
@@ -16,13 +15,6 @@ interface IAgenda {
 function PostAgenda({ post }: { post: IAgenda }) {
   return (
     <>
-      <Head>
-        <title>
-          {" "}
-          {` ${maxChar(post.title, 32)}- Escola de Teatro da UFBA`}{" "}
-        </title>
-      </Head>
-
       <PostAgendaMain
         date={post.date}
         imageAlt={post.imageAlt}

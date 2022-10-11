@@ -83,10 +83,6 @@ interface IApresentacao {
 export default function Page() {
   return (
     <>
-      <Head>
-        <title> A Escola - Escola de Teatro da UFBA</title>
-      </Head>
-
       <div>
         <Apresentacao conteudos={conteudosApresentacao} />
         <FormasDeIngresso

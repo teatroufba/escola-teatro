@@ -2,14 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import image from "@/public/brasao.png";
-import Head from "next/head";
 export default function Error() {
   return (
     <>
-      <Head>
-        <title>Error 404 - Escola de Teatro da UFBA</title>
-      </Head>
-
       <ErrorContainer>
         <div className="content">
           <Image alt="brasao" src={image} />
