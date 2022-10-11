@@ -4,7 +4,6 @@ import Docentes from "@/components/Escola/corpo-docente/Docentes";
 import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
 import FormasDeIngresso from "@/components/Escola/formas-de-ingresso/Ingresso";
 import SetoresInstancias from "@/components/Escola/setores-e-instancias/Setores";
-import Head from "next/head";
 import {
 	conteudosApresentacao,
 	conteudo,
