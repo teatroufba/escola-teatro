@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import Postagem from "@/components/Noticias/Post/Post";
+import { maxChar } from "@/utils/maxChar";
+import Head from "next/head";
 import { createClient } from "prismic";
 
 interface IPostagem {
@@ -24,7 +26,13 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
 
   return (
     <>
-     
+      <Head>
+        <title>
+          {" "}
+          {` ${maxChar(postagem.title, 32)}- Escola de Teatro da UFBA`}{" "}
+        </title>
+      </Head>
+
       <Postagem
         author={postagem.author}
         first_publication_date={publication}
