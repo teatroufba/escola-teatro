@@ -6,6 +6,7 @@ import Noticias from "@/components/Noticias/Noticias";
 import { PreviewData } from "next";
 
 import { createClient } from "../../../prismic";
+import Head from "next/head";
 
 export async function getStaticProps({
   previewData,
@@ -39,5 +40,12 @@ export default function Page({
     title: items.data.title,
     uid: items.uid || "",
   }));
-  return <Noticias post={posts} />;
+  return (
+    <>
+      <Head>
+        <title> Notícias - Escola de Teatro da UFBA</title>
+      </Head>
+      <Noticias post={posts} />;
+    </>
+  );
 }

@@ -8,6 +8,7 @@ import Contato from "@/components/Home/contato";
 import Mural from "@/components/Home/mural/Mural";
 import Noticias from "@/components/Home/noticias/Noticias";
 import { PreviewData } from "next";
+import Head from "next/head";
 import { createClient } from "../../prismic";
 
 export async function getStaticProps({
@@ -101,6 +102,10 @@ export default function Home({
 }) {
   return (
     <>
+      <Head>
+        <title>Início - Escola de Teatro da UFBA</title>
+      </Head>
+
       <Banner />
       <Noticias noticias={noticias} />
       <Agenda agenda={agenda} />
