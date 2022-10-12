@@ -87,7 +87,11 @@ type CardProps = {
   title: string,
 }
 
-function CarouselRevistaLivro() {
+interface ICarouselProps {
+  titulo: string
+}
+
+function CarouselRevistaLivro({ titulo }: ICarouselProps) {
   const carousel = useRef<HTMLInputElement>(null)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
@@ -220,7 +224,7 @@ function CarouselRevistaLivro() {
 
   return (
     <Container>
-        <h2>titulo</h2>
+        <h2>{titulo}</h2>
         <div ref={carousel} className='carousel'>
             {cards.map((value: CardProps, index: number, array: CardProps[]) => (
               <Card desc={value.desc} img={value.img} link={value.link} title={value.title}/>

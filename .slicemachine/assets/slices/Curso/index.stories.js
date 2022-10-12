@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"curso","items":[],"primary":{"titulo":"grow cutting-edge e-tailers","duracao":4235,"descricao":"grow front-end blockchains","ppp":{"link_type":"Web","url":"https://slicemachine.dev"},"matrizCurricular":{"link_type":"Web","url":"http://google.com"},"ementario":{"link_type":"Web","url":"http://twitter.com"},"guiaEstudantil":{"link_type":"Web","url":"https://slicemachine.dev"}},"id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"curso","items":[],"primary":{"titulo":"reintermediate holistic users","duracao":4793,"descricao":"synergize user-centric vortals","ppp":"orchestrate value-added portals","matrizCurricular":"incentivize end-to-end e-markets","ementario":"strategize enterprise relationships","guiaEstudantil":"redefine distributed channels"},"id":"_Default"}} />
 _Default.storyName = 'Default'

@@ -47,11 +47,17 @@
           }
         },
         "website": {
-          "type": "Link",
+          "type": "Text",
           "config": {
             "label": "Website",
-            "placeholder": "",
-            "select": null
+            "placeholder": ""
+          }
+        },
+        "websiteLink": {
+          "type": "Text",
+          "config": {
+            "label": "Website Link",
+            "placeholder": ""
           }
         }
       },

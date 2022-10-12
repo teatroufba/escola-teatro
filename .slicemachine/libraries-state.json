@@ -182,35 +182,31 @@
                   }
                 },
                 "ppp": {
-                  "type": "Link",
+                  "type": "Text",
                   "config": {
                     "label": "Projeto político Pedagógico",
-                    "placeholder": "",
-                    "select": null
+                    "placeholder": ""
                   }
                 },
                 "matrizCurricular": {
-                  "type": "Link",
+                  "type": "Text",
                   "config": {
                     "label": "Matriz Curricular",
-                    "placeholder": "",
-                    "select": null
+                    "placeholder": ""
                   }
                 },
                 "ementario": {
-                  "type": "Link",
+                  "type": "Text",
                   "config": {
                     "label": "Ementário",
-                    "placeholder": "",
-                    "select": null
+                    "placeholder": ""
                   }
                 },
                 "guiaEstudantil": {
-                  "type": "Link",
+                  "type": "Text",
                   "config": {
                     "label": "Guia Estudantil",
-                    "placeholder": "",
-                    "select": null
+                    "placeholder": ""
                   }
                 }
               },
@@ -226,25 +222,13 @@
             "slice_type": "curso",
             "items": [],
             "primary": {
-              "titulo": "grow cutting-edge e-tailers",
-              "duracao": 4235,
-              "descricao": "grow front-end blockchains",
-              "ppp": {
-                "link_type": "Web",
-                "url": "https://slicemachine.dev"
-              },
-              "matrizCurricular": {
-                "link_type": "Web",
-                "url": "http://google.com"
-              },
-              "ementario": {
-                "link_type": "Web",
-                "url": "http://twitter.com"
-              },
-              "guiaEstudantil": {
-                "link_type": "Web",
-                "url": "https://slicemachine.dev"
-              }
+              "titulo": "reintermediate holistic users",
+              "duracao": 4793,
+              "descricao": "synergize user-centric vortals",
+              "ppp": "orchestrate value-added portals",
+              "matrizCurricular": "incentivize end-to-end e-markets",
+              "ementario": "strategize enterprise relationships",
+              "guiaEstudantil": "redefine distributed channels"
             }
           }
         },
@@ -413,11 +397,17 @@
                   }
                 },
                 "website": {
-                  "type": "Link",
+                  "type": "Text",
                   "config": {
                     "label": "Website",
-                    "placeholder": "",
-                    "select": null
+                    "placeholder": ""
+                  }
+                },
+                "websiteLink": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Website Link",
+                    "placeholder": ""
                   }
                 }
               },
@@ -433,15 +423,13 @@
             "slice_type": "grupo_pesquisa",
             "items": [],
             "primary": {
-              "nome": "unleash next-generation networks",
-              "descricao": "engineer web-enabled eyeballs",
-              "lider": "unleash wireless infrastructures",
-              "email": "morph open-source niches",
-              "telefone": "engineer cutting-edge architectures",
-              "website": {
-                "link_type": "Web",
-                "url": "https://prismic.io"
-              }
+              "nome": "aggregate granular e-services",
+              "descricao": "architect sticky ROI",
+              "lider": "monetize compelling web services",
+              "email": "revolutionize one-to-one systems",
+              "telefone": "enhance best-of-breed schemas",
+              "website": "brand killer blockchains",
+              "websiteLink": "iterate ubiquitous applications"
             }
           }
         },
@@ -555,6 +543,13 @@
                     "label": "Título",
                     "placeholder": ""
                   }
+                },
+                "link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -577,16 +572,16 @@
             "slice_type": "livro",
             "items": [
               {
-                "autor": "enhance dynamic users"
+                "autor": "integrate back-end applications"
               },
               {
-                "autor": "utilize virtual relationships"
+                "autor": "target user-centric methodologies"
               },
               {
-                "autor": "facilitate cutting-edge action-items"
+                "autor": "harness customized infomediaries"
               },
               {
-                "autor": "disintermediate dot-com partnerships"
+                "autor": "synergize open-source e-tailers"
               }
             ],
             "primary": {
@@ -597,9 +592,10 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
               },
-              "titulo": "synthesize B2B communities"
+              "titulo": "deploy efficient channels",
+              "link": "evolve intuitive e-business"
             }
           }
         },
@@ -813,11 +809,10 @@
                   }
                 },
                 "link": {
-                  "type": "Link",
+                  "type": "Text",
                   "config": {
                     "label": "Link",
-                    "placeholder": "",
-                    "select": null
+                    "placeholder": ""
                   }
                 }
               },
@@ -840,14 +835,11 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
               },
-              "titulo": "integrate open-source solutions",
-              "descricao": "incubate clicks-and-mortar vortals",
-              "link": {
-                "link_type": "Web",
-                "url": "http://twitter.com"
-              }
+              "titulo": "synergize sticky deliverables",
+              "descricao": "reinvent granular blockchains",
+              "link": "envisioneer strategic infrastructures"
             }
           }
         },

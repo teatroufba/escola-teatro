@@ -149,8 +149,8 @@ function ProducaoAcademica() {
 						</div>
 					</div>
 				</div>
-				<CarouselRevistaLivro />
-				<CarouselRevistaLivro />
+				<CarouselRevistaLivro titulo="Revistas e Publicações " />
+				<CarouselRevistaLivro titulo="Livros" />
 			</div>
 		</Container>
 	);

@@ -34,11 +34,10 @@
           }
         },
         "link": {
-          "type": "Link",
+          "type": "Text",
           "config": {
             "label": "Link",
-            "placeholder": "",
-            "select": null
+            "placeholder": ""
           }
         }
       },

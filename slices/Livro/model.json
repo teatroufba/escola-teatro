@@ -25,6 +25,13 @@
             "label": "Título",
             "placeholder": ""
           }
+        },
+        "link": {
+          "type": "Text",
+          "config": {
+            "label": "Link",
+            "placeholder": ""
+          }
         }
       },
       "items": {

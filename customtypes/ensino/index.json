@@ -34,11 +34,10 @@
         }
       },
       "link": {
-        "type": "Link",
+        "type": "Text",
         "config": {
           "label": "Link",
-          "placeholder": "",
-          "select": null
+          "placeholder": ""
         }
       }
     },
@@ -56,36 +55,32 @@
       }
     },
     "Produção Acadêmica": {
-      "monografia": {
-        "type": "Link",
+      "monografias": {
+        "type": "Text",
         "config": {
-          "label": "Monografia",
-          "placeholder": "",
-          "select": null
+          "label": "Link para Monografias",
+          "placeholder": ""
         }
       },
       "espetaculosFormatura": {
-        "type": "Link",
+        "type": "Text",
         "config": {
-          "label": "Espetáculos de Formatura",
-          "placeholder": "",
-          "select": null
+          "label": "Link para Espetáculos de Formatura",
+          "placeholder": ""
         }
       },
       "dissertacoes": {
-        "type": "Link",
+        "type": "Text",
         "config": {
-          "label": "Dissertações",
-          "placeholder": "",
-          "select": null
+          "label": "Link para Dissertações",
+          "placeholder": ""
         }
       },
       "teses": {
-        "type": "Link",
+        "type": "Text",
         "config": {
-          "label": "Teses",
-          "placeholder": "",
-          "select": null
+          "label": "Link para Teses",
+          "placeholder": ""
         }
       },
       "slices3": {

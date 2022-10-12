@@ -85,9 +85,9 @@ export default function Page({ escolaProps } : {escolaProps: IEscolaProps}) {
 
 export async function getStaticProps({
 	previewData,
-  }: {
+}: {
 	previewData: PreviewData;
-  }) {
+}) {
 	const client = createClient({ previewData });
 	const escola = await client.getSingle('escola')
 	
@@ -159,4 +159,4 @@ export async function getStaticProps({
 	return {
 	  props: { escolaProps },
 	};
-  }
+}

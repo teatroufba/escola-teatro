@@ -33,35 +33,31 @@
           }
         },
         "ppp": {
-          "type": "Link",
+          "type": "Text",
           "config": {
             "label": "Projeto político Pedagógico",
-            "placeholder": "",
-            "select": null
+            "placeholder": ""
           }
         },
         "matrizCurricular": {
-          "type": "Link",
+          "type": "Text",
           "config": {
             "label": "Matriz Curricular",
-            "placeholder": "",
-            "select": null
+            "placeholder": ""
           }
         },
         "ementario": {
-          "type": "Link",
+          "type": "Text",
           "config": {
             "label": "Ementário",
-            "placeholder": "",
-            "select": null
+            "placeholder": ""
           }
         },
         "guiaEstudantil": {
-          "type": "Link",
+          "type": "Text",
           "config": {
             "label": "Guia Estudantil",
-            "placeholder": "",
-            "select": null
+            "placeholder": ""
           }
         }
       },
