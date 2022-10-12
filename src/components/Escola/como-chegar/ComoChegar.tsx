@@ -24,7 +24,7 @@ export default function ComoChegar({
 					<iframe
 						height="336"
 						loading="lazy"
-						src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15550.720594717637!2d-38.52164!3d-12.992298!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14a62291b236efbf!2sEscola%20de%20Teatro%20da%20UFBA!5e0!3m2!1spt-BR!2sbr!4v1657715808611!5m2!1spt-BR!2sbr"
+						src={`https://www.google.com/maps/embed/v1/search?q=${encodeURIComponent(endereco)}&key=AIzaSyCau3SVqNmsAyNC17YWZwOwoPg37KWtxfs`}
 						title="Escola de Teatro da UFBA"
 						width="605"
 					/>
