@@ -23,7 +23,8 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "escola": {}
   },
   "slices": {
     "Membro": {
@@ -34,14 +35,7 @@
     "FormaIngresso": {},
     "ConteudoFormaIngresso": {
       "default": {
-        "items": {
-          "content": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
+        "items": {},
         "primary": {}
       }
     },
@@ -50,6 +44,44 @@
         "items": {},
         "primary": {}
       }
-    }
+    },
+    "ConteudoApresentacao": {
+      "default": {
+        "primary": {
+          "titulo": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "conteudo": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "FormasIngresso": {},
+    "SetoresInstancias": {
+      "default": {
+        "primary": {
+          "nome": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "Docente": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "MembroCorpoTecnico": {}
   }
 }

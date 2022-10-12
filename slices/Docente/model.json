@@ -1,27 +1,28 @@
 {
-  "id": "membro",
+  "id": "docente",
   "type": "SharedSlice",
-  "name": "Membro",
-  "description": "Membro",
+  "name": "Docente",
+  "description": "Docente",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Membro",
+      "description": "Docente",
       "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "nome": {
           "type": "Text",
           "config": {
             "label": "Nome",
-            "placeholder": ""
-          }
-        },
-        "funcao": {
-          "type": "Text",
-          "config": {
-            "label": "Função",
             "placeholder": ""
           }
         },
@@ -30,6 +31,21 @@
           "config": {
             "label": "Email",
             "placeholder": ""
+          }
+        },
+        "interesses": {
+          "type": "Text",
+          "config": {
+            "label": "Áreas de Interesse",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link para o Currículo Lattes",
+            "placeholder": "",
+            "select": null
           }
         }
       },

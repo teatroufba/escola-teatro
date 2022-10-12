@@ -4,7 +4,8 @@ import Docentes from "@/components/Escola/corpo-docente/Docentes";
 import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
 import FormasDeIngresso from "@/components/Escola/formas-de-ingresso/Ingresso";
 import SetoresInstancias from "@/components/Escola/setores-e-instancias/Setores";
-import Head from "next/head";
+import { PreviewData } from "next";
+import { createClient } from "../../../prismic";
 import {
   conteudosApresentacao,
   conteudo,
@@ -80,7 +81,9 @@ interface IApresentacao {
   conteudos: IApresentacaoItem[];
 }
 
-export default function Page() {
+export default function Page({agenda}: any) {
+	console.log(agenda)
+
   return (
     <>
       <div>
@@ -101,3 +104,18 @@ export default function Page() {
     </>
   );
 }
+
+export async function getStaticProps({
+	previewData,
+  }: {
+	previewData: PreviewData;
+  }) {
+	const client = createClient({ previewData });
+	const item = await client.getSingle('escola')
+  
+	const agenda = item
+  
+	return {
+	  props: { agenda },
+	};
+  }

@@ -1,6 +1,101 @@
 {
   "slices": {
     "components": {
+      "conteudo_apresentacao": {
+        "library": "slices",
+        "id": "conteudo_apresentacao",
+        "name": "ConteudoApresentacao",
+        "description": "ConteudoApresentacao",
+        "model": {
+          "id": "conteudo_apresentacao",
+          "type": "SharedSlice",
+          "name": "ConteudoApresentacao",
+          "description": "ConteudoApresentacao",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ConteudoApresentacao",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Título",
+                    "placeholder": "Título",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                },
+                "conteudo": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Conteúdo",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "conteudo_apresentacao",
+            "items": [],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+              },
+              "titulo": [
+                {
+                  "type": "heading1",
+                  "text": "Visualize distributed eyeballs",
+                  "spans": []
+                }
+              ],
+              "conteudo": [
+                {
+                  "type": "paragraph",
+                  "text": "Quis magna aliquip aute amet laborum laboris tempor irure veniam et nostrud laboris in ad. Veniam consequat reprehenderit elit excepteur eu deserunt veniam Lorem veniam dolore ullamco ipsum nisi in. Qui proident occaecat eiusmod sint laborum ut mollit amet qui.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\ConteudoApresentacao\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
       "conteudo_forma_ingresso": {
         "library": "slices",
         "id": "conteudo_forma_ingresso",
@@ -18,25 +113,23 @@
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
               "description": "ConteudoFormaIngresso",
-              "primary": {},
-              "items": {
-                "title": {
+              "primary": {
+                "titulo": {
                   "type": "Text",
                   "config": {
-                    "label": "Title",
+                    "label": "Título",
                     "placeholder": ""
                   }
                 },
-                "content": {
-                  "type": "StructuredText",
+                "conteudo": {
+                  "type": "Text",
                   "config": {
-                    "label": "Content",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "multi": "paragraph,strong,em"
+                    "label": "Conteúdo",
+                    "placeholder": ""
                   }
                 }
               },
+              "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -46,46 +139,123 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "conteudo_forma_ingresso",
-            "items": [
-              {
-                "title": "innovate web-enabled schemas",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Magna mollit incididunt nisi ex non nulla consectetur ex do aute consequat ea. Ullamco non id Lorem incididunt veniam eiusmod exercitation sint consequat ut pariatur.",
-                    "spans": []
-                  }
-                ]
-              },
-              {
-                "title": "innovate 24/365 ROI",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Amet irure elit proident nulla est sit aliqua incididunt enim minim in elit reprehenderit. Fugiat anim culpa exercitation aute sunt nulla cupidatat deserunt esse elit esse do ea.",
-                    "spans": []
-                  }
-                ]
-              },
-              {
-                "title": "envisioneer cutting-edge users",
-                "content": [
-                  {
-                    "type": "paragraph",
-                    "text": "Proident magna voluptate sint irure pariatur et fugiat aliquip dolor incididunt sit. Deserunt anim et ipsum pariatur.",
-                    "spans": []
-                  }
-                ]
-              }
-            ],
-            "primary": {}
+            "items": [],
+            "primary": {
+              "titulo": "implement mission-critical ROI",
+              "conteudo": "engage customized e-business"
+            }
           }
         },
         "meta": {
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\ConteudoFormaIngresso\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
+      "docente": {
+        "library": "slices",
+        "id": "docente",
+        "name": "Docente",
+        "description": "Docente",
+        "model": {
+          "id": "docente",
+          "type": "SharedSlice",
+          "name": "Docente",
+          "description": "Docente",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Docente",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "nome": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Nome",
+                    "placeholder": ""
+                  }
+                },
+                "email": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Email",
+                    "placeholder": ""
+                  }
+                },
+                "interesses": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Áreas de Interesse",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link para o Currículo Lattes",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "docente",
+            "items": [],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+              },
+              "nome": "evolve intuitive ROI",
+              "email": "monetize bleeding-edge eyeballs",
+              "interesses": "deploy transparent technologies",
+              "link": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Docente\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
       },
       "links_forma_ingresso": {
         "library": "slices",
@@ -104,12 +274,11 @@
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
               "description": "LinksFormaIngresso",
-              "primary": {},
-              "items": {
-                "title": {
+              "primary": {
+                "titulo": {
                   "type": "Text",
                   "config": {
-                    "label": "Title",
+                    "label": "Titulo",
                     "placeholder": ""
                   }
                 },
@@ -118,10 +287,11 @@
                   "config": {
                     "label": "Link",
                     "placeholder": "",
-                    "select": null
+                    "select": "media"
                   }
                 }
               },
+              "items": {},
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -131,51 +301,27 @@
             "variation": "default",
             "name": "Default",
             "slice_type": "links_forma_ingresso",
-            "items": [
-              {
-                "title": "incubate impactful e-services",
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://twitter.com"
-                }
-              },
-              {
-                "title": "aggregate granular mindshare",
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://google.com"
-                }
-              },
-              {
-                "title": "monetize transparent synergies",
-                "link": {
-                  "link_type": "Web",
-                  "url": "http://twitter.com"
-                }
-              },
-              {
-                "title": "visualize global partnerships",
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                }
-              },
-              {
-                "title": "aggregate impactful solutions",
-                "link": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                }
+            "items": [],
+            "primary": {
+              "titulo": "architect strategic functionalities",
+              "link": {
+                "link_type": "media",
+                "url": "https://source.unsplash.com/daily"
               }
-            ],
-            "primary": {}
+            }
           }
         },
         "meta": {
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\LinksFormaIngresso\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
       },
       "membro": {
         "library": "slices",
@@ -195,17 +341,17 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "Membro",
               "primary": {
-                "name": {
+                "nome": {
                   "type": "Text",
                   "config": {
-                    "label": "Name",
+                    "label": "Nome",
                     "placeholder": ""
                   }
                 },
-                "role": {
+                "funcao": {
                   "type": "Text",
                   "config": {
-                    "label": "Role",
+                    "label": "Função",
                     "placeholder": ""
                   }
                 },
@@ -213,13 +359,6 @@
                   "type": "Text",
                   "config": {
                     "label": "Email",
-                    "placeholder": ""
-                  }
-                },
-                "phone": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Phone",
                     "placeholder": ""
                   }
                 }
@@ -236,10 +375,9 @@
             "slice_type": "membro",
             "items": [],
             "primary": {
-              "name": "harness next-generation schemas",
-              "role": "reintermediate compelling ROI",
-              "email": "utilize bleeding-edge users",
-              "phone": "recontextualize vertical ROI"
+              "nome": "embrace cross-media eyeballs",
+              "funcao": "reintermediate one-to-one relationships",
+              "email": "harness web-enabled experiences"
             }
           }
         },
@@ -249,7 +387,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\Membro\\default\\preview.png",
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Membro\\default\\preview.png",
             "width": 800,
             "height": 60
           }
@@ -341,6 +479,122 @@
           "extension": "js"
         },
         "screenshotPaths": {}
+      },
+      "setores_instancias": {
+        "library": "slices",
+        "id": "setores_instancias",
+        "name": "SetoresInstancias",
+        "description": "SetoresInstancias",
+        "model": {
+          "id": "setores_instancias",
+          "type": "SharedSlice",
+          "name": "SetoresInstancias",
+          "description": "SetoresInstancias",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SetoresInstancias",
+              "primary": {
+                "nome": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Nome",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {
+                "nome": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Nome do Membro",
+                    "placeholder": ""
+                  }
+                },
+                "email": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Email do Membro",
+                    "placeholder": ""
+                  }
+                },
+                "funcao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Função do Membro",
+                    "placeholder": ""
+                  }
+                },
+                "telefone": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Telefone do Membro",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "setores_instancias",
+            "items": [
+              {
+                "nome": "transform granular blockchains",
+                "email": "repurpose out-of-the-box e-tailers",
+                "funcao": "exploit robust channels",
+                "telefone": "harness global solutions"
+              },
+              {
+                "nome": "orchestrate plug-and-play deliverables",
+                "email": "enhance e-business e-business",
+                "funcao": "scale scalable synergies",
+                "telefone": "reintermediate innovative e-business"
+              },
+              {
+                "nome": "empower efficient e-tailers",
+                "email": "brand value-added paradigms",
+                "funcao": "redefine scalable initiatives",
+                "telefone": "disintermediate clicks-and-mortar niches"
+              },
+              {
+                "nome": "deploy out-of-the-box web services",
+                "email": "revolutionize back-end e-services",
+                "funcao": "disintermediate customized bandwidth",
+                "telefone": "envisioneer killer channels"
+              }
+            ],
+            "primary": {
+              "nome": [
+                {
+                  "type": "heading1",
+                  "text": "Deploy killer infomediaries",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\SetoresInstancias\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
       }
     }
   }
