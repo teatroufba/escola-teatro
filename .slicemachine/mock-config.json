@@ -24,7 +24,8 @@
         }
       }
     },
-    "escola": {}
+    "escola": {},
+    "ensino": {}
   },
   "slices": {
     "Membro": {
@@ -62,6 +63,26 @@
         "primary": {}
       }
     },
-    "MembroCorpoTecnico": {}
+    "MembroCorpoTecnico": {},
+    "Curso": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "GrupoPesquisa": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "RevistaOuPublicacao": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Livro": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

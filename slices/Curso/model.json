@@ -1,0 +1,72 @@
+{
+  "id": "curso",
+  "type": "SharedSlice",
+  "name": "Curso",
+  "description": "Curso",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Curso",
+      "primary": {
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Título",
+            "placeholder": "Título"
+          }
+        },
+        "duracao": {
+          "type": "Number",
+          "config": {
+            "label": "Duração",
+            "placeholder": "4"
+          }
+        },
+        "descricao": {
+          "type": "Text",
+          "config": {
+            "label": "Descrição",
+            "placeholder": ""
+          }
+        },
+        "ppp": {
+          "type": "Link",
+          "config": {
+            "label": "Projeto político Pedagógico",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "matrizCurricular": {
+          "type": "Link",
+          "config": {
+            "label": "Matriz Curricular",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "ementario": {
+          "type": "Link",
+          "config": {
+            "label": "Ementário",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "guiaEstudantil": {
+          "type": "Link",
+          "config": {
+            "label": "Guia Estudantil",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

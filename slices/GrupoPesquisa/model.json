@@ -1,0 +1,62 @@
+{
+  "id": "grupo_pesquisa",
+  "type": "SharedSlice",
+  "name": "GrupoPesquisa",
+  "description": "GrupoPesquisa",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "GrupoPesquisa",
+      "primary": {
+        "nome": {
+          "type": "Text",
+          "config": {
+            "label": "Nome",
+            "placeholder": ""
+          }
+        },
+        "descricao": {
+          "type": "Text",
+          "config": {
+            "label": "Descrição",
+            "placeholder": ""
+          }
+        },
+        "lider": {
+          "type": "Text",
+          "config": {
+            "label": "Líder",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "telefone": {
+          "type": "Text",
+          "config": {
+            "label": "Telefone",
+            "placeholder": ""
+          }
+        },
+        "website": {
+          "type": "Link",
+          "config": {
+            "label": "Website",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

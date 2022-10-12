@@ -1,0 +1,107 @@
+{
+  "id": "ensino",
+  "label": "Ensino",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Graduação": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "curso": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Pós-Graduação": {
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Imagem",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "conteudo": {
+        "type": "Text",
+        "config": {
+          "label": "Conteúdo",
+          "placeholder": ""
+        }
+      },
+      "link": {
+        "type": "Link",
+        "config": {
+          "label": "Link",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    },
+    "Grupos de Pesquisa": {
+      "slices2": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "grupo_pesquisa": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Produção Acadêmica": {
+      "monografia": {
+        "type": "Link",
+        "config": {
+          "label": "Monografia",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "espetaculosFormatura": {
+        "type": "Link",
+        "config": {
+          "label": "Espetáculos de Formatura",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "dissertacoes": {
+        "type": "Link",
+        "config": {
+          "label": "Dissertações",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "teses": {
+        "type": "Link",
+        "config": {
+          "label": "Teses",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "slices3": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "revista_ou_publicacao": {
+              "type": "SharedSlice"
+            },
+            "livro": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

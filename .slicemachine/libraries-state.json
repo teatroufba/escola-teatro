@@ -142,6 +142,124 @@
           }
         }
       },
+      "curso": {
+        "library": "slices",
+        "id": "curso",
+        "name": "Curso",
+        "description": "Curso",
+        "model": {
+          "id": "curso",
+          "type": "SharedSlice",
+          "name": "Curso",
+          "description": "Curso",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Curso",
+              "primary": {
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Título",
+                    "placeholder": "Título"
+                  }
+                },
+                "duracao": {
+                  "type": "Number",
+                  "config": {
+                    "label": "Duração",
+                    "placeholder": "4"
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "ppp": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Projeto político Pedagógico",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "matrizCurricular": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Matriz Curricular",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "ementario": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Ementário",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "guiaEstudantil": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Guia Estudantil",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "curso",
+            "items": [],
+            "primary": {
+              "titulo": "grow cutting-edge e-tailers",
+              "duracao": 4235,
+              "descricao": "grow front-end blockchains",
+              "ppp": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "matrizCurricular": {
+                "link_type": "Web",
+                "url": "http://google.com"
+              },
+              "ementario": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              },
+              "guiaEstudantil": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Curso\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
       "docente": {
         "library": "slices",
         "id": "docente",
@@ -241,6 +359,104 @@
           }
         }
       },
+      "grupo_pesquisa": {
+        "library": "slices",
+        "id": "grupo_pesquisa",
+        "name": "GrupoPesquisa",
+        "description": "GrupoPesquisa",
+        "model": {
+          "id": "grupo_pesquisa",
+          "type": "SharedSlice",
+          "name": "GrupoPesquisa",
+          "description": "GrupoPesquisa",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "GrupoPesquisa",
+              "primary": {
+                "nome": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Nome",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "lider": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Líder",
+                    "placeholder": ""
+                  }
+                },
+                "email": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Email",
+                    "placeholder": ""
+                  }
+                },
+                "telefone": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Telefone",
+                    "placeholder": ""
+                  }
+                },
+                "website": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Website",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "grupo_pesquisa",
+            "items": [],
+            "primary": {
+              "nome": "unleash next-generation networks",
+              "descricao": "engineer web-enabled eyeballs",
+              "lider": "unleash wireless infrastructures",
+              "email": "morph open-source niches",
+              "telefone": "engineer cutting-edge architectures",
+              "website": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\GrupoPesquisa\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
       "links_forma_ingresso": {
         "library": "slices",
         "id": "links_forma_ingresso",
@@ -302,6 +518,98 @@
         "screenshotPaths": {
           "default": {
             "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\LinksFormaIngresso\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
+      "livro": {
+        "library": "slices",
+        "id": "livro",
+        "name": "Livro",
+        "description": "Livro",
+        "model": {
+          "id": "livro",
+          "type": "SharedSlice",
+          "name": "Livro",
+          "description": "Livro",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Livro",
+              "primary": {
+                "capa": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Capa",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Título",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "autor": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Autor",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "livro",
+            "items": [
+              {
+                "autor": "enhance dynamic users"
+              },
+              {
+                "autor": "utilize virtual relationships"
+              },
+              {
+                "autor": "facilitate cutting-edge action-items"
+              },
+              {
+                "autor": "disintermediate dot-com partnerships"
+              }
+            ],
+            "primary": {
+              "capa": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
+              },
+              "titulo": "synthesize B2B communities"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Livro\\default\\preview.png",
             "width": 800,
             "height": 60
           }
@@ -463,6 +771,97 @@
           "extension": "js"
         },
         "screenshotPaths": {}
+      },
+      "revista_ou_publicacao": {
+        "library": "slices",
+        "id": "revista_ou_publicacao",
+        "name": "RevistaOuPublicacao",
+        "description": "RevistaOuPublicacao",
+        "model": {
+          "id": "revista_ou_publicacao",
+          "type": "SharedSlice",
+          "name": "RevistaOuPublicacao",
+          "description": "RevistaOuPublicacao",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RevistaOuPublicacao",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Título",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "revista_ou_publicacao",
+            "items": [],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
+              },
+              "titulo": "integrate open-source solutions",
+              "descricao": "incubate clicks-and-mortar vortals",
+              "link": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\RevistaOuPublicacao\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
       },
       "setores_instancias": {
         "library": "slices",
