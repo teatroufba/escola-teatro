@@ -12,12 +12,10 @@
       "description": "SetoresInstancias",
       "primary": {
         "nome": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Nome",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading1"
+            "placeholder": ""
           }
         }
       },

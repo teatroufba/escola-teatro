@@ -23,7 +23,7 @@
           "config": {
             "label": "Link",
             "placeholder": "",
-            "select": "media"
+            "select": null
           }
         }
       },

@@ -47,33 +47,13 @@
     },
     "ConteudoApresentacao": {
       "default": {
-        "primary": {
-          "titulo": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          },
-          "conteudo": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        }
+        "primary": {}
       }
     },
     "FormasIngresso": {},
     "SetoresInstancias": {
       "default": {
-        "primary": {
-          "nome": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        },
+        "primary": {},
         "items": {}
       }
     },

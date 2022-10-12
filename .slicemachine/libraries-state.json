@@ -28,21 +28,17 @@
                   }
                 },
                 "titulo": {
-                  "type": "StructuredText",
+                  "type": "Text",
                   "config": {
-                    "label": "Título",
-                    "placeholder": "Título",
-                    "allowTargetBlank": true,
-                    "single": "heading1"
+                    "label": "Titulo",
+                    "placeholder": ""
                   }
                 },
                 "conteudo": {
-                  "type": "StructuredText",
+                  "type": "Text",
                   "config": {
                     "label": "Conteúdo",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph"
+                    "placeholder": ""
                   }
                 }
               },
@@ -65,22 +61,10 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
               },
-              "titulo": [
-                {
-                  "type": "heading1",
-                  "text": "Visualize distributed eyeballs",
-                  "spans": []
-                }
-              ],
-              "conteudo": [
-                {
-                  "type": "paragraph",
-                  "text": "Quis magna aliquip aute amet laborum laboris tempor irure veniam et nostrud laboris in ad. Veniam consequat reprehenderit elit excepteur eu deserunt veniam Lorem veniam dolore ullamco ipsum nisi in. Qui proident occaecat eiusmod sint laborum ut mollit amet qui.",
-                  "spans": []
-                }
-              ]
+              "titulo": "innovate 24/7 mindshare",
+              "conteudo": "empower next-generation systems"
             }
           }
         },
@@ -287,7 +271,7 @@
                   "config": {
                     "label": "Link",
                     "placeholder": "",
-                    "select": "media"
+                    "select": null
                   }
                 }
               },
@@ -303,10 +287,10 @@
             "slice_type": "links_forma_ingresso",
             "items": [],
             "primary": {
-              "titulo": "architect strategic functionalities",
+              "titulo": "exploit extensible platforms",
               "link": {
-                "link_type": "media",
-                "url": "https://source.unsplash.com/daily"
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
               }
             }
           }
@@ -499,12 +483,10 @@
               "description": "SetoresInstancias",
               "primary": {
                 "nome": {
-                  "type": "StructuredText",
+                  "type": "Text",
                   "config": {
                     "label": "Nome",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "heading1"
+                    "placeholder": ""
                   }
                 }
               },
@@ -549,38 +531,26 @@
             "slice_type": "setores_instancias",
             "items": [
               {
-                "nome": "transform granular blockchains",
-                "email": "repurpose out-of-the-box e-tailers",
-                "funcao": "exploit robust channels",
-                "telefone": "harness global solutions"
+                "nome": "reintermediate dot-com channels",
+                "email": "extend real-time methodologies",
+                "funcao": "streamline B2C architectures",
+                "telefone": "envisioneer real-time deliverables"
               },
               {
-                "nome": "orchestrate plug-and-play deliverables",
-                "email": "enhance e-business e-business",
-                "funcao": "scale scalable synergies",
-                "telefone": "reintermediate innovative e-business"
+                "nome": "e-enable end-to-end action-items",
+                "email": "utilize interactive metrics",
+                "funcao": "mesh extensible synergies",
+                "telefone": "strategize 24/365 channels"
               },
               {
-                "nome": "empower efficient e-tailers",
-                "email": "brand value-added paradigms",
-                "funcao": "redefine scalable initiatives",
-                "telefone": "disintermediate clicks-and-mortar niches"
-              },
-              {
-                "nome": "deploy out-of-the-box web services",
-                "email": "revolutionize back-end e-services",
-                "funcao": "disintermediate customized bandwidth",
-                "telefone": "envisioneer killer channels"
+                "nome": "incentivize strategic niches",
+                "email": "deploy wireless e-tailers",
+                "funcao": "target B2B synergies",
+                "telefone": "maximize real-time partnerships"
               }
             ],
             "primary": {
-              "nome": [
-                {
-                  "type": "heading1",
-                  "text": "Deploy killer infomediaries",
-                  "spans": []
-                }
-              ]
+              "nome": "repurpose best-of-breed vortals"
             }
           }
         },

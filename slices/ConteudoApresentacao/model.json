@@ -20,21 +20,17 @@
           }
         },
         "titulo": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
-            "label": "Título",
-            "placeholder": "Título",
-            "allowTargetBlank": true,
-            "single": "heading1"
+            "label": "Titulo",
+            "placeholder": ""
           }
         },
         "conteudo": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Conteúdo",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph"
+            "placeholder": ""
           }
         }
       },
