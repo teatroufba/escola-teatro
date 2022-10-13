@@ -111,7 +111,24 @@ const Container = styled.div`
 	}
 `;
 
-function ProducaoAcademica() {
+interface IRevista {
+	descricao: string,
+	titulo: string,
+	imageUrl: string,
+	imageAlt: string,
+	link: string,
+}
+
+interface IProducaoAcademica {
+	monografias: string,
+	espetaculosFormatura: string,
+	dissertacoes: string,
+	teses: string,
+	revistas: IRevista[],
+  	livros: IRevista[],
+}
+
+function ProducaoAcademica({ monografias, espetaculosFormatura, dissertacoes, teses, revistas, livros }: IProducaoAcademica) {
 	return (
 		<Container>
 			<h1 id="producao-academica">Produção Acadêmica</h1>
@@ -120,28 +137,28 @@ function ProducaoAcademica() {
 					<h2>Trabalhos de Conclusão de Curso - TCC</h2>
 					<div className="links">
 						<div className="link">
-							<Link passHref href="/">
+							<Link passHref href={monografias ?? ''}>
 								<a href="replace">
 									<p>Monografias</p>
 								</a>
 							</Link>
 						</div>
 						<div className="link">
-							<Link passHref href="/">
+							<Link passHref href={espetaculosFormatura ?? ''}>
 								<a href="replace">
 									<p>Espetáculos de Formatura</p>
 								</a>
 							</Link>
 						</div>
 						<div className="link">
-							<Link passHref href="/">
+							<Link passHref href={dissertacoes ?? ''}>
 								<a href="replace">
 									<p>Dissertações</p>
 								</a>
 							</Link>
 						</div>
 						<div className="link">
-							<Link passHref href="/">
+							<Link passHref href={teses ?? ''}>
 								<a href="replace">
 									<p>Teses</p>
 								</a>
@@ -149,8 +166,8 @@ function ProducaoAcademica() {
 						</div>
 					</div>
 				</div>
-				<CarouselRevistaLivro titulo="Revistas e Publicações " />
-				<CarouselRevistaLivro titulo="Livros" />
+				<CarouselRevistaLivro titulo="Revistas e Publicações" itens={revistas} />
+				<CarouselRevistaLivro titulo="Livros" itens={livros} />
 			</div>
 		</Container>
 	);

@@ -44,17 +44,17 @@ const Container = styled.div`
 		}
 	}
 `;
-type AccordionProps = {
-	desc: string;
-	email: string;
-	leader: string;
-	name: string;
-	telephone: string;
-	website: string;
+type IGruposPesquisaProps = {
+	nome: string,
+	descricao: string,
+	lider: string,
+	email: string,
+	telefone: string,
+	website: string,
 };
 
-function GruposPesquisa() {
-	const grupo: AccordionProps = {
+function GruposPesquisa({ grupos }: {grupos: IGruposPesquisaProps[]}) {
+	const grupo: any = {
 		name: "Nome do grupo de pesquisa",
 		desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Accumsan turpis tellus, massa nam. Euismod convallis vestibulum fringilla mauris cras tellus cras. Aliquet ac orci cum elit in ac pellentesque aliquet massa. Diam parturient laoreet tempus tortor. Suspendisse amet consectetur massa scelerisque convallis interdum. Porta commodo mattis in at fames. Leo, dignissim lacus orci a nunc, nec id ut. Gravida molestie pellentesque commodo lacus laoreet lorem accumsan. Et nunc nec pulvinar libero sit rhoncus. Sed nulla tellus, risus, mauris erat id lectus scelerisque.",
 		leader: "Lorem Ipsum",
@@ -67,38 +67,17 @@ function GruposPesquisa() {
 		<Container>
 			<h1 id="grupos-de-pesquisa">Grupos de Pesquisa</h1>
 			<div className="groups">
-				<GrupoPesquisa
-					desc={grupo.desc}
-					email={grupo.email}
-					leader={grupo.leader}
-					name={grupo.name}
-					telephone={grupo.telephone}
-					website={grupo.website}
-				/>
-				<GrupoPesquisa
-					desc={grupo.desc}
-					email={grupo.email}
-					leader={grupo.leader}
-					name={grupo.name}
-					telephone={grupo.telephone}
-					website={grupo.website}
-				/>
-				<GrupoPesquisa
-					desc={grupo.desc}
-					email={grupo.email}
-					leader={grupo.leader}
-					name={grupo.name}
-					telephone={grupo.telephone}
-					website={grupo.website}
-				/>
-				<GrupoPesquisa
-					desc={grupo.desc}
-					email={grupo.email}
-					leader={grupo.leader}
-					name={grupo.name}
-					telephone={grupo.telephone}
-					website={grupo.website}
-				/>
+				{grupos.map((item, index) => (
+					<GrupoPesquisa
+						key={`grupo-pesquisa${index}`}
+						desc={item.descricao}
+						email={item.email}
+						leader={item.lider}
+						name={item.nome}
+						telephone={item.telefone}
+						website={item.website}
+					/>
+				))}
 			</div>
 		</Container>
 	);

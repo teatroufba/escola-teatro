@@ -33,11 +33,11 @@ interface IGraduacao {
 
 interface IGrupoPesquisa {
   nome: string,
-    descricao: string,
-    lider: string,
-    email: string,
-    telefone: string,
-    website: string,
+  descricao: string,
+  lider: string,
+  email: string,
+  telefone: string,
+  website: string,
 }
 
 interface IRevista {
@@ -48,46 +48,37 @@ interface IRevista {
   link: string,
 }
 
-interface ILivro {
-  link: string,
-  titulo: string,
-  capaUrl: string,
-  capaAlt: string,
-  autores: string[]
-}
-
 interface IEnsinoProps {
   imageUrl: string,
   imageAlt: string,
   conteudo: string,
   link: string,
-  monografia: string,
+  monografias: string,
   espetaculosFormatura: string,
   dissertacoes: string,
   teses: string,
   graduacao: IGraduacao[],
   gruposPesquisa: IGrupoPesquisa[],
   revistas: IRevista[],
-  livros: ILivro[],
+  livros: IRevista[],
 }
 
 function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
-  console.log(ensinoProps)
 
   return (
     <>
       <Container>
         <section className="grey">
-          <Graduacao />
+          <Graduacao cursos={ensinoProps.graduacao} />
         </section>
         <section>
-          <PosGraduacao />
+          <PosGraduacao imageUrl={ensinoProps.imageUrl} imageAlt={ensinoProps.imageAlt} conteudo={ensinoProps.conteudo} link={ensinoProps.link} />
         </section>
         <section className="grey">
-          <GruposPesquisa />
+          <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
         </section>
         <section>
-          <ProducaoAcademica />
+          <ProducaoAcademica monografias={ensinoProps.monografias} espetaculosFormatura={ensinoProps.espetaculosFormatura} dissertacoes={ensinoProps.dissertacoes} teses={ensinoProps.teses} livros={ensinoProps.livros} revistas={ensinoProps.revistas} />
         </section>
       </Container>
     </>
@@ -143,9 +134,9 @@ export async function getStaticProps({
 	const livros = livrosAuxiliar.map((item: any) => ({
 		link: item.primary.link,
 		titulo: item.primary.titulo,
-    capaUrl: item.primary.capa.url,
-    capaAlt: item.primary.capa.alt,
-    autores: item.items.map((item2: any) => item2.autor)
+    imageUrl: item.primary.capa.url,
+    imageAlt: item.primary.capa.alt,
+    descricao: item.primary.descricao,
 	}))
 
 	const ensinoProps = {
@@ -153,7 +144,7 @@ export async function getStaticProps({
     imageAlt: ensino.data.image.alt,
     conteudo: ensino.data.conteudo,
     link: ensino.data.link,
-    monografia: ensino.data.monografias,
+    monografias: ensino.data.monografias,
     espetaculosFormatura: ensino.data.espetaculosFormatura,
     dissertacoes: ensino.data.dissertacoes,
     teses: ensino.data.teses,

@@ -81,7 +81,8 @@
     },
     "Livro": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     }
   }

@@ -72,24 +72,25 @@ const Container = styled.div`
 type CardProps = {
   desc: string,
   img: string,
+  imgAlt: string,
   link: string,
   title: string,
 }
 
 function Card(props: CardProps) {
-  const { desc, img, link, title } = props;
+  const { desc, img, imgAlt, link, title } = props;
 
   return (
     <Container>
         <div className='img'>
-            {/* <Image src={img} alt='' layout='fill' objectFit='cover' objectPosition='center' draggable={false} /> */}
+            <Image src={img} alt={imgAlt} layout='fill' objectFit='cover' objectPosition='center' draggable={false} />
         </div>
         <div className='content'>
             <div className='info'>
                 <p>{title}</p>
                 <small>{desc}</small>
             </div>
-            <Link href={link}>Acesse</Link>
+            <Link href={link ?? ''}>Acesse</Link>
         </div>
     </Container>
   )
