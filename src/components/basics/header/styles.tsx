@@ -170,7 +170,7 @@ export const HeaderInferior = styled.nav`
 	}
 
 	.hover-state {
-		background-color: #9a1a4b;
+		background-color: #24233a;
 	}
 `;
 
