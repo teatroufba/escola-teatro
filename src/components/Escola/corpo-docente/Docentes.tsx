@@ -15,7 +15,6 @@ interface IDocente {
 	interesses: string;
 	link: string;
 	nome: string;
-	uid: string;
 }
 interface IDocentes {
 	docentes: IDocente[];

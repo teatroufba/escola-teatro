@@ -10,12 +10,11 @@ interface ICard {
     interests: string,
     link: string,
     name: string,
-    uid: string
   }
 
-export default function StaffCardCarousel({name, email, link, interests, imageUrl, altImage, uid} : ICard) {
+export default function StaffCardCarousel({name, email, link, interests, imageUrl, altImage} : ICard) {
     return (
-    <StyledDocenteCardCarrossel key={uid}>
+    <StyledDocenteCardCarrossel>
         <div className="image-container">
             <Image 
                 alt={altImage} 

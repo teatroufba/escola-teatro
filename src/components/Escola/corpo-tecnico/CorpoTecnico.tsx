@@ -1,7 +1,6 @@
 import { StyledStaffTable, StyledStaffTableContainer } from "./styles";
 
 interface ICorpoTecnico {
-	uid: string;
 	email: string;
 	nome: string;
 	funcao: string;
@@ -26,8 +25,8 @@ export default function CorpoTecnico({ corpoTecnico }: ICorpoTecnicoArray) {
 					</thead>
 
 					<tbody>
-						{corpoTecnico.map((item) => (
-							<tr key={item.uid}>
+						{corpoTecnico.map((item, index) => (
+							<tr key={`membro${index}`}>
 								<td>{item.nome}</td>
 								<td>{item.funcao}</td>
 								<td>{item.email}</td>
