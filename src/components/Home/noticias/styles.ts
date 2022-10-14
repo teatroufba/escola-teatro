@@ -69,10 +69,14 @@ export const StyledNoticiaCard = styled.div`
   gap: 10px;
   width: 290px;
 
-  h3 {
+
+  .card-title {
     font-family: 'Merriweather';
+    font-style: normal;
     font-weight: 400;
     font-size: 24px;
+    line-height: 120%;
+    color: #2C2525;
     height: 87px;
   }
 
@@ -90,6 +94,7 @@ export const StyledNoticiaCard = styled.div`
 
     p {
       font-size: 16px;
+      font-weight: 400;
     }
 
     .titles {

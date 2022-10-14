@@ -15,6 +15,20 @@ export const AgendaStyled = styled.div`
     gap: 35px;
     justify-content: center;
 
+    .title-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .title {
+      font-family: 'Merriweather';
+      color: #fff;
+      font-size: 48px;
+      font-weight: 400;
+      display: inline-block;
+      border-bottom: 5px solid #fff;
+    }
+
     @media screen and (max-width: 1400px) {
       width: 791px;
     }
@@ -28,13 +42,7 @@ export const AgendaStyled = styled.div`
       margin: 0 auto;
     }
 
-    h1 {
-      color: white;
-      font-family: 'Merriweather';
-      text-decoration: underline;
-      text-underline-position: under;
-      text-align: center;
-    }
+   
 
     .filtro {
       display: flex;

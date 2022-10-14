@@ -6,12 +6,10 @@ import Pagination from "./Pagination";
 import { StyledEntryFormsContainer } from "./styles";
 
 interface IFormaIngresso {
-	uid: string;
 	link: string;
 	titulo: string;
 }
 interface IConteudo {
-	uid: string;
 	conteudo: string;
 	titulo: string;
 }
@@ -61,8 +59,8 @@ export default function FormasDeIngresso({
 			<h1 id="entry-form-title">Formas de Ingresso</h1>
 			<div className="entry-content">
 				<div className="left-column">
-					{formas.map((forma) => (
-						<div className="entry-form" key={forma.uid}>
+					{formas.map((forma, index) => (
+						<div className="entry-form" key={`forma${index}`}>
 							<Link passHref href={forma.link}>
 								<a href={forma.link} rel="noopener noreferrer" target="_blank">
 									<h3>{forma.titulo}</h3>
@@ -73,8 +71,8 @@ export default function FormasDeIngresso({
 				</div>
 
 				<div className="right-column">
-					{currentContent.map((forma) => (
-						<div className="entry-form-info" key={forma.uid}>
+					{currentContent.map((forma, index) => (
+						<div className="entry-form-info" key={`conteudo-forma${index}`}>
 							<div className="entry-form-info-content">
 								<h3>{forma.titulo}</h3>
 								<div className="text-content">

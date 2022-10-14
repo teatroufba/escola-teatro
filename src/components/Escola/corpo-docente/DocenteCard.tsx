@@ -10,12 +10,11 @@ interface ICard {
     interests: string,
     link: string,
     name: string,
-    uid: string
   }
 
-export default function StaffCard({name, email, link, interests, imageUrl, altImage, uid} : ICard) {
+export default function StaffCard({name, email, link, interests, imageUrl, altImage} : ICard) {
   return (
-    <StyledStaffCard key={uid}>
+    <StyledStaffCard>
         <Image alt={altImage} height={200} src={imageUrl} width={290} />
         <StyledStaffDescriptionContainer>
             <StyledStaffDescription>

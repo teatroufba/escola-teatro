@@ -43,11 +43,18 @@ export const StyledMural = styled.div`
       -moz-border-radius: 5%;
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
     }
+    .img-container {
+      border: 1px solid red;
+      width: 395px;
+      height: 306px;
+    }
     .textover {
       position: relative;
     }
 
     .textover figcaption {
+      width: 100%;
+      height: 80px;
       position: absolute;
       font-size: 24px;
       color: white;

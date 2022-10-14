@@ -4,7 +4,6 @@ import { ArrowDownIcon, ArrowUpIcon } from "./icons";
 import { StyledAccordionContainer } from "./styles";
 
 interface IMembro {
-	uid: string;
 	email: string;
 	nome: string;
 	telefone: string;
@@ -53,8 +52,8 @@ export default function SetorAccordion({ nome, membros }: ISetor) {
 					</button>
 				</div>
 				<div ref={accordion} className="accordion-members-container hidden">
-					{membros.map((membro) => (
-						<div className="accordion-member" key={membro.uid}>
+					{membros.map((membro, index) => (
+						<div className="accordion-member" key={`accodrion${index}`}>
 							<h3>{membro.nome}</h3>
 							<p>Função: {membro.funcao}</p>
 							<p>E-mail: {membro.email}</p>

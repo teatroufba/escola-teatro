@@ -11,17 +11,17 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Membro",
       "primary": {
-        "name": {
+        "nome": {
           "type": "Text",
           "config": {
-            "label": "Name",
+            "label": "Nome",
             "placeholder": ""
           }
         },
-        "role": {
+        "funcao": {
           "type": "Text",
           "config": {
-            "label": "Role",
+            "label": "Função",
             "placeholder": ""
           }
         },
@@ -29,13 +29,6 @@
           "type": "Text",
           "config": {
             "label": "Email",
-            "placeholder": ""
-          }
-        },
-        "phone": {
-          "type": "Text",
-          "config": {
-            "label": "Phone",
             "placeholder": ""
           }
         }

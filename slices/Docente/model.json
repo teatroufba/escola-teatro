@@ -1,0 +1,56 @@
+{
+  "id": "docente",
+  "type": "SharedSlice",
+  "name": "Docente",
+  "description": "Docente",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Docente",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "nome": {
+          "type": "Text",
+          "config": {
+            "label": "Nome",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "interesses": {
+          "type": "Text",
+          "config": {
+            "label": "Áreas de Interesse",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link para o Currículo Lattes",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

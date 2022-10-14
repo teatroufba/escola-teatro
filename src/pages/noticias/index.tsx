@@ -39,5 +39,9 @@ export default function Page({
     title: items.data.title,
     uid: items.uid || "",
   }));
-  return <Noticias post={posts} />;
+  return (
+    <>
+      <Noticias post={posts} />;
+    </>
+  );
 }

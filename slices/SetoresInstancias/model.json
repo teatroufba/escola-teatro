@@ -1,0 +1,55 @@
+{
+  "id": "setores_instancias",
+  "type": "SharedSlice",
+  "name": "SetoresInstancias",
+  "description": "SetoresInstancias",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SetoresInstancias",
+      "primary": {
+        "nome": {
+          "type": "Text",
+          "config": {
+            "label": "Nome",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "nome": {
+          "type": "Text",
+          "config": {
+            "label": "Nome do Membro",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email do Membro",
+            "placeholder": ""
+          }
+        },
+        "funcao": {
+          "type": "Text",
+          "config": {
+            "label": "Função do Membro",
+            "placeholder": ""
+          }
+        },
+        "telefone": {
+          "type": "Text",
+          "config": {
+            "label": "Telefone do Membro",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

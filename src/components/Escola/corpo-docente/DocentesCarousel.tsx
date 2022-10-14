@@ -10,7 +10,6 @@ interface IDocente {
 	interesses: string;
 	link: string;
 	nome: string;
-	uid: string;
 }
 
 interface DocentesProps {
@@ -20,15 +19,14 @@ interface DocentesProps {
 export default function DocentesCarousel ({ docentes }: DocentesProps) {  
     return (
         <StyledStaffCarousel>
-          {docentes.map(docente =>
-            <StaffCardCarousel key={docente.uid}
+          {docentes.map((docente, index) =>
+            <StaffCardCarousel key={`carrossel${index}`}
             altImage={docente.imagemAlt} 
             email={docente.email} 
             imageUrl={docente.imagemUrl}
             interests={docente.interesses} 
             link={docente.link}
             name={docente.nome}
-            uid={docente.uid}
             /> 
         )}
         </StyledStaffCarousel>
