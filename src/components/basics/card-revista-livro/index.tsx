@@ -1,4 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import Image from 'next/image';
+import Link from 'next/link';
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -16,6 +18,7 @@ const Container = styled.div`
     }
 
     .img {
+        position: relative;
         height: 42.5%;
         background-color: #F7F6F5;
         display: flex;
@@ -69,25 +72,25 @@ const Container = styled.div`
 type CardProps = {
   desc: string,
   img: string,
+  imgAlt: string,
   link: string,
   title: string,
 }
 
 function Card(props: CardProps) {
-  const { desc, img, link, title } = props;
+  const { desc, img, imgAlt, link, title } = props;
 
   return (
     <Container>
         <div className='img'>
-            <p>IMAGEM AQUI</p>
-            {img}
+            <Image src={img} alt={imgAlt} layout='fill' objectFit='cover' objectPosition='center' draggable={false} />
         </div>
         <div className='content'>
             <div className='info'>
                 <p>{title}</p>
                 <small>{desc}</small>
             </div>
-            <a>Acesse {link}</a>
+            <Link href={link ?? ''}>Acesse</Link>
         </div>
     </Container>
   )

@@ -1,0 +1,48 @@
+{
+  "id": "revista_ou_publicacao",
+  "type": "SharedSlice",
+  "name": "RevistaOuPublicacao",
+  "description": "RevistaOuPublicacao",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "RevistaOuPublicacao",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Imagem",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "titulo": {
+          "type": "Text",
+          "config": {
+            "label": "Título",
+            "placeholder": ""
+          }
+        },
+        "descricao": {
+          "type": "Text",
+          "config": {
+            "label": "Descrição",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Text",
+          "config": {
+            "label": "Link",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

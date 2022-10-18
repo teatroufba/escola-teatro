@@ -10,25 +10,23 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "ConteudoFormaIngresso",
-      "primary": {},
-      "items": {
-        "title": {
+      "primary": {
+        "titulo": {
           "type": "Text",
           "config": {
-            "label": "Title",
+            "label": "Título",
             "placeholder": ""
           }
         },
-        "content": {
-          "type": "StructuredText",
+        "conteudo": {
+          "type": "Text",
           "config": {
-            "label": "Content",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,strong,em"
+            "label": "Conteúdo",
+            "placeholder": ""
           }
         }
       },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

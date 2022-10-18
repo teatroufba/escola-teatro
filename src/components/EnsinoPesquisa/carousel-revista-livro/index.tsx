@@ -80,100 +80,26 @@ const Container = styled.div`
       }
     }
 `
-type CardProps = {
-  desc: string,
-  img: string,
-  link: string,
-  title: string,
+
+interface IRevista {
+	descricao: string,
+	titulo: string,
+	imageUrl: string,
+	imageAlt: string,
+	link: string,
 }
 
-function CarouselRevistaLivro() {
+interface ICarouselProps {
+  titulo: string
+  itens: IRevista[]
+}
+
+function CarouselRevistaLivro({ titulo, itens }: ICarouselProps) {
   const carousel = useRef<HTMLInputElement>(null)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
   const [scrolling, setScrolling] = useState(false)
   const [carouselPagination, setCarouselPagination] = useState(0)
-
-  const cards: CardProps[] = [
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  },
-  {
-    desc: 'asdsad',
-    img: 'sadasdsa',
-    link: 'sadjbfasdbvas',
-    title: 'asbvdajsbdasd'
-  }
-  ]
 
   useEffect(() => {
     if (carousel.current != null) {
@@ -208,7 +134,7 @@ function CarouselRevistaLivro() {
       setScrolling(true)
       setCarouselScrollLeft(Number(carousel.current.scrollLeft) + (numberOfElements*420))
       carousel.current.scrollLeft += (numberOfElements*420)
-      if (carouselPagination < Math.floor(cards.length/3)) {
+      if (carouselPagination < Math.floor(itens.length/3)) {
         setCarouselPagination( carouselPagination + 1 )
       }
 
@@ -220,16 +146,16 @@ function CarouselRevistaLivro() {
 
   return (
     <Container>
-        <h2>titulo</h2>
+        <h2>{titulo}</h2>
         <div ref={carousel} className='carousel'>
-            {cards.map((value: CardProps, index: number, array: CardProps[]) => (
-              <Card desc={value.desc} img={value.img} link={value.link} title={value.title}/>
+            {itens.map((value, index) => (
+              <Card key={`card${titulo}${index}`} desc={value.descricao} img={value.imageUrl} imgAlt={value.imageAlt} link={value.link} title={value.titulo}/>
             ))}
         </div>
         <div className='controls'>
             <Button className={carouselScrollLeft <= 0 ? 'desactive' : ''} disable={scrolling} onClick={scrollLeft}>Anterior</Button>
             <div className='pagination'>
-                {cards.map((value: CardProps, index: number, array: CardProps[]) => (
+                {itens.map((value, index, array) => (
                   index%3 == 0
                     ? <div key={Number(index)}>
                         <LineIcon hover={Math.floor(index/3) == carouselPagination} size={20} />

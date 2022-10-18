@@ -1,0 +1,53 @@
+{
+  "id": "escola",
+  "label": "Escola",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Apresentação": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "conteudo_apresentacao": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Formas de Ingresso": {
+      "slices1": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "conteudo_forma_ingresso": {
+              "type": "SharedSlice"
+            },
+            "links_forma_ingresso": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Setores e Instâncias": {
+      "slices2": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "setores_instancias": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Docentes": {},
+    "Corpo Técnico": {},
+    "Como Chegar": {}
+  }
+}

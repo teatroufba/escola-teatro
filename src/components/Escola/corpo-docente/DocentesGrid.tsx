@@ -11,7 +11,6 @@ interface IDocente {
 	interesses: string;
 	link: string;
 	nome: string;
-	uid: string;
 }
 interface DocentesProps {
 	docentes: IDocente[];
@@ -71,16 +70,15 @@ export default function DocentesGrid({ docentes, tituloID }: DocentesProps) {
 	return (
 		<div>
 			<StyledStaff id="staff-container">
-				{currentCards.map((docente) => (
+				{currentCards.map((docente, index) => (
 					<StaffCard
-						key={docente.uid}
+						key={`staffCard${index}`}
 						altImage={docente.imagemAlt}
 						email={docente.email}
 						imageUrl={docente.imagemUrl}
 						interests={docente.interesses}
 						link={docente.link}
 						name={docente.nome}
-						uid={docente.uid}
 					/>
 				))}
 			</StyledStaff>

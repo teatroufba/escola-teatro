@@ -6,7 +6,6 @@ import Pagination from "./Pagination";
 import { StyledPresentationContainer } from "./styles";
 
 interface IApresentacaoItem {
-	uid: string;
 	conteudo: string;
 	imageAlt: string;
 	imageUrl: string;
@@ -52,8 +51,8 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 
 	return (
 		<StyledPresentationContainer id="apresentacao">
-			{currentContent.map((item) => (
-				<div className="presentation-content" key={item.uid}>
+			{currentContent.map((item, index) => (
+				<div className="presentation-content" key={`apresentacao${index}`}>
 					<div className="left-column" id="content">
 						<div className="image-container" id="image-container">
 							<Image

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 import Button from "../../basics/button";
@@ -15,6 +17,7 @@ const Container = styled.div`
 	}
 
 	.img {
+		position: relative;
 		width: 45%;
 		background-color: #d6d6d6;
 		display: flex;
@@ -79,6 +82,23 @@ const Container = styled.div`
 			.info {
 				display: flex;
 				gap: 1.5rem;
+
+				a {
+					text-decoration: none;
+					background-color: #2d2b78;
+					font-size: 1.125rem;
+					font-weight: 400;
+					padding: 10px 20px;
+					color: white;
+					border: none;
+					border-radius: 5px;
+					font-family: 'Merriweather';
+					cursor: pointer;
+
+					&:hover {
+						background-color: #9a1a4b;
+					}
+				}
 			}
 		}
 	}
@@ -91,11 +111,18 @@ const Container = styled.div`
 	}
 `;
 
-function PosGraduacao() {
+interface IPosGraduacao {
+	imageUrl: string,
+	imageAlt: string,
+	conteudo: string,
+	link: string,
+}
+
+function PosGraduacao({ imageUrl, imageAlt, conteudo, link }: IPosGraduacao) {
 	return (
 		<Container id="pos-graduacao">
 			<div className="img">
-				<p>CONTAINER IMAGEM AQUI</p>
+				<Image src={imageUrl} alt={imageAlt} layout='fill' objectFit="cover" objectPosition='center' />
 			</div>
 			<div className="graduation">
 				<h1>Pós-Graduação</h1>
@@ -103,34 +130,13 @@ function PosGraduacao() {
 					<div className="courseInfo">
 						<div className="description">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Commodo, proin vitae vel massa varius commodo ultrices.
-								Venenatis venenatis tincidunt vitae blandit eleifend sapien
-								vitae lobortis. Lorem eu pretium a elementum velit sagittis,
-								aliquam. In rhoncus nibh tempus nisl ornare nec scelerisque. Mi,
-								accumsan laoreet quisque laoreet euismod. Porta venenatis vel
-								facilisi enim quis habitasse arcu, ac. Dis consectetur elementum
-								egestas elit enim senectus. Aenean eu ultrices tempor, quis
-								blandit est amet. Sit egestas lacinia turpis consequat
-								elementum. Non volutpat pharetra, gravida enim, ipsum. Tortor
-								vivamus non aliquam neque porttitor congue. Aliquet nunc, enim
-								gravida vitae ut aliquam dolor nulla. Sit eget lectus arcu, quis
-								ac donec nulla metus. Pharetra eget dictum nulla aliquam lectus.
-								Tristique eu facilisis lectus turpis urna egestas turpis et
-								morbi. Vitae, augue mattis tempus vel tincidunt cras
-								pellentesque. Leo elementum tempor euismod ultrices. Habitant et
-								dui scelerisque habitasse ante tempor, felis. Proin nunc sed sit
-								massa. Ultricies eget felis eget est augue at libero. Lacinia
-								vivamus quis aliquam integer odio aliquam ut maecenas.
-								Scelerisque quis vitae felis non amet, venenatis dui. Et magna
-								leo lectus odio arcu pellentesque condimentum amet. Suspendisse
-								cursus neque potenti feugiat quisque.
+								{conteudo}
 							</p>
 							<button>Ver mais</button>
 						</div>
 					</div>
 					<div className="info">
-						<Button>Saiba mais</Button>
+						<Link href={link ?? ''}>Saiba mais</Link>
 					</div>
 				</div>
 			</div>
