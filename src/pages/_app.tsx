@@ -10,12 +10,12 @@ import { GlobalStyles } from "@/styles/global";
 import { linkResolver, repositoryName } from "../../prismic";
 import Header from "@/components/basics/header";
 import Footer from "@/components/basics/footer";
-
+import Head from "next/head";
+import BackToTop from "@/components/basics/back-to-top/index";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<>	
-		
+		<>
 			<PrismicProvider
 				linkResolver={linkResolver}
 				internalLinkComponent={({ href, children, ...props }) => (
@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					<GlobalStyles />
 					<Component {...pageProps} />
 					<Footer />
+					<BackToTop />
 				</PrismicPreview>
 			</PrismicProvider>
 		</>

@@ -11,7 +11,7 @@ export const Submenu = styled.div`
 		font-size: 24px;
 		line-height: 30px;
 		font-family: "Merriweather";
-		background-color: #2d2b78;
+		background-color: #24233a;
 		padding: 0;
 		list-style: none;
 		padding: 0px;
