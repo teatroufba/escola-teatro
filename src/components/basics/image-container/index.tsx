@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 import Button from './../button'
 
 const Container = styled.div`
-    width: 100%;
+    width: 100vw;
     display: flex;
-    gap: 5rem;
     align-items: center;
+    gap: 5rem;
 
     &.left {
         justify-content: left;
@@ -18,13 +19,31 @@ const Container = styled.div`
         flex-direction: row-reverse;
     }
 
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        gap: 1.5rem;
+
+        &.right {
+            flex-direction: column;
+        }
+    }
+
     .carousel {
-        width: 868px;
-        height: 860px;
+        width: calc(40vw - 40px);
+        height: calc(40vw - 40px);
+
+        @media (max-width: 1200px) {
+            width: 660px;
+            height: 660px;
+        }
+
+        @media (max-width: 768px) {
+            width: 100vw;
+            height: 100vw;
+        }
 
         .img {
-            width: 868px;
-            height: 860px;
+            width: 100%;
             display: block;
         }
 
@@ -67,6 +86,10 @@ const Container = styled.div`
             color: #2D2B78;
             border-bottom: 5px solid #2D2B78;
             margin-bottom: 3rem;
+
+            @media (max-width: 768px) {
+                font-size: 2.25rem;
+            }
         }
 
         .text {
@@ -78,16 +101,25 @@ const Container = styled.div`
                 font-family: 'Arial';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 1.125rem;
                 max-width: 660px;
+
+                @media (max-width: 768px) {
+                    font-size: 0.875rem;
+                }
             }
 
             p {
                 font-family: 'Merriweather';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 20px;
+                font-size: 1.25rem;
                 text-decoration-line: underline;
+                color: #2B2B2B;
+
+                @media (max-width: 768px) {
+                    font-size: 1.125rem;
+                }
             }
         }
     }
@@ -109,14 +141,15 @@ function ImageContainer(props: ImageContainerProps) {
   
     return (
       <Container className={imageOrientation}>
-          <div className="carousel">
+        <div className="carousel">
             {imageUrl.map((item, index) => (
                 <div className={index != urlIndex ? 'imgDesactive' : 'img'} key={index}>
                     <Image
                         src={item}
                         alt=""
-                        width={868}
-                        height={860}
+                        width={800}
+                        height={800}
+                        layout="responsive"
                     />
                 </div>
             ))}
@@ -152,15 +185,15 @@ function ImageContainer(props: ImageContainerProps) {
                     />
                 </button>
             </div>
-          </div>
-          <div className="content">
+        </div>
+        <div className="content">
             <h1>{title}</h1>
             <div className="text">
                 <h4>{description}</h4>
-                <p>{link}</p>
+                <Link href={linkHref}><a><p>{link}</p></a></Link>
                 <div><Button className="button">Saiba mais</Button></div>
             </div>
-          </div>
+        </div>
       </Container>
     )
   }

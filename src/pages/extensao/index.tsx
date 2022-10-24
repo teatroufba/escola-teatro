@@ -8,7 +8,10 @@ const ExtensaoStyled = styled.div`
     gap: 7.875rem;
     width: 100vw;
     max-width: 1920px;
-    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+        gap: 1.5rem;
+    }
 `
 
 const ExtensaoData = [
