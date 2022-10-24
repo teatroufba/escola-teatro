@@ -191,18 +191,8 @@ function FooterDown() {
 					<h1>Agenda</h1>
 					<ul>
 						<li>
-							<Link passHref href="/">
-								<a href="replace">Eventos</a>
-							</Link>
-						</li>
-						<li>
-							<Link passHref href="/">
-								<a href="replace">Espetáculos</a>
-							</Link>
-						</li>
-						<li>
-							<Link passHref href="/">
-								<a href="replace">Seminários</a>
+							<Link passHref href="/agenda">
+								<a href="replace">Agenda</a>
 							</Link>
 						</li>
 					</ul>
