@@ -40,8 +40,22 @@ export default function NoticiaCard({
     }
     return text
   }
+
+
   const data = new Date(date)
-  const publication = `${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`
+    let dia = data.getDate().toString()
+    const mes = data.getMonth()
+    const ano = data.getFullYear()
+    let mesNumero = (mes + 1).toString()
+
+    if (dia.length === 1) {
+        dia = `0${dia}`
+    }
+
+    if (mesNumero.length === 1) {
+        mesNumero = `0${mes}`
+    }
+
   return (
     <StyledNoticiaCard className={className}>
       <div className="noticia-img">
@@ -49,7 +63,7 @@ export default function NoticiaCard({
       </div>
       
       <div className="text-post">
-      <p className="data">{publication}
+      <p className="data">{`${dia}/${mesNumero}/${ano}`}
       </p>
         <div className='titles'>
           <h3 className='card-title'>{maxChar(title, 32)}</h3>

@@ -35,6 +35,7 @@ export const StyledNoticias = styled.div`
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
+      gap: 25px;
 
       .mobile{
         display: none;
@@ -69,6 +70,10 @@ export const StyledNoticiaCard = styled.div`
   gap: 10px;
   width: 290px;
 
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  background: #FEFDFC;
+  border-radius: 5px;
+
 
   .card-title {
     font-family: 'Merriweather';
@@ -91,6 +96,7 @@ export const StyledNoticiaCard = styled.div`
     text-align: left;
     font-family: arial;
     height: 274px;
+    padding: 10px;
 
     p {
       font-size: 16px;

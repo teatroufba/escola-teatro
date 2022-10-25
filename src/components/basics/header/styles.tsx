@@ -22,14 +22,26 @@ export const HeaderSuperior = styled.div`
 	width: 100%;
 
 	@media (max-width: 1200px) {
-		padding: 35px 64px;
+		padding: 35px 50px;
 		padding: 0;
 		justify-content: start;
+		align-items: flex-start;
 		flex-direction: column-reverse;
 		gap: 25px;
 
 		position: relative;
 		//position: fixed;
+
+		.logo-img {
+			width: 80px;
+			height: 71px;
+	
+		}
+
+		.header {
+			margin-bottom: 25px;
+			margin-left: 50px;
+		}
 	}
 
 	.social-navbar {

@@ -99,12 +99,14 @@ export const AgendaStyled = styled.div`
 
     .list {
       width: 1069px;
+      height: 450px;
       display: flex;
       gap: 43px;
-      overflow-x: scroll;
+      //overflow-x: scroll;
       scroll-behavior: smooth;
       -ms-overflow-style: none;
       scrollbar-width: none;
+
 
       &::-webkit-scrollbar {
         display: none;
@@ -121,7 +123,7 @@ export const AgendaStyled = styled.div`
       @media screen and (max-width: 768px) {
         width: 100vw;
         padding: 0 25px;
-        overflow-x: scroll;
+        overflow-y: scroll;
         gap: 25px;
       }
     }

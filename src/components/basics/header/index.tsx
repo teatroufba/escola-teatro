@@ -110,7 +110,7 @@ function Header() {
 					</div>
 
 					<ul className="social">
-						<a href="http://www.facebook.com.br">
+						<a href="https://www.facebook.com/ufba.escoladeteatro" target="_blank">
 							<input
 								alt="facebook"
 								className="facebook"
@@ -120,7 +120,7 @@ function Header() {
 								width={50}
 							/>
 						</a>
-						<a href="http://www.instagram.com.br">
+						<a href="https://instagram.com/escoladeteatro.ufba" target="_blank">
 							<input
 								alt="instagram"
 								className="instagram"
@@ -130,7 +130,7 @@ function Header() {
 								width={50}
 							/>
 						</a>
-						<a href="http://www.youtube.com.br">
+						<a href="https://youtube.com/c/teatroufba" target="_blank">
 							<input
 								alt="youtube"
 								className="youtube"
@@ -140,7 +140,7 @@ function Header() {
 								width={50}
 							/>
 						</a>
-						<a href="http://www.flickr.com.br">
+						<a href="https://www.flickr.com/photos/128786324@N02/" target="_blank">
 							<input
 								alt="flickr"
 								className="flickr"
