@@ -32,10 +32,19 @@ export const StyledMural = styled.div`
 
   .mural-card {
     margin-top: 2%;
+    width: 395px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    
+    
 
     a {
       text-decoration: none;
       color: black;
+      display: flex;
+      flex-direction: column;
     }
 
     img {
@@ -44,9 +53,8 @@ export const StyledMural = styled.div`
       box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
     }
     .img-container {
-      border: 1px solid red;
-      width: 395px;
-      height: 306px;
+      
+      width: 100%;
     }
     .textover {
       position: relative;

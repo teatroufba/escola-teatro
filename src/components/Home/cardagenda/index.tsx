@@ -9,6 +9,7 @@ import Link from "next/link";
 const CardStyle = styled.div`
   width: 235px;
   height: 450px;
+  
   border-radius: 5px;
   cursor: pointer;
 
@@ -20,35 +21,43 @@ const CardStyle = styled.div`
 
   &:hover {
     background: #24233a;
-
-    .info h4 {
+    .container-baixo {
+      .title{
       color: #9a1a4b;
+      }
+      .baixo-data {
+        color: #9a1a4b;
+      }
+      .baixo-local {
+        color: #9a1a4b;
+      }
+
+      .img-icon{
+        filter: brightness(0) saturate(100%) invert(14%) sepia(54%) saturate(4320%) hue-rotate(321deg) brightness(96%) contrast(92%);
+      }
     }
+    
+    
   }
 
   .container-img{
-    height: 250px;
-    background-color: #d9d9d9;
-    border-radius: 5px 5px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+
     width: 100%;
+    position: relative;
+    height: 15.625rem;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
 
-    .img-content {
-      min-width: 235px;
-      height: 250px;
-      position: relative;
-      z-index: 0;
-
-    }
+  
 
    
     .img-date {
       background-color: #9a1a4b;
       padding: 15px;
-      z-index: 1;
+      z-index: 0;
       color: #ffffff;
+      position: relative;
      
       h3 {
         font-family: 'Merriweather', serif;
@@ -57,7 +66,7 @@ const CardStyle = styled.div`
       small {
         font-family: 'Merriweather', serif;
       }
-    }
+    }   
   }
 
   .container-baixo {
@@ -67,6 +76,7 @@ const CardStyle = styled.div`
     min-height: 50%;
     height: 50%;
     gap: 10px;
+    font-family: 'Arial';
 
 
     .title {
@@ -75,6 +85,7 @@ const CardStyle = styled.div`
       color: #282b62;
       line-height: 120%;
       font-size: 18px;
+      height: 100px;
     }
 
     .container-title  {
@@ -149,13 +160,12 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
   return (
 
     
-    <CardStyle>
+    <CardStyle >
       <Link href={`/agenda/${uid}`} passHref>
         <div className="card">
             <div className="container-img"> 
-              <div className="img-content"> 
-                <Image src={imageUrl} alt={imageAlt} width={235} height={250} layout="responsive" objectFit="cover"  />
-              </div>
+                <Image src={imageUrl} alt={imageAlt}  layout="fill" objectFit="cover" objectPosition='center' />
+              
             
               <p className='img-date'>
                     {dia}<br />
@@ -167,16 +177,14 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
             <div className="container-baixo">
                 <h4 className='title'>{title}</h4>
                 <div className="container-data">
-                    <Image src='/calendar.svg' alt="" width={24} height={24} />
-                    <p>{`${dia}/${mesNumero}/${ano}`}</p>
+                    <Image className="img-icon" src='/calendar.svg' alt="" width={24} height={24} />
+                    <p className='baixo-data'>{`${dia}/${mesNumero}/${ano}`}</p>
                 </div>
                 <div className="container-location">
-                    <Image src='/location-azul.svg' alt="" width={24} height={24} />
-                    <p>{local}</p>
+                    <Image className="img-icon" src='/location-azul.svg' alt="" width={24} height={24} />
+                    <p className='baixo-local'>{local}</p>
                 </div>
-                <p className="conteudo-agenda">
-                    {subtitle}
-                </p>
+            
                 
                     
                 

@@ -111,6 +111,7 @@ export const StyledAgendaCard = styled.div`
     flex-direction: column;
     border: solid 1px #2D2B784D;
     width: 20.9375rem;
+    
 
     .container-img {
         width: 100%;
@@ -118,6 +119,7 @@ export const StyledAgendaCard = styled.div`
         height: 15.625rem;
         display: flex;
         align-items: flex-end;
+
 
         p {
             font-family: Merriweather;
