@@ -6,6 +6,7 @@ interface IConteudoFoto {
 	alt: string;
 	titulo: string;
 	conteudo: string;
+	link: string;
 }
 
 interface IConteudoGaleria {
@@ -61,24 +62,34 @@ export default function ConteudoGaleria({
 				<div className="galeria-fotos">
 					<div className="fotos-container">
 						{conteudoFotos.map((item, index) => (
-							<div
-								key={index}
-								className="fotos"
-								onMouseEnter={() => handleEnterHover(`${index}-foto`)}
-								onMouseLeave={() => handleOutHover(`${index}-foto`)}
-							>
-								<img
-									id={`${index}-foto`}
-									alt={item.alt}
-									src={item.imageURL}
-									className="fotos"
-								/>
-								<div id={`${index}-foto-layer`} className="layer hidden"></div>
-								<div id={`${index}-foto-conteudo`} className="content hidden">
-									<h3>{item.titulo}</h3>
-									<p>{item.conteudo}</p>
-								</div>
-							</div>
+							<Link passHref href={item.link}>
+								<a href={item.link} rel="noopener noreferrer" target="_blank">
+									<div
+										key={index}
+										className="fotos"
+										onMouseEnter={() => handleEnterHover(`${index}-foto`)}
+										onMouseLeave={() => handleOutHover(`${index}-foto`)}
+									>
+										<img
+											id={`${index}-foto`}
+											alt={item.alt}
+											src={item.imageURL}
+											className="fotos"
+										/>
+										<div
+											id={`${index}-foto-layer`}
+											className="layer hidden"
+										></div>
+										<div
+											id={`${index}-foto-conteudo`}
+											className="content hidden"
+										>
+											<h3>{item.titulo}</h3>
+											<p>{item.conteudo}</p>
+										</div>
+									</div>
+								</a>
+							</Link>
 						))}
 					</div>
 					<Link passHref href={linkGaleria}>

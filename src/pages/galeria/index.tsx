@@ -20,7 +20,7 @@ export default function Page() {
 		alt: "imagem da escola de teatro",
 		titulo: "Título da imagem",
 		conteudo: conteudomenor,
-		link: "www.google.com.br",
+		link: "https://www.google.com.br",
 	};
 
 	return (

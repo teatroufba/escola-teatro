@@ -116,4 +116,28 @@ export const ConteudoStyled = styled.div`
 		font-weight: 400;
 		color: #fff;
 	}
+
+	@media screen and (max-width: 769px) {
+		.fotos-container {
+			flex-direction: column;
+		}
+
+		.fotos-container img {
+			width: 100%;
+			height: 430px;
+		}
+
+		.conteudo {
+			margin: 90px 0 45px 0;
+		}
+
+		.galeria-fotos {
+			gap: 45px;
+		}
+
+		#galeria-link {
+			font-size: 14px;
+			padding: 22px 9px;
+		}
+	}
 `;
