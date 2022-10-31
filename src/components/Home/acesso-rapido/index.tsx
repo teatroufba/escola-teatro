@@ -14,6 +14,8 @@ const AcessoRapidoStyled = styled.div`
   @media(max-width:1000px) {
     flex-direction: column;
     gap: 64px;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   div {
@@ -30,6 +32,22 @@ const AcessoRapidoStyled = styled.div`
 
   div:hover h3 {
     color: #9a1a4b;
+  }
+
+  @media(max-width:1000px) {
+    div {
+      flex-direction:row;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      max-width: 270px;
+      h3 {
+        max-width: 141px;
+      }
+
+      
+    }
+   
   }
 `;
 

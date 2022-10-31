@@ -25,7 +25,9 @@
       }
     },
     "escola": {},
-    "ensino": {}
+    "ensino": {},
+    "post-generico": {},
+    "teste": {}
   },
   "slices": {
     "Membro": {
