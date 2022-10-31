@@ -19,6 +19,33 @@ const Container = styled.div`
         flex-direction: row-reverse;
     }
 
+    &.red {
+        background-color: #9A1A4B;
+        color: white;
+
+        .content {
+            h1 {
+                color: white;
+                border-bottom: 5px solid white;
+            }
+
+            .text .cards .card {
+                border: 2px solid white;
+                background: rgba(255, 255, 255, 0.08);
+
+                p {
+                    color: white;
+                }
+
+                small {
+                    color: white;
+                    text-decoration: underline;
+                    text-decoration-color: white;
+                }
+            }
+        }
+    }
+
     @media (max-width: 1200px) {
         flex-direction: column;
         gap: 1.5rem;
@@ -76,6 +103,13 @@ const Container = styled.div`
 
     .content {
         max-width: 82vw;
+        padding: 1.5rem 0;
+
+        @media (max-width: 768px) {
+            width: 100vw;
+            max-width: 100vw;
+            padding: 1.5rem 1.25rem;
+        }
 
         h1 {
             font-family: 'Merriweather';
@@ -89,6 +123,7 @@ const Container = styled.div`
 
             @media (max-width: 768px) {
                 font-size: 2.25rem;
+                max-width: 325px;
             }
         }
 
@@ -96,6 +131,10 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             gap: 3rem;
+
+            @media (max-width: 768px) {
+                gap: 1.5rem;
+            }
 
             h4 {
                 font-family: 'Arial';
@@ -105,6 +144,7 @@ const Container = styled.div`
                 max-width: 660px;
 
                 @media (max-width: 768px) {
+                    max-width: 100%;
                     font-size: 0.875rem;
                 }
             }
@@ -121,26 +161,74 @@ const Container = styled.div`
                     font-size: 1.125rem;
                 }
             }
+
+            .cards {
+                display: flex;
+                flex-direction: row;
+                gap: 1.5rem;
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 0.75rem;
+                }
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    justify-content: space-between;
+                    border: 2px solid rgba(154, 26, 75, 0.6);
+                    padding: 1rem;
+
+
+                    p {
+                        width: 103px;
+                        font-size: 1rem;
+                        font-family: 'Arial';
+                        text-decoration: none;
+                        color: #2D2B78;
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+
+                    small {
+                        font-size: 1rem;
+                        font-family: 'Merriweather';
+                        color: #2D2B78;
+                    }
+                }
+            }
         }
     }
 `
 
+type card = {
+    title: string;
+    link: string;
+} 
+
 type ImageContainerProps = {
+    style?: string;
     imageOrientation: string;
     imageUrl: string[];
     title: string;
     description: string;
     link: string;
     linkHref: string;
-    linkButton: string;
+    button: boolean;
+    linkButton?: string;
+    cards?: card[];
 }  
 
 function ImageContainer(props: ImageContainerProps) {
-    const { imageOrientation, imageUrl, title, description, link, linkHref, linkButton } = props;
+    const { style, imageOrientation, imageUrl, title, description, link, linkHref, linkButton, button, cards } = props;
     const [urlIndex, setUrlIndex] = useState(0)
   
     return (
-      <Container className={imageOrientation}>
+      <Container className={imageOrientation + " " + style}>
         <div className="carousel">
             {imageUrl.map((item, index) => (
                 <div className={index != urlIndex ? 'imgDesactive' : 'img'} key={index}>
@@ -190,8 +278,14 @@ function ImageContainer(props: ImageContainerProps) {
             <h1>{title}</h1>
             <div className="text">
                 <h4>{description}</h4>
-                <Link href={linkHref}><a><p>{link}</p></a></Link>
-                <div><Button className="button">Saiba mais</Button></div>
+                {link ? <Link href={linkHref}><a><p>{link}</p></a></Link> : ''}
+                {button ? <div><Button className="button">Saiba mais</Button></div> : ''}
+                {cards ? <div className="cards">{cards.map((item,index) =>
+                    <div className="card" key={index}>
+                        <p>{item.title}</p>
+                        <Link href={item.link}><a><small>Ver mais</small></a></Link>
+                    </div>
+                )}</div> : ''}
             </div>
         </div>
       </Container>
