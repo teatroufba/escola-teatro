@@ -164,7 +164,7 @@ export default function MenuMobile() {
 						<div className="menu-option">
 							<button>
 								<span>
-									<a href="/">Galeria Virtual</a>
+									<a href="/galeria">Galeria Virtual</a>
 								</span>
 							</button>
 						</div>

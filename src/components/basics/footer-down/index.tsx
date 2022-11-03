@@ -201,7 +201,7 @@ function FooterDown() {
 					<h1>Galeria Virtual</h1>
 					<ul>
 						<li>
-							<Link passHref href="/">
+							<Link passHref href="/galeria">
 								<a href="replace">Galeria Virtual</a>
 							</Link>
 						</li>
