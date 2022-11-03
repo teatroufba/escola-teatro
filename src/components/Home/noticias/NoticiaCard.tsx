@@ -57,27 +57,20 @@ export default function NoticiaCard({
     }
 
   return (
-    <StyledNoticiaCard className={className}>
-      <div className="noticia-img">
-      <Image src={imageUrl} alt={imageAlt} width={290} height={250} layout={'responsive'}/>
+    <StyledNoticiaCard>
+      <div className="noticias-post-img">
+        {imageUrl ? (
+          <Image alt={imageAlt} src={imageUrl} layout='fill' objectFit="cover" objectPosition='center' />
+        ) : null}
       </div>
-      
-      <div className="text-post">
-      <p className="data">{`${dia}/${mesNumero}/${ano}`}
-      </p>
-        <div className='titles'>
-          <h3 className='card-title'>{maxChar(title, 32)}</h3>
-          <p>{maxChar(subtitle, 128)}</p>
-        </div>
-        <a
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          href={`/noticias/${uid}`}
-        >
-          Saiba mais{'  '}
-          <ArrowIcon hover={hover} />
-        </a>
+      <div className="noticias-post-text">
+        <h3>{title}</h3>
+        <p>{subtitle}</p>
       </div>
+      <a href={`/noticias/${uid}`}>
+        Saiba mais{"  "}
+        <Image alt={imageAlt} height={10} src="/arrow.png" width={10} />
+      </a>
     </StyledNoticiaCard>
   )
 }

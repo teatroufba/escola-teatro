@@ -62,7 +62,7 @@ function Header() {
 
 			case "espacos":
 				setOptions([
-					{ href: "", option: "Teatro Martin Gonçalves" },
+					{ href: "", option: "Teatro Martim Gonçalves" },
 					{ href: "", option: "Pavilhão de Aulas" },
 					{ href: "", option: "Casarão" },
 					{ href: "", option: "Sala 05" },

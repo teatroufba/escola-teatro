@@ -1,3 +1,4 @@
+import PostCard from '@/components/Noticias/PostCard'
 import Link from 'next/link'
 
 import NoticiaCard from './NoticiaCard'
@@ -30,6 +31,8 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
             imageAlt={value.imageAlt}
             date={value.date}
           />
+
+          
         ))}
       </div>
       <div className='noticias-btn'>

@@ -125,7 +125,7 @@ export default function MenuMobile() {
 						<div id="espacos-submenu" className="submenu-mobile hidden">
 							<ul>
 								<li>
-									<a>Teatro Martin Gonçalves</a>
+									<a>Teatro Martim Gonçalves</a>
 								</li>
 								<li>
 									<a>Pavilhão de Aulas</a>
