@@ -61,9 +61,15 @@ export default function FormasDeIngresso({
 				<div className="left-column">
 					{formas.map((forma, index) => (
 						<div className="entry-form" key={`forma${index}`}>
-							<Link passHref href={forma.link}>
-								<a href={forma.link} rel="noopener noreferrer" target="_blank">
-									<h3>{forma.titulo}</h3>
+							<Link passHref href={forma.link ? forma.link : ""}>
+								<a
+									href={forma.link ? forma.link : ""}
+									rel="noopener noreferrer"
+									target="_blank"
+								>
+									<h3>
+										{forma.titulo ? forma.titulo : "Título não informado"}
+									</h3>
 								</a>
 							</Link>
 						</div>
