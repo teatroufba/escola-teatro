@@ -40,7 +40,8 @@ export const StyledEntryFormsContainer = styled.div`
 		background-color: #9a1a4b;
 	}
 
-	.entry-form a {
+	.entry-form a,
+	.entry-form button {
 		cursor: pointer;
 		border: none;
 		background-color: transparent;

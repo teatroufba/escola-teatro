@@ -61,17 +61,9 @@ export default function FormasDeIngresso({
 				<div className="left-column">
 					{formas.map((forma, index) => (
 						<div className="entry-form" key={`forma${index}`}>
-							<Link passHref href={forma.link ? forma.link : ""}>
-								<a
-									href={forma.link ? forma.link : ""}
-									rel="noopener noreferrer"
-									target="_blank"
-								>
-									<h3>
-										{forma.titulo ? forma.titulo : "Título não informado"}
-									</h3>
-								</a>
-							</Link>
+							<button onClick={() => setCurrentPage(index + 1)}>
+								<h3>{forma.titulo ? forma.titulo : "Título não informado"}</h3>
+							</button>
 						</div>
 					))}
 				</div>
