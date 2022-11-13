@@ -42,6 +42,7 @@ export const StyledEntryFormsContainer = styled.div`
 
 	.entry-form a,
 	.entry-form button {
+		width: 100%;
 		cursor: pointer;
 		border: none;
 		background-color: transparent;
