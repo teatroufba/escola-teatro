@@ -1,6 +1,6 @@
 import ReadMore from "@/components/basics/read-more/ReadMore";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import { StyledBannerApresentacaoContainer } from "./styles";
 
@@ -48,10 +48,23 @@ export default function BannerApresentacao({ conteudos }: IApresentacao) {
 		}
 	}
 
+	useEffect(() => {
+		if (document != undefined) {
+			const text = document.getElementById("text-content");
+			if (text) {
+				text.style.height = text.style.height <= "330" ? "300px" : "100%";
+			}
+		}
+	}, [currentContent]);
+
 	return (
 		<StyledBannerApresentacaoContainer>
 			{currentContent.map((item, index) => (
-				<div className="content-wrapper" id="apresentacao">
+				<div
+					className="content-wrapper"
+					id="apresentacao"
+					key={`apresentacao${index}`}
+				>
 					<div className="left-column">
 						<Image
 							alt={item.imageAlt}

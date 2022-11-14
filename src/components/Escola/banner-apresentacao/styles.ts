@@ -17,6 +17,7 @@ export const StyledBannerApresentacaoContainer = styled.div`
 	.content-wrapper {
 		overflow-x: hidden;
 		position: relative;
+		min-height: 860px;
 		height: 100%;
 		//max-width: 95vw;
 		display: flex;
