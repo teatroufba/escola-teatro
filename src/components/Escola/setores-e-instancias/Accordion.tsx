@@ -55,9 +55,9 @@ export default function SetorAccordion({ nome, membros }: ISetor) {
 					{membros.map((membro, index) => (
 						<div className="accordion-member" key={`accodrion${index}`}>
 							<h3>{membro.nome}</h3>
-							<p>Função: {membro.funcao}</p>
-							<p>E-mail: {membro.email}</p>
-							<p>Telefone: {membro.telefone}</p>
+							{membro.funcao ? <p>Função: {membro.funcao}</p> : ''}
+							{membro.email ? <p>E-mail: {membro.email}</p> : ''}
+							{membro.telefone ? <p>Telefone: {membro.telefone}</p> : ''}
 						</div>
 					))}
 				</div>

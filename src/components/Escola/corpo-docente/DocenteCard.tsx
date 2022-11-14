@@ -19,8 +19,8 @@ export default function StaffCard({name, email, link, interests, imageUrl, altIm
         <StyledStaffDescriptionContainer>
             <StyledStaffDescription>
                 <h2> {name} </h2>
-                <p> Email: {email} </p>
-                <p> Áreas de Interesse: {interests} </p>
+                {email ? <p> Email: {email} </p> : ''}
+                {interests ? <p> Áreas de Interesse: {interests} </p> : ''}
             </StyledStaffDescription>
             <Link passHref href={link}>
               <a href={link} rel='noopener noreferrer' target='_blank'>
