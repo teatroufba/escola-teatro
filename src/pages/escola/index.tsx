@@ -1,4 +1,5 @@
 import Apresentacao from "@/components/Escola/apresentacao/Apresentacao";
+import BannerApresentacao from "@/components/Escola/banner-apresentacao";
 import ComoChegar from "@/components/Escola/como-chegar/ComoChegar";
 import Docentes from "@/components/Escola/corpo-docente/Docentes";
 import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
@@ -67,7 +68,8 @@ export default function Page({ escolaProps }: { escolaProps: IEscolaProps }) {
 	return (
 		<>
 			<div>
-				<Apresentacao conteudos={escolaProps.apresentacao} />
+				<BannerApresentacao conteudos={escolaProps.apresentacao} />
+				{/* <Apresentacao conteudos={escolaProps.apresentacao} /> */}
 				<FormasDeIngresso
 					conteudos={escolaProps.ingressoConteudo}
 					formas={escolaProps.ingressoLinks}
