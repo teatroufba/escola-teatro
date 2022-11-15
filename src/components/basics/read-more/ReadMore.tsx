@@ -45,7 +45,7 @@ export default function ReadMore({
 				setIsShowingText(false);
 				setIsClampedText(true);
 				text.classList.add("hidden-text");
-				mainContainer.style.height = window.innerWidth < 768 ? "100%" : "800px";
+				mainContainer.style.height = window.innerWidth < 768 ? "100%" : "900px";
 				text.style.height =
 					window.innerWidth < 768 ? "100%" : `${textHeight}px`;
 			} else {
