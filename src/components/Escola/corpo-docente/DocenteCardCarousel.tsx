@@ -25,13 +25,13 @@ export default function StaffCardCarousel({name, email, link, interests, imageUr
         </div>
         <div className="docente-description">
             <div className="docente-info">
-                <h2> {name} </h2>
-                <p> Email: {email} </p>
-                <p> Áreas de Interesse: {interests} </p>
+                <h2> {name? name : ""} </h2>
+                <p className='email'> Email: {email? email : ""} </p>
+                <p> Áreas de Interesse: {interests? interests : ""} </p>
             </div>
-            <Link passHref href={link}>
+            <Link passHref href={link? link : "/"}>
                 <a href={link} rel='noopener noreferrer' target='_blank'>
-                    <button>Currículo Lattes</button>
+                    <button disabled={link? true : false}>Currículo Lattes</button>
                 </a>
             </Link>
         </div>

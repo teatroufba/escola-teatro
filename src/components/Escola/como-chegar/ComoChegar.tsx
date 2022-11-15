@@ -35,21 +35,21 @@ export default function ComoChegar({
 								<LocationIcon hover size={32} />
 								<h2>Localização</h2>
 							</div>
-							<p>{endereco}</p>
+							<p>{endereco? endereco : "sem informação"}</p>
 						</div>
 						<div className="info-tile">
 							<div className="info-tile-title">
 								<EmailIcon hover size={32} />
 								<h2>E-mail</h2>
 							</div>
-							<p>{email}</p>
+							<p>{email? email : "sem informação"}</p>
 						</div>
 						<div className="info-tile">
 							<div className="info-tile-title">
 								<CallIcon hover size={32} />
 								<h2>Telefone</h2>
 							</div>
-							<p>{telefone}</p>
+							<p>{telefone? telefone : "sem informação"}</p>
 						</div>
 					</LocationInfo>
 				</div>

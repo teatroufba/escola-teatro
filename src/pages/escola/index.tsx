@@ -113,8 +113,8 @@ export async function getStaticProps({
 	}))
 
 	const ingressoLinks = ingressoLinksAuxiliar.map((item: any) => ({
-		link: item.primary.link.url,
-		titulo: item.primary.titulo,
+		link: item.primary.link.url? item.primary.link.url : "",
+		titulo: item.primary.titulo? item.primary.titulo : "",
 	}))
 
 	const setores = escola.data.slices2.map((item: any) => ({
