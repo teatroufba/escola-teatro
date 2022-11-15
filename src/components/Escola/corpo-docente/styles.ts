@@ -17,9 +17,10 @@ export const StyledStaffCard = styled.div`
 
 export const StyledStaffDescriptionContainer = styled.div`
 	max-width: 100%;
+	max-height: 50%;
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 12px;
 	padding: 15.5px 15px 15.5px 24px;
 
 	button {
@@ -44,6 +45,7 @@ export const StyledStaffDescriptionContainer = styled.div`
 
 export const StyledStaffDescription = styled.div`
 	max-width: 100%;
+
 	display: flex;
 	flex-direction: column;
 	gap: 8px;

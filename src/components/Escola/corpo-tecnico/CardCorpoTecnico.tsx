@@ -14,7 +14,7 @@ export default function CardCorpoTecnico({ corpoTecnico }: ICorpoTecnicoArray) {
 	return (
 		<StyledCardCorpoTecnico>
 			{corpoTecnico.map((item, index) => (
-				<div className="staff-wrapper-container">
+				<div className="staff-wrapper-container" key={"corpoTecnico" + index}>
 					<div className="first-line">
 						<div className="staff-name">
 							<span className="staff-subheader">Nome</span>

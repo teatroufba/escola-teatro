@@ -166,24 +166,24 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
             <div className="container-img"> 
                 <Image src={imageUrl} alt={imageAlt}  layout="fill" objectFit="cover" objectPosition='center' />
               
-            
-              <p className='img-date'>
+              {data ? <p className='img-date'>
                     {dia}<br />
                     <span>{meses[mes]}</span>
-              </p>
+              </p> : ''}
                 
 
             </div>
             <div className="container-baixo">
                 <h4 className='title'>{title}</h4>
-                <div className="container-data">
+                {data ? <div className="container-data">
                     <Image className="img-icon" src='/calendar.svg' alt="" width={24} height={24} />
                     <p className='baixo-data'>{`${dia}/${mesNumero}/${ano}`}</p>
-                </div>
-                <div className="container-location">
+                </div> : ''}
+                {local ? <div className="container-location">
                     <Image className="img-icon" src='/location-azul.svg' alt="" width={24} height={24} />
                     <p className='baixo-local'>{local}</p>
-                </div>
+                </div> : ''}
+                
             
                 
                     

@@ -96,17 +96,22 @@ function GrupoPesquisa(props: AccordionProps) {
             <ArrowIcon open={Open} />
         </div>
         <div className={Open ? 'content' : 'disable'}>
+            {desc ? 
             <div className='desc'>
                 <h3>Descrição</h3>
                 <p>{desc}</p>
             </div>
-            <div className='contact'>
-                <h3>Contatos</h3>
-                <p>Líder: {leader}</p>
-                <p>E-mail: {email}</p>
-                <p>Telefone: {telephone}</p>
-                <p>Website: {website}</p>
-            </div>
+            : ''}
+            {leader || email || telephone || website ? 
+                <div className='contact'>
+                    <h3>Contatos</h3>
+                    {leader ? <p>Líder: {leader}</p> : ''}
+                    {email ?  <p>E-mail: {email}</p> : ''}
+                    {telephone ? <p>Telefone: {telephone}</p> : ''}
+                    {website ? <p>Website: {website}</p> : ''}
+                </div>
+            : ''}
+            
         </div>
     </Container>
   )
