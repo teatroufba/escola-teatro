@@ -18,7 +18,6 @@ const ExtensaoStyled = styled.div`
 `
 
 function Extensao({ extensao }: any ) {
-    console.log(extensao)
 
     return (
       <ExtensaoStyled>
