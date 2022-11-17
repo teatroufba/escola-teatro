@@ -13,6 +13,14 @@
           "thumbnails": []
         }
       },
+      "imagem2": {
+        "type": "Image",
+        "config": {
+          "label": "Segunda Imagem",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "tituloBanner": {
         "type": "Text",
         "config": {

@@ -5,24 +5,12 @@
     "slice_type": "post_espacos",
     "items": [
       {
-        "nomeLink": "syndicate enterprise networks",
-        "link": "whiteboard B2C channels"
+        "nomeLink": "expedite dot-com models",
+        "link": "architect next-generation communities"
       },
       {
-        "nomeLink": "leverage out-of-the-box networks",
-        "link": "monetize global paradigms"
-      },
-      {
-        "nomeLink": "incubate global synergies",
-        "link": "iterate compelling e-markets"
-      },
-      {
-        "nomeLink": "transition magnetic supply-chains",
-        "link": "cultivate leading-edge applications"
-      },
-      {
-        "nomeLink": "seize value-added experiences",
-        "link": "visualize global e-commerce"
+        "nomeLink": "leverage seamless supply-chains",
+        "link": "benchmark intuitive e-commerce"
       }
     ],
     "primary": {
@@ -33,10 +21,19 @@
         },
         "alt": "Placeholder image",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
       },
-      "titulo": "leverage e-business convergence",
-      "descricao": "reintermediate 24/7 paradigms"
+      "imagem2": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+      },
+      "titulo": "visualize strategic convergence",
+      "descricao": "brand bleeding-edge communities"
     }
   }
 ]
