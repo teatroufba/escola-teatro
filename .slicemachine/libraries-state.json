@@ -749,6 +749,281 @@
         },
         "screenshotPaths": {}
       },
+      "post_espacos": {
+        "library": "slices",
+        "id": "post_espacos",
+        "name": "PostEspacos",
+        "description": "PostEspacos",
+        "model": {
+          "id": "post_espacos",
+          "type": "SharedSlice",
+          "name": "PostEspacos",
+          "description": "PostEspacos",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostEspacos",
+              "primary": {
+                "imagem": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Título",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "nomeLink": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Nome do link",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "post_espacos",
+            "items": [
+              {
+                "nomeLink": "syndicate enterprise networks",
+                "link": "whiteboard B2C channels"
+              },
+              {
+                "nomeLink": "leverage out-of-the-box networks",
+                "link": "monetize global paradigms"
+              },
+              {
+                "nomeLink": "incubate global synergies",
+                "link": "iterate compelling e-markets"
+              },
+              {
+                "nomeLink": "transition magnetic supply-chains",
+                "link": "cultivate leading-edge applications"
+              },
+              {
+                "nomeLink": "seize value-added experiences",
+                "link": "visualize global e-commerce"
+              }
+            ],
+            "primary": {
+              "imagem": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+              },
+              "titulo": "leverage e-business convergence",
+              "descricao": "reintermediate 24/7 paradigms"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
+      "post_extensao": {
+        "library": "slices",
+        "id": "post_extensao",
+        "name": "PostExtensao",
+        "description": "PostExtensao",
+        "model": {
+          "id": "post_extensao",
+          "type": "SharedSlice",
+          "name": "PostExtensao",
+          "description": "PostExtensao",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostExtensao",
+              "primary": {
+                "imagem": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Titulo",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "Link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "postExtensaoComCatalogo",
+              "name": "Post Extensao - Com Catalogo",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostExtensao",
+              "primary": {
+                "imagem": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Titulo",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "linkCatalogo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link Catalogo",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "post_extensao",
+            "items": [],
+            "primary": {
+              "imagem": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43?w=900&h=500&fit=crop"
+              },
+              "titulo": "generate value-added vortals",
+              "descricao": "redefine 24/7 metrics",
+              "Link": "architect cross-media platforms"
+            }
+          },
+          "postExtensaoComCatalogo": {
+            "variation": "postExtensaoComCatalogo",
+            "name": "Post Extensao - Com Catalogo",
+            "slice_type": "post_extensao",
+            "items": [],
+            "primary": {
+              "imagem": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+              },
+              "titulo": "innovate one-to-one networks",
+              "descricao": "embrace real-time networks",
+              "linkCatalogo": "iterate bricks-and-clicks e-services",
+              "link": "embrace distributed channels"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          },
+          "postExtensaoComCatalogo": {
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\postExtensaoComCatalogo\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
       "revista_ou_publicacao": {
         "library": "slices",
         "id": "revista_ou_publicacao",
