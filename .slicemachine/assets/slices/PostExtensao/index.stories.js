@@ -1,0 +1,12 @@
+import MyComponent from '../../../../slices/PostExtensao';
+
+export default {
+  title: 'slices/PostExtensao'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"post_extensao","items":[{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"}},{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"}},{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"}}],"primary":{"titulo":"incentivize value-added vortals","descricao":"whiteboard vertical ROI","Link":"recontextualize leading-edge interfaces"},"id":"_Default"}} />
+_Default.storyName = 'Default'
+
+export const _PostExtensaoComCatalogo = () => <MyComponent slice={{"variation":"postExtensaoComCatalogo","name":"Post Extensao - Com Catalogo","slice_type":"post_extensao","items":[{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"}},{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"}},{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"}},{"imagem":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"}}],"primary":{"titulo":"transition frictionless paradigms","descricao":"benchmark distributed platforms","linkCatalogo":"reinvent out-of-the-box niches","link":"generate transparent platforms"},"id":"_PostExtensaoComCatalogo"}} />
+_PostExtensaoComCatalogo.storyName = 'Post Extensao - Com Catalogo'

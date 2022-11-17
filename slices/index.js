@@ -9,6 +9,8 @@ import LinksFormaIngresso from './LinksFormaIngresso';
 import Livro from './Livro';
 import Membro from './Membro';
 import Post from './Post';
+import PostEspacos from './PostEspacos';
+import PostExtensao from './PostExtensao';
 import RevistaOuPublicacao from './RevistaOuPublicacao';
 import SetoresInstancias from './SetoresInstancias';
 
@@ -22,6 +24,8 @@ export {
 	Livro,
 	Membro,
 	Post,
+	PostEspacos,
+	PostExtensao,
 	RevistaOuPublicacao,
 	SetoresInstancias,
 };
@@ -36,6 +40,8 @@ export const components = {
 	livro: Livro,
 	membro: Membro,
 	post: Post,
+	post_espacos: PostEspacos,
+	post_extensao: PostExtensao,
 	revista_ou_publicacao: RevistaOuPublicacao,
 	setores_instancias: SetoresInstancias,
 };
