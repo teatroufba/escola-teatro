@@ -18,7 +18,6 @@ const EspacosStyled = styled.div`
 `
 
 function Espacos({ espacos }: any) {
-    console.log(espacos)
 
     return (
       <EspacosStyled>
