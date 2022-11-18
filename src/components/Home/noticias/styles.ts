@@ -65,66 +65,70 @@ export const StyledNoticias = styled.div`
 `
 
 export const StyledNoticiaCard = styled.div`
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 290px;
+  flex-wrap: wrap;
+  width: 325px;
 
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  background: #FEFDFC;
-  border-radius: 5px;
-
-
-  .card-title {
-    font-family: 'Merriweather';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 120%;
-    color: #2C2525;
-    height: 87px;
+  -webkit-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
+-moz-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
+box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
+  transform: scale(0.95);
+  &:hover{
+    transform: scale(1);
+    transition:transform 0.25s ease-in-out;
   }
-
-  .noticia-img {
+  .noticias-post-img {
+    position: relative;
     width: 100%;
+    height: 250px;
+    margin-bottom: 25px;
   }
 
-  .text-post {
+  .noticias-post-text {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    height: 224px;
+    margin-bottom: 25px;
+    overflow: hidden;
     text-align: left;
-    font-family: arial;
-    height: 274px;
-    padding: 10px;
+    padding: 0 8px;
+
+    h3 {
+      font-family: "Merriweather";
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 8px;
+      max-height: 100%;
+    }
 
     p {
-      font-size: 16px;
+      font-family: arial;
       font-weight: 400;
+      font-size: 16px;
+      max-height: 100%;
     }
+  }
 
-    .titles {
-      gap: 15px;
-      height: 204px;
-    }
+  a {
+    text-decoration: none;
+    font-family: "Merriweather";
+    color: black;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 5%;
+    text-align: left;
+    padding: 10px 8px;
+    color: rgba(40, 43, 98, 1);
 
-    a {
-      text-decoration: none;
-      font-family: 'Merriweather';
-      color: #282b62;
-      font-size: 18px;
-      cursor: pointer;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 2%;
-    }
+  }
 
-    a:hover {
-      color: #9a1a4b;
-    }
-    .data {
-      font-size: 14px;
+  @media (min-width: 1081px) {
+    width: 395px;
+
+    .noticias-post-text {
+      height: 172px;
     }
   }
 `

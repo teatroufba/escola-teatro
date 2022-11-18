@@ -51,6 +51,8 @@ export const StyledStaffDescription = styled.div`
 	gap: 8px;
 	color: #2d2b78;
 
+	
+
 	h2 {
 		font-family: "Merriweather";
 		font-weight: 700;
@@ -64,6 +66,10 @@ export const StyledStaffDescription = styled.div`
 		font-family: "Merriweather";
 		font-weight: 400;
 		font-size: 14px;
+	}
+
+	.email {
+		font-weight: bold;
 	}
 `;
 
@@ -215,6 +221,8 @@ export const StyledDocenteCardCarrossel = styled.div`
 		color: #2d2b78;
 	}
 
+	
+
 	.docente-description button {
 		cursor: pointer;
 		font-family: "Merriweather";
@@ -226,5 +234,12 @@ export const StyledDocenteCardCarrossel = styled.div`
 		border: none;
 		border-radius: 4px;
 		padding: 8px 12px;
+	}
+
+	.docente-info {
+		.email {
+			font-weight: bold;
+			color: red;
+		}
 	}
 `;

@@ -1,3 +1,4 @@
+import PostCard from '@/components/Noticias/PostCard'
 import Link from 'next/link'
 
 import NoticiaCard from './NoticiaCard'
@@ -19,7 +20,7 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
       <h1>Notícias</h1>
 
       <div className="noticias-flex">
-        {noticias.slice(0, 4).map((value, index) => (
+        {noticias.slice(0, 3).map((value, index) => (
           <NoticiaCard
             key={value.uid}
             className={index > 1 ? 'mobile' : ''}
@@ -30,6 +31,8 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
             imageAlt={value.imageAlt}
             date={value.date}
           />
+
+          
         ))}
       </div>
       <div className='noticias-btn'>

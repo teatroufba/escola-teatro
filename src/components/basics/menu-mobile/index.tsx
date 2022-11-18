@@ -125,7 +125,7 @@ export default function MenuMobile() {
 						<div id="espacos-submenu" className="submenu-mobile hidden">
 							<ul>
 								<li>
-									<a>Teatro Martin Gonçalves</a>
+									<a>Teatro Martim Gonçalves</a>
 								</li>
 								<li>
 									<a>Pavilhão de Aulas</a>
@@ -156,6 +156,16 @@ export default function MenuMobile() {
 							<button>
 								<span>
 									<a href="/agenda">Agenda</a>
+								</span>
+							</button>
+						</div>
+					</li>
+
+					<li className="menu-main-option">
+						<div className="menu-option">
+							<button>
+								<span>
+									<a href="/noticias">Notícias</a>
 								</span>
 							</button>
 						</div>

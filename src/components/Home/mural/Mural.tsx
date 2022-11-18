@@ -21,20 +21,18 @@ export default function Mural({ mural }: { mural: IMural[] }) {
               <figure className="textover">
                 {value.imageUrl ? (
                   <div className="img-container">
-                      <Image
-                      src={value.imageUrl}
-                      width={395}
-                      height={270}
-                      alt={value.imageAlt}
-                      layout="fill"
-                      
-                    />
+                     <Image
+                      src={value.imageUrl} 
+                      alt={value.imageAlt}  
+                      width={306}
+                      height={210}
+                     />
                   </div>
                   
                 ) : (
                   ''
                 )}
-                <figcaption>{value.title}</figcaption>
+                <figcaption className='text-area'>{value.title}</figcaption>
               </figure>
             </a>
           </div>

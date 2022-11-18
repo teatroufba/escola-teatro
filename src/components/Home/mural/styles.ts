@@ -31,46 +31,48 @@ export const StyledMural = styled.div`
   }
 
   .mural-card {
-    margin-top: 2%;
-    width: 395px;
-    height: 306px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 395px;
+    max-width: 306px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
     border: 1px solid red;
-    
-    
 
     a {
-      text-decoration: none;
-      color: black;
       display: flex;
+      align-items: center;
+      justify-content: center ;
       flex-direction: column;
-    }
-
-    img {
-      border-radius: 5%;
-      -moz-border-radius: 5%;
-      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-    }
-    .img-container {
+      width: 100%;
       
-      width: 100%;
-    }
-    .textover {
-      position: relative;
     }
 
-    .textover figcaption {
+    .textover {
       width: 100%;
-      height: 80px;
-      position: absolute;
-      font-size: 24px;
-      color: white;
-      bottom: 0;
-      padding: 2%;
-      left: 0;
-      background-color: #282b62;
-      border-radius: 0% 0% 10px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      
+    }
+
+    .img-container {
+      display: flex;
+      align-items: center;
+      height: 210px;
+      width: 100%;
+
+      border: 1px solid green;
+   
+    }
+
+    .text-area {
+      background-color: #282B62 ;
+      width: 100%;
     }
   }
 

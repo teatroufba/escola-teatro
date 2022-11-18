@@ -56,7 +56,7 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 					<div className="left-column" id="content">
 						<div className="image-container" id="image-container">
 							<Image
-								alt={item.imageAlt}
+								alt={item.imageAlt? item.imageAlt : "sem informação" }
 								className="image"
 								layout="fill"
 								objectFit="cover"
@@ -67,10 +67,10 @@ export default function Apresentacao({ conteudos }: IApresentacao) {
 					<div className="content-column-wrapper">
 						<div className="content-column">
 							<h1 id="title">Apresentação</h1>
-							<h2>{item.titulo}</h2>
+							<h2>{item.titulo? item.titulo : ""}</h2>
 							<div className="text-content">
 								<p id="text-content" className="hidden-text">
-									{item.conteudo}
+									{item.conteudo? item.conteudo : "sem informação"}
 								</p>
 								<ReadMore
 									textID="text-content"
