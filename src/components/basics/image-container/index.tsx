@@ -278,7 +278,7 @@ function ImageContainer(props: ImageContainerProps) {
             <h1>{title}</h1>
             <div className="text">
                 <h4>{description}</h4>
-                {link ? <Link href={linkHref}><a><p>{link}</p></a></Link> : ''}
+                {link ? <Link href={!linkHref ? '/' : linkHref}><a><p>{link}</p></a></Link> : ''}
                 {button ? <div><Button className="button">Saiba mais</Button></div> : ''}
                 {cards ? <div className="cards">{cards.map((item,index) =>
                     <div className="card" key={index}>

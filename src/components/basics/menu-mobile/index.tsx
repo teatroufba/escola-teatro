@@ -160,6 +160,16 @@ export default function MenuMobile() {
 							</button>
 						</div>
 					</li>
+
+					<li className="menu-main-option">
+						<div className="menu-option">
+							<button>
+								<span>
+									<a href="/noticias">Noticias</a>
+								</span>
+							</button>
+						</div>
+					</li>
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button>

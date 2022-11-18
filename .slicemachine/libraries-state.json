@@ -749,6 +749,349 @@
         },
         "screenshotPaths": {}
       },
+      "post_espacos": {
+        "library": "slices",
+        "id": "post_espacos",
+        "name": "PostEspacos",
+        "description": "PostEspacos",
+        "model": {
+          "id": "post_espacos",
+          "type": "SharedSlice",
+          "name": "PostEspacos",
+          "description": "PostEspacos",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostEspacos",
+              "primary": {
+                "imagem": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "imagem2": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Segunda Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Título",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "nomeLink": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Nome do link",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "post_espacos",
+            "items": [
+              {
+                "nomeLink": "expedite dot-com models",
+                "link": "architect next-generation communities"
+              },
+              {
+                "nomeLink": "leverage seamless supply-chains",
+                "link": "benchmark intuitive e-commerce"
+              }
+            ],
+            "primary": {
+              "imagem": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+              },
+              "imagem2": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+              },
+              "titulo": "visualize strategic convergence",
+              "descricao": "brand bleeding-edge communities"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
+      "post_extensao": {
+        "library": "slices",
+        "id": "post_extensao",
+        "name": "PostExtensao",
+        "description": "PostExtensao",
+        "model": {
+          "id": "post_extensao",
+          "type": "SharedSlice",
+          "name": "PostExtensao",
+          "description": "PostExtensao",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostExtensao",
+              "primary": {
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Titulo",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "Link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "imagem": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "postExtensaoComCatalogo",
+              "name": "Post Extensao - Com Catalogo",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostExtensao",
+              "primary": {
+                "titulo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Titulo",
+                    "placeholder": ""
+                  }
+                },
+                "descricao": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Descrição",
+                    "placeholder": ""
+                  }
+                },
+                "linkCatalogo": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link Catalogo",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "imagem": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Imagem",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "post_extensao",
+            "items": [
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                }
+              }
+            ],
+            "primary": {
+              "titulo": "incentivize value-added vortals",
+              "descricao": "whiteboard vertical ROI",
+              "Link": "recontextualize leading-edge interfaces"
+            }
+          },
+          "postExtensaoComCatalogo": {
+            "variation": "postExtensaoComCatalogo",
+            "name": "Post Extensao - Com Catalogo",
+            "slice_type": "post_extensao",
+            "items": [
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+                }
+              }
+            ],
+            "primary": {
+              "titulo": "transition frictionless paradigms",
+              "descricao": "benchmark distributed platforms",
+              "linkCatalogo": "reinvent out-of-the-box niches",
+              "link": "generate transparent platforms"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
+            "width": 800,
+            "height": 60
+          },
+          "postExtensaoComCatalogo": {
+            "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\postExtensaoComCatalogo\\preview.png",
+            "width": 800,
+            "height": 60
+          }
+        }
+      },
       "revista_ou_publicacao": {
         "library": "slices",
         "id": "revista_ou_publicacao",

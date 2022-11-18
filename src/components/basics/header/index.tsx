@@ -7,6 +7,7 @@ import { HeaderContainer, HeaderInferior, HeaderSuperior } from "./styles";
 import SubmenuHeader from "../submenu-header";
 import StyledDropdown from "../menumobile";
 import MenuMobile from "../menu-mobile";
+import Link from "next/link";
 
 interface SubmenuOption {
 	href: string;
@@ -95,11 +96,14 @@ function Header() {
 		<HeaderContainer>
 			<HeaderSuperior>
 				<div className="header">
-					<div className="logo-img">
-						<Image alt="brasao" src={image} />
-					</div>
+					<Link href="/">
+						<div className="logo-img">
+							<Image alt="brasao" src={image} />
+						</div>
+					</Link>
+					
 
-					<p>Escola de Teatro da UFBA</p>
+					<p>Escola de Teatro | UFBA</p>
 				</div>
 
 				<div className="social-navbar">
@@ -201,6 +205,10 @@ function Header() {
 					</li>
 					<li>
 						<a href="/agenda">Agenda</a>
+					</li>
+
+					<li>
+						<a href="/noticias">Noticias</a>
 					</li>
 					<li>
 						<a href="/galeria">Galeria Virtual</a>
