@@ -64,12 +64,12 @@ export default function NoticiaCard({
         ) : null}
       </div>
       <div className="noticias-post-text">
-        <h3>{title}</h3>
-        <p>{subtitle}</p>
+        <h3>{title? maxChar(title,128) : ""}</h3>
+        <p>{subtitle? maxChar(subtitle,256) : ""}</p>
       </div>
       <a href={`/noticias/${uid}`}>
         Saiba mais{"  "}
-        <Image alt={imageAlt} height={10} src="/arrow.png" width={10} />
+        <Image alt={imageAlt? imageAlt : ""} height={10} src="/arrow.png" width={10} />
       </a>
     </StyledNoticiaCard>
   )
