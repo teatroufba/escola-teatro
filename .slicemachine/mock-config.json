@@ -26,8 +26,11 @@
     },
     "escola": {},
     "ensino": {},
-    "post-generico": {},
-    "teste": {}
+    "extensao": {},
+    "espacos": {
+      "links": {}
+    },
+    "galeria": {}
   },
   "slices": {
     "Membro": {
@@ -82,6 +85,21 @@
       }
     },
     "Livro": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "PostExtensao": {
+      "default": {
+        "primary": {},
+        "items": {}
+      },
+      "postExtensaoComCatalogo": {
+        "primary": {}
+      }
+    },
+    "PostEspacos": {
       "default": {
         "primary": {},
         "items": {}

@@ -106,6 +106,10 @@ export const HeaderSuperior = styled.div`
 		align-items: center;
 		justify-content: space-evenly;
 
+		.logo-img:hover {
+			cursor: pointer;
+		}
+
 		@media (max-width: 1200px) {
 			justify-content: start;
 			align-items: center;

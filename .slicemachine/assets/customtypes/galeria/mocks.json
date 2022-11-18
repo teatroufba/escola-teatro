@@ -1,0 +1,55 @@
+{
+  "id": "e5eafe37-a67c-4d6d-a07a-4f4bfcbcdaba",
+  "uid": "voluptas-nobis-neque",
+  "type": "galeria",
+  "data": {
+    "imagemMain": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+    },
+    "tituloMain": "repurpose ubiquitous supply-chains",
+    "descricaoMain": "empower mission-critical e-business",
+    "linkMain": "engineer next-generation schemas",
+    "imagem1": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+    },
+    "titulo1": "facilitate ubiquitous functionalities",
+    "descricao1": "redefine B2C convergence",
+    "link1": "architect compelling markets",
+    "imagem2": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+    },
+    "titulo2": "embrace dot-com partnerships",
+    "descricao2": "orchestrate granular interfaces",
+    "link2": "morph virtual bandwidth",
+    "imagem3": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+    },
+    "titulo3": "reintermediate revolutionary users",
+    "descricao3": "incubate 24/7 relationships",
+    "link3": "productize rich technologies"
+  }
+}
