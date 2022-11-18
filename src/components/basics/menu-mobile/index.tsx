@@ -165,7 +165,7 @@ export default function MenuMobile() {
 						<div className="menu-option">
 							<button>
 								<span>
-									<a href="/noticias">Noticias</a>
+									<a href="/noticias">Notícias</a>
 								</span>
 							</button>
 						</div>
