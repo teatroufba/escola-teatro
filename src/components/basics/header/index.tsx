@@ -208,7 +208,7 @@ function Header() {
 					</li>
 
 					<li>
-						<a href="/noticias">Noticias</a>
+						<a href="/noticias">Notícias</a>
 					</li>
 					<li>
 						<a href="/galeria">Galeria Virtual</a>
