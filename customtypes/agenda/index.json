@@ -50,6 +50,7 @@
           "placeholder": "",
           "options": [
             "Presencial",
+            "Híbrido",
             "Online"
           ],
           "default_value": "Presencial"
