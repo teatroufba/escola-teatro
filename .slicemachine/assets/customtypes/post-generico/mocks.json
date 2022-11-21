@@ -1,33 +1,24 @@
 {
-  "id": "068c4311-73f2-4af8-9cf7-50f9805e53fa",
-  "uid": "ad-ut-voluptatem",
-  "type": "post-generico",
-  "data": {
-    "image": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
-    },
-    "title": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": "Placeholder image",
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
-    },
-    "autor": "reintermediate wireless models",
-    "text": [
-      {
-        "type": "paragraph",
-        "text": "Culpa reprehenderit proident officia est irure voluptate voluptate. Reprehenderit deserunt laboris sit voluptate veniam officia occaecat. Excepteur laborum elit incididunt duis ipsum reprehenderit mollit id sunt proident dolore ad.",
-        "spans": []
-      }
-    ]
-  }
+    "id": "959c3de2-1a4a-4cf9-bbe8-252398c53223",
+    "uid": "et-eveniet-repellend",
+    "type": "post-generico",
+    "data": {
+        "image": {
+            "dimensions": {
+                "width": 900,
+                "height": 500
+            },
+            "alt": "Placeholder image",
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+        },
+        "title": "evolve real-time e-business",
+        "subtitle": "brand leading-edge schemas",
+        "text": [{
+            "type": "paragraph",
+            "text": "Reprehenderit ea nostrud ullamco non eu ad eiusmod.",
+            "spans": []
+        }],
+        "author": "disintermediate out-of-the-box relationships"
+    }
 }
