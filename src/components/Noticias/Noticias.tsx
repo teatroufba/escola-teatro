@@ -13,6 +13,8 @@ interface IPosts {
   date: string
   imageAlt: string
   imageUrl: string
+  miniaturaAlt: string
+  miniaturaUrl: string
   subtitle: string
   tags: string[]
   title: string
@@ -312,8 +314,8 @@ export default function Noticias({ post }: INoticias) {
       <div className="posts-flex">
         {filtered(post, 9, currentPage).map(value => (
           <PostCard
-            imageAlt={value.imageAlt}
-            imageUrl={value.imageUrl}
+            imageAlt={value.miniaturaUrl ? value.miniaturaAlt : value.imageAlt}
+            imageUrl={value.miniaturaUrl ? value.miniaturaUrl : value.imageUrl}
             subtitle={value.subtitle}
             title={value.title}
             uid={value.uid}

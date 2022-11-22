@@ -34,6 +34,8 @@ export default function Page({
     date: new Date(items.first_publication_date).toISOString(),
     imageAlt: items.data.image.alt,
     imageUrl: items.data.image.url,
+    miniaturaAlt: items.data.miniatura.alt,
+    miniaturaUrl: items.data.miniatura.url,
     subtitle: items.data.subtitle,
     tags: items.tags,
     title: items.data.title,

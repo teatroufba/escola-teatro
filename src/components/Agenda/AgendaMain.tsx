@@ -6,6 +6,8 @@ interface IAgenda {
   date: string;
   imageAlt: string;
   imageUrl: string;
+  miniaturaUrl: string;
+  miniaturaAlt: string;
   local: string;
   tipo: string;
   title: string;
@@ -89,8 +91,8 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
               key={`agenda-card-${index}`}
               subtitulo={item.subtitulo}
               uid={item.uid}
-              imageUrl={item.imageUrl}
-              imageAlt={item.imageAlt}
+              imageUrl={item.miniaturaUrl ? item.miniaturaUrl : item.imageUrl}
+              imageAlt={item.miniaturaUrl ? item.miniaturaAlt : item.imageAlt}
               title={item.title}
               date={item.date}
               local={item.local}

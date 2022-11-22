@@ -6,6 +6,8 @@ interface IAgenda {
   date: string;
   imageAlt: string;
   imageUrl: string;
+  miniaturaUrl: string;
+  miniaturaAlt: string;
   local: string;
   tipo: string;
   title: string;
@@ -36,6 +38,8 @@ export async function getStaticProps({
     title: item.data.titulo,
     imageUrl: item.data.imagem.url,
     imageAlt: item.data.imagem.alt,
+    miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : '',
+    miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : '',
     date: item.data.data,
     tipo: item.data.tipo,
     local: item.data.local,
