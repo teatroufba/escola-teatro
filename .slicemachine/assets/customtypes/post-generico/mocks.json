@@ -1,24 +1,35 @@
 {
-    "id": "959c3de2-1a4a-4cf9-bbe8-252398c53223",
-    "uid": "et-eveniet-repellend",
-    "type": "post-generico",
-    "data": {
-        "image": {
-            "dimensions": {
-                "width": 900,
-                "height": 500
-            },
-            "alt": "Placeholder image",
-            "copyright": null,
-            "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
-        },
-        "title": "evolve real-time e-business",
-        "subtitle": "brand leading-edge schemas",
-        "text": [{
-            "type": "paragraph",
-            "text": "Reprehenderit ea nostrud ullamco non eu ad eiusmod.",
-            "spans": []
-        }],
-        "author": "disintermediate out-of-the-box relationships"
-    }
+  "id": "38c32f75-cec9-4a76-880c-f936c49d9dd8",
+  "uid": "molestiae-cupiditate-fuga",
+  "type": "post-generico",
+  "data": {
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+    },
+    "miniatura": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+    },
+    "title": "maximize 24/7 action-items",
+    "subtitle": "enable impactful solutions",
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Ut ea fugiat eu. Do ex ullamco laboris dolore anim amet non do officia dolore cillum culpa magna nulla.",
+        "spans": []
+      }
+    ],
+    "author": "mesh end-to-end e-tailers"
+  }
 }

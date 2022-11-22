@@ -1,6 +1,6 @@
 {
-  "id": "0ced7e10-8a45-4733-9435-62ba41d3f1e6",
-  "uid": "harum-consequuntur-officiis",
+  "id": "d253fae1-1d2a-443b-84c0-02c0b00602b2",
+  "uid": "placeat-possimus-doloremque",
   "type": "agenda",
   "data": {
     "imagem": {
@@ -10,18 +10,27 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"
     },
-    "titulo": "implement cross-media blockchains",
-    "subtitulo": "strategize clicks-and-mortar web-readiness",
+    "miniatura": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+    },
+    "titulo": "engineer dot-com e-tailers",
+    "subtitulo": "mesh one-to-one e-business",
     "text": [
       {
         "type": "paragraph",
-        "text": "Dolore voluptate incididunt reprehenderit elit ea irure esse sunt eiusmod ipsum cillum ullamco excepteur ipsum anim. Eiusmod ea enim deserunt aliquip. Ullamco occaecat sunt proident laborum sit qui.",
+        "text": "Sit proident qui et occaecat.",
         "spans": []
       }
     ],
-    "data": "2020-07-31T22:06:10.940Z",
+    "data": "2015-11-01T01:23:22.683Z",
     "local": "Presencial",
     "tipo": "Tudo"
   }

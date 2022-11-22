@@ -13,6 +13,14 @@
           "thumbnails": []
         }
       },
+      "miniatura": {
+        "type": "Image",
+        "config": {
+          "label": "Miniatura",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "titulo": {
         "type": "Text",
         "config": {

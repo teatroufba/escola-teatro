@@ -1,6 +1,6 @@
 {
-  "id": "959c3de2-1a4a-4cf9-bbe8-252398c53210",
-  "uid": "et-eveniet-repellendus",
+  "id": "e967ddc6-07f4-4ecd-8789-6626aff4dcbd",
+  "uid": "ad-eveniet-ad",
   "type": "post-de-noticias",
   "data": {
     "image": {
@@ -10,17 +10,26 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+    },
+    "miniatura": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
       "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
     },
-    "title": "evolve real-time e-business",
-    "subtitle": "brand leading-edge schemas",
+    "title": "enhance out-of-the-box vortals",
+    "subtitle": "revolutionize plug-and-play infrastructures",
     "text": [
       {
         "type": "paragraph",
-        "text": "Reprehenderit ea nostrud ullamco non eu ad eiusmod.",
+        "text": "Mollit ad ad labore cillum tempor qui Lorem. Adipisicing minim reprehenderit voluptate sint labore enim mollit esse commodo eiusmod esse exercitation ad ut culpa.",
         "spans": []
       }
     ],
-    "author": "disintermediate out-of-the-box relationships"
+    "author": "morph cutting-edge models"
   }
 }
