@@ -863,7 +863,11 @@
         },
         "screenshotPaths": {
           "default": {
+<<<<<<< Updated upstream
             "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
+=======
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
+>>>>>>> Stashed changes
             "width": 800,
             "height": 60
           }
@@ -1081,12 +1085,20 @@
         },
         "screenshotPaths": {
           "default": {
+<<<<<<< Updated upstream
             "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
+=======
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
+>>>>>>> Stashed changes
             "width": 800,
             "height": 60
           },
           "postExtensaoComCatalogo": {
+<<<<<<< Updated upstream
             "path": "C:\\Users\\matheus\\Documents\\code\\infojr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\postExtensaoComCatalogo\\preview.png",
+=======
+            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\postExtensaoComCatalogo\\preview.png",
+>>>>>>> Stashed changes
             "width": 800,
             "height": 60
           }
