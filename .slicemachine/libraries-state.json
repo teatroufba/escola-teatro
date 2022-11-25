@@ -864,6 +864,7 @@
         "screenshotPaths": {
           "default": {
             "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
+
             "width": 800,
             "height": 60
           }
@@ -1081,6 +1082,7 @@
         },
         "screenshotPaths": {
           "default": {
+
             "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
             "width": 800,
             "height": 60
