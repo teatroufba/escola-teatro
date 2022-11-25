@@ -13,6 +13,14 @@
           "thumbnails": []
         }
       },
+      "miniatura": {
+        "type": "Image",
+        "config": {
+          "label": "Miniatura",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "titulo": {
         "type": "Text",
         "config": {
@@ -50,6 +58,7 @@
           "placeholder": "",
           "options": [
             "Presencial",
+            "Híbrido",
             "Online"
           ],
           "default_value": "Presencial"

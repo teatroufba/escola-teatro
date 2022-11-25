@@ -1,6 +1,6 @@
 {
-  "id": "068c4311-73f2-4af8-9cf7-50f9805e53fa",
-  "uid": "ad-ut-voluptatem",
+  "id": "38c32f75-cec9-4a76-880c-f936c49d9dd8",
+  "uid": "molestiae-cupiditate-fuga",
   "type": "post-generico",
   "data": {
     "image": {
@@ -10,24 +10,26 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
     },
-    "title": {
+    "miniatura": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
     },
-    "autor": "reintermediate wireless models",
+    "title": "maximize 24/7 action-items",
+    "subtitle": "enable impactful solutions",
     "text": [
       {
         "type": "paragraph",
-        "text": "Culpa reprehenderit proident officia est irure voluptate voluptate. Reprehenderit deserunt laboris sit voluptate veniam officia occaecat. Excepteur laborum elit incididunt duis ipsum reprehenderit mollit id sunt proident dolore ad.",
+        "text": "Ut ea fugiat eu. Do ex ullamco laboris dolore anim amet non do officia dolore cillum culpa magna nulla.",
         "spans": []
       }
-    ]
+    ],
+    "author": "mesh end-to-end e-tailers"
   }
 }

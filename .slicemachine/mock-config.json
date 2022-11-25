@@ -30,7 +30,8 @@
     "espacos": {
       "links": {}
     },
-    "galeria": {}
+    "galeria": {},
+    "post-generico": {}
   },
   "slices": {
     "Membro": {

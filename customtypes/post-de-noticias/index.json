@@ -20,6 +20,14 @@
           "thumbnails": []
         }
       },
+      "miniatura": {
+        "type": "Image",
+        "config": {
+          "label": "Miniatura",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "title": {
         "type": "Text",
         "config": {
