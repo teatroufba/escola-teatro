@@ -18,16 +18,16 @@ export default function CardCorpoTecnico({ corpoTecnico }: ICorpoTecnicoArray) {
 					<div className="first-line">
 						<div className="staff-name">
 							<span className="staff-subheader">Nome</span>
-							<span className="staff-info">Devon Lane</span>
+							<span className="staff-info">{item.nome? item.nome : ""}</span>
 						</div>
 						<div className="staff-role">
 							<span className="staff-subheader">Função</span>
-							<span className="staff-info">Accounting</span>
+							<span className="staff-info">{item.funcao? item.funcao : ""}</span>
 						</div>
 					</div>
 					<div className="second-line">
 						<span className="staff-subheader">Contato</span>
-						<span className="staff-contact">devon.lane@example.com</span>
+						<span className="staff-contact">{item.email? item.email : ""}</span>
 					</div>
 				</div>
 			))}
