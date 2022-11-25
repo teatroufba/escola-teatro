@@ -9,6 +9,7 @@ interface IConteudoFoto {
 	alt: string;
 	titulo: string;
 	conteudo: string;
+	
 	link: string;
 }
 

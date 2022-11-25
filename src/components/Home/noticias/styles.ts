@@ -68,8 +68,11 @@ export const StyledNoticiaCard = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   flex-wrap: wrap;
   width: 325px;
+  min-width: 300px;
+  height: 590px;
 
   -webkit-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
 -moz-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
@@ -89,11 +92,13 @@ box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
   .noticias-post-text {
     display: flex;
     flex-direction: column;
-    height: 224px;
-    margin-bottom: 25px;
+    min-height: 250px;
+    margin-bottom: 8px;
     overflow: hidden;
     text-align: left;
-    padding: 0 8px;
+    padding: 0 16px;
+    max-height: 260px;
+    
 
     h3 {
       font-family: "Merriweather";
@@ -117,9 +122,9 @@ box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
     color: black;
     font-weight: 400;
     font-size: 18px;
-    margin-top: 5%;
+    margin-top: 1px;
     text-align: left;
-    padding: 10px 8px;
+    padding: 0 16px;
     color: rgba(40, 43, 98, 1);
 
   }
