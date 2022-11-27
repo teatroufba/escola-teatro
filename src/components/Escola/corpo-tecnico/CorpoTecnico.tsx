@@ -43,9 +43,9 @@ export default function CorpoTecnico({ corpoTecnico }: ICorpoTecnicoArray) {
 						<tbody>
 							{corpoTecnico.map((item, index) => (
 								<tr key={`membro${index}`}>
-									{item.nome ? <td>{item.nome}</td> : '-'}
-									{item.funcao ? <td>{item.funcao}</td>: '-'}
-									{item.email ? <td>{item.email}</td> : '-'}
+									{item.nome ? <td>{item.nome}</td> : <td>-</td>}
+									{item.funcao ? <td>{item.funcao}</td>: <td>-</td>}
+									{item.email ? <td>{item.email}</td> : <td>-</td>}
 								</tr>
 							))}
 						</tbody>
