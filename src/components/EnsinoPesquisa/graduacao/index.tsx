@@ -23,9 +23,9 @@ const Container = styled.div`
 	}
 
 	.graduation {
-		text-align: left;
+		text-align: start;
 		display: flex;
-		justify-content: center;
+		justify-content: start;
 		width: 100vw;
 		max-width: 1235px;
 		gap: 1.5rem;
@@ -70,7 +70,6 @@ const Container = styled.div`
 			width: 57%;
 			display: flex;
 			flex-direction: column;
-			gap: 3.25rem;
 
 			.conteudo {
 				display: flex;
