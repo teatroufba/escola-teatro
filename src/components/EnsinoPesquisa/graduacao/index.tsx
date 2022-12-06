@@ -86,6 +86,10 @@ const Container = styled.div`
 				flex-direction: column;
 				gap: 1.5rem;
 
+				h2 {
+					max-height: 48px;
+				}
+
 				.description {
 					color: #2b2b2b;
 
@@ -171,6 +175,13 @@ interface IGraduacao {
 function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 	const [cardSelect, setCardSelect] = useState(0);
 
+	function textFormater (str: string, numberMax: number) {
+		if (str.length > numberMax) {
+			return str.slice(0, numberMax) + '...'
+		}
+		return str
+	}
+
 	return (
 		<Container>
 			<h1 id="graduacao">Graduação</h1>
@@ -185,7 +196,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								onClick={() => setCardSelect(index)}
 							>
 								<h3>{value.titulo}</h3>
-								<p>Duração: {value.duracao} anos</p>
+								<p>{value.duracao ? `Duração: ${value.duracao} anos` : '' }</p>
 							</div>
 						))}
 					</div>
@@ -197,7 +208,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 							key={`curso-content${index}`}
 							className={cardSelect === index ? "courseInfo" : "disable"}
 							>
-								<h2>{value.titulo}</h2>
+								<h2>{textFormater(value.titulo, 38)}</h2>
 								<div className="description">
 									<p>{value.descricao}</p>
 									<button>Ver mais</button>
