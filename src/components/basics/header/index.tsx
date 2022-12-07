@@ -54,23 +54,17 @@ function Header() {
 
 			case "extensao":
 				setOptions([
-					{ href: "", option: "Cia de Teatro" },
-					{ href: "", option: "Curso Livre" },
-					{ href: "", option: "Ato de 4" },
-					{ href: "", option: "Outros Projetos" },
+					{ href: "/extesao", option: "Cia de Teatro" },
+					{ href: "/extesao", option: "Curso Livre" },
+					{ href: "/extesao", option: "Ato de 4" },
+					{ href: "/extesao", option: "Outros Projetos" },
 				]);
 				break;
 
 			case "espacos":
 				setOptions([
-					{ href: "", option: "Teatro Martim Gonçalves" },
-					{ href: "", option: "Pavilhão de Aulas" },
-					{ href: "", option: "Casarão" },
-					{ href: "", option: "Sala 05" },
-					{ href: "", option: "Galeria Nilda Spencer" },
-					{ href: "", option: "Carpintaria" },
-					{ href: "", option: "Rouparia" },
-					{ href: "", option: "Biblioteca" },
+					{ href: "/espacos", option: "Teatro Martim Gonçalves" },
+					{ href: "/espacos", option: "Outros Espaços" },
 				]);
 				break;
 		}

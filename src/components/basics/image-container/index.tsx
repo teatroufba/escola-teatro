@@ -233,7 +233,7 @@ function ImageContainer(props: ImageContainerProps) {
             {imageUrl.map((item, index) => (
                 <div className={index != urlIndex ? 'imgDesactive' : 'img'} key={index}>
                     <Image
-                        src={item}
+                        src={item? item : "/"}
                         alt=""
                         width={800}
                         height={800}
@@ -282,8 +282,8 @@ function ImageContainer(props: ImageContainerProps) {
                 {button ? <div><Button className="button">Saiba mais</Button></div> : ''}
                 {cards ? <div className="cards">{cards.map((item,index) =>
                     <div className="card" key={index}>
-                        <p>{item.title}</p>
-                        <Link href={item.link}><a><small>Ver mais</small></a></Link>
+                        <p>{item.title? item.title : "sem titulo"}</p>
+                        <Link href={item.link? item.link : "/"}><a><small>Ver mais</small></a></Link>
                     </div>
                 )}</div> : ''}
             </div>
