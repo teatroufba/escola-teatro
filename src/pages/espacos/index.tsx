@@ -33,7 +33,7 @@ function Espacos({ espacos }: any) {
                 linkHref={''}
                 cards={espacos.links.map((item: any) => (
                     {
-                        title: item.nomeLink,
+                        title: item.nomeLink? item.nomeLink : "",
                         link: item.link ? item.link : ''
                     }
                 ))}
@@ -50,7 +50,7 @@ function Espacos({ espacos }: any) {
                 linkHref={''}
                 cards={item.items.map((item: any) => (
                     {
-                        title: item.nomeLink,
+                        title: item.nomeLink? item.nomeLink : '',
                         link: item.link ? item.link : ''
                     }
                 ))}
