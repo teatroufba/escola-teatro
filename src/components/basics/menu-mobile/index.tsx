@@ -35,6 +35,16 @@ export default function MenuMobile() {
 		<MenuMobileContainer>
 			<div className="submenu-wrapper">
 				<ul>
+				<li className="menu-main-option">
+						<div className="menu-option">
+							<button>
+								<span>
+								<a href="/">início</a>
+								</span>
+	
+							</button>
+						</div>
+					</li>
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("escola")}>
@@ -93,24 +103,25 @@ export default function MenuMobile() {
 					</li>
 					<li className="menu-main-option">
 						<div className="menu-option">
-							<button onClick={() => showSubmenu("extensao")}>
+							<button>
 								<span>Extensão</span>
-								<ArrowIcon />
+								
 							</button>
 						</div>
+
 						<div id="extensao-submenu" className="submenu-mobile hidden">
 							<ul>
 								<li>
-									<a>Cia de Teatro</a>
+									<a href="/extensos" >Cia de Teatro</a>
 								</li>
 								<li>
-									<a>Curso Livre</a>
+									<a href="/extensos">Curso Livre</a>
 								</li>
 								<li>
-									<a>Ato de 4</a>
+									<a href="/extensos">Ato de 4</a>
 								</li>
 								<li>
-									<a>Outros Projetos</a>
+									<a href="/extensos">Outros Projetos</a>
 								</li>
 							</ul>
 						</div>
@@ -125,28 +136,10 @@ export default function MenuMobile() {
 						<div id="espacos-submenu" className="submenu-mobile hidden">
 							<ul>
 								<li>
-									<a>Teatro Martim Gonçalves</a>
+									<a href="/espacos/#main">Teatro Martim Gonçalves</a>
 								</li>
 								<li>
-									<a>Pavilhão de Aulas</a>
-								</li>
-								<li>
-									<a>Casarão</a>
-								</li>
-								<li>
-									<a>Sala 05</a>
-								</li>
-								<li>
-									<a>Galeria Nilda Spencer</a>
-								</li>
-								<li>
-									<a>Carpintaria</a>
-								</li>
-								<li>
-									<a>Rouparia</a>
-								</li>
-								<li>
-									<a>Biblioteca</a>
+									<a href="/espacos/#outros">Outros Espaços</a>
 								</li>
 							</ul>
 						</div>

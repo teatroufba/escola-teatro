@@ -28,12 +28,12 @@ function Extensao({ extensao }: any ) {
                     imageUrl={item.items.map((item: any) => (
                         item.imagem.url
                     ))}
-                    title={item.primary.titulo}
-                    description={item.primary.descricao}
+                    title={item.primary.titulo? item.primary.titulo : "vazio" }
+                    description={item.primary.descricao? item.primary.descricao : "vazio" }
                     link={'Confira o catálogo completo da Cia de Teatro'}
                     button={true}
-                    linkButton={item.primary.link}
-                    linkHref={item.primary.linkCatalogo}
+                    linkButton={item.primary.link? item.primary.link : "/"}
+                    linkHref={item.primary.linkCatalogo? item.primary.linkCatalogo : "/" }
                     key={index}
                 />
             }
@@ -43,11 +43,11 @@ function Extensao({ extensao }: any ) {
                 imageUrl={item.items.map((item: any) => (
                     item.imagem.url
                 ))}
-                title={item.primary.titulo}
-                description={item.primary.descricao}
+                title={item.primary.titulo? item.primary.titulo : "vazio"}
+                description={item.primary.descricao? item.primary.descricao : "vazio"}
                 link={''}
                 button={true}
-                linkButton={item.primary.Link}
+                linkButton={item.primary.Link? item.primary.Link : "/"}
                 linkHref={''}
                 key={index}
             />
