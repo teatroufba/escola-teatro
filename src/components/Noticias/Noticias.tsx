@@ -58,18 +58,41 @@ export default function Noticias({ post }: INoticias) {
       const linput = new Date(fdate).toISOString()
       itens = itens.filter(value => value.date < linput && value.date > finput)
     }
+    
     if (sort === 'a-z') {
       itens.sort((a, b) => {
-        if (a.title < b.title) return -1
-        return 1
+        let tituloA = a.title.toUpperCase()
+        let tituloB = b.title.toUpperCase()
+
+        if (tituloA < tituloB) return -1
+
+        if (tituloA > tituloB) return 1
+
+        return 0
       })
     }
+
+    if (sort === 'z-a') {
+      itens.sort((a, b) => {
+        let tituloA = a.title.toUpperCase()
+        let tituloB = b.title.toUpperCase()
+
+        if (tituloB < tituloA) return -1
+
+        if (tituloB > tituloA) return 1
+
+        return 0
+      })
+    }
+
     if (filter !== 'todos') {
       itens = itens.filter(
         value => value.tags.map(item => item).toString() === filter.toString()
       )
     }
+
     if (sort === 'asc') return itens.slice(first, last).reverse()
+
     return itens.slice(first, last)
   }
   return (
@@ -312,13 +335,14 @@ export default function Noticias({ post }: INoticias) {
       </StyledFilter>
 
       <div className="posts-flex">
-        {filtered(post, 9, currentPage).map(value => (
+        {filtered(post, 9, currentPage).map((value, index) => (
           <PostCard
             imageAlt={value.miniaturaUrl ? value.miniaturaAlt : value.imageAlt}
             imageUrl={value.miniaturaUrl ? value.miniaturaUrl : value.imageUrl}
             subtitle={value.subtitle}
             title={value.title}
             uid={value.uid}
+            key={`postNoticia-${index}`}
           />
         ))}
       </div>
