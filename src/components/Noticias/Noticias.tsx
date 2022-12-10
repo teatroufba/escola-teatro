@@ -55,9 +55,17 @@ export default function Noticias({ post }: INoticias) {
     let posts = itens.map(item => item)
 
     if (sort === 'date' && idate !== '' && fdate !== '') {
-      const finput = new Date(idate).toISOString()
-      const linput = new Date(fdate).toISOString()
-      posts = posts.filter(value => value.date < linput && value.date > finput)
+      const iInput = new Date(idate)
+      const fInput = new Date(fdate)
+
+      iInput.setHours(24) // inicio do dia
+      fInput.setHours(47) // fim do dia
+
+      posts = posts.filter(value => {
+        const date = new Date(value.date)
+
+        return (date >= iInput && date <= fInput)
+      })
     }
     
     if (sort === 'a-z') {
