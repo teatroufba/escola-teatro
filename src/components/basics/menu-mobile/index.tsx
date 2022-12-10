@@ -39,7 +39,7 @@ export default function MenuMobile() {
 						<div className="menu-option">
 							<button>
 								<span>
-								<a href="/">início</a>
+								<a href="/">Início</a>
 								</span>
 	
 							</button>
@@ -104,7 +104,11 @@ export default function MenuMobile() {
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button>
-								<span>Extensão</span>
+								<span>
+									
+									<a href="/extensao">Extensão</a>
+									
+								</span>
 								
 							</button>
 						</div>

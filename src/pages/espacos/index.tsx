@@ -33,11 +33,13 @@ function Espacos({ espacos }: any) {
                 linkHref={''}
                 cards={espacos.links.map((item: any) => (
                     {
-                        title: item.nomeLink,
+                        title: item.nomeLink? item.nomeLink : "",
                         link: item.link ? item.link : ''
                     }
                 ))}
             />
+
+            <span id="outros"/>
         {espacos.slices.map((item: any, index: number) => (
             <ImageContainer
                 imageOrientation={index % 2 ? 'left' : 'right'}
@@ -50,7 +52,7 @@ function Espacos({ espacos }: any) {
                 linkHref={''}
                 cards={item.items.map((item: any) => (
                     {
-                        title: item.nomeLink,
+                        title: item.nomeLink? item.nomeLink : '',
                         link: item.link ? item.link : ''
                     }
                 ))}

@@ -128,4 +128,27 @@ export const AgendaStyled = styled.div`
       }
     }
   }
+
+
+  .agenda-btn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background-color:#9a1a4b;
+      font-style: 'Merriweather';
+      font-weight: 400;
+      border: none;
+      border-radius: 5%;
+      padding: 0.5% 4%;
+      font-size: 18px;
+      cursor: pointer;
+      color: white;
+      float: right;
+    }
+  }
+
+ 
 `

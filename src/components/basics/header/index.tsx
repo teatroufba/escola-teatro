@@ -64,7 +64,7 @@ function Header() {
 			case "espacos":
 				setOptions([
 					{ href: "/espacos", option: "Teatro Martim Gonçalves" },
-					{ href: "/espacos", option: "Outros Espaços" },
+					{ href: "/espacos/#outros", option: "Outros Espaços" },
 				]);
 				break;
 		}
@@ -181,8 +181,8 @@ function Header() {
 						<a
 							id="extensao"
 							href="/extensao"
-							onMouseEnter={() => showSubmenu("extensao")}
-							onMouseLeave={() => hideSubmenu("extensao")}
+							// onMouseEnter={() => showSubmenu("extensao")}
+							// onMouseLeave={() => hideSubmenu("extensao")}
 						>
 							Extensão
 						</a>

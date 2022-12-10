@@ -121,11 +121,11 @@ function FooterDown() {
 					<h1>Extensão</h1>
 					<ul>
 						<li>
-							<Link passHref href="/">
-								<a href="replace">Cia de Teatro</a>
+							<Link passHref href="/extensao">
+								<a href="replace">Extensão</a>
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link passHref href="/">
 								<a href="replace">Curso Livre</a>
 							</Link>
@@ -139,23 +139,23 @@ function FooterDown() {
 							<Link passHref href="/">
 								<a href="replace">Outros projetos</a>
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 				<div>
 					<h1>Espaços</h1>
 					<ul>
 						<li>
-							<Link passHref href="/">
+							<Link passHref href="/espacos">
 								<a href="replace">Teatro Martim Gonçalves</a>
 							</Link>
 						</li>
 						<li>
-							<Link passHref href="/">
-								<a href="replace">Pavilhão de Aulas</a>
+							<Link passHref href="/espacos">
+								<a href="replace">Outros espaços</a>
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link passHref href="/">
 								<a href="replace">Casarão</a>
 							</Link>
@@ -184,15 +184,21 @@ function FooterDown() {
 							<Link passHref href="/">
 								<a href="replace">Biblioteca</a>
 							</Link>
-						</li>
+						</li> */}
 					</ul>
 				</div>
 				<div>
-					<h1>Agenda</h1>
+					<h1>Comunicação</h1>
 					<ul>
 						<li>
 							<Link passHref href="/agenda">
 								<a href="replace">Agenda</a>
+							</Link>
+						</li>
+
+						<li>
+							<Link passHref href="/noticias">
+								<a href="replace">Notícias</a>
 							</Link>
 						</li>
 					</ul>

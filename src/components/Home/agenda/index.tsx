@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable react/destructuring-assignment */
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 import CardAgenda from '../cardagenda'
@@ -170,6 +171,12 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             height={14}
           />
         </button>
+      </div>
+
+      <div className='agenda-btn'>
+          <Link href="/agenda" passHref>
+            <button>Veja mais</button>
+          </Link>
       </div>
     </AgendaStyled>
   )
