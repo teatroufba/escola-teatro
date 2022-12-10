@@ -96,7 +96,7 @@ export default function Noticias({ post }: INoticias) {
 
     if (filter !== 'todos') {
       posts = posts.filter(
-        value => value.tags.map(item => item).toString() === filter.toString()
+        value => value.tags.includes(filter)
       )
     }
 
