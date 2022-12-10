@@ -52,15 +52,16 @@ export default function Noticias({ post }: INoticias) {
     current -= 1
     const first = maxPost * current
     const last = first + maxPost
+    let posts = itens.map(item => item)
 
     if (sort === 'date' && idate !== '' && fdate !== '') {
       const finput = new Date(idate).toISOString()
       const linput = new Date(fdate).toISOString()
-      itens = itens.filter(value => value.date < linput && value.date > finput)
+      posts = posts.filter(value => value.date < linput && value.date > finput)
     }
     
     if (sort === 'a-z') {
-      itens.sort((a, b) => {
+      posts.sort((a, b) => {
         let tituloA = a.title.toUpperCase()
         let tituloB = b.title.toUpperCase()
 
@@ -73,7 +74,7 @@ export default function Noticias({ post }: INoticias) {
     }
 
     if (sort === 'z-a') {
-      itens.sort((a, b) => {
+      posts.sort((a, b) => {
         let tituloA = a.title.toUpperCase()
         let tituloB = b.title.toUpperCase()
 
@@ -86,14 +87,14 @@ export default function Noticias({ post }: INoticias) {
     }
 
     if (filter !== 'todos') {
-      itens = itens.filter(
+      posts = posts.filter(
         value => value.tags.map(item => item).toString() === filter.toString()
       )
     }
 
-    if (sort === 'asc') return itens.slice(first, last).reverse()
+    if (sort === 'asc') return posts.slice(first, last).reverse()
 
-    return itens.slice(first, last)
+    return posts.slice(first, last)
   }
   return (
     <StyledNoticias>
