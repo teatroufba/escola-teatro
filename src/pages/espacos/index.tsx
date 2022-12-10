@@ -38,6 +38,8 @@ function Espacos({ espacos }: any) {
                     }
                 ))}
             />
+
+            <span id="outros"/>
         {espacos.slices.map((item: any, index: number) => (
             <ImageContainer
                 imageOrientation={index % 2 ? 'left' : 'right'}
