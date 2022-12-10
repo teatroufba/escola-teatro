@@ -54,7 +54,7 @@ export default function Noticias({ post }: INoticias) {
     const last = first + maxPost
     let posts = itens.map(item => item)
 
-    if (sort === 'date' && idate !== '' && fdate !== '') {
+    if (idate !== '' && fdate !== '') {
       const iInput = new Date(idate)
       const fInput = new Date(fdate)
 
@@ -248,7 +248,6 @@ export default function Noticias({ post }: INoticias) {
                 <button
                   id="button-date"
                   type="button"
-                  onClick={() => setSort('date')}
                 >
                   Filtrar
                 </button>
@@ -333,7 +332,6 @@ export default function Noticias({ post }: INoticias) {
                 <button
                   id="button-date"
                   type="button"
-                  onClick={() => setSort('date')}
                 >
                   Filtrar
                 </button>
