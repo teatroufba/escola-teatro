@@ -88,6 +88,10 @@ const Container = styled.div`
 
 				h2 {
 					max-height: 48px;
+
+					@media (max-width: 768px) {
+						max-height: none;
+					}
 				}
 
 				.description {
