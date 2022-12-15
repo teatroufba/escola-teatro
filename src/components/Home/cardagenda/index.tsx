@@ -83,6 +83,12 @@ const CardStyle = styled.div`
       line-height: 120%;
       font-size: 18px;
       height: 100px;
+      overflow-y: scroll;
+      scrollbar-width: none;
+    }
+
+    .title::-webkit-scrollbar {
+      display: none;
     }
 
     .container-title  {
