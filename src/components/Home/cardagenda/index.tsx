@@ -7,7 +7,7 @@ import { StyledAgendaCard } from '@/components/Agenda/styles'
 import Link from "next/link";
 
 const CardStyle = styled.div`
-  width: 235px;
+  width: 450px;
   height: 450px;
   
   border-radius: 5px;
@@ -42,15 +42,12 @@ const CardStyle = styled.div`
 
   .container-img{
 
-    width: 100%;
+    min-width: 15.625rem;
     position: relative;
     height: 15.625rem;
     display: flex;
     align-items: flex-end;
     margin-bottom: 10px;
-
-  
-
    
     .img-date {
       background-color: #9a1a4b;
@@ -164,7 +161,7 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
       <Link href={`/agenda/${uid}`} passHref>
         <div className="card">
             <div className="container-img"> 
-                <Image src={imageUrl} alt={imageAlt}  layout="fill" objectFit="cover" objectPosition='center' />
+                <Image src={imageUrl} alt={imageAlt}  layout="fill" />
               
               {data ? <p className='img-date'>
                     {dia}<br />

@@ -102,7 +102,7 @@ export const AgendaStyled = styled.div`
       height: 450px;
       display: flex;
       gap: 43px;
-      //overflow-x: scroll;
+      overflow-x: scroll;
       scroll-behavior: smooth;
       -ms-overflow-style: none;
       scrollbar-width: none;
