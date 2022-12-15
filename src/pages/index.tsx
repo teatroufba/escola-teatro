@@ -21,8 +21,8 @@ export async function getStaticProps({
   const agenda = items.map((value) => ({
     uid: value.uid || "",
     title: value.data.titulo,
-    imageUrl: value.data.imagem.url ? value.data.imagem.url : '',
-    imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '',
+    imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
+    imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
     date: value.data.data,
     tipo: value.data.tipo,
     local: value.data.local,
