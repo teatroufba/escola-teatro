@@ -103,29 +103,24 @@ export default function MenuMobile() {
 					</li>
 					<li className="menu-main-option">
 						<div className="menu-option">
-							<button>
-								<span>
-									
-									<a href="/extensao">Extensão</a>
-									
-								</span>
-								
+							<button onClick={() => showSubmenu("extensao")}>
+								<span>Extensão</span>
+								<ArrowIcon />
 							</button>
 						</div>
-
 						<div id="extensao-submenu" className="submenu-mobile hidden">
 							<ul>
 								<li>
-									<a href="/extensos" >Cia de Teatro</a>
+									<a href="/extensao/#cia-de-teatro">Cia de Teatro</a>
 								</li>
 								<li>
-									<a href="/extensos">Curso Livre</a>
+									<a href="/extensao/#curso-livre">Curso Livre</a>
 								</li>
 								<li>
-									<a href="/extensos">Ato de 4</a>
+									<a href="/extensao/#ato-de-4">Ato de Quatro</a>
 								</li>
 								<li>
-									<a href="/extensos">Outros Projetos</a>
+									<a href="/extensao/#outros-projetos">Outros Projetos</a>
 								</li>
 							</ul>
 						</div>

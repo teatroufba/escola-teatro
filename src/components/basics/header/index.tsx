@@ -54,10 +54,10 @@ function Header() {
 
 			case "extensao":
 				setOptions([
-					{ href: "/extesao", option: "Cia de Teatro" },
-					{ href: "/extesao", option: "Curso Livre" },
-					{ href: "/extesao", option: "Ato de 4" },
-					{ href: "/extesao", option: "Outros Projetos" },
+					{ href: "/extensao/#cia-de-teatro", option: "Cia de Teatro" },
+					{ href: "/extensao/#curso-livre", option: "Curso Livre" },
+					{ href: "/extensao/#ato-de-4", option: "Ato de 4" },
+					{ href: "/extensao/#outros-projetos", option: "Outros Projetos" },
 				]);
 				break;
 
@@ -181,8 +181,8 @@ function Header() {
 						<a
 							id="extensao"
 							href="/extensao"
-							// onMouseEnter={() => showSubmenu("extensao")}
-							// onMouseLeave={() => hideSubmenu("extensao")}
+							onMouseEnter={() => showSubmenu("extensao")}
+							onMouseLeave={() => hideSubmenu("extensao")}
 						>
 							Extensão
 						</a>
