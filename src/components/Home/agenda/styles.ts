@@ -32,6 +32,7 @@ export const AgendaStyled = styled.div`
       display: flex;
       gap: 10px;
       justify-content: right;
+      padding-top: 1rem;
 
       button {
         background-color: #24233a;
@@ -96,6 +97,7 @@ export const AgendaStyled = styled.div`
       .filtroMobile {
         display: flex;
         justify-content: right;
+        padding-top: 1rem;
       }
       .filtro {
         display: none;

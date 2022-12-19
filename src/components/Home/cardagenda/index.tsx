@@ -45,6 +45,7 @@ const CardStyle = styled.div`
   .container-img{
 
     min-width: 15.625rem;
+    background-color: #ffffff;
     position: relative;
     height: 15.625rem;
     display: flex;
@@ -69,6 +70,7 @@ const CardStyle = styled.div`
   }
 
   .container-baixo {
+    min-width: 15.625rem;
     padding: 0 15px 15px 15px;
     display: flex;
     flex-direction: column;
@@ -76,6 +78,7 @@ const CardStyle = styled.div`
     height: 50%;
     gap: 10px;
     font-family: 'Arial';
+    background-color: #ffffff;
 
 
     .title {
