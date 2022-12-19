@@ -19,7 +19,7 @@ const Container = styled.div`
 	.img {
 		position: relative;
 		width: 45%;
-		background-color: #d6d6d6;
+		background-color: white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -122,7 +122,7 @@ function PosGraduacao({ imageUrl, imageAlt, conteudo, link }: IPosGraduacao) {
 	return (
 		<Container id="pos-graduacao">
 			<div className="img">
-				<Image src={imageUrl} alt={imageAlt} layout='fill' objectFit="cover" objectPosition='center' />
+				<Image src={imageUrl} alt={imageAlt} layout='fill' objectFit='contain' objectPosition='center' />
 			</div>
 			<div className="graduation">
 				<h1>Pós-Graduação</h1>

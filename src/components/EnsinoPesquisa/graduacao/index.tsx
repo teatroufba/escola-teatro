@@ -23,9 +23,9 @@ const Container = styled.div`
 	}
 
 	.graduation {
-		text-align: left;
+		text-align: start;
 		display: flex;
-		justify-content: center;
+		justify-content: start;
 		width: 100vw;
 		max-width: 1235px;
 		gap: 1.5rem;
@@ -40,6 +40,7 @@ const Container = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 2rem;
+			justify-content: space-between;
 
 			@media (max-width: 1300px) {
 				width: 100%;
@@ -70,7 +71,6 @@ const Container = styled.div`
 			width: 57%;
 			display: flex;
 			flex-direction: column;
-			gap: 3.25rem;
 
 			.conteudo {
 				display: flex;
@@ -171,6 +171,19 @@ interface IGraduacao {
 
 function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 	const [cardSelect, setCardSelect] = useState(0);
+	const [seeMore, setSeeMore] = useState(false);
+
+	function textFormater (str: string, numberMax: number) {
+		if (str.length > numberMax) {
+			return str.slice(0, numberMax) + '...'
+		}
+		return str
+	}
+
+	function toggleSeeMore() {
+		setSeeMore(s => !s);
+	}
+	
 
 	return (
 		<Container>
@@ -186,10 +199,11 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								onClick={() => setCardSelect(index)}
 							>
 								<h3>{value.titulo}</h3>
-								<p>Duração: {value.duracao} anos</p>
+								<p>{value.duracao ? `Duração: ${value.duracao} anos` : '' }</p>
 							</div>
 						))}
 					</div>
+					<div />
 				</div>
 				<div className="content">
 					{cursos.map((value, index) => (
@@ -200,8 +214,8 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 							>
 								<h2>{value.titulo}</h2>
 								<div className="description">
-									<p>{value.descricao}</p>
-									<button>Ver mais</button>
+									<p>{seeMore ? value.descricao : textFormater(value.descricao, 600)}</p>
+									{value.descricao.length > 600 ? <button onClick={toggleSeeMore}>{seeMore ? 'Ver menos' : 'Ver mais'}</button> : ''}
 								</div>
 							</div>
 							<div className={cardSelect === index ? "info" : "disable"} key={`curso-info${index}`}>
