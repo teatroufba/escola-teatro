@@ -40,6 +40,7 @@ const Container = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 2rem;
+			justify-content: space-between;
 
 			@media (max-width: 1300px) {
 				width: 100%;
@@ -85,14 +86,6 @@ const Container = styled.div`
 				display: flex;
 				flex-direction: column;
 				gap: 1.5rem;
-
-				h2 {
-					max-height: 48px;
-
-					@media (max-width: 768px) {
-						max-height: none;
-					}
-				}
 
 				.description {
 					color: #2b2b2b;
@@ -178,6 +171,7 @@ interface IGraduacao {
 
 function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 	const [cardSelect, setCardSelect] = useState(0);
+	const [seeMore, setSeeMore] = useState(false);
 
 	function textFormater (str: string, numberMax: number) {
 		if (str.length > numberMax) {
@@ -185,6 +179,11 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 		}
 		return str
 	}
+
+	function toggleSeeMore() {
+		setSeeMore(s => !s);
+	}
+	
 
 	return (
 		<Container>
@@ -204,6 +203,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 							</div>
 						))}
 					</div>
+					<div />
 				</div>
 				<div className="content">
 					{cursos.map((value, index) => (
@@ -212,10 +212,10 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 							key={`curso-content${index}`}
 							className={cardSelect === index ? "courseInfo" : "disable"}
 							>
-								<h2>{textFormater(value.titulo, 38)}</h2>
+								<h2>{value.titulo}</h2>
 								<div className="description">
-									<p>{value.descricao}</p>
-									<button>Ver mais</button>
+									<p>{seeMore ? value.descricao : textFormater(value.descricao, 600)}</p>
+									{value.descricao.length > 600 ? <button onClick={toggleSeeMore}>{seeMore ? 'Ver menos' : 'Ver mais'}</button> : ''}
 								</div>
 							</div>
 							<div className={cardSelect === index ? "info" : "disable"} key={`curso-info${index}`}>
