@@ -12,7 +12,6 @@ export const AgendaStyled = styled.div`
     width: 1069px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
     justify-content: center;
 
     .title-box {
@@ -102,7 +101,8 @@ export const AgendaStyled = styled.div`
       height: 450px;
       display: flex;
       gap: 43px;
-      //overflow-x: scroll;
+      overflow-x: scroll;
+      overflow-y: hidden;
       scroll-behavior: smooth;
       -ms-overflow-style: none;
       scrollbar-width: none;

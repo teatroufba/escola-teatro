@@ -15,7 +15,7 @@ export const StyledPosts = styled.div`
   .noticias-post-img {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 25rem;
     margin-bottom: 25px;
   }
 
@@ -25,6 +25,7 @@ export const StyledPosts = styled.div`
     height: 224px;
     margin-bottom: 25px;
     overflow: hidden;
+    width: 25rem;
 
     h3 {
       font-family: "Merriweather";
@@ -53,9 +54,19 @@ export const StyledPosts = styled.div`
 
   @media (min-width: 1081px) {
     width: 395px;
-
+    .noticias-post-img {
+      width: 25rem;
+      height: 25rem;
+    }
     .noticias-post-text {
       height: 172px;
+    }
+  }
+
+  @media (max-width: 1081px) {
+    .noticias-post-img {
+      width: 25rem;
+      height: 25rem;
     }
   }
 `;
