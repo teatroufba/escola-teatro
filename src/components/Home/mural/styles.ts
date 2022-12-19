@@ -25,7 +25,7 @@ export const StyledMural = styled.div`
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 3%;
+    gap: 1.5625rem;
     text-align: center;
     justify-content: center;
   }
@@ -34,30 +34,25 @@ export const StyledMural = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 395px;
-    max-width: 306px;
-    width: 100%;
+    width: 395px;
+    height: 306px;
+
+    max-width: 395px;
+    max-height: 306px;
+    min-width: 325px;
+    min-height: 268px;
     margin: 0;
     padding: 0;
-    
-    border: 1px solid red;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 10px 10px 10px 10px;
 
     a {
       display: flex;
       align-items: center;
-      justify-content: center ;
-      flex-direction: column;
-      width: 100%;
-      
-    }
-
-    .textover {
-      width: 100%;
-      display: flex;
-      align-items: center;
       justify-content: center;
       flex-direction: column;
-      
+      width: 100%;
+      text-decoration: none;
     }
 
     .img-container {
@@ -65,14 +60,24 @@ export const StyledMural = styled.div`
       align-items: center;
       height: 210px;
       width: 100%;
-
-      border: 1px solid green;
-   
+      border-radius: 10px 10px 0px 0px;
+      overflow: hidden;
     }
 
     .text-area {
       background-color: #282B62 ;
       width: 100%;
+      height: 96px;
+      max-height: 96px;
+      padding: 15px 15px;
+      overflow: hidden;
+      border-radius: 0px 0px 10px 10px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: 'Merriweather';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
     }
   }
 
@@ -82,4 +87,21 @@ export const StyledMural = styled.div`
       color: #9a1a4b;
     }
   }
+
+  @media (max-width: 768px) {
+    .mural-card {
+      width: 325px;
+      height: 268px;
+
+      .img-container {
+        height: 172px;
+        width: 100%;
+      }
+
+      .text-area {
+        font-size: 20px;
+      }
+    }
+	}
+
 `
