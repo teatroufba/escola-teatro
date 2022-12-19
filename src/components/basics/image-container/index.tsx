@@ -226,10 +226,9 @@ type ImageContainerProps = {
 function ImageContainer(props: ImageContainerProps) {
     const { style, imageOrientation, imageUrl, title, description, link, linkHref, linkButton, button, cards } = props;
     const [urlIndex, setUrlIndex] = useState(0)
-  
     return (
       <Container className={imageOrientation + " " + style}>
-        <div className="carousel">
+        <div className="carousel" id={title}>
             {imageUrl.map((item, index) => (
                 <div className={index != urlIndex ? 'imgDesactive' : 'img'} key={index}>
                     <Image

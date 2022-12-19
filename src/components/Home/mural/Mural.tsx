@@ -11,6 +11,14 @@ interface IMural {
 }
 
 export default function Mural({ mural }: { mural: IMural[] }) {
+  
+  function textFormater (str: string, numberMax: number) {
+		if (str.length > numberMax) {
+			return str.slice(0, numberMax) + '...'
+		}
+		return str
+	}
+
   return (
     <StyledMural>
       <h1>Mural Estudantil</h1>
@@ -24,7 +32,7 @@ export default function Mural({ mural }: { mural: IMural[] }) {
                      <Image
                       src={value.imageUrl} 
                       alt={value.imageAlt}  
-                      width={306}
+                      width={395}
                       height={210}
                      />
                   </div>
@@ -32,7 +40,7 @@ export default function Mural({ mural }: { mural: IMural[] }) {
                 ) : (
                   ''
                 )}
-                <figcaption className='text-area'>{value.title}</figcaption>
+                <figcaption className='text-area'>{textFormater(value.title, 45)}</figcaption>
               </figure>
             </a>
           </div>

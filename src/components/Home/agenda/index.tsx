@@ -167,7 +167,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
                   date={value.date}
                   title={value.title}
                   local={value.local}
-                  imageUrl={value.imageUrl}
+                  imageUrl={value.imageUrl ? value.imageUrl : "/"}
                   imageAlt={value.imageAlt}
                   uid = {value.uid}
                   subtitle = {value.subtitle}

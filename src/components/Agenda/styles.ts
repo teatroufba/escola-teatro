@@ -93,6 +93,16 @@ export const StyledAgenda = styled.section`
             margin-bottom: 5rem;
         }
     }
+    @media (max-width: 1081px) {
+        #container-cards-agenda {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
 
     @media (min-width: 1276px) {
         #agenda-topo {
@@ -110,13 +120,13 @@ export const StyledAgendaCard = styled.div`
     background: solid white;
     flex-direction: column;
     border: solid 1px #2D2B784D;
-    width: 20.9375rem;
+    width: 25rem;
     
 
     .container-img {
         width: 100%;
         position: relative;
-        height: 15.625rem;
+        height: 25rem;
         display: flex;
         align-items: flex-end;
 
@@ -216,5 +226,10 @@ export const StyledAgendaCard = styled.div`
 
     @media (min-width: 1081px) {
         width: 24.6875rem;
+    }
+    @media (max-width: 1081px) {
+        width: 20rem;
+        .container-img {
+            height: 20rem;
     }
 `

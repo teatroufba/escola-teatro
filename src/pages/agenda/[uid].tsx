@@ -44,8 +44,8 @@ export async function getStaticProps({
 
   const post = {
     title: item ? item?.data.titulo : undefined,
-    imageUrl: item ? item?.data.imagem.url : undefined,
-    imageAlt: item ? item?.data.imagem.alt : undefined,
+    imageUrl: item?.data.imagem.url ? item?.data.imagem.url : '/',
+    imageAlt: item?.data.imagem.alt ? item?.data.imagem.alt : '/',
     date: item ? item?.data.data : undefined,
     local: item ? item?.data.local : undefined,
     text: item ? item?.data.text : undefined,

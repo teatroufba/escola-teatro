@@ -87,6 +87,7 @@ export const StyledCardCorpoTecnico = styled.div`
 	.staff-role {
 		display: flex;
 		flex-direction: column;
+		width: 40%;
 	}
 
 	.second-line {

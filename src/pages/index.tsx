@@ -20,13 +20,13 @@ export async function getStaticProps({
 
   const agenda = items.map((value) => ({
     uid: value.uid || "",
-    title: value.data.titulo || "",
-    imageUrl: value.data.imagem.url || "/background.png",
-    imageAlt: value.data.imagem.alt || "",
-    date: value.data.data || "",
-    tipo: value.data.tipo || "",
-    local: value.data.local || "",
-    descricao: value.data.subtitulo || "",
+    title: value.data.titulo,
+    imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
+    imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
+    date: value.data.data,
+    tipo: value.data.tipo,
+    local: value.data.local,
+    descricao: value.data.subtitulo,
   }));
 
   const itemsMural = await client.getAllByType("mural-estudantil", {
