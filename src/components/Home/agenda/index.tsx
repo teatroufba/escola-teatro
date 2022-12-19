@@ -30,8 +30,9 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
       setCarouselTotalScroll(
         Number(carousel.current.scrollWidth - carousel.current.clientWidth)
       )
+      setCarouselScrollLeft(carousel.current.scrollLeft)
     }
-  }, [carouselScrollLeft])
+  }, [carouselScrollLeft, filter])
 
   const scrollLeft = () => {
     if (carousel.current != null && carousel.current.scrollLeft > 0) {
@@ -75,7 +76,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
         
         <div className="filtro">
           <button
-            id="Tudo"
+            className={filter === "Tudo" ? 'active' : ''}
             onClick={() => {
               setFilter('Tudo')
             }}
@@ -83,7 +84,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             TUDO
           </button>
           <button
-            id="Eventos"
+            className={filter === "Eventos" ? 'active' : ''}
             onClick={() => {
               setFilter('Eventos')
             }}
@@ -91,7 +92,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             EVENTOS
           </button>
           <button
-            id="Espetáculos"
+            className={filter === "Espetáculos" ? 'active' : ''}
             onClick={() => {
               setFilter('Espetáculos')
             }}
@@ -99,7 +100,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             ESPETÁCULOS
           </button>
           <button
-            id="Defedas"
+            className={filter === "Defesas" ? 'active' : ''}
             onClick={() => {
               setFilter('Defesas')
             }}
@@ -107,7 +108,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             DEFESAS
           </button>
           <button
-            id="Formações"
+            className={filter === "Formações" ? 'active' : ''}
             onClick={() => {
               setFilter('Formações')
             }}
@@ -115,13 +116,33 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             FORMAÇÕES
           </button>
           <button
-            id="Outros"
+            className={filter === "Outros" ? 'active' : ''}
             onClick={() => {
               setFilter('Outros')
             }}
           >
             OUTROS
           </button>
+        </div>
+        <div className="filtroMobile">
+          <div className='img'>
+            <Image
+              src="/arrow-down-red.svg"
+              alt="ícone de seta para baixo"
+              width={14}
+              height={8}
+            />
+          </div>
+          <select onChange={(e) => {
+              setFilter(e.target.value)
+            }}>
+            <option value='Tudo'>TUDO</option>
+            <option value='Eventos'>EVENTOS</option>
+            <option value='Espetáculos'>ESPETÁCULOS</option>
+            <option value='Defesas'>DEFESAS</option>
+            <option value='Formações'>FORMAÇÕES</option>
+            <option value='Outros'>OUTROS</option>
+          </select>
         </div>
       </div>
       <div className="eventos">
@@ -141,8 +162,6 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
           {agenda
             .filter(value => filterArray(value.tipo))
             .map(value => (
-              
-                
                 <CardAgenda
                   key={value.uid}
                   date={value.date}
@@ -152,9 +171,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
                   imageAlt={value.imageAlt}
                   uid = {value.uid}
                   subtitle = {value.subtitle}
-                  
                 />
-              
             ))}
         </div>
         <button

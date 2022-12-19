@@ -9,6 +9,8 @@ import Link from "next/link";
 const CardStyle = styled.div`
   width: 450px;
   height: 450px;
+  min-width: 235px;
+  min-height: 450px;
   
   border-radius: 5px;
   cursor: pointer;
