@@ -124,6 +124,26 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             OUTROS
           </button>
         </div>
+        <div className="filtroMobile">
+          <div className='img'>
+            <Image
+              src="/arrow-down-red.svg"
+              alt="ícone de seta para baixo"
+              width={14}
+              height={8}
+            />
+          </div>
+          <select onChange={(e) => {
+              setFilter(e.target.value)
+            }}>
+            <option value='Tudo'>TUDO</option>
+            <option value='Eventos'>EVENTOS</option>
+            <option value='Espetáculos'>ESPETÁCULOS</option>
+            <option value='Defesas'>DEFESAS</option>
+            <option value='Formações'>FORMAÇÕES</option>
+            <option value='Outros'>OUTROS</option>
+          </select>
+        </div>
       </div>
       <div className="eventos">
         <button

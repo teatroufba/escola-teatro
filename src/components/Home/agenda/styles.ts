@@ -29,21 +29,6 @@ export const AgendaStyled = styled.div`
       border-bottom: 5px solid #fff;
     }
 
-    @media screen and (max-width: 1400px) {
-      width: 791px;
-    }
-
-    @media screen and (max-width: 1000px) {
-      width: 513px;
-    }
-
-    @media screen and (max-width: 768px) {
-      width: calc(100vw - 50px);
-      margin: 0 auto;
-    }
-
-   
-
     .filtro {
       display: flex;
       gap: 10px;
@@ -68,6 +53,57 @@ export const AgendaStyled = styled.div`
         }
       }
     }
+
+    .filtroMobile {
+      display: none;
+
+      .img {
+        position: relative;
+        left: 160px;
+        top: 5px;
+      }
+
+      select {
+        max-width: 170px;
+
+        appearance: none;
+        outline: 0;
+        border: 0;
+        box-shadow: none;
+
+        flex: 1;
+        padding: 5px 10px;
+        gap: 10px;
+        color: #9A1A4B;
+        background-color: #24233A;
+        background-image: none;
+        cursor: pointer;
+        border: 1px solid #9A1A4B;
+        border-radius: 5px;
+      }
+    }
+
+    @media screen and (max-width: 1400px) {
+      width: 791px;
+    }
+
+    @media screen and (max-width: 1000px) {
+      width: 513px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: calc(100vw - 50px);
+      margin: 0 auto;
+      .filtroMobile {
+        display: flex;
+        justify-content: right;
+      }
+      .filtro {
+        display: none;
+      }
+    }
+
+    
   }
 
   .eventos {
