@@ -54,7 +54,7 @@ const Container = styled.div`
                 font-family: 'Arial';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 1.5rem;
+                font-size: 1rem;
                 line-height: 120%;
                 color: #2B2B2B;
             }
@@ -63,7 +63,7 @@ const Container = styled.div`
                 font-family: 'Merriweather';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 line-height: 120%;
                 color: #9A1A4B;
             }
