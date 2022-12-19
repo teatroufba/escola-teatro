@@ -65,8 +65,11 @@ export const StyledPosts = styled.div`
 
   @media (max-width: 1081px) {
     .noticias-post-img {
-      width: 25rem;
-      height: 25rem;
+      width: 20rem;
+      height: 20rem;
+    }
+    .noticias-post-text {
+      width: 20rem;
     }
   }
 `;
@@ -175,7 +178,9 @@ export const StyledNoticias = styled.div`
 
   @media (min-width: 725px) and (max-width: 1080px) {
     .posts-flex {
-      width: 675px;
+      width: 800px;
+      justify-content: space-around;
+      align-items: center;
     }
   }
 
