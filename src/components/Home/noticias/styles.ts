@@ -69,10 +69,8 @@ export const StyledNoticiaCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-wrap: wrap;
-  width: 325px;
-  min-width: 300px;
-  height: 590px;
+  width: 315px;
+  height: 569px;
 
   -webkit-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
 -moz-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
@@ -85,34 +83,30 @@ box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
   .noticias-post-img {
     position: relative;
     width: 100%;
-    height: 250px;
+    aspect-ratio: 1/1;
     margin-bottom: 25px;
   }
 
   .noticias-post-text {
     display: flex;
     flex-direction: column;
-    min-height: 250px;
-    margin-bottom: 8px;
     overflow: hidden;
     text-align: left;
+    gap: 15px;
     padding: 0 16px;
-    max-height: 260px;
+    margin-bottom: 25px;
     
 
     h3 {
       font-family: "Merriweather";
       font-weight: 400;
       font-size: 24px;
-      margin-bottom: 8px;
-      max-height: 100%;
     }
 
     p {
       font-family: arial;
       font-weight: 400;
       font-size: 16px;
-      max-height: 100%;
     }
   }
 
@@ -122,7 +116,7 @@ box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
     color: black;
     font-weight: 400;
     font-size: 18px;
-    margin-top: 1px;
+    margin-bottom: 35px;
     text-align: left;
     padding: 0 16px;
     color: rgba(40, 43, 98, 1);
