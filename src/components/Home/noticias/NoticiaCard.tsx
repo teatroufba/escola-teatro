@@ -60,7 +60,8 @@ export default function NoticiaCard({
     <StyledNoticiaCard>
       <div className="noticias-post-img">
         {imageUrl ? (
-          <Image alt={imageAlt} src={imageUrl} layout='fill' objectFit="cover" objectPosition='center' />
+          <Image alt={imageAlt} src={imageUrl} layout='fill'
+          objectFit='contain' objectPosition='center' />
         ) : null}
       </div>
       <div className="noticias-post-text">

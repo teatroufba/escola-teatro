@@ -69,13 +69,17 @@ export const StyledNoticiaCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 315px;
-  height: 569px;
+  max-width: 395px;
 
   -webkit-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
--moz-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
+  -moz-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
+  box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
   transform: scale(0.95);
+
+  @media (max-width: 768px) {
+    max-height: none;
+  }
+
   &:hover{
     transform: scale(1);
     transition:transform 0.25s ease-in-out;
@@ -123,7 +127,7 @@ box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
 
   }
 
-  @media (min-width: 1081px) {
+  @media (min-width: 768px) {
     width: 395px;
 
     .noticias-post-text {
