@@ -52,25 +52,57 @@ export default function Noticias({ post }: INoticias) {
     current -= 1
     const first = maxPost * current
     const last = first + maxPost
+    let posts = itens.map(item => item)
 
-    if (sort === 'date' && idate !== '' && fdate !== '') {
-      const finput = new Date(idate).toISOString()
-      const linput = new Date(fdate).toISOString()
-      itens = itens.filter(value => value.date < linput && value.date > finput)
-    }
-    if (sort === 'a-z') {
-      itens.sort((a, b) => {
-        if (a.title < b.title) return -1
-        return 1
+    if (idate !== '' && fdate !== '') {
+      const iInput = new Date(idate)
+      const fInput = new Date(fdate)
+
+      iInput.setHours(24) // inicio do dia
+      fInput.setHours(47) // fim do dia
+
+      posts = posts.filter(value => {
+        const date = new Date(value.date)
+
+        return (date >= iInput && date <= fInput)
       })
     }
+    
+    if (sort === 'a-z') {
+      posts.sort((a, b) => {
+        let tituloA = a.title.toUpperCase()
+        let tituloB = b.title.toUpperCase()
+
+        if (tituloA < tituloB) return -1
+
+        if (tituloA > tituloB) return 1
+
+        return 0
+      })
+    }
+
+    if (sort === 'z-a') {
+      posts.sort((a, b) => {
+        let tituloA = a.title.toUpperCase()
+        let tituloB = b.title.toUpperCase()
+
+        if (tituloB < tituloA) return -1
+
+        if (tituloB > tituloA) return 1
+
+        return 0
+      })
+    }
+
     if (filter !== 'todos') {
-      itens = itens.filter(
-        value => value.tags.map(item => item).toString() === filter.toString()
+      posts = posts.filter(
+        value => value.tags.includes(filter)
       )
     }
-    if (sort === 'asc') return itens.slice(first, last).reverse()
-    return itens.slice(first, last)
+
+    if (sort === 'asc') return posts.slice(first, last).reverse()
+
+    return posts.slice(first, last)
   }
   return (
     <StyledNoticias>
@@ -216,7 +248,6 @@ export default function Noticias({ post }: INoticias) {
                 <button
                   id="button-date"
                   type="button"
-                  onClick={() => setSort('date')}
                 >
                   Filtrar
                 </button>
@@ -301,7 +332,6 @@ export default function Noticias({ post }: INoticias) {
                 <button
                   id="button-date"
                   type="button"
-                  onClick={() => setSort('date')}
                 >
                   Filtrar
                 </button>
@@ -312,13 +342,14 @@ export default function Noticias({ post }: INoticias) {
       </StyledFilter>
 
       <div className="posts-flex">
-        {filtered(post, 9, currentPage).map(value => (
+        {filtered(post, 9, currentPage).map((value, index) => (
           <PostCard
             imageAlt={value.miniaturaUrl ? value.miniaturaAlt : value.imageAlt}
             imageUrl={value.miniaturaUrl ? value.miniaturaUrl : value.imageUrl}
             subtitle={value.subtitle}
             title={value.title}
             uid={value.uid}
+            key={`postNoticia-${index}`}
           />
         ))}
       </div>

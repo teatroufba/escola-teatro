@@ -35,6 +35,9 @@ export default function Postagem({
 }: IPostagem) {
   const oneMinute = 1000 * 60
 
+  const primeiraData = first_publication_date?.replace(/\/(\d{1,2})/, (match, p1) => `/${+p1 + 1}`) // substitui o numero do mes pelo numero correto
+  // nao sei pq mas o first_publication_date vem sempre com o mes errado
+
   const calculateLastAtt = () =>
     formatDistance(last_publication_date, new Date(), {
       addSuffix: true,
@@ -113,7 +116,7 @@ export default function Postagem({
             <span>
               <p>
                 Por <b>{author}</b> <br />
-                {first_publication_date} &nbsp;&nbsp;Atualizado {lastAtt}
+                {primeiraData} &nbsp;&nbsp;Atualizado {lastAtt}
               </p>
             </span>
 
