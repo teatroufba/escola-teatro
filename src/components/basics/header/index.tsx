@@ -39,7 +39,7 @@ function Header() {
 					},
 					{ href: "/escola/#corpo-docente", option: "Corpo Docente" },
 					{ href: "/escola/#corpo-tecnico", option: "Corpo Técnico" },
-					{ href: "/escola/#como-chegar", option: "Contato" },
+					{ href: "/escola/#como-chegar", option: "Como Chegar" },
 				]);
 				break;
 
