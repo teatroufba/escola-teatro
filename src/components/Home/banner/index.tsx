@@ -15,11 +15,6 @@ const BannerStyled = styled.div`
     height: calc(39.06vw + 40px);
   }
 
-  @media screen and (max-width: 768px) {
-    height: calc(100vw + 40px);
-    max-height: 1008px;
-  }
-
   .carousel {
     width: 100%;
     margin: 0 auto;
@@ -38,16 +33,6 @@ const BannerStyled = styled.div`
     img {
       width: 100vw;
       max-height: 750px;
-
-      @media screen and (max-width: 768px) {
-        height: 100vw;
-        max-height: 1008px;
-      }
-    }
-
-    @media screen and (max-width: 768px) {
-      height: 100vw;
-      max-height: 1008px;
     }
   }
 
@@ -56,7 +41,6 @@ const BannerStyled = styled.div`
     width: 100%;
     max-height: 750px;
     height: 39.06vw;
-    min-height: 200px;
     background-color: #9a1a4b;
     opacity: 0.7;
     position: relative;
@@ -81,26 +65,9 @@ const BannerStyled = styled.div`
       }
     }
 
-    @media (min-width: 768px) and (max-width: 1300px) {
+    @media (max-width: 1300px) {
       .banner-control {
         top: -39.06vw;
-        justify-content: right;
-        position: relative;
-        background-color: #282b62;
-        width: 100vw;
-        height: 40px;
-        padding: 0 25px;
-        justify-content: center;
-
-        .content {
-          display: none;
-        }
-      }
-    }
-
-    @media (max-width: 768px) {
-      .banner-control {
-        top: calc(-100vw);
         justify-content: right;
         position: relative;
         background-color: #282b62;
@@ -162,7 +129,7 @@ const BannerStyled = styled.div`
           }
         }
 
-      @media (min-width: 768px) and (max-width: 1300px) {
+      @media (max-width: 1300px) {
         position: relative;
         top: calc(-39.06vw - 266px);
         display: flex;
@@ -175,13 +142,8 @@ const BannerStyled = styled.div`
         }
       }
 
-      @media screen and (max-width: 768px) {
-        position: relative;
-        top: calc(-100vw - 266px);
-        display: flex;
-        width: 86.667vw;
-        max-width: 500px;
-        margin: 0 auto;
+      @media screen and (max-width: 600px) {
+        top: calc(-39.06vw - 176px);
 
         h1 {
           font-size: 2rem;
@@ -189,6 +151,7 @@ const BannerStyled = styled.div`
 
         p {
           font-size: 0.875rem;
+          display: none;
         }
 
         .content-button {
@@ -198,17 +161,9 @@ const BannerStyled = styled.div`
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1920px) {
+  @media (max-width: 1920px) {
     .layer {
-      top: max(-39.06vw, -750px);
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    .layer {
-      top: -100vw;
-      height: 100vw;
-      max-height: 790px;
+      top: -39.06vw;
     }
   }
 
@@ -277,7 +232,7 @@ const BannerStyled = styled.div`
       justify-content: right;
       position: static;
       width: 100vw;
-      padding: 0 25px;
+      margin: 0 auto;
       justify-content: center;
       top: -90px;
 
