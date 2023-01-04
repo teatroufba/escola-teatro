@@ -121,6 +121,7 @@ export const StyledAgendaCard = styled.div`
     flex-direction: column;
     border: solid 1px #2D2B784D;
     width: 25rem;
+    cursor: pointer;
     
 
     .container-img {
@@ -231,5 +232,6 @@ export const StyledAgendaCard = styled.div`
         width: 20rem;
         .container-img {
             height: 20rem;
+        }
     }
 `

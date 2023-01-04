@@ -11,6 +11,7 @@ export const StyledPosts = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   width: 325px;
+  cursor: pointer;
 
   .noticias-post-img {
     position: relative;
