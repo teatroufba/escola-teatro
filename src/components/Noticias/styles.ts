@@ -10,12 +10,16 @@ export const StyledPosts = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content:center;
   width: 325px;
+  border: solid 1.5px #2D2B784D;
   cursor: pointer;
 
   .noticias-post-img {
+    margin-top: .1rem;
+    margin-left: .1rem;
     position: relative;
-    width: 100%;
+    width: 99%;
     height: 25rem;
     margin-bottom: 25px;
   }
@@ -39,8 +43,13 @@ export const StyledPosts = styled.div`
     p {
       font-family: arial;
       font-weight: 400;
-      font-size: 16px;
-      max-height: 100%;
+      font-size: 15px;
+      max-height: 95%;
+      max-width: 95%;
+      overflow: scroll;
+      ::-webkit-scrollbar {
+        display: none;
+    }
     }
   }
 
@@ -56,8 +65,8 @@ export const StyledPosts = styled.div`
   @media (min-width: 1081px) {
     width: 395px;
     .noticias-post-img {
-      width: 25rem;
-      height: 25rem;
+      width: 24.3rem;
+      height: 24.3rem;
     }
     .noticias-post-text {
       height: 172px;
