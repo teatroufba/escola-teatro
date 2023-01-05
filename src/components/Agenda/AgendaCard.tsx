@@ -44,31 +44,31 @@ export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, titl
     }
 
     return (
-        <StyledAgendaCard>
-            <div className="container-img">
-                <Image src={imageUrl} alt={imageAlt} layout="fill" objectFit="cover" objectPosition='center' />
-                <p>
-                    {dia}<br />
-                    <span>{meses[mes]}</span>
-                </p>
-            </div>
-            <div className="container-baixo">
-                <h4>{title}</h4>
-                <div className="container-data">
-                    <Image src='/calendar.svg' alt="" width={24} height={24} />
-                    <p>{`${dia}/${mesNumero}/${ano}`}</p>
+        <Link href={`/agenda/${uid}`}>
+            <StyledAgendaCard>
+                <div className="container-img">
+                    <Image src={imageUrl} alt={imageAlt} layout="fill" objectFit="cover" objectPosition='center' />
+                    <p>
+                        {dia}<br />
+                        <span>{meses[mes]}</span>
+                    </p>
                 </div>
-                <div className="container-location">
-                    <Image src='/location-azul.svg' alt="" width={24} height={24} />
-                    <p>{local}</p>
-                </div>
-                <p className="conteudo-agenda">
-                    {subtitulo}
-                </p>
-                <Link href={`/agenda/${uid}`} passHref>
+                <div className="container-baixo">
+                    <h4>{title}</h4>
+                    <div className="container-data">
+                        <Image src='/calendar.svg' alt="" width={24} height={24} />
+                        <p>{`${dia}/${mesNumero}/${ano}`}</p>
+                    </div>
+                    <div className="container-location">
+                        <Image src='/location-azul.svg' alt="" width={24} height={24} />
+                        <p>{local}</p>
+                    </div>
+                    <p className="conteudo-agenda">
+                        {subtitulo}
+                    </p>
                     <a>Acesse</a>
-                </Link>
-            </div>
-        </StyledAgendaCard>
+                </div>
+            </StyledAgendaCard>
+        </Link>
     )
 }

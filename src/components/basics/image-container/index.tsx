@@ -177,6 +177,7 @@ const Container = styled.div`
                     display: flex;
                     flex-direction: column;
                     gap: 0.75rem;
+                    cursor: pointer;
                     justify-content: space-between;
                     border: 2px solid rgba(154, 26, 75, 0.6);
                     padding: 1rem;
@@ -193,6 +194,10 @@ const Container = styled.div`
                             width: 100%;
                         }
                     }
+
+                    a {
+						text-decoration: underline;
+					}
 
                     small {
                         font-size: 1rem;
@@ -280,10 +285,12 @@ function ImageContainer(props: ImageContainerProps) {
                 {link ? <Link href={!linkHref ? '/' : linkHref}><a><p>{link}</p></a></Link> : ''}
                 {button ? <div><Button className="button">Saiba mais</Button></div> : ''}
                 {cards ? <div className="cards">{cards.map((item,index) =>
-                    <div className="card" key={index}>
-                        <p>{item.title? item.title : "sem titulo"}</p>
-                        <Link href={item.link? item.link : "/"}><a><small>Ver mais</small></a></Link>
-                    </div>
+                    <Link href={item.link? item.link : "/"}>
+                        <div className="card" key={index}>
+                            <p>{item.title? item.title : "sem titulo"}</p>
+                            <a><small>Ver mais</small></a>
+                        </div>
+                    </Link>
                 )}</div> : ''}
             </div>
         </div>

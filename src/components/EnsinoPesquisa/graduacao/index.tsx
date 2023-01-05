@@ -118,6 +118,7 @@ const Container = styled.div`
 				}
 
 				div {
+					cursor: pointer;
 					width: calc(25% - 1.125rem);
 					max-width: 160px;
 					padding: 1rem;
@@ -133,12 +134,11 @@ const Container = styled.div`
 						max-width: 768px;
 					}
 
-					a {
+					.link {
 						color: #2d2b78;
 						padding: 0;
 						margin: 0;
 						background-color: transparent;
-						cursor: pointer;
 						border: none;
 						text-decoration: underline;
 					}
@@ -219,22 +219,30 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								</div>
 							</div>
 							<div className={cardSelect === index ? "info" : "disable"} key={`curso-info${index}`}>
-								<div>
-									<p>Projeto político Pedagógico</p>
-									<Link href={value.ppp}>Ver mais</Link>
-								</div>
-								<div>
-									<p>Matriz Curricular</p>
-									<Link href={value.matrizCurricular}>Ver mais</Link>
-								</div>
-								<div>
-									<p>Ementário</p>
-									<Link href={value.ementario}>Ver mais</Link>
-								</div>
-								<div>
-									<p>Guia Estudantil</p>
-									<Link href={value.guiaEstudantil}>Ver mais</Link>
-								</div>
+								<Link href={value.ppp}>
+									<div>
+										<p>Projeto político Pedagógico</p>
+										<p className="link">Ver mais</p>
+									</div>
+								</Link>
+								<Link href={value.matrizCurricular}>
+									<div>
+										<p>Matriz Curricular</p>
+										<p className="link">Ver mais</p>
+									</div>
+								</Link>
+								<Link href={value.ementario}>
+									<div>
+										<p>Ementário</p>
+										<p className="link">Ver mais</p>
+									</div>
+								</Link>
+								<Link href={value.guiaEstudantil}>
+									<div>
+										<p>Guia Estudantil</p>
+										<p className="link">Ver mais</p>
+									</div>
+								</Link>
 							</div>
 						</div>
 					))}
