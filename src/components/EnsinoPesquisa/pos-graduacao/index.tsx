@@ -132,7 +132,6 @@ function PosGraduacao({ imageUrl, imageAlt, conteudo, link }: IPosGraduacao) {
 							<p>
 								{conteudo}
 							</p>
-							<button>Ver mais</button>
 						</div>
 					</div>
 					<div className="info">

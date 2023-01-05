@@ -61,6 +61,9 @@ export const StyledNoticias = styled.div`
     cursor: pointer;
     color: white;
     float: right;
+    &:hover {
+      background-color: #9a1a4b;
+    }
   }
 `
 

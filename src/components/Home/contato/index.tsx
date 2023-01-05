@@ -110,6 +110,9 @@ const ContatoStyled = styled.div`
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        &:hover {
+          background-color: #9a1a4b;
+        }
       }
     }
   }
