@@ -112,7 +112,7 @@ export interface AgendaDocumentDataTiposItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    tipo: prismicT.SelectField<"Evento" | "Espetáculo" | "Defesa" | "Formação" | "Outro">;
+    tipo: prismicT.SelectField<"Eventos" | "Espetáculos" | "Defesas" | "Formações" | "Outros">;
 }
 /**
  * Agenda document from Prismic
@@ -124,120 +124,6 @@ export interface AgendaDocumentDataTiposItem {
  * @typeParam Lang - Language API ID of the document.
  */
 export type AgendaDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AgendaDocumentData>, "agenda", Lang>;
-/** Content for Card docente documents */
-interface CardDocenteDocumentData {
-    /**
-     * Name field in *Card docente*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: card-docente.name
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    name: prismicT.KeyTextField;
-    /**
-     * Email field in *Card docente*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: card-docente.email
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    email: prismicT.KeyTextField;
-    /**
-     * Interests field in *Card docente*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: card-docente.interests
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    interests: prismicT.KeyTextField;
-    /**
-     * Link field in *Card docente*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: card-docente.link
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    link: prismicT.KeyTextField;
-    /**
-     * Image field in *Card docente*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: card-docente.image
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-}
-/**
- * Card docente document from Prismic
- *
- * - **API ID**: `card-docente`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CardDocenteDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CardDocenteDocumentData>, "card-docente", Lang>;
-/** Content for Como chegar documents */
-interface ComoChegarDocumentData {
-    /**
-     * Address field in *Como chegar*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: como-chegar.address
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    address: prismicT.KeyTextField;
-    /**
-     * Email field in *Como chegar*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: como-chegar.email
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    email: prismicT.KeyTextField;
-    /**
-     * Phone Number field in *Como chegar*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: como-chegar.phone
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    phone: prismicT.KeyTextField;
-}
-/**
- * Como chegar document from Prismic
- *
- * - **API ID**: `como-chegar`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type ComoChegarDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ComoChegarDocumentData>, "como-chegar", Lang>;
 /** Content for Corpo Tecnico documents */
 interface CorpoTecnicoDocumentData {
     /**
@@ -1040,7 +926,7 @@ export interface PostDeNoticiasDocumentDataCategoriasItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    categoria: prismicT.SelectField<"Aviso" | "Acadêmico" | "Concurso" | "Evento" | "Parceria" | "Nota">;
+    categoria: prismicT.SelectField<"Avisos" | "Acadêmico" | "Concursos" | "Eventos" | "Parcerias" | "Notas">;
 }
 /**
  * Post de noticias document from Prismic
@@ -1131,59 +1017,7 @@ interface PostGenericoDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PostGenericoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostGenericoDocumentData>, "post-generico", Lang>;
-/** Content for Setor documents */
-interface SetorDocumentData {
-    /**
-     * Name field in *Setor*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: setor.name
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    name: prismicT.KeyTextField;
-    /**
-     * Slice Zone field in *Setor*
-     *
-     * - **Field Type**: Slice Zone
-     * - **Placeholder**: *None*
-     * - **API ID Path**: setor.slices[]
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
-     *
-     */
-    slices: prismicT.SliceZone<SetorDocumentDataSlicesSlice>;
-}
-/**
- * Slice for *Setor → Slice Zone*
- *
- */
-type SetorDocumentDataSlicesSlice = MembroSlice;
-/**
- * Setor document from Prismic
- *
- * - **API ID**: `setor`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type SetorDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SetorDocumentData>, "setor", Lang>;
-/** Content for teste documents */
-type TesteDocumentData = Record<string, never>;
-/**
- * teste document from Prismic
- *
- * - **API ID**: `teste`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type TesteDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<TesteDocumentData>, "teste", Lang>;
-export type AllDocumentTypes = AgendaDocument | CardDocenteDocument | ComoChegarDocument | CorpoTecnicoDocument | EnsinoDocument | EscolaDocument | EspacosDocument | ExtensaoDocument | GaleriaDocument | MuralEstudantilDocument | PaginaDeNoticiasDocument | PostDeNoticiasDocument | PostGenericoDocument | SetorDocument | TesteDocument;
+export type AllDocumentTypes = AgendaDocument | CorpoTecnicoDocument | EnsinoDocument | EscolaDocument | EspacosDocument | ExtensaoDocument | GaleriaDocument | MuralEstudantilDocument | PaginaDeNoticiasDocument | PostDeNoticiasDocument | PostGenericoDocument;
 /**
  * Primary content in ConteudoApresentacao → Primary
  *
@@ -2205,6 +2039,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AgendaDocumentData, AgendaDocumentDataTiposItem, AgendaDocument, CardDocenteDocumentData, CardDocenteDocument, ComoChegarDocumentData, ComoChegarDocument, CorpoTecnicoDocumentData, CorpoTecnicoDocument, EnsinoDocumentData, EnsinoDocumentDataSlicesSlice, EnsinoDocumentDataSlices2Slice, EnsinoDocumentDataSlices3Slice, EnsinoDocument, EscolaDocumentData, EscolaDocumentDataSlicesSlice, EscolaDocumentDataSlices1Slice, EscolaDocumentDataSlices2Slice, EscolaDocumentDataSlices3Slice, EscolaDocumentDataSlices4Slice, EscolaDocument, EspacosDocumentData, EspacosDocumentDataLinksItem, EspacosDocumentDataSlicesSlice, EspacosDocument, ExtensaoDocumentData, ExtensaoDocumentDataSlicesSlice, ExtensaoDocument, GaleriaDocumentData, GaleriaDocument, MuralEstudantilDocumentData, MuralEstudantilDocument, PaginaDeNoticiasDocumentData, PaginaDeNoticiasDocument, PostDeNoticiasDocumentData, PostDeNoticiasDocumentDataCategoriasItem, PostDeNoticiasDocument, PostGenericoDocumentData, PostGenericoDocument, SetorDocumentData, SetorDocumentDataSlicesSlice, SetorDocument, TesteDocumentData, TesteDocument, AllDocumentTypes, ConteudoApresentacaoSliceDefaultPrimary, ConteudoApresentacaoSliceDefault, ConteudoApresentacaoSliceVariation, ConteudoApresentacaoSlice, ConteudoFormaIngressoSliceDefaultPrimary, ConteudoFormaIngressoSliceDefault, ConteudoFormaIngressoSliceVariation, ConteudoFormaIngressoSlice, CursoSliceDefaultPrimary, CursoSliceDefault, CursoSliceVariation, CursoSlice, DocenteSliceDefaultPrimary, DocenteSliceDefault, DocenteSliceVariation, DocenteSlice, GrupoPesquisaSliceDefaultPrimary, GrupoPesquisaSliceDefault, GrupoPesquisaSliceVariation, GrupoPesquisaSlice, LinksFormaIngressoSliceDefaultPrimary, LinksFormaIngressoSliceDefault, LinksFormaIngressoSliceVariation, LinksFormaIngressoSlice, LivroSliceDefaultPrimary, LivroSliceDefault, LivroSliceVariation, LivroSlice, MembroSliceDefaultPrimary, MembroSliceDefault, MembroSliceVariation, MembroSlice, PostSliceDefaultPrimary, PostSliceDefault, PostSliceVariation, PostSlice, PostEspacosSliceDefaultPrimary, PostEspacosSliceDefaultItem, PostEspacosSliceDefault, PostEspacosSliceVariation, PostEspacosSlice, PostExtensaoSliceDefaultPrimary, PostExtensaoSliceDefaultItem, PostExtensaoSliceDefault, PostExtensaoSlicePostExtensaoComCatalogoPrimary, PostExtensaoSlicePostExtensaoComCatalogoItem, PostExtensaoSlicePostExtensaoComCatalogo, PostExtensaoSliceVariation, PostExtensaoSlice, RevistaOuPublicacaoSliceDefaultPrimary, RevistaOuPublicacaoSliceDefault, RevistaOuPublicacaoSliceVariation, RevistaOuPublicacaoSlice, SetoresInstanciasSliceDefaultPrimary, SetoresInstanciasSliceDefaultItem, SetoresInstanciasSliceDefault, SetoresInstanciasSliceVariation, SetoresInstanciasSlice };
+        export type { AgendaDocumentData, AgendaDocumentDataTiposItem, AgendaDocument, CorpoTecnicoDocumentData, CorpoTecnicoDocument, EnsinoDocumentData, EnsinoDocumentDataSlicesSlice, EnsinoDocumentDataSlices2Slice, EnsinoDocumentDataSlices3Slice, EnsinoDocument, EscolaDocumentData, EscolaDocumentDataSlicesSlice, EscolaDocumentDataSlices1Slice, EscolaDocumentDataSlices2Slice, EscolaDocumentDataSlices3Slice, EscolaDocumentDataSlices4Slice, EscolaDocument, EspacosDocumentData, EspacosDocumentDataLinksItem, EspacosDocumentDataSlicesSlice, EspacosDocument, ExtensaoDocumentData, ExtensaoDocumentDataSlicesSlice, ExtensaoDocument, GaleriaDocumentData, GaleriaDocument, MuralEstudantilDocumentData, MuralEstudantilDocument, PaginaDeNoticiasDocumentData, PaginaDeNoticiasDocument, PostDeNoticiasDocumentData, PostDeNoticiasDocumentDataCategoriasItem, PostDeNoticiasDocument, PostGenericoDocumentData, PostGenericoDocument, AllDocumentTypes, ConteudoApresentacaoSliceDefaultPrimary, ConteudoApresentacaoSliceDefault, ConteudoApresentacaoSliceVariation, ConteudoApresentacaoSlice, ConteudoFormaIngressoSliceDefaultPrimary, ConteudoFormaIngressoSliceDefault, ConteudoFormaIngressoSliceVariation, ConteudoFormaIngressoSlice, CursoSliceDefaultPrimary, CursoSliceDefault, CursoSliceVariation, CursoSlice, DocenteSliceDefaultPrimary, DocenteSliceDefault, DocenteSliceVariation, DocenteSlice, GrupoPesquisaSliceDefaultPrimary, GrupoPesquisaSliceDefault, GrupoPesquisaSliceVariation, GrupoPesquisaSlice, LinksFormaIngressoSliceDefaultPrimary, LinksFormaIngressoSliceDefault, LinksFormaIngressoSliceVariation, LinksFormaIngressoSlice, LivroSliceDefaultPrimary, LivroSliceDefault, LivroSliceVariation, LivroSlice, MembroSliceDefaultPrimary, MembroSliceDefault, MembroSliceVariation, MembroSlice, PostSliceDefaultPrimary, PostSliceDefault, PostSliceVariation, PostSlice, PostEspacosSliceDefaultPrimary, PostEspacosSliceDefaultItem, PostEspacosSliceDefault, PostEspacosSliceVariation, PostEspacosSlice, PostExtensaoSliceDefaultPrimary, PostExtensaoSliceDefaultItem, PostExtensaoSliceDefault, PostExtensaoSlicePostExtensaoComCatalogoPrimary, PostExtensaoSlicePostExtensaoComCatalogoItem, PostExtensaoSlicePostExtensaoComCatalogo, PostExtensaoSliceVariation, PostExtensaoSlice, RevistaOuPublicacaoSliceDefaultPrimary, RevistaOuPublicacaoSliceDefault, RevistaOuPublicacaoSliceVariation, RevistaOuPublicacaoSlice, SetoresInstanciasSliceDefaultPrimary, SetoresInstanciasSliceDefaultItem, SetoresInstanciasSliceDefault, SetoresInstanciasSliceVariation, SetoresInstanciasSlice };
     }
 }

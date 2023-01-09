@@ -37,7 +37,7 @@ export default function Page({
     miniaturaAlt: items.data.miniatura.alt,
     miniaturaUrl: items.data.miniatura.url,
     subtitle: items.data.subtitle,
-    tags: items.tags,
+    tags: items.data.categorias.map((categorias: { categoria: any; }) => (categorias.categoria.toLowerCase())),
     title: items.data.title,
     uid: items.uid || "",
   }));

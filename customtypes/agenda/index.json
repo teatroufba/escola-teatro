@@ -75,11 +75,11 @@
                 "label": "Tipo",
                 "placeholder": "",
                 "options": [
-                  "Evento",
-                  "Espetáculo",
-                  "Defesa",
-                  "Formação",
-                  "Outro"
+                  "Eventos",
+                  "Espetáculos",
+                  "Defesas",
+                  "Formações",
+                  "Outros"
                 ]
               }
             }

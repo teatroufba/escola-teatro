@@ -84,7 +84,7 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
               return true;
             }
 
-            return item.tipo === Categoria;
+            return item.tipo.includes(Categoria);
           })
           .map((item, index) => (
             <AgendaCard
