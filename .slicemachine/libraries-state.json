@@ -50,22 +50,24 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "conteudo_apresentacao",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
               "image": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
               },
-              "titulo": "innovate 24/7 mindshare",
-              "conteudo": "empower next-generation systems"
-            }
+              "titulo": "planet",
+              "conteudo": "would"
+            },
+            "slice_type": "conteudo_apresentacao"
           }
         },
         "meta": {
@@ -121,13 +123,15 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "conteudo_forma_ingresso",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
-              "titulo": "implement mission-critical ROI",
-              "conteudo": "engage customized e-business"
-            }
+              "titulo": "jet",
+              "conteudo": "notice"
+            },
+            "slice_type": "conteudo_forma_ingresso"
           }
         },
         "meta": {
@@ -218,18 +222,20 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "curso",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
-              "titulo": "reintermediate holistic users",
-              "duracao": 4793,
-              "descricao": "synergize user-centric vortals",
-              "ppp": "orchestrate value-added portals",
-              "matrizCurricular": "incentivize end-to-end e-markets",
-              "ementario": "strategize enterprise relationships",
-              "guiaEstudantil": "redefine distributed channels"
-            }
+              "titulo": "music",
+              "duracao": 7,
+              "descricao": "furniture",
+              "ppp": "parent",
+              "matrizCurricular": "voyage",
+              "ementario": "whale",
+              "guiaEstudantil": "lower"
+            },
+            "slice_type": "curso"
           }
         },
         "meta": {
@@ -308,27 +314,29 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "docente",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
               "image": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
               },
-              "nome": "evolve intuitive ROI",
-              "email": "monetize bleeding-edge eyeballs",
-              "interesses": "deploy transparent technologies",
+              "nome": "doll",
+              "email": "ask",
+              "interesses": "enemy",
               "link": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "http://twitter.com"
               }
-            }
+            },
+            "slice_type": "docente"
           }
         },
         "meta": {
@@ -419,18 +427,20 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "grupo_pesquisa",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
-              "nome": "aggregate granular e-services",
-              "descricao": "architect sticky ROI",
-              "lider": "monetize compelling web services",
-              "email": "revolutionize one-to-one systems",
-              "telefone": "enhance best-of-breed schemas",
-              "website": "brand killer blockchains",
-              "websiteLink": "iterate ubiquitous applications"
-            }
+              "nome": "obtain",
+              "descricao": "mirror",
+              "lider": "tired",
+              "email": "hide",
+              "telefone": "shade",
+              "website": "speed",
+              "websiteLink": "roar"
+            },
+            "slice_type": "grupo_pesquisa"
           }
         },
         "meta": {
@@ -487,16 +497,18 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "links_forma_ingresso",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
-              "titulo": "exploit extensible platforms",
+              "titulo": "tin",
               "link": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "http://google.com"
               }
-            }
+            },
+            "slice_type": "links_forma_ingresso"
           }
         },
         "meta": {
@@ -567,23 +579,25 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "livro",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
               "capa": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
               },
-              "titulo": "innovate back-end synergies",
-              "descricao": "brand best-of-breed platforms",
-              "link": "enhance end-to-end ROI"
-            }
+              "titulo": "press",
+              "descricao": "applied",
+              "link": "younger"
+            },
+            "slice_type": "livro"
           }
         },
         "meta": {
@@ -640,14 +654,16 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "membro",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
-              "nome": "embrace cross-media eyeballs",
-              "funcao": "reintermediate one-to-one relationships",
-              "email": "harness web-enabled experiences"
-            }
+              "nome": "camp",
+              "funcao": "face",
+              "email": "somebody"
+            },
+            "slice_type": "membro"
           }
         },
         "meta": {
@@ -713,21 +729,22 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "post",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Seize web-enabled models",
+                  "text": "Particular",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Reprehenderit officia tempor qui aute excepteur sint aliquip consequat laboris officia. Duis ut Lorem do magna minim ea laboris qui.",
+                  "text": "Consequat cillum nulla Lorem deserunt et est laborum aliquip cillum Lorem sint enim eu id aute. Labore est esse duis voluptate est duis ex consectetur do ad veniam. Consectetur aliqua et commodo amet irure commodo dolor aute officia ex.",
                   "spans": []
                 }
               ],
@@ -736,11 +753,12 @@
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
               }
-            }
+            },
+            "slice_type": "post"
           }
         },
         "meta": {
@@ -821,16 +839,11 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "post_espacos",
+            "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "nomeLink": "expedite dot-com models",
-                "link": "architect next-generation communities"
-              },
-              {
-                "nomeLink": "leverage seamless supply-chains",
-                "link": "benchmark intuitive e-commerce"
+                "nomeLink": "earth",
+                "link": "sentence"
               }
             ],
             "primary": {
@@ -839,22 +852,23 @@
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
               },
               "imagem2": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
               },
-              "titulo": "visualize strategic convergence",
-              "descricao": "brand bleeding-edge communities"
-            }
+              "titulo": "task",
+              "descricao": "number"
+            },
+            "slice_type": "post_espacos"
           }
         },
         "meta": {
@@ -864,7 +878,6 @@
         "screenshotPaths": {
           "default": {
             "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
-
             "width": 800,
             "height": 60
           }
@@ -975,8 +988,7 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "post_extensao",
+            "version": "sktwi1xtmkfgx8626",
             "items": [
               {
                 "imagem": {
@@ -984,44 +996,22 @@
                     "width": 900,
                     "height": 500
                   },
-                  "alt": "Placeholder image",
+                  "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
                 }
               }
             ],
             "primary": {
-              "titulo": "incentivize value-added vortals",
-              "descricao": "whiteboard vertical ROI",
-              "Link": "recontextualize leading-edge interfaces"
-            }
+              "titulo": "simple",
+              "descricao": "its",
+              "Link": "cake"
+            },
+            "slice_type": "post_extensao"
           },
           "postExtensaoComCatalogo": {
             "variation": "postExtensaoComCatalogo",
-            "name": "Post Extensao - Com Catalogo",
-            "slice_type": "post_extensao",
+            "version": "sktwi1xtmkfgx8626",
             "items": [
               {
                 "imagem": {
@@ -1029,51 +1019,19 @@
                     "width": 900,
                     "height": 500
                   },
-                  "alt": "Placeholder image",
+                  "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
                 }
               }
             ],
             "primary": {
-              "titulo": "transition frictionless paradigms",
-              "descricao": "benchmark distributed platforms",
-              "linkCatalogo": "reinvent out-of-the-box niches",
-              "link": "generate transparent platforms"
-            }
+              "titulo": "air",
+              "descricao": "elephant",
+              "linkCatalogo": "rock",
+              "link": "verb"
+            },
+            "slice_type": "post_extensao"
           }
         },
         "meta": {
@@ -1082,7 +1040,6 @@
         },
         "screenshotPaths": {
           "default": {
-
             "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
             "width": 800,
             "height": 60
@@ -1150,23 +1107,25 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "revista_ou_publicacao",
-            "items": [],
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
             "primary": {
               "image": {
                 "dimensions": {
                   "width": 900,
                   "height": 500
                 },
-                "alt": "Placeholder image",
+                "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
               },
-              "titulo": "synergize sticky deliverables",
-              "descricao": "reinvent granular blockchains",
-              "link": "envisioneer strategic infrastructures"
-            }
+              "titulo": "himself",
+              "descricao": "flight",
+              "link": "furniture"
+            },
+            "slice_type": "revista_ou_publicacao"
           }
         },
         "meta": {
@@ -1244,31 +1203,19 @@
         "mocks": {
           "default": {
             "variation": "default",
-            "name": "Default",
-            "slice_type": "setores_instancias",
+            "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "nome": "reintermediate dot-com channels",
-                "email": "extend real-time methodologies",
-                "funcao": "streamline B2C architectures",
-                "telefone": "envisioneer real-time deliverables"
-              },
-              {
-                "nome": "e-enable end-to-end action-items",
-                "email": "utilize interactive metrics",
-                "funcao": "mesh extensible synergies",
-                "telefone": "strategize 24/365 channels"
-              },
-              {
-                "nome": "incentivize strategic niches",
-                "email": "deploy wireless e-tailers",
-                "funcao": "target B2B synergies",
-                "telefone": "maximize real-time partnerships"
+                "nome": "flag",
+                "email": "acres",
+                "funcao": "figure",
+                "telefone": "courage"
               }
             ],
             "primary": {
-              "nome": "repurpose best-of-breed vortals"
-            }
+              "nome": "number"
+            },
+            "slice_type": "setores_instancias"
           }
         },
         "meta": {

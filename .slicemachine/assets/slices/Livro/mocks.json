@@ -1,22 +1,24 @@
 [
   {
     "variation": "default",
-    "name": "Default",
-    "slice_type": "livro",
-    "items": [],
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
     "primary": {
       "capa": {
         "dimensions": {
           "width": 900,
           "height": 500
         },
-        "alt": "Placeholder image",
+        "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
       },
-      "titulo": "innovate back-end synergies",
-      "descricao": "brand best-of-breed platforms",
-      "link": "enhance end-to-end ROI"
-    }
+      "titulo": "press",
+      "descricao": "applied",
+      "link": "younger"
+    },
+    "slice_type": "livro"
   }
 ]

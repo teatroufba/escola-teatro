@@ -1,21 +1,22 @@
 [
   {
     "variation": "default",
-    "name": "Default",
-    "slice_type": "post",
-    "items": [],
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
     "primary": {
       "title": [
         {
           "type": "heading1",
-          "text": "Seize web-enabled models",
+          "text": "Particular",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Reprehenderit officia tempor qui aute excepteur sint aliquip consequat laboris officia. Duis ut Lorem do magna minim ea laboris qui.",
+          "text": "Consequat cillum nulla Lorem deserunt et est laborum aliquip cillum Lorem sint enim eu id aute. Labore est esse duis voluptate est duis ex consectetur do ad veniam. Consectetur aliqua et commodo amet irure commodo dolor aute officia ex.",
           "spans": []
         }
       ],
@@ -24,10 +25,11 @@
           "width": 900,
           "height": 500
         },
-        "alt": "Placeholder image",
+        "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
       }
-    }
+    },
+    "slice_type": "post"
   }
 ]

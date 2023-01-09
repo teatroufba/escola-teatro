@@ -57,6 +57,29 @@
           "label": "Author",
           "placeholder": ""
         }
+      },
+      "categorias": {
+        "type": "Group",
+        "config": {
+          "label": "Categorias",
+          "fields": {
+            "categoria": {
+              "type": "Select",
+              "config": {
+                "label": "Categoria",
+                "placeholder": "",
+                "options": [
+                  "Aviso",
+                  "Acadêmico",
+                  "Concurso",
+                  "Evento",
+                  "Parceria",
+                  "Nota"
+                ]
+              }
+            }
+          }
+        }
       }
     }
   }

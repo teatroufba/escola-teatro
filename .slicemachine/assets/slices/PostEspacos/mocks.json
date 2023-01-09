@@ -1,16 +1,11 @@
 [
   {
     "variation": "default",
-    "name": "Default",
-    "slice_type": "post_espacos",
+    "version": "sktwi1xtmkfgx8626",
     "items": [
       {
-        "nomeLink": "expedite dot-com models",
-        "link": "architect next-generation communities"
-      },
-      {
-        "nomeLink": "leverage seamless supply-chains",
-        "link": "benchmark intuitive e-commerce"
+        "nomeLink": "earth",
+        "link": "sentence"
       }
     ],
     "primary": {
@@ -19,21 +14,22 @@
           "width": 900,
           "height": 500
         },
-        "alt": "Placeholder image",
+        "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
       },
       "imagem2": {
         "dimensions": {
           "width": 900,
           "height": 500
         },
-        "alt": "Placeholder image",
+        "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+        "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
       },
-      "titulo": "visualize strategic convergence",
-      "descricao": "brand bleeding-edge communities"
-    }
+      "titulo": "task",
+      "descricao": "number"
+    },
+    "slice_type": "post_espacos"
   }
 ]
