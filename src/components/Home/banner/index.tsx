@@ -315,7 +315,15 @@ const BannerStyled = styled.div`
   }
 `
 
-function Banner() {
+interface IBanner {
+  imageAlt: string;
+  imageUrl: string;
+  title: string;
+  descricao: string;
+  link: string
+}
+
+function Banner({ banner }: { banner: IBanner[] }) {
   const carousel = useRef<HTMLInputElement>(null)
   const [scrolling, setScrolling] = useState(false)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)

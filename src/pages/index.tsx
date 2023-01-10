@@ -16,6 +16,16 @@ export async function getStaticProps({
   previewData: PreviewData;
 }) {
   const client = createClient({ previewData });
+  const itemsBanner = await client.getAllByType("post_do_banner");
+
+  const banner = itemsBanner.map((value) => ({
+    imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
+    imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
+    title: value.data.titulo,
+    descricao: value.data.subtitulo,
+    link: value.data.link,
+  }));
+
   const items = await client.getAllByType("agenda");
 
   const agenda = items.map((value) => ({
@@ -24,7 +34,7 @@ export async function getStaticProps({
     imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
     imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
     date: value.data.data,
-    tipo: value.data.tipo,
+    tipo: value.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
     local: value.data.local,
     descricao: value.data.subtitulo,
   }));
@@ -63,6 +73,14 @@ export async function getStaticProps({
   };
 }
 
+interface IBanner {
+  imageAlt: string;
+  imageUrl: string;
+  title: string;
+  descricao: string;
+  link: string
+}
+
 interface IMural {
   imageAlt: string;
   imageUrl: string;
@@ -91,17 +109,19 @@ interface IAgenda {
 }
 
 export default function Home({
+  banner,
   mural,
   agenda,
   noticias,
 }: {
+  banner: IBanner[];
   agenda: IAgenda[];
   mural: IMural[];
   noticias: INoticias[];
 }) {
   return (
     <>
-      <Banner />
+      <Banner banner={banner} />
       <Noticias noticias={noticias} />
       <Agenda agenda={agenda} />
       <Mural mural={mural} />

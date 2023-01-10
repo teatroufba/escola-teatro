@@ -832,6 +832,63 @@ interface PaginaDeNoticiasDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PaginaDeNoticiasDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PaginaDeNoticiasDocumentData>, "pagina-de-noticias", Lang>;
+/** Content for Post do Banner documents */
+interface PostDoBannerDocumentData {
+    /**
+     * Imagem field in *Post do Banner*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_do_banner.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Título field in *Post do Banner*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_do_banner.titulo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    titulo: prismicT.KeyTextField;
+    /**
+     * Descrição field in *Post do Banner*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_do_banner.descricao
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    descricao: prismicT.KeyTextField;
+    /**
+     * Link field in *Post do Banner*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_do_banner.link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link: prismicT.KeyTextField;
+}
+/**
+ * Post do Banner document from Prismic
+ *
+ * - **API ID**: `post_do_banner`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostDoBannerDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PostDoBannerDocumentData>, "post_do_banner", Lang>;
 /** Content for Post de noticias documents */
 interface PostDeNoticiasDocumentData {
     /**
@@ -1017,7 +1074,7 @@ interface PostGenericoDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type PostGenericoDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostGenericoDocumentData>, "post-generico", Lang>;
-export type AllDocumentTypes = AgendaDocument | CorpoTecnicoDocument | EnsinoDocument | EscolaDocument | EspacosDocument | ExtensaoDocument | GaleriaDocument | MuralEstudantilDocument | PaginaDeNoticiasDocument | PostDeNoticiasDocument | PostGenericoDocument;
+export type AllDocumentTypes = AgendaDocument | CorpoTecnicoDocument | EnsinoDocument | EscolaDocument | EspacosDocument | ExtensaoDocument | GaleriaDocument | MuralEstudantilDocument | PaginaDeNoticiasDocument | PostDoBannerDocument | PostDeNoticiasDocument | PostGenericoDocument;
 /**
  * Primary content in ConteudoApresentacao → Primary
  *
@@ -2039,6 +2096,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AgendaDocumentData, AgendaDocumentDataTiposItem, AgendaDocument, CorpoTecnicoDocumentData, CorpoTecnicoDocument, EnsinoDocumentData, EnsinoDocumentDataSlicesSlice, EnsinoDocumentDataSlices2Slice, EnsinoDocumentDataSlices3Slice, EnsinoDocument, EscolaDocumentData, EscolaDocumentDataSlicesSlice, EscolaDocumentDataSlices1Slice, EscolaDocumentDataSlices2Slice, EscolaDocumentDataSlices3Slice, EscolaDocumentDataSlices4Slice, EscolaDocument, EspacosDocumentData, EspacosDocumentDataLinksItem, EspacosDocumentDataSlicesSlice, EspacosDocument, ExtensaoDocumentData, ExtensaoDocumentDataSlicesSlice, ExtensaoDocument, GaleriaDocumentData, GaleriaDocument, MuralEstudantilDocumentData, MuralEstudantilDocument, PaginaDeNoticiasDocumentData, PaginaDeNoticiasDocument, PostDeNoticiasDocumentData, PostDeNoticiasDocumentDataCategoriasItem, PostDeNoticiasDocument, PostGenericoDocumentData, PostGenericoDocument, AllDocumentTypes, ConteudoApresentacaoSliceDefaultPrimary, ConteudoApresentacaoSliceDefault, ConteudoApresentacaoSliceVariation, ConteudoApresentacaoSlice, ConteudoFormaIngressoSliceDefaultPrimary, ConteudoFormaIngressoSliceDefault, ConteudoFormaIngressoSliceVariation, ConteudoFormaIngressoSlice, CursoSliceDefaultPrimary, CursoSliceDefault, CursoSliceVariation, CursoSlice, DocenteSliceDefaultPrimary, DocenteSliceDefault, DocenteSliceVariation, DocenteSlice, GrupoPesquisaSliceDefaultPrimary, GrupoPesquisaSliceDefault, GrupoPesquisaSliceVariation, GrupoPesquisaSlice, LinksFormaIngressoSliceDefaultPrimary, LinksFormaIngressoSliceDefault, LinksFormaIngressoSliceVariation, LinksFormaIngressoSlice, LivroSliceDefaultPrimary, LivroSliceDefault, LivroSliceVariation, LivroSlice, MembroSliceDefaultPrimary, MembroSliceDefault, MembroSliceVariation, MembroSlice, PostSliceDefaultPrimary, PostSliceDefault, PostSliceVariation, PostSlice, PostEspacosSliceDefaultPrimary, PostEspacosSliceDefaultItem, PostEspacosSliceDefault, PostEspacosSliceVariation, PostEspacosSlice, PostExtensaoSliceDefaultPrimary, PostExtensaoSliceDefaultItem, PostExtensaoSliceDefault, PostExtensaoSlicePostExtensaoComCatalogoPrimary, PostExtensaoSlicePostExtensaoComCatalogoItem, PostExtensaoSlicePostExtensaoComCatalogo, PostExtensaoSliceVariation, PostExtensaoSlice, RevistaOuPublicacaoSliceDefaultPrimary, RevistaOuPublicacaoSliceDefault, RevistaOuPublicacaoSliceVariation, RevistaOuPublicacaoSlice, SetoresInstanciasSliceDefaultPrimary, SetoresInstanciasSliceDefaultItem, SetoresInstanciasSliceDefault, SetoresInstanciasSliceVariation, SetoresInstanciasSlice };
+        export type { AgendaDocumentData, AgendaDocumentDataTiposItem, AgendaDocument, CorpoTecnicoDocumentData, CorpoTecnicoDocument, EnsinoDocumentData, EnsinoDocumentDataSlicesSlice, EnsinoDocumentDataSlices2Slice, EnsinoDocumentDataSlices3Slice, EnsinoDocument, EscolaDocumentData, EscolaDocumentDataSlicesSlice, EscolaDocumentDataSlices1Slice, EscolaDocumentDataSlices2Slice, EscolaDocumentDataSlices3Slice, EscolaDocumentDataSlices4Slice, EscolaDocument, EspacosDocumentData, EspacosDocumentDataLinksItem, EspacosDocumentDataSlicesSlice, EspacosDocument, ExtensaoDocumentData, ExtensaoDocumentDataSlicesSlice, ExtensaoDocument, GaleriaDocumentData, GaleriaDocument, MuralEstudantilDocumentData, MuralEstudantilDocument, PaginaDeNoticiasDocumentData, PaginaDeNoticiasDocument, PostDoBannerDocumentData, PostDoBannerDocument, PostDeNoticiasDocumentData, PostDeNoticiasDocumentDataCategoriasItem, PostDeNoticiasDocument, PostGenericoDocumentData, PostGenericoDocument, AllDocumentTypes, ConteudoApresentacaoSliceDefaultPrimary, ConteudoApresentacaoSliceDefault, ConteudoApresentacaoSliceVariation, ConteudoApresentacaoSlice, ConteudoFormaIngressoSliceDefaultPrimary, ConteudoFormaIngressoSliceDefault, ConteudoFormaIngressoSliceVariation, ConteudoFormaIngressoSlice, CursoSliceDefaultPrimary, CursoSliceDefault, CursoSliceVariation, CursoSlice, DocenteSliceDefaultPrimary, DocenteSliceDefault, DocenteSliceVariation, DocenteSlice, GrupoPesquisaSliceDefaultPrimary, GrupoPesquisaSliceDefault, GrupoPesquisaSliceVariation, GrupoPesquisaSlice, LinksFormaIngressoSliceDefaultPrimary, LinksFormaIngressoSliceDefault, LinksFormaIngressoSliceVariation, LinksFormaIngressoSlice, LivroSliceDefaultPrimary, LivroSliceDefault, LivroSliceVariation, LivroSlice, MembroSliceDefaultPrimary, MembroSliceDefault, MembroSliceVariation, MembroSlice, PostSliceDefaultPrimary, PostSliceDefault, PostSliceVariation, PostSlice, PostEspacosSliceDefaultPrimary, PostEspacosSliceDefaultItem, PostEspacosSliceDefault, PostEspacosSliceVariation, PostEspacosSlice, PostExtensaoSliceDefaultPrimary, PostExtensaoSliceDefaultItem, PostExtensaoSliceDefault, PostExtensaoSlicePostExtensaoComCatalogoPrimary, PostExtensaoSlicePostExtensaoComCatalogoItem, PostExtensaoSlicePostExtensaoComCatalogo, PostExtensaoSliceVariation, PostExtensaoSlice, RevistaOuPublicacaoSliceDefaultPrimary, RevistaOuPublicacaoSliceDefault, RevistaOuPublicacaoSliceVariation, RevistaOuPublicacaoSlice, SetoresInstanciasSliceDefaultPrimary, SetoresInstanciasSliceDefaultItem, SetoresInstanciasSliceDefault, SetoresInstanciasSliceVariation, SetoresInstanciasSlice };
     }
 }
