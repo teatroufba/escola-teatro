@@ -29,11 +29,11 @@ export default function PostCard({
         <div className="noticias-post-text">
           <h3>{title}</h3>
           <p>{subtitle}</p>
-        </div>
-        <a>
+          <a>
           Saiba mais{"  "}
           <Image alt={imageAlt} height={10} src="/arrow.png" width={10} />
         </a>
+        </div>
       </StyledPosts>
     </Link>
   );

@@ -16,12 +16,11 @@ export const StyledPosts = styled.div`
   cursor: pointer;
 
   .noticias-post-img {
-    margin-top: .1rem;
-    margin-left: .1rem;
-    position: relative;
-    width: 99%;
-    height: 25rem;
-    margin-bottom: 25px;
+    width: 100%;
+        position: relative;
+        height: 25rem;
+        display: flex;
+        align-items: flex-end;
   }
 
   .noticias-post-text {
@@ -31,13 +30,18 @@ export const StyledPosts = styled.div`
     margin-bottom: 25px;
     overflow: hidden;
     width: 25rem;
-
+    padding: .5rem 1rem 0 1rem;
     h3 {
       font-family: "Merriweather";
       font-weight: 400;
       font-size: 24px;
       margin-bottom: 8px;
       max-height: 100%;
+      display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
     }
 
     p {
@@ -50,6 +54,11 @@ export const StyledPosts = styled.div`
       ::-webkit-scrollbar {
         display: none;
     }
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
     }
   }
 
@@ -63,17 +72,18 @@ export const StyledPosts = styled.div`
   }
 
   @media (min-width: 1081px) {
-    width: 395px;
+    width: 24.4rem;
     .noticias-post-img {
       width: 24.3rem;
       height: 24.3rem;
     }
     .noticias-post-text {
-      height: 172px;
+      height: 250px;
     }
   }
 
   @media (max-width: 1081px) {
+    width: 20.2rem;
     .noticias-post-img {
       width: 20rem;
       height: 20rem;
