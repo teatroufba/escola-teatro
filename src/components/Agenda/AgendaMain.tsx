@@ -91,12 +91,12 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
               key={`agenda-card-${index}`}
               subtitulo={item.subtitulo}
               uid={item.uid}
-              imageUrl={item.miniaturaUrl ? item.miniaturaUrl : item.imageUrl}
-              imageAlt={item.miniaturaUrl ? item.miniaturaAlt : item.imageAlt}
+              imageUrl={item.miniaturaUrl ? item.miniaturaUrl : "/"}
+              imageAlt={item.miniaturaUrl ? item.miniaturaAlt : "/"}
               title={item.title}
               date={item.date}
               local={item.local}
-              tipo={item.tipo}
+              tipo={item.tipo ? item.tipo : "/"}
             />
           ))}
       </div>

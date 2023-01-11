@@ -30,6 +30,7 @@ enum meses {
 
 export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, title, uid, subtitulo }: IAgendaCardProps) {
     const data = new Date(date)
+    console.log(subtitulo)
     let dia = data.getDate().toString()
     const mes = data.getMonth()
     const ano = data.getFullYear()

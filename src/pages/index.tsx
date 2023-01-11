@@ -24,7 +24,7 @@ export async function getStaticProps({
     imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
     imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
     date: value.data.data,
-    tipo: value.data.tipo,
+    tipo: value.data.tipo ? value.data.tipo : '',
     local: value.data.local,
     descricao: value.data.subtitulo,
   }));
