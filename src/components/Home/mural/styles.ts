@@ -35,12 +35,12 @@ export const StyledMural = styled.div`
     align-items: center;
     justify-content: center;
     width: 395px;
-    height: 306px;
+    height: 290px;
 
     max-width: 395px;
-    max-height: 306px;
+    max-height: 290px;
     min-width: 325px;
-    min-height: 268px;
+    min-height: 290px;
     margin: 0;
     padding: 0;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
@@ -67,17 +67,16 @@ export const StyledMural = styled.div`
     .text-area {
       background-color: #282B62 ;
       width: 100%;
-      height: 96px;
+      height: 80px;
       max-height: 96px;
       padding: 15px 15px;
-      overflow: hidden;
       border-radius: 0px 0px 10px 10px;
       color: #FFFFFF;
       text-decoration: none;
       font-family: 'Merriweather';
       font-style: normal;
       font-weight: 400;
-      font-size: 24px;
+      font-size: 16px;
     }
   }
 
@@ -91,7 +90,8 @@ export const StyledMural = styled.div`
   @media (max-width: 768px) {
     .mural-card {
       width: 325px;
-      height: 268px;
+      max-height: 232px;
+      min-height: 232px;
 
       .img-container {
         height: 172px;
@@ -99,7 +99,8 @@ export const StyledMural = styled.div`
       }
 
       .text-area {
-        font-size: 20px;
+        font-size: 12px;
+        height: 64px;
       }
     }
 	}
