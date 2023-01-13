@@ -106,13 +106,13 @@ function FooterDown() {
 							</Link>
 						</li>
 						<li>
-							<Link passHref href="/ensino/#grupos-de-pesquisa">
-								<a href="/ensino/#grupos-de-pesquisa">Grupos de Pesquisa</a>
+							<Link passHref href="/ensino/#producao-academica">
+								<a href="/ensino/#producao-academica">Produção Acadêmica</a>
 							</Link>
 						</li>
 						<li>
-							<Link passHref href="/ensino/#producao-academica">
-								<a href="/ensino/#producao-academica">Produção Acadêmica</a>
+							<Link passHref href="/ensino/#grupos-de-pesquisa">
+								<a href="/ensino/#grupos-de-pesquisa">Grupos de Pesquisa</a>
 							</Link>
 						</li>
 					</ul>

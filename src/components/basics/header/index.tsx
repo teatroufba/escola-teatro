@@ -47,8 +47,8 @@ function Header() {
 				setOptions([
 					{ href: "/ensino/#graduacao", option: "Graduação" },
 					{ href: "/ensino/#pos-graduacao", option: "Pós Graduação" },
-					{ href: "/ensino/#grupos-de-pesquisa", option: "Grupos de Pesquisa" },
 					{ href: "/ensino/#producao-academica", option: "Produção Acadêmica" },
+					{ href: "/ensino/#grupos-de-pesquisa", option: "Grupos de Pesquisa" },
 				]);
 				break;
 

@@ -74,11 +74,11 @@ function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
         <section>
           <PosGraduacao imageUrl={ensinoProps.imageUrl} imageAlt={ensinoProps.imageAlt} conteudo={ensinoProps.conteudo} link={ensinoProps.link} />
         </section>
-        <section className="grey">
-          <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
-        </section>
         <section>
           <ProducaoAcademica monografias={ensinoProps.monografias} espetaculosFormatura={ensinoProps.espetaculosFormatura} dissertacoes={ensinoProps.dissertacoes} teses={ensinoProps.teses} livros={ensinoProps.livros} revistas={ensinoProps.revistas} />
+        </section>
+        <section className="grey">
+          <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
         </section>
       </Container>
     </>
