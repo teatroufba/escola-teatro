@@ -32,7 +32,6 @@ function Header() {
 			case "escola":
 				setOptions([
 					{ href: "/escola/#apresentacao", option: "Apresentação" },
-					{ href: "/escola/#formas-de-ingresso", option: "Ingresso" },
 					{
 						href: "/escola/#setores-e-instancias",
 						option: "Setores e Instâncias",
@@ -48,6 +47,7 @@ function Header() {
 					{ href: "/ensino/#graduacao", option: "Graduação" },
 					{ href: "/ensino/#pos-graduacao", option: "Pós Graduação" },
 					{ href: "/ensino/#producao-academica", option: "Produção Acadêmica" },
+					{ href: "/ensino/#formas-de-ingresso", option: "Ingresso" },
 					{ href: "/ensino/#grupos-de-pesquisa", option: "Grupos de Pesquisa" },
 				]);
 				break;
