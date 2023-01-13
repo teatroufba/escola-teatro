@@ -180,12 +180,13 @@ const Container = styled.div`
                     cursor: pointer;
                     justify-content: space-between;
                     border: 2px solid rgba(154, 26, 75, 0.6);
-                    padding: 1rem;
+                    padding: .9rem;
 
 
                     p {
-                        width: 103px;
-                        font-size: 1rem;
+                        max-width: 165px;
+                        min-width: 103px;
+                        font-size: .9rem;
                         font-family: 'Arial';
                         text-decoration: none;
                         color: #2D2B78;
