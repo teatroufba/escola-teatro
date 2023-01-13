@@ -92,7 +92,7 @@ function Header() {
 				<div className="header">
 					<Link href="/">
 						<div className="logo-img">
-							<Image alt="brasao" src={image} />
+							<Image alt="brasao" src={image} height={100} width={100}/>
 						</div>
 					</Link>
 					
