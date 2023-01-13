@@ -15,7 +15,7 @@ const Container = styled.div`
     border: 2px solid #E6E6EF;
 
     .header {
-        padding: 1.5rem;
+        padding: 1rem;
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -26,7 +26,7 @@ const Container = styled.div`
             font-family: 'Merriweather';
             font-style: normal;
             font-weight: 700;
-            font-size: 1.75rem;
+            font-size: 1.2rem;
             line-height: 120%;
             color: #2D2B78;
             text-align: left;
@@ -54,7 +54,7 @@ const Container = styled.div`
                 font-family: 'Arial';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 1rem;
+                font-size: .9rem;
                 line-height: 120%;
                 color: #2B2B2B;
             }
@@ -63,7 +63,7 @@ const Container = styled.div`
                 font-family: 'Merriweather';
                 font-style: normal;
                 font-weight: 700;
-                font-size: 1.3rem;
+                font-size: 1rem;
                 line-height: 120%;
                 color: #9A1A4B;
             }

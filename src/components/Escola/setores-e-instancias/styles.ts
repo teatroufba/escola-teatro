@@ -15,7 +15,7 @@ export const StyledDepartmentsContainer = styled.div`
 		box-sizing: border-box;
 		width: fit-content;
 		font-weight: 400;
-		font-size: 48px;
+		font-size: 32px;
 		color: #282b62;
 		margin: 0 3rem 3rem 3rem;
 		border-bottom: 5px solid #282b62;
@@ -39,12 +39,12 @@ export const StyledAccordionContainer = styled.div`
 	.accordion-content {
 		width: 100%;
 		border: 2px solid #e6e6ef;
-		padding: 24px 8px 24px 24px;
+		padding: 16px 8px 16px 16px;
 	}
 
 	.accordion-header h2 {
 		text-align: left;
-		font-size: 36px;
+		font-size: 20px;
 		font-weight: 700;
 		color: #2d2b78;
 	}
@@ -78,13 +78,13 @@ export const StyledAccordionContainer = styled.div`
 	}
 
 	.accordion-member h3 {
-		font-size: 28px;
+		font-size: 18px;
 		font-weight: 700;
 		color: #9a1a4b;
 	}
 
 	.accordion-member p {
-		font-size: 18px;
+		font-size: 14px;
 		font-weight: 400;
 		color: #2d2b78;
 	}
