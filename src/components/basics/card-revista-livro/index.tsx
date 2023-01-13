@@ -39,7 +39,6 @@ const Container = styled.div`
             flex-direction: column;
             gap: 0.5rem;
             p {
-                height: 100%;
                 font-size: 1.25rem;
                 white-space: nowrap;
                 font-weight: 700;
@@ -48,13 +47,16 @@ const Container = styled.div`
                 color: #9A1A4B;
             }
             small {
-                height: 100%;
+                max-height: 6rem;
                 font-family: 'Arial';
                 font-size: 0.875rem;
-                white-space: nowrap;
-                overflow: hidden;
                 text-overflow: ellipsis;
                 color: #000000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
             }
         }
 
