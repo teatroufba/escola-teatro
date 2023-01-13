@@ -13,6 +13,7 @@ interface IAgenda {
   title: string;
   uid: string;
   subtitulo: string;
+  descricao: string;
 }
 
 function Agenda({ agenda }: { agenda: IAgenda[] }) {

@@ -16,6 +16,7 @@ interface IAgenda {
   tipo: string
   local: string
   descricao: string
+  subtitulo: string
 }
 
 export default function Agenda({ agenda }: { agenda: IAgenda[] }) {

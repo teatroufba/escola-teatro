@@ -87,7 +87,8 @@ interface IAgenda {
   tipo: string;
   title: string;
   uid: string;
-  subtitle: string;
+  subtitulo: string;
+  descricao: string;
 }
 
 export default function Home({
