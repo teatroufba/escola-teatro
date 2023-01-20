@@ -2,7 +2,7 @@ import { useState } from "react";
 import AgendaCard from "./AgendaCard";
 import { StyledAgenda } from "./styles";
 
-interface IAgenda {
+export interface IAgenda {
   date: string;
   imageAlt: string;
   imageUrl: string;
@@ -16,12 +16,17 @@ interface IAgenda {
   descricao: string;
 }
 
-interface IAgendaMainProps {
+export interface IAgendaMainProps {
   agenda: IAgenda[];
 }
 
 export default function AgendaMain({ agenda }: IAgendaMainProps) {
   const [Categoria, setCategoria] = useState<string>("Todos");
+
+  const agendaOrdenada = [...agenda].sort((a, b) => {
+    const timestamp = (date: string) => new Date(date).getTime();
+    return timestamp(b.date) - timestamp(a.date);
+  });
 
   return (
     <StyledAgenda>
@@ -79,7 +84,7 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
         </button>
       </div>
       <div id="container-cards-agenda">
-        {agenda
+        {agendaOrdenada
           .filter((item) => {
             if (Categoria === "Todos") {
               return true;

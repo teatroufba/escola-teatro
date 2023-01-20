@@ -18,7 +18,7 @@ export async function getStaticProps({
   const client = createClient({ previewData });
   const items = await client.getAllByType("agenda");
 
-  const agenda = items.map((value) => ({
+  const agenda = items.map((value: any) => ({
     uid: value.uid || "",
     title: value.data.titulo,
     imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
@@ -27,7 +27,10 @@ export async function getStaticProps({
     tipo: value.data.tipo ? value.data.tipo : '',
     local: value.data.local,
     descricao: value.data.subtitulo,
-  }));
+  } as IAgenda)).sort((a: IAgenda, b: IAgenda) => {
+    const timestamp = (date: string) => new Date(date).getTime();
+    return timestamp(b.date) - timestamp(a.date);
+  });
 
   const itemsMural = await client.getAllByType("mural-estudantil", {
     orderings: {
@@ -36,7 +39,7 @@ export async function getStaticProps({
     },
   });
 
-  const mural = itemsMural.map((value) => ({
+  const mural = itemsMural.map((value: any) => ({
     uid: value.uid || "",
     title: value.data.titulo,
     imageUrl: value.data.imagem.url || "",
@@ -50,7 +53,7 @@ export async function getStaticProps({
     },
   });
 
-  const noticias = posts.map((value) => ({
+  const noticias = posts.map((value: any) => ({
     uid: value.uid,
     title: value.data.title,
     subtitle: value.data.subtitle,
