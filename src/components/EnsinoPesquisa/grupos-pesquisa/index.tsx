@@ -37,7 +37,7 @@ const Container = styled.div`
 		border-bottom: 5px solid #282b62;
 		display: inline-block;
 		margin-bottom: 3rem;
-		font-size: 1.8rem;
+		font-size:48px;
 
 		@media (max-width: 768px) {
 			text-align: left;

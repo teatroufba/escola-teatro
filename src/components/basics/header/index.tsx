@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import image from "@/public/brasao.png";
+import image from "@/public/brasaoSemLetra.png";
 
 import { HeaderContainer, HeaderInferior, HeaderSuperior } from "./styles";
 import SubmenuHeader from "../submenu-header";
@@ -46,8 +46,8 @@ function Header() {
 				setOptions([
 					{ href: "/ensino/#graduacao", option: "Graduação" },
 					{ href: "/ensino/#pos-graduacao", option: "Pós Graduação" },
-					{ href: "/ensino/#producao-academica", option: "Produção Acadêmica" },
 					{ href: "/ensino/#formas-de-ingresso", option: "Ingresso" },
+					{ href: "/ensino/#producao-academica", option: "Produção Acadêmica" },
 					{ href: "/ensino/#grupos-de-pesquisa", option: "Grupos de Pesquisa" },
 				]);
 				break;
@@ -92,7 +92,7 @@ function Header() {
 				<div className="header">
 					<Link href="/">
 						<div className="logo-img">
-							<Image alt="brasao" src={image} height={100} width={100}/>
+							<Image alt="brasao" src={image} height={135} width={150}/>
 						</div>
 					</Link>
 					

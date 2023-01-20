@@ -30,11 +30,11 @@ export const StyledPosts = styled.div`
     margin-bottom: 25px;
     overflow: hidden;
     width: 25rem;
-    padding: .5rem 1rem 0 1rem;
+    padding: 1.5rem 1rem 0 1rem;
     h3 {
       font-family: "Merriweather";
       font-weight: 400;
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 8px;
       max-height: 100%;
       display: -webkit-box;

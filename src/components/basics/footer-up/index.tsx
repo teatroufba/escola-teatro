@@ -52,9 +52,9 @@ function FooterUp() {
         <a href="replace" id='brasao' > 
           <Image
             alt="Brasão da Escola de Teatro"
-            height={80}
+            height={105}
             src="/brasao.png"
-            width={80}
+            width={120}
           />
         </a>
       </Link>
