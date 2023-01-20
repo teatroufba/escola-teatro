@@ -48,7 +48,7 @@ export default function MenuMobile() {
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("escola")}>
-								<span>A Escola</span>
+								<span><a href="/escola">A Escola</a></span>
 								<ArrowIcon />
 							</button>
 						</div>
@@ -80,7 +80,7 @@ export default function MenuMobile() {
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("ensino")}>
-								<span>Ensino e Pesquisa</span>
+								<span><a href="/ensino">Ensino e Pesquisa</a></span>
 								<ArrowIcon />
 							</button>
 						</div>
@@ -104,7 +104,7 @@ export default function MenuMobile() {
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("extensao")}>
-								<span>Extensão</span>
+								<span><a href="/extensao">Extensão</a></span>
 								<ArrowIcon />
 							</button>
 						</div>
@@ -128,7 +128,7 @@ export default function MenuMobile() {
 					<li className="menu-main-option">
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("espacos")}>
-								<span>Espaços</span>
+								<span><a href="/espacos">Espaços</a></span>
 								<ArrowIcon />
 							</button>
 						</div>

@@ -40,7 +40,7 @@ export default function Mural({ mural }: { mural: IMural[] }) {
                 ) : (
                   ''
                 )}
-                <figcaption className='text-area'>{textFormater(value.title, 45)}</figcaption>
+                <figcaption className='text-area'>{textFormater(value.title, 60)}</figcaption>
               </figure>
             </a>
           </div>

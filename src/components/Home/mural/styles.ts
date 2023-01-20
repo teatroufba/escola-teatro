@@ -61,7 +61,6 @@ export const StyledMural = styled.div`
       height: 210px;
       width: 100%;
       border-radius: 10px 10px 0px 0px;
-      overflow: hidden;
     }
 
     .text-area {
