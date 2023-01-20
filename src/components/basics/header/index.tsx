@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import image from "@/public/brasao.png";
+import image from "@/public/brasaoSemLetra.png";
 
 import { HeaderContainer, HeaderInferior, HeaderSuperior } from "./styles";
 import SubmenuHeader from "../submenu-header";
@@ -92,7 +92,7 @@ function Header() {
 				<div className="header">
 					<Link href="/">
 						<div className="logo-img">
-							<Image alt="brasao" src={image} height={100} width={100}/>
+							<Image alt="brasao" src={image} height={135} width={150}/>
 						</div>
 					</Link>
 					
