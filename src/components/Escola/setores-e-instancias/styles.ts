@@ -15,7 +15,7 @@ export const StyledDepartmentsContainer = styled.div`
 		box-sizing: border-box;
 		width: fit-content;
 		font-weight: 400;
-		font-size: 32px;
+		font-size: 48px;
 		color: #282b62;
 		margin: 0 3rem 3rem 3rem;
 		border-bottom: 5px solid #282b62;

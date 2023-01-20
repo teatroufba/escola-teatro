@@ -64,7 +64,7 @@ const Container = styled.div`
     .carousel {
       width: 100%;
       display: flex;
-      gap: 25px;
+      gap: 10px;
       overflow-x: scroll;
       scroll-behavior: smooth;
       -ms-overflow-style: none;

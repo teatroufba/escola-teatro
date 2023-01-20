@@ -87,13 +87,13 @@ function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
           <PosGraduacao imageUrl={ensinoProps.imageUrl} imageAlt={ensinoProps.imageAlt} conteudo={ensinoProps.conteudo} link={ensinoProps.link} />
         </section>
         <section>
-          <ProducaoAcademica monografias={ensinoProps.monografias} espetaculosFormatura={ensinoProps.espetaculosFormatura} dissertacoes={ensinoProps.dissertacoes} teses={ensinoProps.teses} livros={ensinoProps.livros} revistas={ensinoProps.revistas} />
-        </section>
-        <section>
           <FormasDeIngresso
             conteudos={ensinoProps.ingressoConteudo}
             formas={ensinoProps.ingressoLinks}
           />
+        </section>
+        <section>
+          <ProducaoAcademica monografias={ensinoProps.monografias} espetaculosFormatura={ensinoProps.espetaculosFormatura} dissertacoes={ensinoProps.dissertacoes} teses={ensinoProps.teses} livros={ensinoProps.livros} revistas={ensinoProps.revistas} />
         </section>
         <section className="grey">
           <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
