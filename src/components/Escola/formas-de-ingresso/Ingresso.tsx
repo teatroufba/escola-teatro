@@ -60,7 +60,7 @@ export default function FormasDeIngresso({
 			<div className="entry-content">
 				<div className="left-column">
 					{formas.map((forma, index) => (
-						<div className="entry-form" key={`forma${index}`}>
+						<div className='entry-form' key={`forma${index}`} style={currentPage == index+1 ? {} : {opacity: 0.3}}>
 							<button onClick={() => setCurrentPage(index + 1)}>
 								<h3>{forma.titulo ? forma.titulo : "Título não informado"}</h3>
 							</button>
