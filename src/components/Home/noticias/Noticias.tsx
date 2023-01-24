@@ -14,6 +14,7 @@ interface INoticias {
 }
 
 export default function Noticias({ noticias }: { noticias: INoticias[] }) {
+  console.log(noticias)
   return (
     <StyledNoticias>
 

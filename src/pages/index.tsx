@@ -59,7 +59,7 @@ export async function getStaticProps({
     subtitle: value.data.subtitle,
     imageUrl: value.data.image.url,
     imageAlt: value.data.image.alt,
-    date: value.first_publication_date,
+    date: value.data.data,
   }));
   return {
     props: { mural, agenda, noticias },

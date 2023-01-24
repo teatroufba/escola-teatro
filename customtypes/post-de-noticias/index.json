@@ -59,9 +59,9 @@
         }
       },
       "data": {
-        "type": "Date",
+        "type": "Timestamp",
         "config": {
-          "label": "Data",
+          "label": "Teste",
           "placeholder": ""
         }
       },
