@@ -57,6 +57,20 @@
           "label": "Author",
           "placeholder": ""
         }
+      },
+      "data": {
+        "type": "Date",
+        "config": {
+          "label": "Data",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
       }
     }
   }

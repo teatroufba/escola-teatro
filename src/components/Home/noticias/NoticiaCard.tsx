@@ -40,11 +40,12 @@ export default function NoticiaCard({
     }
     return text
   }
-
-
-  const data = new Date(date)
+    const data = new Date(date)
     let dia = data.getDate().toString()
-    const mes = data.getMonth()
+    let mes = data.getMonth()
+    if(data.getMonth() == 0){
+        mes = 1
+      }
     const ano = data.getFullYear()
     let mesNumero = (mes + 1).toString()
 
@@ -65,8 +66,12 @@ export default function NoticiaCard({
         ) : null}
       </div>
       <div className="noticias-post-text">
-        <h3>{title? maxChar(title,128) : ""}</h3>
+        <h3>{title? maxChar(title,50) : ""}</h3>
         <p>{subtitle? maxChar(subtitle,256) : ""}</p>
+      </div>
+      <div className="container-data">
+              <Image src='/calendar.svg' alt="" width={24} height={24} />
+              <p>{`${dia}/${mesNumero}/${ano}`}</p>
       </div>
       <a href={`/noticias/${uid}`}>
         Saiba mais{"  "}

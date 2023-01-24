@@ -23,6 +23,19 @@ export const StyledPosts = styled.div`
         align-items: flex-end;
   }
 
+
+  .container-data {
+    display: flex;
+    gap: 0.5rem;
+    padding-top: .5rem;
+    align-items: center;
+
+    p {
+        font-size: 0.875rem;
+        line-height: 1.3125rem;
+        font-family: Arial;
+    }
+}
   .noticias-post-text {
     display: flex;
     flex-direction: column;

@@ -101,8 +101,7 @@ export const StyledNoticiaCard = styled.div`
     text-align: left;
     gap: 15px;
     padding: 0 16px;
-    margin-bottom: 25px;
-    
+    margin-bottom: 15px;
 
     h3 {
       font-family: "Merriweather";
@@ -114,8 +113,28 @@ export const StyledNoticiaCard = styled.div`
       font-family: arial;
       font-weight: 400;
       font-size: 16px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    
     }
   }
+  .container-data {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    padding: 0 16px;
+
+    p {
+        font-size: 1rem;
+        line-height: 1.3125rem;
+        font-family: Arial;
+    }
+}
 
   a {
     text-decoration: none;

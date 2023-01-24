@@ -14,7 +14,6 @@ interface IConteudoFoto {
 }
 
 export default function Page({ galeria }: any) {
-	console.log(galeria)
 
 	const conteudoFoto: IConteudoFoto = {
 		imageURL: galeria.imagem1.url,
