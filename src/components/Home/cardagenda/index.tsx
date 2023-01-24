@@ -178,7 +178,10 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
 
     const data = new Date(date)
     let dia = data.getDate().toString()
-    const mes = data.getMonth()
+    let mes = data.getMonth()
+    if(data.getMonth() == 0){
+      mes = 1
+    }
     const ano = data.getFullYear()
     let mesNumero = (mes + 1).toString()
 
