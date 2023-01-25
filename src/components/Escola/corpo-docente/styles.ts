@@ -17,10 +17,11 @@ export const StyledStaffCard = styled.div`
 
 export const StyledStaffDescriptionContainer = styled.div`
 	max-width: 100%;
+	min-height: 50%;
 	max-height: 50%;
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	justify-content: space-between;
 	padding: 15.5px 15px 15.5px 24px;
 
 	button {
@@ -36,7 +37,6 @@ export const StyledStaffDescriptionContainer = styled.div`
 	}
 
 	a {
-		max-width: 175px;
 		display: flex;
 		text-decoration: none;
 		align-items: center;
@@ -45,10 +45,12 @@ export const StyledStaffDescriptionContainer = styled.div`
 
 export const StyledStaffDescription = styled.div`
 	max-width: 100%;
+	height: 100%;
 
+	padding-bottom: 15px;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	justify-content: space-between;
 	color: #2d2b78;
 
 	
@@ -56,7 +58,7 @@ export const StyledStaffDescription = styled.div`
 	h2 {
 		font-family: "Merriweather";
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 16px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -65,11 +67,18 @@ export const StyledStaffDescription = styled.div`
 	p {
 		font-family: "Merriweather";
 		font-weight: 400;
-		font-size: 14px;
+		font-size: 12px;
+		max-width: calc(100% - 21px);
 	}
 
 	.email {
 		font-weight: bold;
+	}
+
+	div {
+		display: flex;
+		gap: 3px;
+		align-items: flex-start;
 	}
 `;
 

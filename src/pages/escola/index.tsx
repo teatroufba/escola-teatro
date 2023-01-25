@@ -102,10 +102,10 @@ export async function getStaticProps({
 
 	const docente = escola.data.slices3.map((item: any) => ({
 		imagemAlt: item.primary.image.alt,
-		email: item.primary.email ? maxChar(item.primary.email, 20) : "",
+		email: item.primary.email,
 		imagemUrl: item.primary.image.url,
 		interesses: item.primary.interesses
-			? maxChar(item.primary.interesses, 30)
+			? maxChar(item.primary.interesses, 90)
 			: "",
 		link: item.primary.link.url,
 		nome: item.primary.nome,
