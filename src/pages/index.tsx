@@ -23,11 +23,13 @@ export async function getStaticProps({
     title: value.data.titulo,
     imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
     imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
+    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : '/',
+    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : '/',
     date: value.data.data,
     tipo: value.data.tipo ? value.data.tipo : '',
     local: value.data.local,
     descricao: value.data.subtitulo,
-  } as IAgenda)).sort((a: IAgenda, b: IAgenda) => {
+  } as unknown as IAgenda)).sort((a: IAgenda, b: IAgenda) => {
     const timestamp = (date: string) => new Date(date).getTime();
     return timestamp(b.date) - timestamp(a.date);
   });
@@ -57,8 +59,10 @@ export async function getStaticProps({
     uid: value.uid,
     title: value.data.title,
     subtitle: value.data.subtitle,
-    imageUrl: value.data.image.url,
-    imageAlt: value.data.image.alt,
+    imageUrl: value.data.image.url ? value.data.image.url : null,
+    imageAlt: value.data.image.alt ? value.data.image.alt : null,
+    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : '/',
+    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : '/',
     date: value.data.data,
   }));
   return {
@@ -78,6 +82,8 @@ interface INoticias {
   imageAlt: string;
   imageUrl: string;
   subtitle: string;
+  miniaturaUrl: string
+  miniaturaAlt: string
   title: string;
   uid: string;
 }
@@ -92,6 +98,8 @@ interface IAgenda {
   uid: string;
   subtitulo: string;
   descricao: string;
+  miniaturaUrl: string
+  miniaturaAlt: string
 }
 
 export default function Home({

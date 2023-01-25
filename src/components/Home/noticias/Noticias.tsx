@@ -10,11 +10,12 @@ interface INoticias {
   subtitle: string
   imageUrl: string
   imageAlt: string
+  miniaturaUrl: string
+  miniaturaAlt: string
   date: string
 }
 
 export default function Noticias({ noticias }: { noticias: INoticias[] }) {
-  console.log(noticias)
   return (
     <StyledNoticias>
 
@@ -28,8 +29,8 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
             uid={value.uid}
             title={value.title}
             subtitle={value.subtitle}
-            imageUrl={value.imageUrl}
-            imageAlt={value.imageAlt}
+            imageUrl={value.miniaturaUrl}
+            imageAlt={value.miniaturaAlt}
             date={value.date}
           />
         ))}

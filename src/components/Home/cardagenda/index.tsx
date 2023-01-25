@@ -200,7 +200,7 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
       <Link href={`/agenda/${uid}`} passHref>
         <div className="card">
             <div className="container-img"> 
-                <Image src={imageUrl} alt={imageAlt}  layout="fill" />
+                <Image src={imageUrl} alt={imageAlt} layout="fill" />
               
               {data ? <p className='img-date'>
                     {dia}<br />

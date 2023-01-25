@@ -41,7 +41,6 @@ export default function Page({
     title: items.data.title,
     uid: items.uid || "",
   }));
-  console.log(posts)
   return (
     <>
       <Noticias post={posts} />;

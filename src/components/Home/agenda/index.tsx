@@ -12,6 +12,8 @@ interface IAgenda {
   title: string
   imageUrl: string
   imageAlt: string
+  miniaturaUrl: string
+  miniaturaAlt: string
   date: string
   tipo: string
   local: string
@@ -168,8 +170,8 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
                   date={value.date ? value.date : ""}
                   title={value.title ? value.title : ""}
                   local={value.local ? value.local : ""}
-                  imageUrl={value.imageUrl ? value.imageUrl : "/"}
-                  imageAlt={value.imageAlt ? value.imageAlt : "/"}
+                  imageUrl={value.miniaturaUrl ? value.miniaturaUrl : "/"}
+                  imageAlt={value.miniaturaAlt ? value.miniaturaAlt : "/"}
                   uid = {value.uid ? value.uid : ""}
                   subtitle = {value.descricao ? value.descricao : ""}
                 />
