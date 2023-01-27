@@ -108,46 +108,46 @@ function Header() {
 					</div>
 
 					<ul className="social">
-						<a href="https://www.facebook.com/ufba.escoladeteatro" target="_blank">
-							<input
-								alt="facebook"
-								className="facebook"
+						<Link passHref href="https://www.facebook.com/ufba.escoladeteatro/" >
+							<a className="desktop" href="replace" target="_blank">
+							<Image
+								alt="Icone do Facebook"
 								height={50}
-								src="./icon-facebook.svg"
-								type="image"
+								src="/face-icon.svg"
 								width={50}
 							/>
-						</a>
-						<a href="https://instagram.com/escoladeteatro.ufba" target="_blank">
-							<input
-								alt="instagram"
-								className="instagram"
+							</a>
+						</Link>
+						<Link passHref href="https://www.instagram.com/escoladeteatro.ufba/" >
+							<a className="desktop" href="replace" target="_blank">
+							<Image
+								alt="Icone do Instagram"
 								height={50}
-								src="./icon-instagram.svg"
-								type="image"
+								src="/insta-icon.svg"
 								width={50}
 							/>
-						</a>
-						<a href="https://youtube.com/c/teatroufba" target="_blank">
-							<input
-								alt="youtube"
-								className="youtube"
+							</a>
+						</Link>
+						<Link passHref href="https://www.youtube.com/user/teatroufba" >
+							<a className="desktop" href="replace" target="_blank" >
+							<Image
+								alt="Icone do Youtube"
 								height={50}
-								src="./icon-youtube.svg"
-								type="image"
+								src="/youtube-icon.svg"
 								width={50}
 							/>
-						</a>
-						<a href="https://www.flickr.com/photos/128786324@N02/" target="_blank">
-							<input
-								alt="flickr"
-								className="flickr"
+							</a>
+						</Link>
+						<Link passHref href="https://www.flickr.com/photos/128786324@N02/sets/" >
+							<a className="desktop" href="replace" target="_blank">
+							<Image
+								alt="Icone do Flickr"
 								height={50}
-								src="./icon-flickr.svg"
-								type="image"
+								src="/flickr-icon.svg"
 								width={50}
 							/>
-						</a>
+							</a>
+						</Link>
 					</ul>
 				</div>
 			</HeaderSuperior>

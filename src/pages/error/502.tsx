@@ -30,12 +30,16 @@ const Container = styled.div`
 function ErrorPage502() {
   return (
     <Container>
-      <Image
-        alt="Brasão da Escola de teatro"
-        height={110}
-        src="/logo-fundo-claro.png"
-        width={123}
-      />
+      <Link passHref href="/">
+        <a href="replace" id='brasao' > 
+          <Image
+            alt="Brasão da Escola de Teatro"
+            height={105}
+            src="/brasao.png"
+            width={120}
+          />
+        </a>
+      </Link>
       <h1>Erro 502</h1>
       <p>
         Ocorreu um erro em nosso servidor, tente novamente ou volte mais tarde.

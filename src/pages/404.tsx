@@ -2,12 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import image from "@/public/brasao.png";
+import Link from "next/link";
 export default function Error() {
   return (
     <>
       <ErrorContainer>
         <div className="content">
-          <Image alt="brasao" src={image} />
+        <Link passHref href="/">
+          <a href="replace" id='brasao' > 
+            <Image
+              alt="Brasão da Escola de Teatro"
+              height={105}
+              src={image}
+              width={120}
+            />
+          </a>
+        </Link>
           <h1>Error 404</h1>
 
           <p>
