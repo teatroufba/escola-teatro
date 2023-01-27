@@ -1,4 +1,5 @@
 import ReadMore from "@/components/basics/read-more/ReadMore";
+import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -10,7 +11,7 @@ interface IFormaIngresso {
 	titulo: string;
 }
 interface IConteudo {
-	conteudo: string;
+	conteudo: [];
 	titulo: string;
 }
 interface FormasDeIngressoProps {
@@ -74,9 +75,14 @@ export default function FormasDeIngresso({
 							<div className="entry-form-info-content">
 								<h3>{forma.titulo}</h3>
 								<div className="text-content">
-									<p id="entry-form-text-content" className="hidden-text">
-										{forma.conteudo}
-									</p>
+									<div id="entry-form-text-content">
+											<PrismicRichText
+												field={forma.conteudo}
+												components={{
+												paragraph: ({ children }) => <p>{children}</p>,
+												}}
+											/>
+									</div>
 									<ReadMore
 										textID="entry-form-text-content"
 										mainContainerID="formas-de-ingresso"

@@ -47,7 +47,7 @@ interface IFormaIngresso {
 }
 
 interface IConteudo {
-	conteudo: string;
+	conteudo: [];
 	titulo: string;
 }
 interface IRevista {

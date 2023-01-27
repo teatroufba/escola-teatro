@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"conteudo_forma_ingresso","items":[],"primary":{"titulo":"implement mission-critical ROI","conteudo":"engage customized e-business"},"id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"conteudo_forma_ingresso","items":[],"primary":{"titulo":"transform interactive deliverables","conteudo":[{"type":"paragraph","text":"Labore reprehenderit voluptate cillum adipisicing occaecat nostrud esse consectetur officia eu magna incididunt dolor nostrud magna. Et mollit consectetur ullamco non laboris voluptate in et nisi laboris laborum sint.","spans":[]}]},"id":"_Default"}} />
 _Default.storyName = 'Default'
