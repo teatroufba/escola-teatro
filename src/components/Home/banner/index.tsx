@@ -30,9 +30,10 @@ const BannerStyled = styled.div`
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    img {
+    .imagem-banner {
       width: 100vw;
-      max-height: 750px;
+      height: 39.06vw;
+      position: relative;
     }
   }
 
@@ -328,6 +329,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const [scrolling, setScrolling] = useState(false)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
+  const [pagina, setPagina] = useState(1)
   const [carouselPagination, setCarouselPagination] = useState([
     true,
     false,
@@ -404,27 +406,29 @@ function Banner({ banner }: { banner: IBanner[] }) {
   return (
     <BannerStyled>
       <div ref={carousel} className="carousel">
-        <img alt="" src="/background.png" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
+        {banner.map((item, index) => (
+          <div className='imagem-banner' key={`banner${index}`}>
+            <Image
+              src={item.imageUrl ? item.imageUrl : '/'}
+              alt={item.imageAlt ? item.imageAlt : '/'}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              priority // pra ser carregado primeiro ja que é o banner
+            />
+          </div>
+        ))}
       </div>
       <div className='layer' />
       <div className="banner-control">
         <div className='content'>
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie elit vitae odio blandit mauris ac aenean pellentesque.</p>
+          <h1>{banner[pagina-1].title}</h1>
+          <p>{banner[pagina-1].descricao}</p>
           <div className='content-button'>
-            <a className='desktop'>
+            <a 
+              href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}
+              className='desktop'>
               <Image
                 alt="ícone de seta para esquerda"
                 height={14}
@@ -437,14 +441,14 @@ function Banner({ banner }: { banner: IBanner[] }) {
         </div>
         <div className="pagination">
           <div className="pagination-control">
-            <p>01</p>
-            {carouselPagination.map((page: boolean, index: number) => (
-              <div key={Number(index)} className={index > 6 ? 'desktop' : ''}>
-                <LineIcon hover={page} size={20} />
+            <p>1</p>
+            {banner.map((item, index) => (
+              <div key={`paginacao-banner${index}`} className={index > 6 ? 'desktop' : ''}>
+                <LineIcon hover={pagina == index + 1} size={20} />
               </div>
             ))}
-            <p className="desktop">13</p>
-            <p className="mobile">07</p>
+            <p className="desktop">{banner.length}</p>
+            <p className="mobile">{banner.length}</p>
           </div>
           <button
             className={

@@ -76,7 +76,7 @@ export async function getStaticProps({
     date: value.data.data,
   }));
   return {
-    props: { mural, agenda, noticias },
+    props: { banner, mural, agenda, noticias },
   };
 }
 
