@@ -93,7 +93,7 @@ export const StyledStaffContainer = styled.div`
 
 	h1 {
 		font-family: "Merriweather";
-		font-weight: 400;
+		font-weight: 600;
 		font-size: 48px;
 		color: #fff;
 		margin: 3rem;

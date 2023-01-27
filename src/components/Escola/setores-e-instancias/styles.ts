@@ -20,6 +20,7 @@ export const StyledDepartmentsContainer = styled.div`
 		margin: 0 3rem 3rem 3rem;
 		border-bottom: 5px solid #282b62;
 		text-align: center;
+		font-weight: 600;
 	}
 
 	@media screen and (max-width: 768px) {

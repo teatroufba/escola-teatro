@@ -115,7 +115,7 @@ const Container = styled.div`
             font-family: 'Merriweather';
             font-style: normal;
             display: inline-block;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 3rem;
             color: #2D2B78;
             border-bottom: 5px solid #2D2B78;
