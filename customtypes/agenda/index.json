@@ -64,20 +64,26 @@
           "default_value": "Presencial"
         }
       },
-      "tipo": {
-        "type": "Select",
+      "tipos": {
+        "type": "Group",
         "config": {
-          "label": "Tipo",
-          "placeholder": "",
-          "options": [
-            "Tudo",
-            "Eventos",
-            "Espetáculos",
-            "Defesas",
-            "Formações",
-            "Outros"
-          ],
-          "default_value": "Tudo"
+          "label": "Tipos",
+          "fields": {
+            "tipo": {
+              "type": "Select",
+              "config": {
+                "label": "Tipo",
+                "placeholder": "",
+                "options": [
+                  "Eventos",
+                  "Espetáculos",
+                  "Defesas",
+                  "Formações",
+                  "Outros"
+                ]
+              }
+            }
+          }
         }
       },
       "uid": {

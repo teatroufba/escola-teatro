@@ -30,9 +30,10 @@ const BannerStyled = styled.div`
     -ms-overflow-style: none;
     scrollbar-width: none;
 
-    img {
-      width: 100vw;
-      max-height: 750px;
+    .imagem-banner {
+      min-width: 100vw;
+      height: 39.06vw;
+      position: relative;
     }
   }
 
@@ -248,7 +249,7 @@ const BannerStyled = styled.div`
         background-color: #282b62;
         display: flex;
         justify-content: center;
-        width: 484px;
+        max-width: 484px;
         height: 40px;
         color: white;
         padding: 0 15px;
@@ -315,57 +316,48 @@ const BannerStyled = styled.div`
   }
 `
 
-function Banner() {
+interface IBanner {
+  imageAlt: string;
+  imageUrl: string;
+  title: string;
+  descricao: string;
+  link: string
+}
+
+function Banner({ banner }: { banner: IBanner[] }) {
   const carousel = useRef<HTMLInputElement>(null)
   const [scrolling, setScrolling] = useState(false)
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
-  const [carouselPagination, setCarouselPagination] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ])
-
-  const pagination = (page: number) => {
-    const carouselPaginationReplace = carouselPagination
-    const fromIndex = carouselPaginationReplace.indexOf(true)
-    const element = carouselPaginationReplace.splice(fromIndex, 1)[0]
-
-    carouselPaginationReplace.splice(fromIndex + page, 0, element)
-    setCarouselPagination(carouselPaginationReplace)
-  }
+  const [pagina, setPagina] = useState(1)
 
   useEffect(() => {
     if (carousel.current != null) {
       setCarouselTotalScroll(
         Number(carousel.current.scrollWidth - carousel.current.clientWidth)
       )
+
+      carousel.current.addEventListener('scroll', mudaPagina)
     }
   }, [carouselScrollLeft])
+
+  const mudaPagina = () => {
+    if (carousel.current != null) {
+      setPagina(Math.round(carousel.current.scrollWidth / (carousel.current.scrollWidth - carousel.current.scrollLeft)))
+    }
+  }
 
   const scroll = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (carousel.current.scrollLeft < 12*carousel.current.clientWidth) {
+      if (pagina < banner.length) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
         carousel.current.scrollLeft += carousel.current.clientWidth
-        pagination(1)
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
-        pagination(-12)
       }
       setTimeout(() => {
         setScrolling(false)
@@ -376,16 +368,14 @@ function Banner() {
   const scrollMobile = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (carousel.current.scrollLeft < 6*carousel.current.clientWidth) {
+      if (pagina < banner.length) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
         carousel.current.scrollLeft += carousel.current.clientWidth
-        pagination(1)
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
-        pagination(-6)
       }
       setTimeout(() => {
         setScrolling(false)
@@ -396,27 +386,29 @@ function Banner() {
   return (
     <BannerStyled>
       <div ref={carousel} className="carousel">
-        <img alt="" src="/background.png" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
-        <img alt="" src="/banner-1.jpg" />
+        {banner.map((item, index) => (
+          <div className='imagem-banner' key={`banner${index}`}>
+            <Image
+              src={item.imageUrl ? item.imageUrl : '/'}
+              alt={item.imageAlt ? item.imageAlt : '/'}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              priority // é carregado primeiro ja que é o banner
+            />
+          </div>
+        ))}
       </div>
       <div className='layer' />
       <div className="banner-control">
         <div className='content'>
-          <h1>Lorem Ipsum</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie elit vitae odio blandit mauris ac aenean pellentesque.</p>
+          <h1>{banner[pagina-1].title}</h1>
+          <p>{banner[pagina-1].descricao}</p>
           <div className='content-button'>
-            <a className='desktop'>
+            <a 
+              href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}
+              className='desktop'>
               <Image
                 alt="ícone de seta para esquerda"
                 height={14}
@@ -429,14 +421,14 @@ function Banner() {
         </div>
         <div className="pagination">
           <div className="pagination-control">
-            <p>01</p>
-            {carouselPagination.map((page: boolean, index: number) => (
-              <div key={Number(index)} className={index > 6 ? 'desktop' : ''}>
-                <LineIcon hover={page} size={20} />
+            <p>1</p>
+            {banner.map((item, index) => (
+              <div key={`paginacao-banner${index}`} className={index > 6 ? 'desktop' : ''}>
+                <LineIcon hover={pagina == index + 1} size={20} />
               </div>
             ))}
-            <p className="desktop">13</p>
-            <p className="mobile">07</p>
+            <p className="desktop">{banner.length}</p>
+            <p className="mobile">{banner.length}</p>
           </div>
           <button
             className={

@@ -1,35 +1,36 @@
 {
-  "id": "como-chegar",
-  "label": "Como chegar",
-  "repeatable": false,
+  "id": "post_do_banner",
+  "label": "Post do Banner",
+  "repeatable": true,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "type": "UID",
+      "image": {
+        "type": "Image",
         "config": {
-          "label": "Uid",
+          "label": "Imagem",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "titulo": {
+        "type": "Text",
+        "config": {
+          "label": "Título",
           "placeholder": ""
         }
       },
-      "address": {
+      "descricao": {
         "type": "Text",
         "config": {
-          "label": "Address",
+          "label": "Descrição",
           "placeholder": ""
         }
       },
-      "email": {
+      "link": {
         "type": "Text",
         "config": {
-          "label": "Email",
-          "placeholder": ""
-        }
-      },
-      "phone": {
-        "type": "Text",
-        "config": {
-          "label": "Phone Number",
+          "label": "Link",
           "placeholder": ""
         }
       }

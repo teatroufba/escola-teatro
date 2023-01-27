@@ -42,7 +42,7 @@ export async function getStaticProps({
     miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : '/',
     miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : '/',
     date: item.data.data,
-    tipo: item.data.tipo ? item.data.tipo : '',
+    tipo: item.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
     local: item.data.local,
     subtitulo: item.data.subtitulo,
   }));

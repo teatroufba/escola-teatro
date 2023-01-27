@@ -1,17 +1,19 @@
 [
   {
     "variation": "default",
-    "name": "Default",
-    "slice_type": "curso",
-    "items": [],
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
     "primary": {
-      "titulo": "reintermediate holistic users",
-      "duracao": 4793,
-      "descricao": "synergize user-centric vortals",
-      "ppp": "orchestrate value-added portals",
-      "matrizCurricular": "incentivize end-to-end e-markets",
-      "ementario": "strategize enterprise relationships",
-      "guiaEstudantil": "redefine distributed channels"
-    }
+      "titulo": "music",
+      "duracao": 7,
+      "descricao": "furniture",
+      "ppp": "parent",
+      "matrizCurricular": "voyage",
+      "ementario": "whale",
+      "guiaEstudantil": "lower"
+    },
+    "slice_type": "curso"
   }
 ]

@@ -1,17 +1,19 @@
 [
   {
     "variation": "default",
-    "name": "Default",
-    "slice_type": "grupo_pesquisa",
-    "items": [],
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
     "primary": {
-      "nome": "aggregate granular e-services",
-      "descricao": "architect sticky ROI",
-      "lider": "monetize compelling web services",
-      "email": "revolutionize one-to-one systems",
-      "telefone": "enhance best-of-breed schemas",
-      "website": "brand killer blockchains",
-      "websiteLink": "iterate ubiquitous applications"
-    }
+      "nome": "obtain",
+      "descricao": "mirror",
+      "lider": "tired",
+      "email": "hide",
+      "telefone": "shade",
+      "website": "speed",
+      "websiteLink": "roar"
+    },
+    "slice_type": "grupo_pesquisa"
   }
 ]

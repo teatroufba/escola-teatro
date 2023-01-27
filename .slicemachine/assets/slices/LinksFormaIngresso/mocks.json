@@ -1,15 +1,17 @@
 [
   {
     "variation": "default",
-    "name": "Default",
-    "slice_type": "links_forma_ingresso",
-    "items": [],
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
     "primary": {
-      "titulo": "exploit extensible platforms",
+      "titulo": "tin",
       "link": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "http://google.com"
       }
-    }
+    },
+    "slice_type": "links_forma_ingresso"
   }
 ]

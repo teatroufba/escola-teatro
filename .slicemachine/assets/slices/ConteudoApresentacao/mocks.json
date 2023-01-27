@@ -1,27 +1,24 @@
-[
-  {
+[{
     "variation": "default",
-    "name": "Default",
-    "slice_type": "conteudo_apresentacao",
-    "items": [],
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+        {}
+    ],
     "primary": {
-      "image": {
-        "dimensions": {
-          "width": 900,
-          "height": 500
+        "image": {
+            "dimensions": {
+                "width": 900,
+                "height": 500
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
         },
-        "alt": "Placeholder image",
-        "copyright": null,
-        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
-      },
-      "titulo": "repurpose next-generation initiatives",
-      "conteudo": [
-        {
-          "type": "paragraph",
-          "text": "Quis ullamco mollit laborum id exercitation do ad consectetur qui voluptate. Anim qui deserunt dolor.",
-          "spans": []
-        }
-      ]
+        "titulo": "repurpose next-generation initiatives",
+        "conteudo": [{
+            "type": "paragraph",
+            "text": "Quis ullamco mollit laborum id exercitation do ad consectetur qui voluptate. Anim qui deserunt dolor.",
+            "spans": []
+        }]
     }
-  }
-]
+}]

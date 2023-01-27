@@ -163,7 +163,13 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
         </button>
         <div className="list" ref={carousel}>
           {agenda
-            .filter(value => filterArray(value.tipo))
+            .filter((item) => {
+              if (filter === "Tudo") {
+                return true;
+              }
+
+              return item.tipo.includes(filter);
+            })
             .map(value => (
                 <CardAgenda
                   key={value.uid ? value.uid : ""}

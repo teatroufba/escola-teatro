@@ -1,111 +1,90 @@
 {
-  "_cts": {
-    "pagina-de-noticias": {},
-    "post-de-noticias": {
-      "text": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
+    "_cts": {
+        "agenda": {
+            "tipos": {}
+        },
+        "escola": {},
+        "ensino": {},
+        "post-generico": {},
+        "teste": {},
+        "extensao": {},
+        "espacos": {
+            "links": {}
+        },
+        "galeria": {}
+    },
+    "slices": {
+        "Membro": {
+            "default": {
+                "primary": {}
+            }
+        },
+        "FormaIngresso": {},
+        "ConteudoFormaIngresso": {
+            "default": {
+                "items": {},
+                "primary": {}
+            }
+        },
+        "LinksFormaIngresso": {
+            "default": {
+                "items": {},
+                "primary": {}
+            }
+        },
+        "ConteudoApresentacao": {
+            "default": {
+                "primary": {}
+            }
+        },
+        "FormasIngresso": {},
+        "SetoresInstancias": {
+            "default": {
+                "primary": {},
+                "items": {}
+            }
+        },
+        "Docente": {
+            "default": {
+                "primary": {}
+            }
+        },
+        "MembroCorpoTecnico": {},
+        "Curso": {
+            "default": {
+                "primary": {}
+            }
+        },
+        "GrupoPesquisa": {
+            "default": {
+                "primary": {}
+            }
+        },
+        "RevistaOuPublicacao": {
+            "default": {
+                "primary": {}
+            }
+        },
+        "Livro": {
+            "default": {
+                "primary": {},
+                "items": {}
+            }
+        },
+        "PostExtensao": {
+            "default": {
+                "primary": {},
+                "items": {}
+            },
+            "postExtensaoComCatalogo": {
+                "primary": {}
+            }
+        },
+        "PostEspacos": {
+            "default": {
+                "primary": {},
+                "items": {}
+            }
         }
-      }
-    },
-    "card-staff": {},
-    "card-docente": {},
-    "como-chegar": {},
-    "corpo-tecnico": {},
-    "setores": {},
-    "setor": {},
-    "forma-de-ingresso": {},
-    "agenda": {
-      "text": {
-        "config": {
-          "patternType": "PARAGRAPH",
-          "blocks": 1
-        }
-      }
-    },
-    "escola": {},
-    "ensino": {},
-    "post-generico": {},
-    "teste": {},
-    "extensao": {},
-    "espacos": {
-      "links": {}
-    },
-    "galeria": {}
-  },
-  "slices": {
-    "Membro": {
-      "default": {
-        "primary": {}
-      }
-    },
-    "FormaIngresso": {},
-    "ConteudoFormaIngresso": {
-      "default": {
-        "items": {},
-        "primary": {}
-      }
-    },
-    "LinksFormaIngresso": {
-      "default": {
-        "items": {},
-        "primary": {}
-      }
-    },
-    "ConteudoApresentacao": {
-      "default": {
-        "primary": {}
-      }
-    },
-    "FormasIngresso": {},
-    "SetoresInstancias": {
-      "default": {
-        "primary": {},
-        "items": {}
-      }
-    },
-    "Docente": {
-      "default": {
-        "primary": {}
-      }
-    },
-    "MembroCorpoTecnico": {},
-    "Curso": {
-      "default": {
-        "primary": {}
-      }
-    },
-    "GrupoPesquisa": {
-      "default": {
-        "primary": {}
-      }
-    },
-    "RevistaOuPublicacao": {
-      "default": {
-        "primary": {}
-      }
-    },
-    "Livro": {
-      "default": {
-        "primary": {},
-        "items": {}
-      }
-    },
-    "PostExtensao": {
-      "default": {
-        "primary": {},
-        "items": {}
-      },
-      "postExtensaoComCatalogo": {
-        "primary": {}
-      }
-    },
-    "PostEspacos": {
-      "default": {
-        "primary": {},
-        "items": {}
-      }
     }
-  }
 }
