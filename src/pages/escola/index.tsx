@@ -36,7 +36,7 @@ interface ISetor {
 }
 
 interface IApresentacaoItem {
-	conteudo: string;
+	conteudo: [];
 	imageAlt: string;
 	imageUrl: string;
 	titulo: string;
