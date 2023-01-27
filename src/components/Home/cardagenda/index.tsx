@@ -20,9 +20,12 @@ const CardStyle = styled.div`
   gap: 10px;
 
   background-color: #ffffff;
+  transform: scale(0.98);
+  transition: .5s;
 
   &:hover {
-    background: #24233a;
+    transform: scale(1.02);
+    transition:transform 0.25s ease-in-out;
     .container-baixo {
       .title{
       color: #9a1a4b;
