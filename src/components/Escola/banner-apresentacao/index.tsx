@@ -1,11 +1,12 @@
 import ReadMore from "@/components/basics/read-more/ReadMore";
+import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import { StyledBannerApresentacaoContainer } from "./styles";
 
 interface IApresentacaoItem {
-	conteudo: string;
+	conteudo: [];
 	imageAlt: string;
 	imageUrl: string;
 	titulo: string;
@@ -79,9 +80,14 @@ export default function BannerApresentacao({ conteudos }: IApresentacao) {
 							<h1 id="presentation-section-title">Apresentação</h1>
 							<div className="presentation-content">
 								<h2>{item.titulo ? item.titulo : "Sobre a escola"}</h2>
-								<p id="text-content" className="hidden-text">
-									{item.conteudo}
-								</p>
+								<div id="text-content" className="hidden-text">
+									<PrismicRichText
+										field={item.conteudo}
+										components={{
+										paragraph: ({ children }) => <p>{children}</p>,
+										}}
+									/>
+								</div>
 								<ReadMore
 									textID="text-content"
 									mainContainerID="apresentacao"

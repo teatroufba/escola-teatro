@@ -344,6 +344,7 @@ export default function Noticias({ post }: INoticias) {
       <div className="posts-flex">
         {filtered(post, 9, currentPage).map((value, index) => (
           <PostCard
+            date={value.date}
             imageAlt={value.miniaturaUrl ? value.miniaturaAlt : value.imageAlt}
             imageUrl={value.miniaturaUrl ? value.miniaturaUrl : value.imageUrl}
             subtitle={value.subtitle}

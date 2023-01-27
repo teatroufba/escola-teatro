@@ -28,16 +28,21 @@ export async function getStaticProps({
 
   const items = await client.getAllByType("agenda");
 
-  const agenda = items.map((value) => ({
+  const agenda = items.map((value: any) => ({
     uid: value.uid || "",
     title: value.data.titulo,
     imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
     imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
+    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : '/',
+    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : '/',
     date: value.data.data,
     tipo: value.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
     local: value.data.local,
     descricao: value.data.subtitulo,
-  }));
+  } as unknown as IAgenda)).sort((a: IAgenda, b: IAgenda) => {
+    const timestamp = (date: string) => new Date(date).getTime();
+    return timestamp(b.date) - timestamp(a.date);
+  });
 
   const itemsMural = await client.getAllByType("mural-estudantil", {
     orderings: {
@@ -46,7 +51,7 @@ export async function getStaticProps({
     },
   });
 
-  const mural = itemsMural.map((value) => ({
+  const mural = itemsMural.map((value: any) => ({
     uid: value.uid || "",
     title: value.data.titulo,
     imageUrl: value.data.imagem.url || "",
@@ -60,13 +65,15 @@ export async function getStaticProps({
     },
   });
 
-  const noticias = posts.map((value) => ({
+  const noticias = posts.map((value: any) => ({
     uid: value.uid,
     title: value.data.title,
     subtitle: value.data.subtitle,
-    imageUrl: value.data.image.url,
-    imageAlt: value.data.image.alt,
-    date: value.first_publication_date,
+    imageUrl: value.data.image.url ? value.data.image.url : null,
+    imageAlt: value.data.image.alt ? value.data.image.alt : null,
+    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : '/',
+    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : '/',
+    date: value.data.data,
   }));
   return {
     props: { mural, agenda, noticias },
@@ -93,6 +100,8 @@ interface INoticias {
   imageAlt: string;
   imageUrl: string;
   subtitle: string;
+  miniaturaUrl: string
+  miniaturaAlt: string
   title: string;
   uid: string;
 }
@@ -105,7 +114,10 @@ interface IAgenda {
   tipo: string;
   title: string;
   uid: string;
-  subtitle: string;
+  subtitulo: string;
+  descricao: string;
+  miniaturaUrl: string
+  miniaturaAlt: string
 }
 
 export default function Home({

@@ -12,10 +12,13 @@ interface IAgenda {
   title: string
   imageUrl: string
   imageAlt: string
+  miniaturaUrl: string
+  miniaturaAlt: string
   date: string
   tipo: string
   local: string
-  subtitle: string
+  descricao: string
+  subtitulo: string
 }
 
 export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
@@ -163,14 +166,14 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
             .filter(value => filterArray(value.tipo))
             .map(value => (
                 <CardAgenda
-                  key={value.uid}
-                  date={value.date}
-                  title={value.title}
-                  local={value.local}
-                  imageUrl={value.imageUrl ? value.imageUrl : "/"}
-                  imageAlt={value.imageAlt}
-                  uid = {value.uid}
-                  subtitle = {value.subtitle}
+                  key={value.uid ? value.uid : ""}
+                  date={value.date ? value.date : ""}
+                  title={value.title ? value.title : ""}
+                  local={value.local ? value.local : ""}
+                  imageUrl={value.miniaturaUrl ? value.miniaturaUrl : "/"}
+                  imageAlt={value.miniaturaAlt ? value.miniaturaAlt : "/"}
+                  uid = {value.uid ? value.uid : ""}
+                  subtitle = {value.descricao ? value.descricao : ""}
                 />
             ))}
         </div>

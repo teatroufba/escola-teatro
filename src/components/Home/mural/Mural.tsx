@@ -25,7 +25,7 @@ export default function Mural({ mural }: { mural: IMural[] }) {
       <div className="mural-posts">
         {mural.slice(0, 6).map(value => (
           <div className="mural-card" key={value.uid}>
-            <a href={`/mural/${value.uid}`}>
+            <a href={`/publicacoes/${value.uid}`}>
               <figure className="textover">
                 {value.imageUrl ? (
                   <div className="img-container">
@@ -40,7 +40,7 @@ export default function Mural({ mural }: { mural: IMural[] }) {
                 ) : (
                   ''
                 )}
-                <figcaption className='text-area'>{textFormater(value.title, 45)}</figcaption>
+                <figcaption className='text-area'>{textFormater(value.title, 60)}</figcaption>
               </figure>
             </a>
           </div>

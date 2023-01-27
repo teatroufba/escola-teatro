@@ -21,7 +21,7 @@ export const StyledLocationContent = styled.div`
 		box-sizing: border-box;
 		width: fit-content;
 		font-family: "Merriweather", sans-serif;
-		font-weight: 400;
+		font-weight: 600;
 		font-size: 48px;
 		color: #282b62;
 		margin: 3rem;

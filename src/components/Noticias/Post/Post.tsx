@@ -13,9 +13,7 @@ interface IPostagem {
   author: string
   first_publication_date?: string
   imageAlt?: string
-  imageHeight: string
   imageUrl: string
-  imageWidth: string
   last_publication_date: Date
   subtitle: string
   text: []
@@ -27,8 +25,6 @@ export default function Postagem({
   text,
   imageUrl,
   imageAlt,
-  imageWidth,
-  imageHeight,
   author,
   last_publication_date,
   first_publication_date,

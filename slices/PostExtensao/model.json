@@ -31,6 +31,13 @@
             "label": "Link",
             "placeholder": ""
           }
+        },
+        "uid": {
+          "type": "Text",
+          "config": {
+            "label": "Uid",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -77,6 +84,13 @@
           "type": "Text",
           "config": {
             "label": "Link",
+            "placeholder": ""
+          }
+        },
+        "uid": {
+          "type": "Text",
+          "config": {
+            "label": "Uid",
             "placeholder": ""
           }
         }

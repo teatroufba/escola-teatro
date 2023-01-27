@@ -3,8 +3,9 @@
 /* eslint-disable sonarjs/no-use-of-empty-return-value */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
+import Pagination from "@/components/Escola/formas-de-ingresso/Pagination";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -40,7 +41,6 @@ const Container = styled.div`
 			display: flex;
 			flex-direction: column;
 			gap: 2rem;
-			justify-content: space-between;
 
 			@media (max-width: 1300px) {
 				width: 100%;
@@ -167,13 +167,48 @@ interface IGraduacao {
 	matrizCurricular: string,
 	ementario: string,
 	guiaEstudantil: string,
-  }
+}
 
 function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 	const [cardSelect, setCardSelect] = useState(0);
 	const [seeMore, setSeeMore] = useState(false);
 
-	function textFormater (str: string, numberMax: number) {
+	const [currentPage, setCurrentPage] = useState(1);
+	const [contentPerPage] = useState(1);
+
+	const lastContent = currentPage * contentPerPage;
+	const firstContent = lastContent - contentPerPage;
+
+	const pages = [...Array(Math.ceil(cursos.length / contentPerPage)).keys()];
+
+	const [isShowingText, setIsShowingText] = useState(false);
+	const [isClampedText, setIsClampedText] = useState(true);
+	const [isLongText, setIsLongText] = useState(true);
+
+	useEffect(() => {
+		setCardSelect(currentPage - 1);
+	}, [currentPage]);
+
+	function hideText() {
+		if (isShowingText) {
+			const text = document.getElementById("entry-form-text-content");
+			const mainContainer = document.getElementById("formas-de-ingresso");
+
+			if (text && mainContainer) {
+				setIsShowingText(false);
+				text.classList.add("hidden-text");
+				mainContainer.style.height = window.innerWidth < 768 ? "100%" : "800px";
+				text.style.height = window.innerWidth < 768 ? "100%" : "300px";
+
+				window.scrollTo({
+					top: document.getElementById("entry-form-title")?.offsetTop,
+					behavior: "smooth",
+				});
+			}
+		}
+	}
+
+	function textFormater(str: string, numberMax: number) {
 		if (str.length > numberMax) {
 			return str.slice(0, numberMax) + '...'
 		}
@@ -183,7 +218,6 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 	function toggleSeeMore() {
 		setSeeMore(s => !s);
 	}
-	
 
 	return (
 		<Container>
@@ -199,7 +233,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								onClick={() => setCardSelect(index)}
 							>
 								<h3>{value.titulo}</h3>
-								<p>{value.duracao ? `Duração: ${value.duracao} anos` : '' }</p>
+								<p>{value.duracao ? `Duração: ${value.duracao} anos` : ''}</p>
 							</div>
 						))}
 					</div>
@@ -209,8 +243,8 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 					{cursos.map((value, index) => (
 						<div key={`conteudo${index}`} className={'conteudo'}>
 							<div
-							key={`curso-content${index}`}
-							className={cardSelect === index ? "courseInfo" : "disable"}
+								key={`curso-content${index}`}
+								className={cardSelect === index ? "courseInfo" : "disable"}
 							>
 								<h2>{value.titulo}</h2>
 								<div className="description">
@@ -218,6 +252,12 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 									{value.descricao.length > 600 ? <button onClick={toggleSeeMore}>{seeMore ? 'Ver menos' : 'Ver mais'}</button> : ''}
 								</div>
 							</div>
+							{cardSelect === index && <Pagination
+								currentPage={currentPage}
+								pages={pages}
+								paginationFunction={setCurrentPage}
+								hideTextFunction={hideText}
+							/>}
 							<div className={cardSelect === index ? "info" : "disable"} key={`curso-info${index}`}>
 								<Link href={value.ppp}>
 									<div>

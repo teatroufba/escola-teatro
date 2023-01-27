@@ -35,12 +35,17 @@ export default function StaffCard({
 			<StyledStaffDescriptionContainer>
 				<StyledStaffDescription>
 					<h2> {name ? name : "Nome não informado"} </h2>
-					<p> Email: {email ? email : "Email não informado"} </p>
-					<p>
-						{" "}
-						Áreas de Interesse:{" "}
-						{interests ? interests : "Interesses não informados"}{" "}
-					</p>
+					<div>
+						<Image src='/email.svg' width={18} height={18}></Image>
+						<p>{email ? email : "Email não informado"}</p>
+					</div>
+					<div>
+						<Image src='/head-icon.svg' width={18} height={18}></Image>
+						<p>
+							{" "}
+							{interests ? interests : "Interesses não informados"}{" "}
+						</p>
+					</div>
 				</StyledStaffDescription>
 				<Link passHref href={link ? link : ""}>
 					<a href={link ? link : ""} rel="noopener noreferrer" target="_blank">

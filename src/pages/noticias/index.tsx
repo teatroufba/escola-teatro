@@ -31,7 +31,7 @@ export default function Page({
   noticias: PrismicDocument<Record<string, any>, string, string>[];
 }) {
   const posts = noticias.map((items) => ({
-    date: new Date(items.first_publication_date).toISOString(),
+    date: items.data.data,
     imageAlt: items.data.image.alt,
     imageUrl: items.data.image.url,
     miniaturaAlt: items.data.miniatura.alt,

@@ -13,6 +13,7 @@ interface IAgenda {
   title: string;
   uid: string;
   subtitulo: string;
+  descricao: string;
 }
 
 function Agenda({ agenda }: { agenda: IAgenda[] }) {
@@ -38,8 +39,8 @@ export async function getStaticProps({
     title: item.data.titulo,
     imageUrl: item.data.imagem.url ? item.data.imagem.url : '/',
     imageAlt: item.data.imagem.alt ? item.data.imagem.alt : '/',
-    miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : '',
-    miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : '',
+    miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : '/',
+    miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : '/',
     date: item.data.data,
     tipo: item.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
     local: item.data.local,

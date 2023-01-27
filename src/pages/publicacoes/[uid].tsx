@@ -8,9 +8,7 @@ interface IPostagem {
   first_publication_date: string;
   id: string;
   imageAlt: string;
-  imageHeight: string;
   imageUrl: string;
-  imageWidth: string;
   last_publication_date: Date;
   subtitle: string;
   text: [];
@@ -28,9 +26,7 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
         author={postagem.author}
         first_publication_date={publication}
         imageAlt={postagem.imageAlt}
-        imageHeight={postagem.imageHeight}
         imageUrl={postagem.imageUrl}
-        imageWidth={postagem.imageWidth}
         last_publication_date={lastPublication}
         subtitle={postagem.subtitle}
         text={postagem.text}
@@ -49,9 +45,7 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
     first_publication_date: posts.first_publication_date,
     id: posts.id,
     imageAlt: posts.data.image.alt,
-    imageHeight: posts.data.image.dimensions.height,
     imageUrl: posts.data.image.url,
-    imageWidth: posts.data.image.dimensions.width,
     last_publication_date: posts.last_publication_date,
     subtitle: posts.data.subtitle,
     text: posts.data.text,

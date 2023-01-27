@@ -2,7 +2,7 @@ import { useState } from "react";
 import AgendaCard from "./AgendaCard";
 import { StyledAgenda } from "./styles";
 
-interface IAgenda {
+export interface IAgenda {
   date: string;
   imageAlt: string;
   imageUrl: string;
@@ -13,14 +13,20 @@ interface IAgenda {
   title: string;
   uid: string;
   subtitulo: string;
+  descricao: string;
 }
 
-interface IAgendaMainProps {
+export interface IAgendaMainProps {
   agenda: IAgenda[];
 }
 
 export default function AgendaMain({ agenda }: IAgendaMainProps) {
   const [Categoria, setCategoria] = useState<string>("Todos");
+
+  const agendaOrdenada = [...agenda].sort((a, b) => {
+    const timestamp = (date: string) => new Date(date).getTime();
+    return timestamp(b.date) - timestamp(a.date);
+  });
 
   return (
     <StyledAgenda>
@@ -78,7 +84,7 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
         </button>
       </div>
       <div id="container-cards-agenda">
-        {agenda
+        {agendaOrdenada
           .filter((item) => {
             if (Categoria === "Todos") {
               return true;
@@ -91,12 +97,12 @@ export default function AgendaMain({ agenda }: IAgendaMainProps) {
               key={`agenda-card-${index}`}
               subtitulo={item.subtitulo}
               uid={item.uid}
-              imageUrl={item.miniaturaUrl ? item.miniaturaUrl : item.imageUrl}
-              imageAlt={item.miniaturaUrl ? item.miniaturaAlt : item.imageAlt}
+              imageUrl={item.miniaturaUrl ? item.miniaturaUrl : "/"}
+              imageAlt={item.miniaturaUrl ? item.miniaturaAlt : "/"}
               title={item.title}
               date={item.date}
               local={item.local}
-              tipo={item.tipo}
+              tipo={item.tipo ? item.tipo : "/"}
             />
           ))}
       </div>

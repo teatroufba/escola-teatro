@@ -87,8 +87,8 @@ const Container = styled.div`
             justify-content: space-between;
 
             button {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 background-color: #9a1a4b;
                 border: none;
                 border-radius: 5px;
@@ -97,6 +97,12 @@ const Container = styled.div`
                 &.desactive {
                     background-color: #958fa0;
                 }
+            }
+            @media (max-width: 768px) {
+                position: relative;
+                width: 100%;
+                padding: 0 .5rem;
+                justify-content: space-between;
             }
         }
     }
@@ -115,7 +121,7 @@ const Container = styled.div`
             font-family: 'Merriweather';
             font-style: normal;
             display: inline-block;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 3rem;
             color: #2D2B78;
             border-bottom: 5px solid #2D2B78;
@@ -180,12 +186,13 @@ const Container = styled.div`
                     cursor: pointer;
                     justify-content: space-between;
                     border: 2px solid rgba(154, 26, 75, 0.6);
-                    padding: 1rem;
+                    padding: .9rem;
 
 
                     p {
-                        width: 103px;
-                        font-size: 1rem;
+                        max-width: 165px;
+                        min-width: 103px;
+                        font-size: .9rem;
                         font-family: 'Arial';
                         text-decoration: none;
                         color: #2D2B78;
@@ -231,6 +238,7 @@ type ImageContainerProps = {
 function ImageContainer(props: ImageContainerProps) {
     const { style, imageOrientation, imageUrl, title, description, link, linkHref, linkButton, button, cards } = props;
     const [urlIndex, setUrlIndex] = useState(0)
+    console.log(linkButton)
     return (
       <Container className={imageOrientation + " " + style}>
         <div className="carousel" id={title}>
@@ -283,7 +291,7 @@ function ImageContainer(props: ImageContainerProps) {
             <div className="text">
                 <h4>{description}</h4>
                 {link ? <Link href={!linkHref ? '/' : linkHref}><a><p>{link}</p></a></Link> : ''}
-                {button ? <div><Button className="button">Saiba mais</Button></div> : ''}
+                {button ? <a href={linkButton}><Button className="button">Saiba mais</Button></a> : ''}
                 {cards ? <div className="cards">{cards.map((item,index) =>
                     <Link href={item.link? item.link : "/"}>
                         <div className="card" key={index}>

@@ -1,4 +1,5 @@
 import ReadMore from "@/components/basics/read-more/ReadMore";
+import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -10,7 +11,7 @@ interface IFormaIngresso {
 	titulo: string;
 }
 interface IConteudo {
-	conteudo: string;
+	conteudo: [];
 	titulo: string;
 }
 interface FormasDeIngressoProps {
@@ -60,7 +61,7 @@ export default function FormasDeIngresso({
 			<div className="entry-content">
 				<div className="left-column">
 					{formas.map((forma, index) => (
-						<div className="entry-form" key={`forma${index}`}>
+						<div className='entry-form' key={`forma${index}`} style={currentPage == index+1 ? {} : {opacity: 0.3}}>
 							<button onClick={() => setCurrentPage(index + 1)}>
 								<h3>{forma.titulo ? forma.titulo : "Título não informado"}</h3>
 							</button>
@@ -74,9 +75,14 @@ export default function FormasDeIngresso({
 							<div className="entry-form-info-content">
 								<h3>{forma.titulo}</h3>
 								<div className="text-content">
-									<p id="entry-form-text-content" className="hidden-text">
-										{forma.conteudo}
-									</p>
+									<div id="entry-form-text-content">
+											<PrismicRichText
+												field={forma.conteudo}
+												components={{
+												paragraph: ({ children }) => <p>{children}</p>,
+												}}
+											/>
+									</div>
 									<ReadMore
 										textID="entry-form-text-content"
 										mainContainerID="formas-de-ingresso"

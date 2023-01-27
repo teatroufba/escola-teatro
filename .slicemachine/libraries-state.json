@@ -1,1235 +1,1301 @@
 {
-  "slices": {
-    "components": {
-      "conteudo_apresentacao": {
-        "library": "slices",
-        "id": "conteudo_apresentacao",
-        "name": "ConteudoApresentacao",
-        "description": "ConteudoApresentacao",
-        "model": {
-          "id": "conteudo_apresentacao",
-          "type": "SharedSlice",
-          "name": "ConteudoApresentacao",
-          "description": "ConteudoApresentacao",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "ConteudoApresentacao",
-              "primary": {
-                "image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
+    "slices": {
+        "components": {
+            "conteudo_apresentacao": {
+                "library": "slices",
+                "id": "conteudo_apresentacao",
+                "name": "ConteudoApresentacao",
+                "description": "ConteudoApresentacao",
+                "model": {
+                    "id": "conteudo_apresentacao",
+                    "type": "SharedSlice",
+                    "name": "ConteudoApresentacao",
+                    "description": "ConteudoApresentacao",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "ConteudoApresentacao",
+                        "primary": {
+                            "image": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Imagem",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            },
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Titulo",
+                                    "placeholder": ""
+                                }
+                            },
+                            "conteudo": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "label": "Conteudo",
+                                    "placeholder": "",
+                                    "allowTargetBlank": true,
+                                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
                 },
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Titulo",
-                    "placeholder": ""
-                  }
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "image": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+                            },
+                            "titulo": "repurpose next-generation initiatives",
+                            "conteudo": [{
+                                "type": "paragraph",
+                                "text": "Quis ullamco mollit laborum id exercitation do ad consectetur qui voluptate. Anim qui deserunt dolor.",
+                                "spans": []
+                            }]
+                        }
+                    }
                 },
-                "conteudo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Conteúdo",
-                    "placeholder": ""
-                  }
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\ConteudoApresentacao\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
                 }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
-              },
-              "titulo": "planet",
-              "conteudo": "would"
             },
-            "slice_type": "conteudo_apresentacao"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\ConteudoApresentacao\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
+            "conteudo_forma_ingresso": {
+                "library": "slices",
+                "id": "conteudo_forma_ingresso",
+                "name": "ConteudoFormaIngresso",
+                "description": "ConteudoFormaIngresso",
+                "model": {
+                    "id": "conteudo_forma_ingresso",
+                    "type": "SharedSlice",
+                    "name": "ConteudoFormaIngresso",
+                    "description": "ConteudoFormaIngresso",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "ConteudoFormaIngresso",
+                        "primary": {
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Título",
+                                    "placeholder": ""
+                                }
+                            },
+                            "conteudo": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "label": "Conteudo",
+                                    "placeholder": "",
+                                    "allowTargetBlank": true,
+                                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "titulo": "transform interactive deliverables",
+                            "conteudo": [{
+                                "type": "paragraph",
+                                "text": "Labore reprehenderit voluptate cillum adipisicing occaecat nostrud esse consectetur officia eu magna incididunt dolor nostrud magna. Et mollit consectetur ullamco non laboris voluptate in et nisi laboris laborum sint.",
+                                "spans": []
+                            }]
+                        }
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\ConteudoFormaIngresso\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "curso": {
+                "library": "slices",
+                "id": "curso",
+                "name": "Curso",
+                "description": "Curso",
+                "model": {
+                    "id": "curso",
+                    "type": "SharedSlice",
+                    "name": "Curso",
+                    "description": "Curso",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "Curso",
+                        "primary": {
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Título",
+                                    "placeholder": "Título"
+                                }
+                            },
+                            "duracao": {
+                                "type": "Number",
+                                "config": {
+                                    "label": "Duração",
+                                    "placeholder": "4"
+                                }
+                            },
+                            "descricao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Descrição",
+                                    "placeholder": ""
+                                }
+                            },
+                            "ppp": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Projeto político Pedagógico",
+                                    "placeholder": ""
+                                }
+                            },
+                            "matrizCurricular": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Matriz Curricular",
+                                    "placeholder": ""
+                                }
+                            },
+                            "ementario": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Ementário",
+                                    "placeholder": ""
+                                }
+                            },
+                            "guiaEstudantil": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Guia Estudantil",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "titulo": "music",
+                            "duracao": 7,
+                            "descricao": "furniture",
+                            "ppp": "parent",
+                            "matrizCurricular": "voyage",
+                            "ementario": "whale",
+                            "guiaEstudantil": "lower"
+                        },
+                        "slice_type": "curso"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Curso\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "docente": {
+                "library": "slices",
+                "id": "docente",
+                "name": "Docente",
+                "description": "Docente",
+                "model": {
+                    "id": "docente",
+                    "type": "SharedSlice",
+                    "name": "Docente",
+                    "description": "Docente",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "Docente",
+                        "primary": {
+                            "image": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Imagem",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            },
+                            "nome": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Nome",
+                                    "placeholder": ""
+                                }
+                            },
+                            "email": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Email",
+                                    "placeholder": ""
+                                }
+                            },
+                            "interesses": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Áreas de Interesse",
+                                    "placeholder": ""
+                                }
+                            },
+                            "link": {
+                                "type": "Link",
+                                "config": {
+                                    "label": "Link para o Currículo Lattes",
+                                    "placeholder": "",
+                                    "select": null
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "image": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+                            },
+                            "nome": "doll",
+                            "email": "ask",
+                            "interesses": "enemy",
+                            "link": {
+                                "link_type": "Web",
+                                "url": "http://twitter.com"
+                            }
+                        },
+                        "slice_type": "docente"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Docente\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "grupo_pesquisa": {
+                "library": "slices",
+                "id": "grupo_pesquisa",
+                "name": "GrupoPesquisa",
+                "description": "GrupoPesquisa",
+                "model": {
+                    "id": "grupo_pesquisa",
+                    "type": "SharedSlice",
+                    "name": "GrupoPesquisa",
+                    "description": "GrupoPesquisa",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "GrupoPesquisa",
+                        "primary": {
+                            "nome": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Nome",
+                                    "placeholder": ""
+                                }
+                            },
+                            "descricao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Descrição",
+                                    "placeholder": ""
+                                }
+                            },
+                            "lider": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Líder",
+                                    "placeholder": ""
+                                }
+                            },
+                            "email": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Email",
+                                    "placeholder": ""
+                                }
+                            },
+                            "telefone": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Telefone",
+                                    "placeholder": ""
+                                }
+                            },
+                            "website": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Website",
+                                    "placeholder": ""
+                                }
+                            },
+                            "websiteLink": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Website Link",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "nome": "obtain",
+                            "descricao": "mirror",
+                            "lider": "tired",
+                            "email": "hide",
+                            "telefone": "shade",
+                            "website": "speed",
+                            "websiteLink": "roar"
+                        },
+                        "slice_type": "grupo_pesquisa"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\GrupoPesquisa\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "links_forma_ingresso": {
+                "library": "slices",
+                "id": "links_forma_ingresso",
+                "name": "LinksFormaIngresso",
+                "description": "LinksFormaIngresso",
+                "model": {
+                    "id": "links_forma_ingresso",
+                    "type": "SharedSlice",
+                    "name": "LinksFormaIngresso",
+                    "description": "LinksFormaIngresso",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "LinksFormaIngresso",
+                        "primary": {
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Titulo",
+                                    "placeholder": ""
+                                }
+                            },
+                            "link": {
+                                "type": "Link",
+                                "config": {
+                                    "label": "Link",
+                                    "placeholder": "",
+                                    "select": null
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "titulo": "tin",
+                            "link": {
+                                "link_type": "Web",
+                                "url": "http://google.com"
+                            }
+                        },
+                        "slice_type": "links_forma_ingresso"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\LinksFormaIngresso\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "livro": {
+                "library": "slices",
+                "id": "livro",
+                "name": "Livro",
+                "description": "Livro",
+                "model": {
+                    "id": "livro",
+                    "type": "SharedSlice",
+                    "name": "Livro",
+                    "description": "Livro",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "Livro",
+                        "primary": {
+                            "capa": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Capa",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            },
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Título",
+                                    "placeholder": ""
+                                }
+                            },
+                            "descricao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Descricao",
+                                    "placeholder": ""
+                                }
+                            },
+                            "link": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Link",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "capa": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+                            },
+                            "titulo": "press",
+                            "descricao": "applied",
+                            "link": "younger"
+                        },
+                        "slice_type": "livro"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {}
+            },
+            "membro": {
+                "library": "slices",
+                "id": "membro",
+                "name": "Membro",
+                "description": "Membro",
+                "model": {
+                    "id": "membro",
+                    "type": "SharedSlice",
+                    "name": "Membro",
+                    "description": "Membro",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "Membro",
+                        "primary": {
+                            "nome": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Nome",
+                                    "placeholder": ""
+                                }
+                            },
+                            "funcao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Função",
+                                    "placeholder": ""
+                                }
+                            },
+                            "email": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Email",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "nome": "camp",
+                            "funcao": "face",
+                            "email": "somebody"
+                        },
+                        "slice_type": "membro"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Membro\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "post": {
+                "library": "slices",
+                "id": "post",
+                "name": "Post",
+                "description": "Post",
+                "model": {
+                    "id": "post",
+                    "type": "SharedSlice",
+                    "name": "Post",
+                    "description": "Post",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "Post",
+                        "primary": {
+                            "title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "single": "heading1",
+                                    "label": "Title",
+                                    "placeholder": "This is where it all begins..."
+                                }
+                            },
+                            "description": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "single": "paragraph",
+                                    "label": "Description",
+                                    "placeholder": "A nice description of your feature"
+                                }
+                            },
+                            "Image": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Image",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "title": [{
+                                "type": "heading1",
+                                "text": "Particular",
+                                "spans": []
+                            }],
+                            "description": [{
+                                "type": "paragraph",
+                                "text": "Consequat cillum nulla Lorem deserunt et est laborum aliquip cillum Lorem sint enim eu id aute. Labore est esse duis voluptate est duis ex consectetur do ad veniam. Consectetur aliqua et commodo amet irure commodo dolor aute officia ex.",
+                                "spans": []
+                            }],
+                            "Image": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
+                            }
+                        },
+                        "slice_type": "post"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {}
+            },
+            "post_espacos": {
+                "library": "slices",
+                "id": "post_espacos",
+                "name": "PostEspacos",
+                "description": "PostEspacos",
+                "model": {
+                    "id": "post_espacos",
+                    "type": "SharedSlice",
+                    "name": "PostEspacos",
+                    "description": "PostEspacos",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "PostEspacos",
+                        "primary": {
+                            "imagem": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Imagem",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            },
+                            "imagem2": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Segunda Imagem",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            },
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Título",
+                                    "placeholder": ""
+                                }
+                            },
+                            "descricao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Descrição",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {
+                            "nomeLink": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Nome do link",
+                                    "placeholder": ""
+                                }
+                            },
+                            "link": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Link",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [{
+                            "nomeLink": "earth",
+                            "link": "sentence"
+                        }],
+                        "primary": {
+                            "imagem": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+                            },
+                            "imagem2": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+                            },
+                            "titulo": "task",
+                            "descricao": "number"
+                        },
+                        "slice_type": "post_espacos"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "post_extensao": {
+                "library": "slices",
+                "id": "post_extensao",
+                "name": "PostExtensao",
+                "description": "PostExtensao",
+                "model": {
+                    "id": "post_extensao",
+                    "type": "SharedSlice",
+                    "name": "PostExtensao",
+                    "description": "PostExtensao",
+                    "variations": [{
+                            "id": "default",
+                            "name": "Default",
+                            "docURL": "...",
+                            "version": "sktwi1xtmkfgx8626",
+                            "description": "PostExtensao",
+                            "primary": {
+                                "titulo": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Titulo",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "descricao": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Descrição",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "Link": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Link",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "uid": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Uid",
+                                        "placeholder": ""
+                                    }
+                                }
+                            },
+                            "items": {
+                                "imagem": {
+                                    "type": "Image",
+                                    "config": {
+                                        "label": "Imagem",
+                                        "constraint": {},
+                                        "thumbnails": []
+                                    }
+                                }
+                            },
+                            "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                        },
+                        {
+                            "id": "postExtensaoComCatalogo",
+                            "name": "Post Extensao - Com Catalogo",
+                            "docURL": "...",
+                            "version": "sktwi1xtmkfgx8626",
+                            "description": "PostExtensao",
+                            "primary": {
+                                "titulo": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Titulo",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "descricao": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Descrição",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "linkCatalogo": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Link Catalogo",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "link": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Link",
+                                        "placeholder": ""
+                                    }
+                                },
+                                "uid": {
+                                    "type": "Text",
+                                    "config": {
+                                        "label": "Uid",
+                                        "placeholder": ""
+                                    }
+                                }
+                            },
+                            "items": {
+                                "imagem": {
+                                    "type": "Image",
+                                    "config": {
+                                        "label": "Imagem",
+                                        "constraint": {},
+                                        "thumbnails": []
+                                    }
+                                }
+                            },
+                            "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                        }
+                    ]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [{
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": null,
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f?w=900&h=500&fit=crop"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
+                                }
+                            }
+                        ],
+                        "primary": {
+                            "titulo": "syndicate plug-and-play communities",
+                            "descricao": "deliver B2C users",
+                            "Link": "target back-end web-readiness",
+                            "uid": "visualize strategic experiences"
+                        }
+                    },
+                    "postExtensaoComCatalogo": {
+                        "variation": "postExtensaoComCatalogo",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [{
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": null,
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+                                }
+                            },
+                            {
+                                "imagem": {
+                                    "dimensions": {
+                                        "width": 900,
+                                        "height": 500
+                                    },
+                                    "alt": "Placeholder image",
+                                    "copyright": null,
+                                    "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+                                }
+                            }
+                        ],
+                        "primary": {
+                            "titulo": "redefine efficient methodologies",
+                            "descricao": "evolve B2B infrastructures",
+                            "linkCatalogo": "target one-to-one synergies",
+                            "link": "brand frictionless schemas",
+                            "uid": "expedite web-enabled deliverables"
+                        }
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    },
+                    "postExtensaoComCatalogo": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\postExtensaoComCatalogo\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "revista_ou_publicacao": {
+                "library": "slices",
+                "id": "revista_ou_publicacao",
+                "name": "RevistaOuPublicacao",
+                "description": "RevistaOuPublicacao",
+                "model": {
+                    "id": "revista_ou_publicacao",
+                    "type": "SharedSlice",
+                    "name": "RevistaOuPublicacao",
+                    "description": "RevistaOuPublicacao",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "RevistaOuPublicacao",
+                        "primary": {
+                            "image": {
+                                "type": "Image",
+                                "config": {
+                                    "label": "Imagem",
+                                    "constraint": {},
+                                    "thumbnails": []
+                                }
+                            },
+                            "titulo": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Título",
+                                    "placeholder": ""
+                                }
+                            },
+                            "descricao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Descrição",
+                                    "placeholder": ""
+                                }
+                            },
+                            "link": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Link",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {},
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [
+                            {}
+                        ],
+                        "primary": {
+                            "image": {
+                                "dimensions": {
+                                    "width": 900,
+                                    "height": 500
+                                },
+                                "alt": null,
+                                "copyright": null,
+                                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+                            },
+                            "titulo": "himself",
+                            "descricao": "flight",
+                            "link": "furniture"
+                        },
+                        "slice_type": "revista_ou_publicacao"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\RevistaOuPublicacao\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            },
+            "setores_instancias": {
+                "library": "slices",
+                "id": "setores_instancias",
+                "name": "SetoresInstancias",
+                "description": "SetoresInstancias",
+                "model": {
+                    "id": "setores_instancias",
+                    "type": "SharedSlice",
+                    "name": "SetoresInstancias",
+                    "description": "SetoresInstancias",
+                    "variations": [{
+                        "id": "default",
+                        "name": "Default",
+                        "docURL": "...",
+                        "version": "sktwi1xtmkfgx8626",
+                        "description": "SetoresInstancias",
+                        "primary": {
+                            "nome": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Nome",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "items": {
+                            "nome": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Nome do Membro",
+                                    "placeholder": ""
+                                }
+                            },
+                            "email": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Email do Membro",
+                                    "placeholder": ""
+                                }
+                            },
+                            "funcao": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Função do Membro",
+                                    "placeholder": ""
+                                }
+                            },
+                            "telefone": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Telefone do Membro",
+                                    "placeholder": ""
+                                }
+                            }
+                        },
+                        "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+                    }]
+                },
+                "mocks": {
+                    "default": {
+                        "variation": "default",
+                        "version": "sktwi1xtmkfgx8626",
+                        "items": [{
+                            "nome": "flag",
+                            "email": "acres",
+                            "funcao": "figure",
+                            "telefone": "courage"
+                        }],
+                        "primary": {
+                            "nome": "number"
+                        },
+                        "slice_type": "setores_instancias"
+                    }
+                },
+                "meta": {
+                    "fileName": "index",
+                    "extension": "js"
+                },
+                "screenshotPaths": {
+                    "default": {
+                        "path": "C:\\Users\\Artur\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\SetoresInstancias\\default\\preview.png",
+                        "width": 800,
+                        "height": 60
+                    }
+                }
+            }
         }
-      },
-      "conteudo_forma_ingresso": {
-        "library": "slices",
-        "id": "conteudo_forma_ingresso",
-        "name": "ConteudoFormaIngresso",
-        "description": "ConteudoFormaIngresso",
-        "model": {
-          "id": "conteudo_forma_ingresso",
-          "type": "SharedSlice",
-          "name": "ConteudoFormaIngresso",
-          "description": "ConteudoFormaIngresso",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "ConteudoFormaIngresso",
-              "primary": {
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Título",
-                    "placeholder": ""
-                  }
-                },
-                "conteudo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Conteúdo",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "titulo": "jet",
-              "conteudo": "notice"
-            },
-            "slice_type": "conteudo_forma_ingresso"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\ConteudoFormaIngresso\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "curso": {
-        "library": "slices",
-        "id": "curso",
-        "name": "Curso",
-        "description": "Curso",
-        "model": {
-          "id": "curso",
-          "type": "SharedSlice",
-          "name": "Curso",
-          "description": "Curso",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Curso",
-              "primary": {
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Título",
-                    "placeholder": "Título"
-                  }
-                },
-                "duracao": {
-                  "type": "Number",
-                  "config": {
-                    "label": "Duração",
-                    "placeholder": "4"
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descrição",
-                    "placeholder": ""
-                  }
-                },
-                "ppp": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Projeto político Pedagógico",
-                    "placeholder": ""
-                  }
-                },
-                "matrizCurricular": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Matriz Curricular",
-                    "placeholder": ""
-                  }
-                },
-                "ementario": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Ementário",
-                    "placeholder": ""
-                  }
-                },
-                "guiaEstudantil": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Guia Estudantil",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "titulo": "music",
-              "duracao": 7,
-              "descricao": "furniture",
-              "ppp": "parent",
-              "matrizCurricular": "voyage",
-              "ementario": "whale",
-              "guiaEstudantil": "lower"
-            },
-            "slice_type": "curso"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Curso\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "docente": {
-        "library": "slices",
-        "id": "docente",
-        "name": "Docente",
-        "description": "Docente",
-        "model": {
-          "id": "docente",
-          "type": "SharedSlice",
-          "name": "Docente",
-          "description": "Docente",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Docente",
-              "primary": {
-                "image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "nome": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Nome",
-                    "placeholder": ""
-                  }
-                },
-                "email": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Email",
-                    "placeholder": ""
-                  }
-                },
-                "interesses": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Áreas de Interesse",
-                    "placeholder": ""
-                  }
-                },
-                "link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Link para o Currículo Lattes",
-                    "placeholder": "",
-                    "select": null
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
-              },
-              "nome": "doll",
-              "email": "ask",
-              "interesses": "enemy",
-              "link": {
-                "link_type": "Web",
-                "url": "http://twitter.com"
-              }
-            },
-            "slice_type": "docente"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Docente\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "grupo_pesquisa": {
-        "library": "slices",
-        "id": "grupo_pesquisa",
-        "name": "GrupoPesquisa",
-        "description": "GrupoPesquisa",
-        "model": {
-          "id": "grupo_pesquisa",
-          "type": "SharedSlice",
-          "name": "GrupoPesquisa",
-          "description": "GrupoPesquisa",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "GrupoPesquisa",
-              "primary": {
-                "nome": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Nome",
-                    "placeholder": ""
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descrição",
-                    "placeholder": ""
-                  }
-                },
-                "lider": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Líder",
-                    "placeholder": ""
-                  }
-                },
-                "email": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Email",
-                    "placeholder": ""
-                  }
-                },
-                "telefone": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Telefone",
-                    "placeholder": ""
-                  }
-                },
-                "website": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Website",
-                    "placeholder": ""
-                  }
-                },
-                "websiteLink": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Website Link",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "nome": "obtain",
-              "descricao": "mirror",
-              "lider": "tired",
-              "email": "hide",
-              "telefone": "shade",
-              "website": "speed",
-              "websiteLink": "roar"
-            },
-            "slice_type": "grupo_pesquisa"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\GrupoPesquisa\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "links_forma_ingresso": {
-        "library": "slices",
-        "id": "links_forma_ingresso",
-        "name": "LinksFormaIngresso",
-        "description": "LinksFormaIngresso",
-        "model": {
-          "id": "links_forma_ingresso",
-          "type": "SharedSlice",
-          "name": "LinksFormaIngresso",
-          "description": "LinksFormaIngresso",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "LinksFormaIngresso",
-              "primary": {
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Titulo",
-                    "placeholder": ""
-                  }
-                },
-                "link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": "",
-                    "select": null
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "titulo": "tin",
-              "link": {
-                "link_type": "Web",
-                "url": "http://google.com"
-              }
-            },
-            "slice_type": "links_forma_ingresso"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\LinksFormaIngresso\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "livro": {
-        "library": "slices",
-        "id": "livro",
-        "name": "Livro",
-        "description": "Livro",
-        "model": {
-          "id": "livro",
-          "type": "SharedSlice",
-          "name": "Livro",
-          "description": "Livro",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Livro",
-              "primary": {
-                "capa": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Capa",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Título",
-                    "placeholder": ""
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descricao",
-                    "placeholder": ""
-                  }
-                },
-                "link": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "capa": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
-              },
-              "titulo": "press",
-              "descricao": "applied",
-              "link": "younger"
-            },
-            "slice_type": "livro"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
-      "membro": {
-        "library": "slices",
-        "id": "membro",
-        "name": "Membro",
-        "description": "Membro",
-        "model": {
-          "id": "membro",
-          "type": "SharedSlice",
-          "name": "Membro",
-          "description": "Membro",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Membro",
-              "primary": {
-                "nome": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Nome",
-                    "placeholder": ""
-                  }
-                },
-                "funcao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Função",
-                    "placeholder": ""
-                  }
-                },
-                "email": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Email",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "nome": "camp",
-              "funcao": "face",
-              "email": "somebody"
-            },
-            "slice_type": "membro"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\Membro\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "post": {
-        "library": "slices",
-        "id": "post",
-        "name": "Post",
-        "description": "Post",
-        "model": {
-          "id": "post",
-          "type": "SharedSlice",
-          "name": "Post",
-          "description": "Post",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Post",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                },
-                "Image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Particular",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Consequat cillum nulla Lorem deserunt et est laborum aliquip cillum Lorem sint enim eu id aute. Labore est esse duis voluptate est duis ex consectetur do ad veniam. Consectetur aliqua et commodo amet irure commodo dolor aute officia ex.",
-                  "spans": []
-                }
-              ],
-              "Image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
-              }
-            },
-            "slice_type": "post"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
-      "post_espacos": {
-        "library": "slices",
-        "id": "post_espacos",
-        "name": "PostEspacos",
-        "description": "PostEspacos",
-        "model": {
-          "id": "post_espacos",
-          "type": "SharedSlice",
-          "name": "PostEspacos",
-          "description": "PostEspacos",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "PostEspacos",
-              "primary": {
-                "imagem": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "imagem2": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Segunda Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Título",
-                    "placeholder": ""
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descrição",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {
-                "nomeLink": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Nome do link",
-                    "placeholder": ""
-                  }
-                },
-                "link": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "nomeLink": "earth",
-                "link": "sentence"
-              }
-            ],
-            "primary": {
-              "imagem": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
-              },
-              "imagem2": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
-              },
-              "titulo": "task",
-              "descricao": "number"
-            },
-            "slice_type": "post_espacos"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostEspacos\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "post_extensao": {
-        "library": "slices",
-        "id": "post_extensao",
-        "name": "PostExtensao",
-        "description": "PostExtensao",
-        "model": {
-          "id": "post_extensao",
-          "type": "SharedSlice",
-          "name": "PostExtensao",
-          "description": "PostExtensao",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "PostExtensao",
-              "primary": {
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Titulo",
-                    "placeholder": ""
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descrição",
-                    "placeholder": ""
-                  }
-                },
-                "Link": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {
-                "imagem": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            },
-            {
-              "id": "postExtensaoComCatalogo",
-              "name": "Post Extensao - Com Catalogo",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "PostExtensao",
-              "primary": {
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Titulo",
-                    "placeholder": ""
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descrição",
-                    "placeholder": ""
-                  }
-                },
-                "linkCatalogo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Link Catalogo",
-                    "placeholder": ""
-                  }
-                },
-                "link": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {
-                "imagem": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": null,
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
-                }
-              }
-            ],
-            "primary": {
-              "titulo": "simple",
-              "descricao": "its",
-              "Link": "cake"
-            },
-            "slice_type": "post_extensao"
-          },
-          "postExtensaoComCatalogo": {
-            "variation": "postExtensaoComCatalogo",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": null,
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
-                }
-              }
-            ],
-            "primary": {
-              "titulo": "air",
-              "descricao": "elephant",
-              "linkCatalogo": "rock",
-              "link": "verb"
-            },
-            "slice_type": "post_extensao"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          },
-          "postExtensaoComCatalogo": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\PostExtensao\\postExtensaoComCatalogo\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "revista_ou_publicacao": {
-        "library": "slices",
-        "id": "revista_ou_publicacao",
-        "name": "RevistaOuPublicacao",
-        "description": "RevistaOuPublicacao",
-        "model": {
-          "id": "revista_ou_publicacao",
-          "type": "SharedSlice",
-          "name": "RevistaOuPublicacao",
-          "description": "RevistaOuPublicacao",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "RevistaOuPublicacao",
-              "primary": {
-                "image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Imagem",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "titulo": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Título",
-                    "placeholder": ""
-                  }
-                },
-                "descricao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Descrição",
-                    "placeholder": ""
-                  }
-                },
-                "link": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Link",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
-              },
-              "titulo": "himself",
-              "descricao": "flight",
-              "link": "furniture"
-            },
-            "slice_type": "revista_ou_publicacao"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\RevistaOuPublicacao\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      },
-      "setores_instancias": {
-        "library": "slices",
-        "id": "setores_instancias",
-        "name": "SetoresInstancias",
-        "description": "SetoresInstancias",
-        "model": {
-          "id": "setores_instancias",
-          "type": "SharedSlice",
-          "name": "SetoresInstancias",
-          "description": "SetoresInstancias",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "SetoresInstancias",
-              "primary": {
-                "nome": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Nome",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "items": {
-                "nome": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Nome do Membro",
-                    "placeholder": ""
-                  }
-                },
-                "email": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Email do Membro",
-                    "placeholder": ""
-                  }
-                },
-                "funcao": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Função do Membro",
-                    "placeholder": ""
-                  }
-                },
-                "telefone": {
-                  "type": "Text",
-                  "config": {
-                    "label": "Telefone do Membro",
-                    "placeholder": ""
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "nome": "flag",
-                "email": "acres",
-                "funcao": "figure",
-                "telefone": "courage"
-              }
-            ],
-            "primary": {
-              "nome": "number"
-            },
-            "slice_type": "setores_instancias"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {
-          "default": {
-            "path": "C:\\Users\\Edyo\\Desktop\\InfoJr\\escola-teatro\\.slicemachine\\assets\\slices\\SetoresInstancias\\default\\preview.png",
-            "width": 800,
-            "height": 60
-          }
-        }
-      }
     }
-  }
 }

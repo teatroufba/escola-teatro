@@ -20,9 +20,12 @@ const CardStyle = styled.div`
   gap: 10px;
 
   background-color: #ffffff;
+  transform: scale(0.98);
+  transition: .5s;
 
   &:hover {
-    background: #24233a;
+    transform: scale(1.02);
+    transition:transform 0.25s ease-in-out;
     .container-baixo {
       .title{
       color: #9a1a4b;
@@ -80,24 +83,50 @@ const CardStyle = styled.div`
     font-family: 'Arial';
     background-color: #ffffff;
 
-
+    .divTitle{
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      max-width: 98%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .title {
       font-family: 'Merriweather', serif;
       font-weight: 400;
       color: #282b62;
       line-height: 120%;
-      font-size: 18px;
-      height: 100px;
-      overflow-y: scroll;
+      font-size: 16px;
+      text-overflow: ellipsis;
       scrollbar-width: none;
     }
 
     .title::-webkit-scrollbar {
       display: none;
     }
+    .divSubtitle{
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      max-width: 98%;
+      max-height: 3rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .subtitle{
+      font-size: 14px;
+    }
 
     .container-title  {
       height: 150px;
+    }
+    .dataLocation{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .3rem;
     }
 
     div {
@@ -124,7 +153,6 @@ type CardProps = {
 }
 
 function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}: CardProps) {
-  
   const meses = [
     'JAN',
     'FEV',
@@ -153,7 +181,10 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
 
     const data = new Date(date)
     let dia = data.getDate().toString()
-    const mes = data.getMonth()
+    let mes = data.getMonth()
+    if(data.getMonth() == 0){
+      mes = 1
+    }
     const ano = data.getFullYear()
     let mesNumero = (mes + 1).toString()
 
@@ -172,7 +203,7 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
       <Link href={`/agenda/${uid}`} passHref>
         <div className="card">
             <div className="container-img"> 
-                <Image src={imageUrl} alt={imageAlt}  layout="fill" />
+                <Image src={imageUrl} alt={imageAlt} layout="fill" />
               
               {data ? <p className='img-date'>
                     {dia}<br />
@@ -182,15 +213,24 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
 
             </div>
             <div className="container-baixo">
-                <h4 className='title'>{title}</h4>
-                {data ? <div className="container-data">
-                    <Image className="img-icon" src='/calendar.svg' alt="" width={24} height={24} />
-                    <p className='baixo-data'>{`${dia}/${mesNumero}/${ano}`}</p>
-                </div> : ''}
-                {local ? <div className="container-location">
-                    <Image className="img-icon" src='/location-azul.svg' alt="" width={24} height={24} />
-                    <p className='baixo-local'>{local}</p>
-                </div> : ''}
+                <div className='divTitle'>
+                  <h4 className='title'>{title}</h4>
+                </div>
+                <div className='divSubtitle'>
+                  <p className='subtitle'>{subtitle}</p>
+                </div>
+                <div className='dataLocation'>
+                  {data ? <div className="container-data">
+                      <Image className="img-icon" src='/calendar.svg' alt="" width={24} height={24} />
+                      <p className='baixo-data'>{`${dia}/${mesNumero}/${ano}`}</p>
+                  </div> : ''}
+                  <div>
+                  </div>
+                  {local ? <div className="container-location">
+                      <Image className="img-icon" src='/location-azul.svg' alt="" width={24} height={24} />
+                      <p className='baixo-local'>{local}</p>
+                  </div> : ''}
+                </div>
                 
             
                 

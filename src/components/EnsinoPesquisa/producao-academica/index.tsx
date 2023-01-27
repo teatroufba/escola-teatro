@@ -8,7 +8,7 @@ import CarouselRevistaLivro from "@/components/EnsinoPesquisa/carousel-revista-l
 const Container = styled.div`
 	width: 100vw;
 	text-align: center;
-	padding: 130px 0 200px 0;
+	padding: 0px 0 50px 0;
 	background-color: white;
 
 	@media (max-width: 1024px) {

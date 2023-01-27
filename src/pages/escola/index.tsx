@@ -3,7 +3,6 @@ import BannerApresentacao from "@/components/Escola/banner-apresentacao";
 import ComoChegar from "@/components/Escola/como-chegar/ComoChegar";
 import Docentes from "@/components/Escola/corpo-docente/Docentes";
 import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
-import FormasDeIngresso from "@/components/Escola/formas-de-ingresso/Ingresso";
 import SetoresInstancias from "@/components/Escola/setores-e-instancias/Setores";
 import { maxChar } from "@/utils/maxChar";
 import undefinedCheck from "@/utils/undefinedCheck";
@@ -35,18 +34,9 @@ interface ISetor {
 	membros: IMembro[];
 	nome: string;
 }
-interface IFormaIngresso {
-	link: string;
-	titulo: string;
-}
-
-interface IConteudo {
-	conteudo: string;
-	titulo: string;
-}
 
 interface IApresentacaoItem {
-	conteudo: string;
+	conteudo: [];
 	imageAlt: string;
 	imageUrl: string;
 	titulo: string;
@@ -57,8 +47,6 @@ interface IEscolaProps {
 	email: string;
 	telefone: string;
 	apresentacao: IApresentacaoItem[];
-	ingressoConteudo: IConteudo[];
-	ingressoLinks: IFormaIngresso[];
 	setores: ISetor[];
 	docente: IDocente[];
 	corpoTecnico: ICorpoTecnico[];
@@ -70,10 +58,6 @@ export default function Page({ escolaProps }: { escolaProps: IEscolaProps }) {
 			<div>
 				<BannerApresentacao conteudos={escolaProps.apresentacao} />
 				{/* <Apresentacao conteudos={escolaProps.apresentacao} /> */}
-				<FormasDeIngresso
-					conteudos={escolaProps.ingressoConteudo}
-					formas={escolaProps.ingressoLinks}
-				/>
 				<SetoresInstancias setores={escolaProps.setores} />
 				<Docentes docentes={escolaProps.docente} />
 				<CorpoTecnico corpoTecnico={escolaProps.corpoTecnico} />
@@ -104,31 +88,6 @@ export async function getStaticProps({
 
 	const apresentacaoChecked = undefinedCheck(apresentacao);
 
-	const ingressoLinksAuxiliar: any[] = [];
-	const ingressoConteudo = escola.data.slices1
-		.filter((item: any) => {
-			if (item.slice_type !== "conteudo_forma_ingresso") {
-				ingressoLinksAuxiliar.push(item);
-				return false;
-			}
-
-			return true;
-		})
-		.map((item: any) => ({
-			conteudo: item.primary.conteudo,
-			titulo: item.primary.titulo,
-		}));
-
-	const ingressoLinksAuxiliarChecked = undefinedCheck(ingressoLinksAuxiliar);
-	const ingressoConteudoChecked = undefinedCheck(ingressoConteudo);
-
-	const ingressoLinks = ingressoLinksAuxiliar.map((item: any) => ({
-		link: item.primary.link.url,
-		titulo: item.primary.titulo,
-	}));
-
-	const ingressoLinksChecked = undefinedCheck(ingressoLinks);
-
 	const setores = escola.data.slices2.map((item: any) => ({
 		membros: item.items.map((item2: any) => ({
 			email: item2.email,
@@ -143,10 +102,10 @@ export async function getStaticProps({
 
 	const docente = escola.data.slices3.map((item: any) => ({
 		imagemAlt: item.primary.image.alt,
-		email: item.primary.email ? maxChar(item.primary.email, 20) : "",
+		email: item.primary.email,
 		imagemUrl: item.primary.image.url,
 		interesses: item.primary.interesses
-			? maxChar(item.primary.interesses, 30)
+			? maxChar(item.primary.interesses, 150)
 			: "",
 		link: item.primary.link.url,
 		nome: item.primary.nome,
@@ -173,8 +132,6 @@ export async function getStaticProps({
 			? escola.data.telefone
 			: "Telefone não informado",
 		apresentacao: apresentacaoChecked,
-		ingressoConteudo: ingressoConteudoChecked,
-		ingressoLinks: ingressoConteudoChecked,
 		setores: setoresChecked,
 		docente: docenteChecked,
 		corpoTecnico: corpoTecnicoChecked,

@@ -6,14 +6,14 @@ export const StyledEntryFormsContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #ffffff;
+	background-color: #f7f6f5;
 	margin-bottom: 80px;
 	margin-top: 80px;
 
 	h1 {
 		box-sizing: border-box;
 		width: fit-content;
-		font-weight: 400;
+		font-weight: 600;
 		font-size: 48px;
 		color: #282b62;
 		margin: 0 3rem 3rem 3rem;

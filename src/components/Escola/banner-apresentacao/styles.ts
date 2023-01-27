@@ -7,11 +7,11 @@ export const StyledBannerApresentacaoContainer = styled.div`
 	#presentation-section-title {
 		box-sizing: border-box;
 		width: fit-content;
-		font-weight: 400;
 		font-size: 48px;
 		color: #ffffff;
 		border-bottom: 5px solid #ffffff;
 		text-align: center;
+		font-weight: 600;
 	}
 
 	.content-wrapper {

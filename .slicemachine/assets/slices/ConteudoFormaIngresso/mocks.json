@@ -1,14 +1,15 @@
-[
-  {
+[{
     "variation": "default",
     "version": "sktwi1xtmkfgx8626",
     "items": [
-      {}
+        {}
     ],
     "primary": {
-      "titulo": "jet",
-      "conteudo": "notice"
-    },
-    "slice_type": "conteudo_forma_ingresso"
-  }
-]
+        "titulo": "transform interactive deliverables",
+        "conteudo": [{
+            "type": "paragraph",
+            "text": "Labore reprehenderit voluptate cillum adipisicing occaecat nostrud esse consectetur officia eu magna incididunt dolor nostrud magna. Et mollit consectetur ullamco non laboris voluptate in et nisi laboris laborum sint.",
+            "spans": []
+        }]
+    }
+}]

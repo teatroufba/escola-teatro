@@ -17,10 +17,11 @@ export const StyledStaffCard = styled.div`
 
 export const StyledStaffDescriptionContainer = styled.div`
 	max-width: 100%;
-	max-height: 50%;
+	min-height: 55%;
+	max-height: 55%;
 	display: flex;
 	flex-direction: column;
-	gap: 12px;
+	justify-content: space-between;
 	padding: 15.5px 15px 15.5px 24px;
 
 	button {
@@ -36,7 +37,6 @@ export const StyledStaffDescriptionContainer = styled.div`
 	}
 
 	a {
-		max-width: 175px;
 		display: flex;
 		text-decoration: none;
 		align-items: center;
@@ -45,10 +45,12 @@ export const StyledStaffDescriptionContainer = styled.div`
 
 export const StyledStaffDescription = styled.div`
 	max-width: 100%;
+	height: 100%;
 
+	padding-bottom: 15px;
 	display: flex;
 	flex-direction: column;
-	gap: 8px;
+	gap: .5rem;
 	color: #2d2b78;
 
 	
@@ -56,7 +58,7 @@ export const StyledStaffDescription = styled.div`
 	h2 {
 		font-family: "Merriweather";
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 16px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -65,11 +67,18 @@ export const StyledStaffDescription = styled.div`
 	p {
 		font-family: "Merriweather";
 		font-weight: 400;
-		font-size: 14px;
+		font-size: 12px;
+		max-width: calc(100% - 21px);
 	}
 
 	.email {
 		font-weight: bold;
+	}
+
+	div {
+		display: flex;
+		gap: 3px;
+		align-items: flex-start;
 	}
 `;
 
@@ -84,7 +93,7 @@ export const StyledStaffContainer = styled.div`
 
 	h1 {
 		font-family: "Merriweather";
-		font-weight: 400;
+		font-weight: 600;
 		font-size: 48px;
 		color: #fff;
 		margin: 3rem;
@@ -187,13 +196,24 @@ export const StyledDocenteCardCarrossel = styled.div`
 	display: flex;
 	flex-direction: column;
 	font-family: "Merriweather";
-	max-width: 241.5px;
+	width: 30rem;
+	height: 30rem;
 	margin-bottom: 80px;
 
 	.image-container {
 		position: relative;
-		width: 241.5px;
+		width: 100%;
 		height: 140px;
+	}
+	.emailDivDocente{
+		display: flex;
+		gap: .3rem;
+	}
+	.headDivDocente{
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: .3rem;
 	}
 
 	.docente-description {
@@ -202,6 +222,8 @@ export const StyledDocenteCardCarrossel = styled.div`
 		background-color: #ffffff;
 		padding: 12px;
 		gap: 12px;
+		width: 18rem;
+		height: 17rem;
 	}
 
 	.docente-description h2 {
@@ -221,6 +243,10 @@ export const StyledDocenteCardCarrossel = styled.div`
 		color: #2d2b78;
 	}
 
+	.interestsDiv{
+		height:6.5rem;
+	}
+
 	
 
 	.docente-description button {
@@ -237,9 +263,8 @@ export const StyledDocenteCardCarrossel = styled.div`
 	}
 
 	.docente-info {
-		.email {
-			font-weight: bold;
-			color: red;
-		}
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
 	}
 `;

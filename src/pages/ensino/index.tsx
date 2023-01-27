@@ -6,7 +6,9 @@ import ProducaoAcademica from "@/components/EnsinoPesquisa/producao-academica";
 import styled from "styled-components";
 
 import Graduacao from "@/components/EnsinoPesquisa/graduacao";
+import undefinedCheck from "@/utils/undefinedCheck";
 import PosGraduacao from "@/components/EnsinoPesquisa/pos-graduacao";
+import FormasDeIngresso from "@/components/Escola/formas-de-ingresso/Ingresso";
 import { PreviewData } from "next";
 import { createClient } from "../../../prismic";
 
@@ -39,7 +41,15 @@ interface IGrupoPesquisa {
   telefone: string,
   website: string,
 }
+interface IFormaIngresso {
+	link: string;
+	titulo: string;
+}
 
+interface IConteudo {
+	conteudo: [];
+	titulo: string;
+}
 interface IRevista {
   descricao: string,
   titulo: string,
@@ -61,6 +71,8 @@ interface IEnsinoProps {
   gruposPesquisa: IGrupoPesquisa[],
   revistas: IRevista[],
   livros: IRevista[],
+  ingressoConteudo: IConteudo[],
+	ingressoLinks: IFormaIngresso[];
 }
 
 function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
@@ -74,11 +86,17 @@ function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
         <section>
           <PosGraduacao imageUrl={ensinoProps.imageUrl} imageAlt={ensinoProps.imageAlt} conteudo={ensinoProps.conteudo} link={ensinoProps.link} />
         </section>
-        <section className="grey">
-          <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
+        <section>
+          <FormasDeIngresso
+            conteudos={ensinoProps.ingressoConteudo}
+            formas={ensinoProps.ingressoLinks}
+          />
         </section>
         <section>
           <ProducaoAcademica monografias={ensinoProps.monografias} espetaculosFormatura={ensinoProps.espetaculosFormatura} dissertacoes={ensinoProps.dissertacoes} teses={ensinoProps.teses} livros={ensinoProps.livros} revistas={ensinoProps.revistas} />
+        </section>
+        <section className="grey">
+          <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
         </section>
       </Container>
     </>
@@ -94,6 +112,32 @@ export async function getStaticProps({
 }) {
 	const client = createClient({ previewData });
 	const ensino = await client.getSingle('ensino')
+  const escola = await client.getSingle("escola");
+
+  const ingressoLinksAuxiliar: any[] = [];
+	const ingressoConteudo = escola.data.slices1
+		.filter((item: any) => {
+			if (item.slice_type !== "conteudo_forma_ingresso") {
+				ingressoLinksAuxiliar.push(item);
+				return false;
+			}
+
+			return true;
+		})
+		.map((item: any) => ({
+			conteudo: item.primary.conteudo,
+			titulo: item.primary.titulo,
+		}));
+
+	const ingressoLinksAuxiliarChecked = undefinedCheck(ingressoLinksAuxiliar);
+	const ingressoConteudoChecked = undefinedCheck(ingressoConteudo);
+
+	const ingressoLinks = ingressoLinksAuxiliar.map((item: any) => ({
+		link: item.primary.link.url,
+		titulo: item.primary.titulo,
+	}));
+
+	const ingressoLinksChecked = undefinedCheck(ingressoLinks);
 
   const graduacao = ensino.data.slices.map((item: any) => ({
     titulo: item.primary.titulo,
@@ -152,6 +196,8 @@ export async function getStaticProps({
     gruposPesquisa: gruposPesquisa,
     revistas: revistas,
     livros: livros,
+    ingressoConteudo: ingressoConteudoChecked,
+		ingressoLinks: ingressoConteudoChecked,
 	}
   
 	return {

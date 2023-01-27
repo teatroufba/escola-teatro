@@ -66,11 +66,6 @@ function FooterDown() {
 							</Link>
 						</li>
 						<li>
-							<Link passHref href="/escola/#formas-de-ingresso">
-								<a href="/escola/#formas-de-ingresso">Formas de Ingresso</a>
-							</Link>
-						</li>
-						<li>
 							<Link passHref href="/escola/#setores-e-instancias">
 								<a href="/escola/#setores-e-instancias">Setores e Instâncias</a>
 							</Link>
@@ -106,13 +101,18 @@ function FooterDown() {
 							</Link>
 						</li>
 						<li>
-							<Link passHref href="/ensino/#grupos-de-pesquisa">
-								<a href="/ensino/#grupos-de-pesquisa">Grupos de Pesquisa</a>
+							<Link passHref href="/ensino/#formas-de-ingresso">
+								<a href="/ensino/#formas-de-ingresso">Formas de Ingresso</a>
 							</Link>
 						</li>
 						<li>
 							<Link passHref href="/ensino/#producao-academica">
 								<a href="/ensino/#producao-academica">Produção Acadêmica</a>
+							</Link>
+						</li>
+						<li>
+							<Link passHref href="/ensino/#grupos-de-pesquisa">
+								<a href="/ensino/#grupos-de-pesquisa">Grupos de Pesquisa</a>
 							</Link>
 						</li>
 					</ul>
