@@ -336,22 +336,28 @@ function Banner({ banner }: { banner: IBanner[] }) {
       setCarouselTotalScroll(
         Number(carousel.current.scrollWidth - carousel.current.clientWidth)
       )
+
+      carousel.current.addEventListener('scroll', mudaPagina)
     }
   }, [carouselScrollLeft])
+
+  const mudaPagina = () => {
+    if (carousel.current != null) {
+      setPagina(Math.round(carousel.current.scrollWidth / (carousel.current.scrollWidth - carousel.current.scrollLeft)))
+    }
+  }
 
   const scroll = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (carousel.current.scrollLeft < (banner.length - 1.1)*carousel.current.clientWidth) { // esse 1.1 eu nao sei porque funciona mas funciona. 1 nao funciona, 2 nao funciona
+      if (pagina < banner.length) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
         carousel.current.scrollLeft += carousel.current.clientWidth
-        setPagina(pagina + 1)
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
-        setPagina(1)
       }
       setTimeout(() => {
         setScrolling(false)
@@ -362,16 +368,14 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const scrollMobile = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (carousel.current.scrollLeft < (banner.length - 1.1)*carousel.current.clientWidth) {
+      if (pagina < banner.length) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
         carousel.current.scrollLeft += carousel.current.clientWidth
-        setPagina(pagina + 1)
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
-        setPagina(1)
       }
       setTimeout(() => {
         setScrolling(false)
