@@ -87,8 +87,8 @@ const Container = styled.div`
             justify-content: space-between;
 
             button {
-                width: 40px;
-                height: 40px;
+                width: 35px;
+                height: 35px;
                 background-color: #9a1a4b;
                 border: none;
                 border-radius: 5px;
@@ -97,6 +97,12 @@ const Container = styled.div`
                 &.desactive {
                     background-color: #958fa0;
                 }
+            }
+            @media (max-width: 768px) {
+                position: relative;
+                width: 100%;
+                padding: 0 .5rem;
+                justify-content: space-between;
             }
         }
     }
