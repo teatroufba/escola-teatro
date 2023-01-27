@@ -31,7 +31,7 @@ const BannerStyled = styled.div`
     scrollbar-width: none;
 
     .imagem-banner {
-      width: 100vw;
+      min-width: 100vw;
       height: 39.06vw;
       position: relative;
     }
@@ -249,7 +249,7 @@ const BannerStyled = styled.div`
         background-color: #282b62;
         display: flex;
         justify-content: center;
-        width: 484px;
+        max-width: 484px;
         height: 40px;
         color: white;
         padding: 0 15px;
@@ -330,30 +330,6 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
   const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
   const [pagina, setPagina] = useState(1)
-  const [carouselPagination, setCarouselPagination] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ])
-
-  const pagination = (page: number) => {
-    const carouselPaginationReplace = carouselPagination
-    const fromIndex = carouselPaginationReplace.indexOf(true)
-    const element = carouselPaginationReplace.splice(fromIndex, 1)[0]
-
-    carouselPaginationReplace.splice(fromIndex + page, 0, element)
-    setCarouselPagination(carouselPaginationReplace)
-  }
 
   useEffect(() => {
     if (carousel.current != null) {
@@ -366,16 +342,16 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const scroll = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (carousel.current.scrollLeft < 12*carousel.current.clientWidth) {
+      if (carousel.current.scrollLeft < (banner.length - 1.1)*carousel.current.clientWidth) { // esse 1.1 eu nao sei porque funciona mas funciona. 1 nao funciona, 2 nao funciona
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
         carousel.current.scrollLeft += carousel.current.clientWidth
-        pagination(1)
+        setPagina(pagina + 1)
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
-        pagination(-12)
+        setPagina(1)
       }
       setTimeout(() => {
         setScrolling(false)
@@ -386,16 +362,16 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const scrollMobile = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (carousel.current.scrollLeft < 6*carousel.current.clientWidth) {
+      if (carousel.current.scrollLeft < (banner.length - 1.1)*carousel.current.clientWidth) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
         )
         carousel.current.scrollLeft += carousel.current.clientWidth
-        pagination(1)
+        setPagina(pagina + 1)
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
-        pagination(-6)
+        setPagina(1)
       }
       setTimeout(() => {
         setScrolling(false)
@@ -414,7 +390,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              priority // pra ser carregado primeiro ja que é o banner
+              priority // é carregado primeiro ja que é o banner
             />
           </div>
         ))}
