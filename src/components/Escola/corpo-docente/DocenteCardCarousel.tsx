@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { StyledDocenteCardCarrossel } from "./styles";
+import { StyledDocenteCardCarrossel, StyledStaffDescription } from "./styles";
 
 interface ICard {
 	altImage: string;
@@ -33,13 +33,20 @@ export default function StaffCardCarousel({
 			</div>
 			<div className="docente-description">
 				<div className="docente-info">
-					<h2> {name ? name : "Nome não informado"} </h2>
-					<p> Email: {email ? email : "Email não informado"} </p>
-					<p>
-						{" "}
-						Áreas de Interesse:{" "}
-						{interests ? interests : "Interesses não informados"}{" "}
-					</p>
+					<StyledStaffDescription>
+						<h2> {name ? name : "Nome não informado"} </h2>
+						<div>
+							<Image src='/email.svg' width={18} height={18}></Image>
+							<p>{email ? email : "Email não informado"}</p>
+						</div>
+						<div>
+							<Image src='/head-icon.svg' width={18} height={18}></Image>
+							<p className="interestsDiv">
+								{" "}
+								{interests ? interests : "Interesses não informados"}{" "}
+							</p>
+						</div>
+					</StyledStaffDescription>
 				</div>
 				<Link passHref href={link ? link : ""}>
 					<a href={link ? link : ""} rel="noopener noreferrer" target="_blank">

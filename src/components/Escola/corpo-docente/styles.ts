@@ -196,13 +196,24 @@ export const StyledDocenteCardCarrossel = styled.div`
 	display: flex;
 	flex-direction: column;
 	font-family: "Merriweather";
-	max-width: 241.5px;
+	width: 30rem;
+	height: 30rem;
 	margin-bottom: 80px;
 
 	.image-container {
 		position: relative;
-		width: 241.5px;
+		width: 100%;
 		height: 140px;
+	}
+	.emailDivDocente{
+		display: flex;
+		gap: .3rem;
+	}
+	.headDivDocente{
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		gap: .3rem;
 	}
 
 	.docente-description {
@@ -211,6 +222,8 @@ export const StyledDocenteCardCarrossel = styled.div`
 		background-color: #ffffff;
 		padding: 12px;
 		gap: 12px;
+		width: 18rem;
+		height: 17rem;
 	}
 
 	.docente-description h2 {
@@ -230,6 +243,10 @@ export const StyledDocenteCardCarrossel = styled.div`
 		color: #2d2b78;
 	}
 
+	.interestsDiv{
+		height:6.5rem;
+	}
+
 	
 
 	.docente-description button {
@@ -246,9 +263,8 @@ export const StyledDocenteCardCarrossel = styled.div`
 	}
 
 	.docente-info {
-		.email {
-			font-weight: bold;
-			color: red;
-		}
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
 	}
 `;
