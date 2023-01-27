@@ -907,6 +907,13 @@
                     "label": "Link",
                     "placeholder": ""
                   }
+                },
+                "uid": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Uid",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -955,6 +962,13 @@
                     "label": "Link",
                     "placeholder": ""
                   }
+                },
+                "uid": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Uid",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -996,7 +1010,7 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
                 }
               },
               {
@@ -1007,41 +1021,7 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
-                }
-              }
-            ],
-            "primary": {
-              "titulo": "incentivize value-added vortals",
-              "descricao": "whiteboard vertical ROI",
-              "Link": "recontextualize leading-edge interfaces"
-            }
-          },
-          "postExtensaoComCatalogo": {
-            "variation": "postExtensaoComCatalogo",
-            "name": "Post Extensao - Com Catalogo",
-            "slice_type": "post_extensao",
-            "items": [
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
-                }
-              },
-              {
-                "imagem": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": "Placeholder image",
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
                 }
               },
               {
@@ -1063,15 +1043,73 @@
                   },
                   "alt": "Placeholder image",
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+                  "url": "https://images.unsplash.com/photo-1587905069134-008460d7a636?w=900&h=500&fit=crop"
                 }
               }
             ],
             "primary": {
-              "titulo": "transition frictionless paradigms",
-              "descricao": "benchmark distributed platforms",
-              "linkCatalogo": "reinvent out-of-the-box niches",
-              "link": "generate transparent platforms"
+              "titulo": "syndicate plug-and-play communities",
+              "descricao": "deliver B2C users",
+              "Link": "target back-end web-readiness",
+              "uid": "visualize strategic experiences"
+            }
+          },
+          "postExtensaoComCatalogo": {
+            "variation": "postExtensaoComCatalogo",
+            "name": "Post Extensao - Com Catalogo",
+            "slice_type": "post_extensao",
+            "items": [
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?w=900&h=500&fit=crop"
+                }
+              },
+              {
+                "imagem": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": "Placeholder image",
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+                }
+              }
+            ],
+            "primary": {
+              "titulo": "redefine efficient methodologies",
+              "descricao": "evolve B2B infrastructures",
+              "linkCatalogo": "target one-to-one synergies",
+              "link": "brand frictionless schemas",
+              "uid": "expedite web-enabled deliverables"
             }
           }
         },

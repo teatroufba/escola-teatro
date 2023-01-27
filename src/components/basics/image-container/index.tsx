@@ -238,6 +238,7 @@ type ImageContainerProps = {
 function ImageContainer(props: ImageContainerProps) {
     const { style, imageOrientation, imageUrl, title, description, link, linkHref, linkButton, button, cards } = props;
     const [urlIndex, setUrlIndex] = useState(0)
+    console.log(linkButton)
     return (
       <Container className={imageOrientation + " " + style}>
         <div className="carousel" id={title}>
@@ -290,7 +291,7 @@ function ImageContainer(props: ImageContainerProps) {
             <div className="text">
                 <h4>{description}</h4>
                 {link ? <Link href={!linkHref ? '/' : linkHref}><a><p>{link}</p></a></Link> : ''}
-                {button ? <div><Button className="button">Saiba mais</Button></div> : ''}
+                {button ? <a href={linkButton}><Button className="button">Saiba mais</Button></a> : ''}
                 {cards ? <div className="cards">{cards.map((item,index) =>
                     <Link href={item.link? item.link : "/"}>
                         <div className="card" key={index}>
