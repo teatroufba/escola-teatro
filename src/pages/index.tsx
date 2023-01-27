@@ -19,10 +19,10 @@ export async function getStaticProps({
   const itemsBanner = await client.getAllByType("post_do_banner");
 
   const banner = itemsBanner.map((value) => ({
-    imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
-    imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
+    imageUrl: value.data.image.url ? value.data.image.url : '/',
+    imageAlt: value.data.image.alt ? value.data.image.alt : '/',
     title: value.data.titulo,
-    descricao: value.data.subtitulo,
+    descricao: value.data.descricao,
     link: value.data.link,
   }));
 
