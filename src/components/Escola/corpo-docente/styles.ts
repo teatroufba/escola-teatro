@@ -17,8 +17,8 @@ export const StyledStaffCard = styled.div`
 
 export const StyledStaffDescriptionContainer = styled.div`
 	max-width: 100%;
-	min-height: 50%;
-	max-height: 50%;
+	min-height: 55%;
+	max-height: 55%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -50,7 +50,7 @@ export const StyledStaffDescription = styled.div`
 	padding-bottom: 15px;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	gap: .5rem;
 	color: #2d2b78;
 
 	
