@@ -28,7 +28,7 @@ export const StyledAgenda = styled.section`
         max-width: 100%;
         overflow: auto;
         padding: 0 1.5rem;
-        column-gap: 3rem;
+        column-gap: 1rem;
         margin-bottom: 1.5rem;
         -ms-overflow-style: none;
         scrollbar-width: none;

@@ -14,7 +14,13 @@ const Container = styled.div`
     font-family: 'Merriweather';
 
     @media screen and (max-width: 600px) {
-        min-width: 315px;
+        min-width: 250px;
+        .content{
+            padding: 1rem 1.25rem !important;
+            p{
+                font-size: 1rem !important;
+            }
+        }
     }
 
     .img {
