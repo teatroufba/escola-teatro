@@ -161,7 +161,7 @@ export const AgendaStyled = styled.div`
       @media screen and (max-width: 768px) {
         width: 100vw;
         padding: 0 25px;
-        overflow-y: scroll;
+        overflow-y: hidden;
         gap: 25px;
       }
     }

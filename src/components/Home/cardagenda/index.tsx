@@ -10,6 +10,7 @@ const CardStyle = styled.div`
   width: 450px;
   height: 450px;
   min-width: 235px;
+  max-width: 235px;
   min-height: 450px;
   
   border-radius: 5px;
@@ -27,6 +28,7 @@ const CardStyle = styled.div`
     transform: scale(1.02);
     transition:transform 0.25s ease-in-out;
     .container-baixo {
+      overflow: hidden;
       .title{
       color: #9a1a4b;
       }
