@@ -394,7 +394,6 @@ function Banner({ banner }: { banner: IBanner[] }) {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              priority // é carregado primeiro ja que é o banner
             />
           </div>
         ))}
