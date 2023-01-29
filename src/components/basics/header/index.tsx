@@ -7,6 +7,7 @@ import { HeaderContainer, HeaderInferior, HeaderSuperior } from "./styles";
 import SubmenuHeader from "../submenu-header";
 import StyledDropdown from "../menumobile";
 import MenuMobile from "../menu-mobile";
+import { useRouter } from 'next/router'
 import Link from "next/link";
 
 interface SubmenuOption {
@@ -19,6 +20,8 @@ interface SubmenuOptions {
 }
 
 function Header() {
+	const router = useRouter()
+	const url = router.pathname
 	const [options, setOptions] = useState<SubmenuOption[]>([]);
 	const [section, setSection] = useState<string>("");
 	const [isShowing, setIsShowing] = useState(false);
@@ -154,10 +157,10 @@ function Header() {
 
 			<HeaderInferior>
 				<ul className="menu">
-					<li>
+					<li className={url == "/" ? "selected_menu" : ''}>
 						<a href="/">Início</a>
 					</li>
-					<li>
+					<li className={url == "/escola" ? "selected_menu" : ''}>
 						<a
 							id="escola"
 							href="/escola"
@@ -167,7 +170,7 @@ function Header() {
 							A Escola
 						</a>
 					</li>
-					<li>
+					<li className={url == "/ensino" ? "selected_menu" : ''}>
 						<a
 							id="ensino"
 							href="/ensino"
@@ -177,7 +180,7 @@ function Header() {
 							Ensino e Pesquisa
 						</a>
 					</li>
-					<li>
+					<li className={url == "/extensao" ? "selected_menu" : ''}>
 						<a
 							id="extensao"
 							href="/extensao"
@@ -187,7 +190,7 @@ function Header() {
 							Extensão
 						</a>
 					</li>
-					<li>
+					<li className={url == "/espacos" ? "selected_menu" : ''}>
 						<a
 							id="espacos"
 							href="/espacos"
@@ -197,14 +200,14 @@ function Header() {
 							Espaços
 						</a>
 					</li>
-					<li>
+					<li className={url == "/agenda" ? "selected_menu" : ''}>
 						<a href="/agenda">Agenda</a>
 					</li>
 
-					<li>
+					<li className={url == "/noticias" ? "selected_menu" : ''}>
 						<a href="/noticias">Notícias</a>
 					</li>
-					<li>
+					<li className={url == "/galeria" ? "selected_menu" : ''}>
 						<a href="/galeria">Galeria Virtual</a>
 					</li>
 				</ul>

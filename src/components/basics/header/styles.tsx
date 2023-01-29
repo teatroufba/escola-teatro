@@ -181,6 +181,10 @@ export const HeaderInferior = styled.nav`
 		transition-duration: 0.3s;
 	}
 
+	.selected_menu{
+		background-color: #9a1a4b;
+	}
+
 	.menu li a:hover {
 		background-color: #9a1a4b;
 	}
