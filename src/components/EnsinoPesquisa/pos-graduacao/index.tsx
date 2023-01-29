@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Button from "../../basics/button";
 
 const Container = styled.div`
+	padding-top: 3rem;
 	color: #2d2b78;
 	background-color: white;
 	font-family: "Merriweather", serif;

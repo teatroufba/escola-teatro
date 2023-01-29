@@ -83,7 +83,7 @@ export default function FormasDeIngresso({
 												}}
 											/>
 									</div>
-									<ReadMore
+									{/* <ReadMore
 										textID="entry-form-text-content"
 										mainContainerID="formas-de-ingresso"
 										buttonID="entry-form-show-text-btn"
@@ -97,7 +97,7 @@ export default function FormasDeIngresso({
 										setIsShowingText={setIsShowingText}
 										setIsClampedText={setIsClampedText}
 										setIsLongText={setIsLongText}
-									/>
+									/> */}
 								</div>
 							</div>
 							<Pagination

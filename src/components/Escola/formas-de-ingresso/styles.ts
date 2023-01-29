@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledEntryFormsContainer = styled.div`
+	padding-top: 3rem;
 	font-family: "Merriweather", sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -23,9 +24,9 @@ export const StyledEntryFormsContainer = styled.div`
 	}
 
 	.entry-content {
-		width: min(1236px, 80%);
+		width: min(1200px, 80%);
 		display: flex;
-		gap: 80px;
+		gap: 3rem;
 		margin-bottom: 80px;
 	}
 
@@ -84,13 +85,13 @@ export const StyledEntryFormsContainer = styled.div`
 	}
 
 	.entry-form-info p {
-		font-family: Arial;
-		font-size: 20px;
+		font-family: "Merriweather", serif;
+		font-size: 16px;
 		font-weight: 400;
 		line-height: 30px;
 		letter-spacing: 0em;
 		text-align: left;
-		color: #2d2b78;
+		color: #2B2B2B;
 		height: 300px;
 	}
 
