@@ -31,17 +31,12 @@ enum meses {
 export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, title, uid, subtitulo }: IAgendaCardProps) {
     const data = new Date(date)
     let dia = data.getDate().toString()
-    let mes = data.getMonth()
-    if(data.getMonth() == 0){
-        mes = 1
-      }
+    let mes = data.getMonth() + 1
     const ano = data.getFullYear()
-    let mesNumero = (mes + 1).toString()
-
+    let mesNumero = (mes).toString()
     if (dia.length === 1) {
         dia = `0${dia}`
     }
-
     if (mesNumero.length === 1) {
         mesNumero = `0${mes}`
     }
@@ -53,7 +48,7 @@ export default function AgendaCard({ date, imageAlt, imageUrl, local, tipo, titl
                     <Image src={imageUrl} alt={imageAlt} layout="fill" objectFit="cover" objectPosition='center' />
                     <p>
                         {dia}<br />
-                        <span>{meses[mes]}</span>
+                        <span>{meses[mes-1]}</span>
                     </p>
                 </div>
                 <div className="container-baixo">
