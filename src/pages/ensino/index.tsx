@@ -26,7 +26,7 @@ const Container = styled.div`
 interface IGraduacao {
   titulo: string,
   duracao: number,
-  descricao: string,
+  descricao: [],
   ppp: string,
   matrizCurricular: string,
   ementario: string,
@@ -61,7 +61,7 @@ interface IRevista {
 interface IEnsinoProps {
   imageUrl: string,
   imageAlt: string,
-  conteudo: string,
+  conteudo: [],
   link: string,
   monografias: string,
   espetaculosFormatura: string,

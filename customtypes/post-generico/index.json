@@ -57,6 +57,14 @@
           "label": "Author",
           "placeholder": ""
         }
+      },
+      "document": {
+        "type": "Link",
+        "config": {
+          "label": "Document",
+          "placeholder": "",
+          "select": "media"
+        }
       }
     }
   }

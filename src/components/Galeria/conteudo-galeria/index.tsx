@@ -1,3 +1,4 @@
+import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import { ConteudoStyled } from "./styles";
 
@@ -5,13 +6,13 @@ interface IConteudoFoto {
 	imageURL: string;
 	alt: string;
 	titulo: string;
-	conteudo: string;
+	conteudo: [];
 	link: string;
 }
 
 interface IConteudoGaleria {
 	titulo: string;
-	conteudo: string;
+	conteudo: [];
 	linkGaleria: string;
 	conteudoFotos: IConteudoFoto[];
 }
@@ -57,7 +58,12 @@ export default function ConteudoGaleria({
 			<div className="conteudo-wrapper">
 				<div className="conteudo">
 					<h1>{titulo}</h1>
-					<p>{conteudo}</p>
+					<PrismicRichText
+						field={conteudo}
+						components={{
+						paragraph: ({ children }) => <p>{children}</p>,
+						}}
+					/>
 				</div>
 				<div className="galeria-fotos">
 					<div className="fotos-container">
@@ -85,7 +91,12 @@ export default function ConteudoGaleria({
 											className="content hidden"
 										>
 											<h3>{item.titulo}</h3>
-											<p>{item.conteudo}</p>
+											<PrismicRichText
+												field={item.conteudo}
+												components={{
+												paragraph: ({ children }) => <p>{children}</p>,
+												}}
+											/>
 										</div>
 									</div>
 								</a>

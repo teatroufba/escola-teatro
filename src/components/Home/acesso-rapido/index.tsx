@@ -72,19 +72,19 @@ function AcessoRapido() {
 
   return (
     <AcessoRapidoStyled>
-      <Link href="/" passHref>
+      <Link href="/publicacoes/solicitacoes" passHref>
         <div onMouseEnter={handleMouseEnterS} onMouseLeave={handleMouseLeave}>
           <SolicitacoesIcon size={100} hover={hover[0]} />
           <h3>Solicitações</h3>
         </div>
       </Link>
-      <Link href="/" passHref>
+      <Link href="/publicacoes/selecoes-e-concursos" passHref>
         <div onMouseEnter={handleMouseEnterC} onMouseLeave={handleMouseLeave}>
           <ConcursoIcon size={100} hover={hover[1]} />
           <h3>Seleções e Concursos</h3>
         </div>
       </Link>
-      <Link href="/" passHref>
+      <Link href="/galeria" passHref>
         <div onMouseEnter={handleMouseEnterG} onMouseLeave={handleMouseLeave}>
           <GaleriaIcon size={100} hover={hover[2]} />
           <h3>Galeria Virtual</h3>

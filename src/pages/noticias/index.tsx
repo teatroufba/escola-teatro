@@ -4,7 +4,7 @@
 import { PrismicDocument } from "@prismicio/types";
 import Noticias from "@/components/Noticias/Noticias";
 import { PreviewData } from "next";
-
+import image from "@/public/novoBrasaoHandler.png";
 import { createClient } from "../../../prismic";
 
 export async function getStaticProps({
@@ -34,8 +34,8 @@ export default function Page({
     date: items.data.data,
     imageAlt: items.data.image.alt,
     imageUrl: items.data.image.url,
-    miniaturaAlt: items.data.miniatura.alt,
-    miniaturaUrl: items.data.miniatura.url,
+    miniaturaAlt: items.data.miniatura.alt ? items.data.miniatura.alt : image,
+    miniaturaUrl: items.data.miniatura.url ? items.data.miniatura.url : image,
     subtitle: items.data.subtitle,
     tags: items.data?.categorias?.map((categorias: { categoria: any; }) => (categorias.categoria.toLowerCase())),
     title: items.data.title,

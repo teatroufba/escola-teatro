@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import Postagem from "@/components/Noticias/Post/Post";
+import PostagemGenerica from "@/components/Noticias/Post/PostGenerico";
 import { createClient } from "prismic";
+import image from "@/public/novoBrasaoHandler.png";
 
 interface IPostagem {
   author: string;
@@ -14,6 +15,8 @@ interface IPostagem {
   text: [];
   title: string;
   uid: string;
+  document: string;
+  documentName: string;
 }
 export default function Post({ postagem }: { postagem: IPostagem }) {
   const d = new Date(postagem.first_publication_date);
@@ -22,7 +25,7 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
 
   return (
     <>
-      <Postagem
+      <PostagemGenerica
         author={postagem.author}
         first_publication_date={publication}
         imageAlt={postagem.imageAlt}
@@ -31,6 +34,8 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
         subtitle={postagem.subtitle}
         text={postagem.text}
         title={postagem.title}
+        document={postagem.document}
+        documentName={postagem.documentName}
       />
     </>
   );
@@ -41,16 +46,18 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
   const posts = await client.getByUID("post-generico", params.uid);
 
   const postagem = {
-    author: posts.data.author,
-    first_publication_date: posts.first_publication_date,
-    id: posts.id,
-    imageAlt: posts.data.image.alt,
-    imageUrl: posts.data.image.url,
+    author: posts.data.author ? posts.data.author : '',
+    first_publication_date: posts.first_publication_date ? posts.first_publication_date : '',
+    id: posts.id ? posts.id : '',
+    imageAlt: posts.data.image.alt ? posts.data.image.alt : image,
+    imageUrl: posts.data.image.url ? posts.data.image.url : image,
     last_publication_date: posts.last_publication_date,
     subtitle: posts.data.subtitle,
     text: posts.data.text,
     title: posts.data.title,
     uid: posts.uid,
+    document: posts.data.document.url ? posts.data.document.url : '',
+    documentName: posts.data.document.name ? posts.data.document.name : '',
   };
   return {
     props: { postagem },

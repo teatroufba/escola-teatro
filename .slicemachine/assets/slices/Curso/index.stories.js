@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"curso","items":[],"primary":{"titulo":"reintermediate holistic users","duracao":4793,"descricao":"synergize user-centric vortals","ppp":"orchestrate value-added portals","matrizCurricular":"incentivize end-to-end e-markets","ementario":"strategize enterprise relationships","guiaEstudantil":"redefine distributed channels"},"id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"curso","items":[],"primary":{"titulo":"strategize back-end mindshare","duracao":9151,"descricao":[{"type":"paragraph","text":"Ullamco incididunt anim proident ullamco nisi voluptate Lorem ad tempor deserunt in est.","spans":[]}],"ppp":"utilize frictionless experiences","matrizCurricular":"harness 24/365 synergies","ementario":"expedite customized networks","guiaEstudantil":"innovate out-of-the-box metrics"},"id":"_Default"}} />
 _Default.storyName = 'Default'

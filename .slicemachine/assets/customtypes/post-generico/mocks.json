@@ -1,6 +1,6 @@
 {
-  "id": "38c32f75-cec9-4a76-880c-f936c49d9dd8",
-  "uid": "molestiae-cupiditate-fuga",
+  "id": "d9f3c1f3-1093-4252-ae62-c1945eda5189",
+  "uid": "aut-voluptatem-minus",
   "type": "post-generico",
   "data": {
     "image": {
@@ -10,7 +10,7 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
     },
     "miniatura": {
       "dimensions": {
@@ -19,17 +19,21 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a?w=900&h=500&fit=crop"
     },
-    "title": "maximize 24/7 action-items",
-    "subtitle": "enable impactful solutions",
+    "title": "redefine cross-platform functionalities",
+    "subtitle": "seize viral relationships",
     "text": [
       {
         "type": "paragraph",
-        "text": "Ut ea fugiat eu. Do ex ullamco laboris dolore anim amet non do officia dolore cillum culpa magna nulla.",
+        "text": "Proident cillum nostrud dolor exercitation in enim.",
         "spans": []
       }
     ],
-    "author": "mesh end-to-end e-tailers"
+    "author": "transition transparent interfaces",
+    "document": {
+      "link_type": "media",
+      "url": "https://source.unsplash.com/daily"
+    }
   }
 }

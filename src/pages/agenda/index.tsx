@@ -1,6 +1,7 @@
 import AgendaMain from "@/components/Agenda/AgendaMain";
 import { PreviewData } from "next";
 import { createClient } from "../../../prismic";
+import image from "@/public/novoBrasaoHandler.png";
 
 interface IAgenda {
   date: string;
@@ -37,10 +38,10 @@ export async function getStaticProps({
   const agenda = items.map((item) => ({
     uid: item.uid || "",
     title: item.data.titulo,
-    imageUrl: item.data.imagem.url ? item.data.imagem.url : '/',
-    imageAlt: item.data.imagem.alt ? item.data.imagem.alt : '/',
-    miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : '/',
-    miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : '/',
+    imageUrl: item.data.imagem.url ? item.data.imagem.url : image,
+    imageAlt: item.data.imagem.alt ? item.data.imagem.alt : image,
+    miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : image,
+    miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : image,
     date: item.data.data,
     tipo: item.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
     local: item.data.local,

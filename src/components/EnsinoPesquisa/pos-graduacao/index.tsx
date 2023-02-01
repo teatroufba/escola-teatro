@@ -1,3 +1,4 @@
+import { PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
 import Link from "next/link";
 import styled from "styled-components";
@@ -115,7 +116,7 @@ const Container = styled.div`
 interface IPosGraduacao {
 	imageUrl: string,
 	imageAlt: string,
-	conteudo: string,
+	conteudo: [],
 	link: string,
 }
 
@@ -130,9 +131,14 @@ function PosGraduacao({ imageUrl, imageAlt, conteudo, link }: IPosGraduacao) {
 				<div className="content">
 					<div className="courseInfo">
 						<div className="description">
-							<p>
-								{conteudo}
-							</p>
+							<div>
+							<PrismicRichText
+								field={conteudo}
+								components={{
+								paragraph: ({ children }) => <p>{children}</p>,
+								}}
+							/>
+							</div>
 						</div>
 					</div>
 					<div className="info">

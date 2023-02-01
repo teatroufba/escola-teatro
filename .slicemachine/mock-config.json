@@ -1,90 +1,123 @@
 {
-    "_cts": {
-        "agenda": {
-            "tipos": {}
-        },
-        "escola": {},
-        "ensino": {},
-        "post-generico": {},
-        "teste": {},
-        "extensao": {},
-        "espacos": {
-            "links": {}
-        },
-        "galeria": {}
+  "_cts": {
+    "agenda": {
+      "tipos": {}
     },
-    "slices": {
-        "Membro": {
-            "default": {
-                "primary": {}
-            }
-        },
-        "FormaIngresso": {},
-        "ConteudoFormaIngresso": {
-            "default": {
-                "items": {},
-                "primary": {}
-            }
-        },
-        "LinksFormaIngresso": {
-            "default": {
-                "items": {},
-                "primary": {}
-            }
-        },
-        "ConteudoApresentacao": {
-            "default": {
-                "primary": {}
-            }
-        },
-        "FormasIngresso": {},
-        "SetoresInstancias": {
-            "default": {
-                "primary": {},
-                "items": {}
-            }
-        },
-        "Docente": {
-            "default": {
-                "primary": {}
-            }
-        },
-        "MembroCorpoTecnico": {},
-        "Curso": {
-            "default": {
-                "primary": {}
-            }
-        },
-        "GrupoPesquisa": {
-            "default": {
-                "primary": {}
-            }
-        },
-        "RevistaOuPublicacao": {
-            "default": {
-                "primary": {}
-            }
-        },
-        "Livro": {
-            "default": {
-                "primary": {},
-                "items": {}
-            }
-        },
-        "PostExtensao": {
-            "default": {
-                "primary": {},
-                "items": {}
-            },
-            "postExtensaoComCatalogo": {
-                "primary": {}
-            }
-        },
-        "PostEspacos": {
-            "default": {
-                "primary": {},
-                "items": {}
-            }
+    "escola": {},
+    "ensino": {},
+    "post-generico": {},
+    "teste": {},
+    "extensao": {},
+    "espacos": {
+      "links": {}
+    },
+    "galeria": {
+      "descricaoMain": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
         }
+      },
+      "descricao1": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "descricao2": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "descricao3": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "post-de-noticias": {}
+  },
+  "slices": {
+    "Membro": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "FormaIngresso": {},
+    "ConteudoFormaIngresso": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "LinksFormaIngresso": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "ConteudoApresentacao": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "FormasIngresso": {},
+    "SetoresInstancias": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Docente": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "MembroCorpoTecnico": {},
+    "Curso": {
+      "default": {
+        "primary": {
+          "descricao": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "GrupoPesquisa": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "RevistaOuPublicacao": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Livro": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "PostExtensao": {
+      "default": {
+        "primary": {},
+        "items": {}
+      },
+      "postExtensaoComCatalogo": {
+        "primary": {}
+      }
+    },
+    "PostEspacos": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
+  }
 }

@@ -180,23 +180,17 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
     setHover(false)
   }
 
-
-    const data = new Date(date)
-    let dia = data.getDate().toString()
-    let mes = data.getMonth()
-    if(data.getMonth() == 0){
-      mes = 1
-    }
-    const ano = data.getFullYear()
-    let mesNumero = (mes + 1).toString()
-
-    if (dia.length === 1) {
-        dia = `0${dia}`
-    }
-
-    if (mesNumero.length === 1) {
-        mesNumero = `0${mes}`
-    }
+  const data = new Date(date)
+  let dia = data.getDate().toString()
+  let mes = data.getMonth() + 1
+  const ano = data.getFullYear()
+  let mesNumero = (mes).toString()
+  if (dia.length === 1) {
+      dia = `0${dia}`
+  }
+  if (mesNumero.length === 1) {
+      mesNumero = `0${mes}`
+  }
 
   return (
 
@@ -209,7 +203,7 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
               
               {data ? <p className='img-date'>
                     {dia}<br />
-                    <span>{meses[mes]}</span>
+                    <span>{meses[mes-1]}</span>
               </p> : ''}
                 
 

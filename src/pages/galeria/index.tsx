@@ -8,7 +8,7 @@ interface IConteudoFoto {
 	imageURL: string;
 	alt: string;
 	titulo: string;
-	conteudo: string;
+	conteudo: [];
 	
 	link: string;
 }

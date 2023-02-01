@@ -21,10 +21,12 @@
         }
       },
       "descricaoMain": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
-          "label": "Descricao",
-          "placeholder": ""
+          "label": "Descrição",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "linkMain": {
@@ -52,10 +54,12 @@
         }
       },
       "descricao1": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
           "label": "Descrição",
-          "placeholder": ""
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "link1": {
@@ -83,10 +87,12 @@
         }
       },
       "descricao2": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
-          "label": "Descricao",
-          "placeholder": ""
+          "label": "Descrição",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "link2": {
@@ -114,10 +120,12 @@
         }
       },
       "descricao3": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
-          "label": "Descricao",
-          "placeholder": ""
+          "label": "Descrição",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "link3": {

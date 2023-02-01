@@ -4,6 +4,7 @@
 import { PrismicDocument } from "@prismicio/types";
 import Noticias from "@/components/Noticias/Noticias";
 import { PreviewData } from "next";
+import image from "@/public/novoBrasaoHandler.png";
 
 import { createClient } from "../../../prismic";
 
@@ -32,8 +33,8 @@ export default function Page({
 }) {
   const posts = noticias.map((items) => ({
     date: new Date(items.first_publication_date).toISOString(),
-    imageAlt: items.data.image.alt,
-    imageUrl: items.data.image.url,
+    imageAlt: items.data.image.alt ? items.data.image.alt : image,
+    imageUrl: items.data.image.url ? items.data.image.alt : image,
     miniaturaAlt: items.data.miniatura.alt,
     miniaturaUrl: items.data.miniatura.url,
     subtitle: items.data.subtitle,

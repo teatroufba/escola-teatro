@@ -11,7 +11,6 @@ import { StyledPostNoticiaMain } from './styles';
 
 interface IPostagem {
   author: string
-  date: string
   first_publication_date?: string
   imageAlt?: string
   imageUrl: string
@@ -19,12 +18,11 @@ interface IPostagem {
   subtitle: string
   text: []
   title: string
-  document: string;
-  documentName: string;
+  document: string
+  documentName: string
 }
-export default function Postagem({
+export default function PostagemGenerica({
   title,
-  date,
   subtitle,
   text,
   imageUrl,
@@ -36,17 +34,7 @@ export default function Postagem({
   documentName,
 }: IPostagem) {
   const oneMinute = 1000 * 60
-  const data = new Date(date)
-  let dia = data.getDate().toString()
-  let mes = data.getMonth() + 1
-  const ano = data.getFullYear()
-  let mesNumero = (mes).toString()
-  if (dia.length === 1) {
-      dia = `0${dia}`
-  }
-  if (mesNumero.length === 1) {
-      mesNumero = `0${mes}`
-  }
+
   const primeiraData = first_publication_date?.replace(/\/(\d{1,2})/, (match, p1) => `/${+p1 + 1}`) // substitui o numero do mes pelo numero correto
   // nao sei pq mas o first_publication_date vem sempre com o mes errado
 
@@ -125,17 +113,9 @@ export default function Postagem({
             <h1 className='title'>{title}</h1>
             <p className='subtitle'>{subtitle}</p>
 
-            <span>
-              <p>
-                Por <b>{author}</b> <br />
-                {`${dia}/${mesNumero}/${ano}`} &nbsp;&nbsp;Atualizado {lastAtt}
-              </p>
-            </span>
-
             <span className="hr-line"></span>
           </div>
         </div>
-
         <div id="conteudo-post-noticia">
           <PrismicRichText
             field={text}
@@ -148,14 +128,6 @@ export default function Postagem({
           <button className='button-document'><p>{documentName}</p></button></a>
            : ''}
       </div>
-
-        <div className="btn-align-left">
-            <button type="button">
-              <Link passHref href="/noticias">
-                Ver outras notícias
-              </Link>
-            </button>
-        </div>
     </StyledPostNoticiaMain>
 
 
