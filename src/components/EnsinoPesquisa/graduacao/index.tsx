@@ -4,6 +4,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import Pagination from "@/components/Escola/formas-de-ingresso/Pagination";
+import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
@@ -162,7 +163,7 @@ const Container = styled.div`
 interface IGraduacao {
 	titulo: string,
 	duracao: number,
-	descricao: string,
+	descricao: [],
 	ppp: string,
 	matrizCurricular: string,
 	ementario: string,
@@ -248,7 +249,13 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 							>
 								<h2>{value.titulo}</h2>
 								<div className="description">
-									<p>{seeMore ? value.descricao : textFormater(value.descricao, 600)}</p>
+								<PrismicRichText
+									field={value.descricao}
+									// field={seeMore ? value.descricao : textFormater(value.descricao, 600)}
+									components={{
+									paragraph: ({ children }) => <p>{children}</p>,
+									}}
+									/>
 									{value.descricao.length > 600 ? <button onClick={toggleSeeMore}>{seeMore ? 'Ver menos' : 'Ver mais'}</button> : ''}
 								</div>
 							</div>

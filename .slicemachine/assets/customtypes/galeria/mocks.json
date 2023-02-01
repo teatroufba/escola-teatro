@@ -1,6 +1,6 @@
 {
-  "id": "e5eafe37-a67c-4d6d-a07a-4f4bfcbcdaba",
-  "uid": "voluptas-nobis-neque",
+  "id": "ab0c4132-a23a-4c84-afaa-5cc84214de5c",
+  "uid": "aut-modi-id",
   "type": "galeria",
   "data": {
     "imagemMain": {
@@ -10,11 +10,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
     },
-    "tituloMain": "repurpose ubiquitous supply-chains",
-    "descricaoMain": "empower mission-critical e-business",
-    "linkMain": "engineer next-generation schemas",
+    "tituloMain": "deliver rich schemas",
+    "descricaoMain": [
+      {
+        "type": "paragraph",
+        "text": "Consectetur reprehenderit proident Lorem sunt mollit irure duis minim ex tempor adipisicing laboris veniam consectetur proident. Sunt dolore enim voluptate consequat reprehenderit.",
+        "spans": []
+      }
+    ],
+    "linkMain": "synthesize B2C methodologies",
     "imagem1": {
       "dimensions": {
         "width": 900,
@@ -22,11 +28,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
     },
-    "titulo1": "facilitate ubiquitous functionalities",
-    "descricao1": "redefine B2C convergence",
-    "link1": "architect compelling markets",
+    "titulo1": "envisioneer world-class infrastructures",
+    "descricao1": [
+      {
+        "type": "paragraph",
+        "text": "Ex ullamco excepteur ullamco laborum anim amet quis exercitation ea fugiat anim magna occaecat exercitation. Ad id consectetur nisi Lorem ad qui reprehenderit sunt Lorem sint do duis. Ex dolor minim commodo consequat deserunt voluptate mollit veniam anim adipisicing incididunt.",
+        "spans": []
+      }
+    ],
+    "link1": "transform clicks-and-mortar technologies",
     "imagem2": {
       "dimensions": {
         "width": 900,
@@ -34,11 +46,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
     },
-    "titulo2": "embrace dot-com partnerships",
-    "descricao2": "orchestrate granular interfaces",
-    "link2": "morph virtual bandwidth",
+    "titulo2": "incubate clicks-and-mortar e-services",
+    "descricao2": [
+      {
+        "type": "paragraph",
+        "text": "Sint veniam tempor elit laboris dolor. Ex ut ex sint amet non laborum sunt adipisicing id et.",
+        "spans": []
+      }
+    ],
+    "link2": "reintermediate intuitive infomediaries",
     "imagem3": {
       "dimensions": {
         "width": 900,
@@ -46,10 +64,16 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
     },
-    "titulo3": "reintermediate revolutionary users",
-    "descricao3": "incubate 24/7 relationships",
-    "link3": "productize rich technologies"
+    "titulo3": "transition synergistic action-items",
+    "descricao3": [
+      {
+        "type": "paragraph",
+        "text": "Consequat non tempor consequat proident occaecat occaecat dolore deserunt adipisicing reprehenderit sint sint ipsum voluptate. Adipisicing ex occaecat incididunt irure.",
+        "spans": []
+      }
+    ],
+    "link3": "benchmark dot-com bandwidth"
   }
 }
