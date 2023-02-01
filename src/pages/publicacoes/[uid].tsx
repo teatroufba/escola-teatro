@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import Postagem from "@/components/Noticias/Post/Post";
+import PostagemGenerica from "@/components/Noticias/Post/PostGenerico";
 import { createClient } from "prismic";
 
 interface IPostagem {
@@ -22,7 +22,7 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
 
   return (
     <>
-      <Postagem
+      <PostagemGenerica
         author={postagem.author}
         first_publication_date={publication}
         imageAlt={postagem.imageAlt}

@@ -47,7 +47,7 @@ export const StyledPostNoticiaMain = styled.section`
               display: flex;
               flex-direction: column;
               gap: 11px;
-              padding:  0 0 60px 0;
+              padding:  0 0 20px 0;
 
               .title {
                 font-family: 'Merriweather';
@@ -138,7 +138,7 @@ export const StyledPostNoticiaMain = styled.section`
               display: flex;
               flex-direction: column;
               gap: 25px;
-              padding:  0 0 60px 0;
+              padding:  0 0 20px 0;
 
               .title {
                 font-family: 'Merriweather';
