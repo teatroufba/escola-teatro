@@ -14,6 +14,8 @@ interface IPostagem {
   text: [];
   title: string;
   uid: string;
+  document: string;
+  documentName: string;
 }
 export default function Post({ postagem }: { postagem: IPostagem }) {
   const d = new Date(postagem.first_publication_date);
@@ -31,6 +33,8 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
         subtitle={postagem.subtitle}
         text={postagem.text}
         title={postagem.title}
+        document={postagem.document}
+        documentName={postagem.documentName}
       />
     </>
   );
@@ -51,6 +55,8 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
     text: posts.data.text,
     title: posts.data.title,
     uid: posts.uid,
+    document: posts.data.document.url ? posts.data.document.url : '',
+    documentName: posts.data.document.name ? posts.data.document.name : '',
   };
   return {
     props: { postagem },

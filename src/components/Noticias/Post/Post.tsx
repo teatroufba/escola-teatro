@@ -18,6 +18,8 @@ interface IPostagem {
   subtitle: string
   text: []
   title: string
+  document: string;
+  documentName: string;
 }
 export default function Postagem({
   title,
@@ -28,6 +30,8 @@ export default function Postagem({
   author,
   last_publication_date,
   first_publication_date,
+  document,
+  documentName,
 }: IPostagem) {
   const oneMinute = 1000 * 60
 
@@ -128,6 +132,9 @@ export default function Postagem({
             }}
           />
         </div>
+        {document ? <a className='button-document-div' href={document}>
+          <button className='button-document'><p>{documentName}</p></button></a>
+           : ''}
       </div>
 
         <div className="btn-align-left">

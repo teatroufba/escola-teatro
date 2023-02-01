@@ -18,6 +18,8 @@ interface IPostagem {
   subtitle: string
   text: []
   title: string
+  document: string
+  documentName: string
 }
 export default function PostagemGenerica({
   title,
@@ -28,6 +30,8 @@ export default function PostagemGenerica({
   author,
   last_publication_date,
   first_publication_date,
+  document,
+  documentName,
 }: IPostagem) {
   const oneMinute = 1000 * 60
 
@@ -120,6 +124,9 @@ export default function PostagemGenerica({
             }}
           />
         </div>
+        {document ? <a className='button-document-div' href={document}>
+          <button className='button-document'><p>{documentName}</p></button></a>
+           : ''}
       </div>
     </StyledPostNoticiaMain>
 

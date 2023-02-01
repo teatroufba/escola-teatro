@@ -6,6 +6,42 @@ export const StyledPostNoticiaMain = styled.section`
     flex-direction: column;
     align-items: center;
     padding:  0 0 1.25rem 0  ;
+    .button-document-div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .button-document{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      gap: 12px;
+      width: 35%;
+      height: 60px;
+      background: #9A1A4B;
+      border: 1px solid #9A1A4B;
+      border-radius: 5px;
+      p{
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFF;´
+      }
+    }
+    @media (max-width: 769px) {
+      .button-document{
+        width: 80%;
+        p{
+          font-size: 12px;
+        }
+      }
+    }
     .btn-align-left {
       button {
         background-color: #2d2b78;
