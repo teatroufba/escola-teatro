@@ -93,7 +93,7 @@ export default function FormasDeIngresso({
 										isClampedText={isClampedText}
 										isLongText={isLongText}
 										currentPage={currentPage}
-										maxCharacters={815}
+										maxCharacters={600}
 										setIsShowingText={setIsShowingText}
 										setIsClampedText={setIsClampedText}
 										setIsLongText={setIsLongText}

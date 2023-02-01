@@ -55,7 +55,6 @@ export const StyledEntryFormsContainer = styled.div`
 		font-size: 24px;
 		font-weight: 400;
 		margin-bottom: 1px solid #fff;
-		text-decoration: underline;
 		text-align: left;
 		margin-bottom: 10px;
 		padding: 24px;
@@ -92,7 +91,6 @@ export const StyledEntryFormsContainer = styled.div`
 		letter-spacing: 0em;
 		text-align: left;
 		color: #2B2B2B;
-		height: 300px;
 	}
 
 	#entry-form-show-text-btn,
