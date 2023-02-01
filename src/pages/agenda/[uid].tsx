@@ -2,6 +2,7 @@ import PostAgendaMain from "@/components/Agenda/Post/PostAgendaMain";
 import { maxChar } from "@/utils/maxChar";
 import { PreviewData } from "next";
 import { createClient } from "../../../prismic";
+import image from "@/public/novoBrasaoHandler.png";
 
 interface IAgenda {
   date: string;
@@ -44,8 +45,8 @@ export async function getStaticProps({
 
   const post = {
     title: item ? item?.data.titulo : undefined,
-    imageUrl: item?.data.imagem.url ? item?.data.imagem.url : '/',
-    imageAlt: item?.data.imagem.alt ? item?.data.imagem.alt : '/',
+    imageUrl: item?.data.imagem.url ? item?.data.imagem.url : image,
+    imageAlt: item?.data.imagem.alt ? item?.data.imagem.alt : image,
     date: item ? item?.data.data : undefined,
     local: item ? item?.data.local : undefined,
     text: item ? item?.data.text : undefined,

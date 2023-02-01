@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import PostagemGenerica from "@/components/Noticias/Post/PostGenerico";
 import { createClient } from "prismic";
+import image from "@/public/novoBrasaoHandler.png";
 
 interface IPostagem {
   author: string;
@@ -45,11 +46,11 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
   const posts = await client.getByUID("post-generico", params.uid);
 
   const postagem = {
-    author: posts.data.author,
-    first_publication_date: posts.first_publication_date,
-    id: posts.id,
-    imageAlt: posts.data.image.alt,
-    imageUrl: posts.data.image.url,
+    author: posts.data.author ? posts.data.author : '',
+    first_publication_date: posts.first_publication_date ? posts.first_publication_date : '',
+    id: posts.id ? posts.id : '',
+    imageAlt: posts.data.image.alt ? posts.data.image.alt : image,
+    imageUrl: posts.data.image.url ? posts.data.image.url : image,
     last_publication_date: posts.last_publication_date,
     subtitle: posts.data.subtitle,
     text: posts.data.text,
