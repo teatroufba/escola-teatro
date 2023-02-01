@@ -5,6 +5,7 @@ import { createClient } from "prismic";
 
 interface IPostagem {
   author: string;
+  date: string;
   first_publication_date: string;
   id: string;
   imageAlt: string;
@@ -18,6 +19,7 @@ interface IPostagem {
   documentName: string;
 }
 export default function Post({ postagem }: { postagem: IPostagem }) {
+  console.log(postagem)
   const d = new Date(postagem.first_publication_date);
   const publication = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
   const lastPublication = new Date(postagem.last_publication_date);
@@ -26,6 +28,7 @@ export default function Post({ postagem }: { postagem: IPostagem }) {
     <>
       <Postagem
         author={postagem.author}
+        date={postagem.date}
         first_publication_date={publication}
         imageAlt={postagem.imageAlt}
         imageUrl={postagem.imageUrl}
@@ -46,6 +49,7 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
 
   const postagem = {
     author: posts.data.author,
+    date: posts.data.data,
     first_publication_date: posts.first_publication_date,
     id: posts.id,
     imageAlt: posts.data.image.alt ? posts.data.image.alt : "/",
