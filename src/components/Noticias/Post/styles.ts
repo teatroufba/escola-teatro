@@ -78,6 +78,13 @@ export const StyledPostNoticiaMain = styled.section`
         display: flex;
         flex-direction: column;
         padding: 2rem 1.25rem;
+        width: 80%;
+        pre{
+          line-break: auto;
+          white-space: normal;
+          overflow-wrap: break-word;
+          text-align: center; 
+        }
 
         #container-header-noticia {
               display: flex;
