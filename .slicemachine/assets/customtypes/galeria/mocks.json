@@ -1,6 +1,6 @@
 {
-  "id": "ab0c4132-a23a-4c84-afaa-5cc84214de5c",
-  "uid": "aut-modi-id",
+  "id": "376d5d79-cfe2-4146-8a49-a2effaaa8ca8",
+  "uid": "ut-et-et",
   "type": "galeria",
   "data": {
     "imagemMain": {
@@ -10,17 +10,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
     },
-    "tituloMain": "deliver rich schemas",
+    "tituloMain": "target frictionless action-items",
     "descricaoMain": [
       {
         "type": "paragraph",
-        "text": "Consectetur reprehenderit proident Lorem sunt mollit irure duis minim ex tempor adipisicing laboris veniam consectetur proident. Sunt dolore enim voluptate consequat reprehenderit.",
+        "text": "In laboris commodo enim.",
         "spans": []
       }
     ],
-    "linkMain": "synthesize B2C methodologies",
+    "linkMain": "redefine holistic relationships",
     "imagem1": {
       "dimensions": {
         "width": 900,
@@ -28,17 +28,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9?w=900&h=500&fit=crop"
     },
-    "titulo1": "envisioneer world-class infrastructures",
+    "titulo1": "syndicate open-source applications",
     "descricao1": [
       {
         "type": "paragraph",
-        "text": "Ex ullamco excepteur ullamco laborum anim amet quis exercitation ea fugiat anim magna occaecat exercitation. Ad id consectetur nisi Lorem ad qui reprehenderit sunt Lorem sint do duis. Ex dolor minim commodo consequat deserunt voluptate mollit veniam anim adipisicing incididunt.",
+        "text": "Cupidatat proident velit duis labore labore mollit pariatur labore do tempor. Qui aliquip et dolore enim aliqua proident ut dolor ex occaecat sunt fugiat aliqua ut amet.",
         "spans": []
       }
     ],
-    "link1": "transform clicks-and-mortar technologies",
+    "link1": "leverage viral solutions",
     "imagem2": {
       "dimensions": {
         "width": 900,
@@ -46,17 +46,17 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
     },
-    "titulo2": "incubate clicks-and-mortar e-services",
+    "titulo2": "generate customized web services",
     "descricao2": [
       {
         "type": "paragraph",
-        "text": "Sint veniam tempor elit laboris dolor. Ex ut ex sint amet non laborum sunt adipisicing id et.",
+        "text": "In qui irure laborum exercitation ex do et in.",
         "spans": []
       }
     ],
-    "link2": "reintermediate intuitive infomediaries",
+    "link2": "reinvent intuitive functionalities",
     "imagem3": {
       "dimensions": {
         "width": 900,
@@ -64,16 +64,16 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db?w=900&h=500&fit=crop"
     },
-    "titulo3": "transition synergistic action-items",
+    "titulo3": "facilitate best-of-breed solutions",
     "descricao3": [
       {
         "type": "paragraph",
-        "text": "Consequat non tempor consequat proident occaecat occaecat dolore deserunt adipisicing reprehenderit sint sint ipsum voluptate. Adipisicing ex occaecat incididunt irure.",
+        "text": "Anim et proident enim eiusmod enim tempor nisi sit. Pariatur anim reprehenderit ex dolor pariatur nisi. Aliqua quis quis in voluptate sit consectetur aliquip et nisi voluptate cupidatat Lorem.",
         "spans": []
       }
     ],
-    "link3": "benchmark dot-com bandwidth"
+    "link3": "visualize proactive action-items"
   }
 }
