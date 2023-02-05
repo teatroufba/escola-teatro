@@ -30,6 +30,11 @@ export default function Noticias({ post }: INoticias) {
   const [idate, setIDate] = useState('')
   const [fdate, setFDate] = useState('')
 
+  const orderedPost = [...post].sort((a, b) => {
+    const timestamp = (date: string) => new Date(date).getTime();
+    return timestamp(b.date) - timestamp(a.date);
+  });
+
   useEffect(() => {
     function resize() {
       setWidth(window.innerWidth)
@@ -67,7 +72,7 @@ export default function Noticias({ post }: INoticias) {
         return (date >= iInput && date <= fInput)
       })
     }
-    
+
     if (sort === 'a-z') {
       posts.sort((a, b) => {
         let tituloA = a.title.toUpperCase()
@@ -342,7 +347,7 @@ export default function Noticias({ post }: INoticias) {
       </StyledFilter>
 
       <div className="posts-flex">
-        {filtered(post, 9, currentPage).map((value, index) => (
+        {filtered(orderedPost, 9, currentPage).map((value, index) => (
           <PostCard
             date={value.date}
             imageAlt={value.miniaturaUrl ? value.miniaturaAlt : value.imageAlt}

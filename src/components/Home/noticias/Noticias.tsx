@@ -16,13 +16,18 @@ interface INoticias {
 }
 
 export default function Noticias({ noticias }: { noticias: INoticias[] }) {
+  const noticiasOrdenadas = [...noticias].sort((a, b) => {
+    const timestamp = (date: string) => new Date(date).getTime();
+    return timestamp(b.date) - timestamp(a.date);
+  });
+
   return (
     <StyledNoticias>
 
       <h1>Notícias</h1>
 
       <div className="noticias-flex">
-        {noticias.slice(0, 3).map((value, index) => (
+        {noticiasOrdenadas.slice(0, 3).map((value, index) => (
           <NoticiaCard
             key={value.uid}
             className={index > 1 ? 'mobile' : ''}
@@ -40,7 +45,7 @@ export default function Noticias({ noticias }: { noticias: INoticias[] }) {
             <button>Notícias anteriores</button>
           </Link>
       </div>
-      
+
     </StyledNoticias>
   )
 }
