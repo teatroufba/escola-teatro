@@ -184,12 +184,12 @@ export const StyledPagination = styled.div`
 `;
 
 export const StyledStaffCarousel = styled.div`
-	width: 100%;
+	width: 115%;
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: nowrap;
 	overflow-x: scroll;
-	gap: 24px;
+	gap: 8px;
 `;
 
 export const StyledDocenteCardCarrossel = styled.div`
