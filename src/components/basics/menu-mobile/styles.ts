@@ -50,6 +50,9 @@ export const MenuMobileContainer = styled.nav`
 		align-items: center;
 		width: 95%;
 	}
+	#selected_menu{
+		background-color: #9a1a4b;
+	}
 
 	.menu-option span {
 		font-family: "Merriweather";
@@ -85,6 +88,9 @@ export const MenuMobileContainer = styled.nav`
 		font-family: "Arial";
 		font-weight: 400;
 		font-size: 16px;
+	}
+	.selected_menu{
+		background-color: #9a1a4b;
 	}
 
 	.submenu-mobile a,

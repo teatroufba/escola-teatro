@@ -19,6 +19,8 @@ function ArrowIcon() {
 }
 
 export default function MenuMobile() {
+	const router = useRouter()
+	const url = router.pathname
 	function showSubmenu(section: string) {
 		if (typeof document != "undefined") {
 			const submenu = document.getElementById(`${section}-submenu`);
@@ -35,7 +37,7 @@ export default function MenuMobile() {
 		<MenuMobileContainer>
 			<div className="submenu-wrapper">
 				<ul>
-				<li className="menu-main-option">
+				<li className="menu-main-option" id={url == "/" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button>
 								<span>
@@ -45,7 +47,7 @@ export default function MenuMobile() {
 							</button>
 						</div>
 					</li>
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/escola" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("escola")}>
 								<span><a href="/escola">A Escola</a></span>
@@ -77,7 +79,7 @@ export default function MenuMobile() {
 							</ul>
 						</div>
 					</li>
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/ensino" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("ensino")}>
 								<span><a href="/ensino">Ensino e Pesquisa</a></span>
@@ -101,7 +103,7 @@ export default function MenuMobile() {
 							</ul>
 						</div>
 					</li>
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/extensao" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("extensao")}>
 								<span><a href="/extensao">Extensão</a></span>
@@ -125,7 +127,7 @@ export default function MenuMobile() {
 							</ul>
 						</div>
 					</li>
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/espacos" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button onClick={() => showSubmenu("espacos")}>
 								<span><a href="/espacos">Espaços</a></span>
@@ -143,7 +145,7 @@ export default function MenuMobile() {
 							</ul>
 						</div>
 					</li>
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/agenda" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button>
 								<span>
@@ -153,7 +155,7 @@ export default function MenuMobile() {
 						</div>
 					</li>
 
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/noticias" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button>
 								<span>
@@ -162,7 +164,7 @@ export default function MenuMobile() {
 							</button>
 						</div>
 					</li>
-					<li className="menu-main-option">
+					<li className="menu-main-option" id={url == "/galeria" ? "selected_menu" : ''}>
 						<div className="menu-option">
 							<button>
 								<span>
