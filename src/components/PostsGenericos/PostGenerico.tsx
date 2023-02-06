@@ -42,7 +42,6 @@ export default function PostGenerico({date, imageUrl,imageAlt,title,subtitle,min
         </div>
         <div className="noticias-post-text">
           <h3>{title}</h3>
-          <h1>AAAAAAAAAAAAAAAA</h1>
           <p>{subtitle}</p>
           <div className="container-data">
               <Image src='/calendar.svg' alt="" width={24} height={24} />

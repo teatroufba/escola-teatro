@@ -6,10 +6,20 @@ export const StyledPostNoticiaMain = styled.section`
     flex-direction: column;
     align-items: center;
     padding:  0 0 1.25rem 0  ;
+    .documentDisplay{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
     .button-document-div{
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    .documentDisplay{
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
     }
     .button-document{
       display: flex;
@@ -18,7 +28,7 @@ export const StyledPostNoticiaMain = styled.section`
       align-items: center;
       padding: 20px;
       gap: 12px;
-      width: 35%;
+      width: 50%;
       height: 60px;
       background: #9A1A4B;
       border: 1px solid #9A1A4B;
@@ -27,7 +37,7 @@ export const StyledPostNoticiaMain = styled.section`
         font-family: 'Arial';
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 1.2rem;
         display: flex;
         align-items: center;
         text-align: center;
@@ -36,9 +46,10 @@ export const StyledPostNoticiaMain = styled.section`
     }
     @media (max-width: 769px) {
       .button-document{
-        width: 80%;
+        width: 100%;
+        height: 100px;
         p{
-          font-size: 12px;
+          font-size: 1.1rem;
         }
       }
     }

@@ -18,8 +18,18 @@ interface IPostagem {
   subtitle: string
   text: []
   title: string
-  document: string
-  documentName: string
+  document: string;
+  document2: string;
+  document3: string;
+  document4: string;
+  document5: string;
+  document6: string;
+  documentName: string;
+  documentName2: string;
+  documentName3: string;
+  documentName4: string;
+  documentName5: string;
+  documentName6: string;
 }
 export default function PostagemGenerica({
   title,
@@ -31,7 +41,17 @@ export default function PostagemGenerica({
   last_publication_date,
   first_publication_date,
   document,
+  document2,
+  document3,
+  document4,
+  document5,
+  document6,
   documentName,
+  documentName2,
+  documentName3,
+  documentName4,
+  documentName5,
+  documentName6,
 }: IPostagem) {
   const oneMinute = 1000 * 60
 
@@ -124,9 +144,26 @@ export default function PostagemGenerica({
             }}
           />
         </div>
-        {document ? <a className='button-document-div' href={document}>
-          <button className='button-document'><p>{documentName}</p></button></a>
-           : ''}
+        <div className="documentDisplay">
+          {document ? <a className='button-document-div' href={document}>
+            <button className='button-document'><p>{documentName}</p></button></a>
+            : ''}
+          {document2 ? <a className='button-document-div' href={document2}>
+            <button className='button-document'><p>{documentName2}</p></button></a>
+            : ''}
+          {document3 ? <a className='button-document-div' href={document3}>
+            <button className='button-document'><p>{documentName3}</p></button></a>
+            : ''}
+          {document4 ? <a className='button-document-div' href={document4}>
+            <button className='button-document'><p>{documentName4}</p></button></a>
+            : ''}
+          {document5 ? <a className='button-document-div' href={document5}>
+            <button className='button-document'><p>{documentName5}</p></button></a>
+            : ''}
+          {document6 ? <a className='button-document-div' href={document6}>
+            <button className='button-document'><p>{documentName6}</p></button></a>
+            : ''}
+        </div>
       </div>
     </StyledPostNoticiaMain>
 

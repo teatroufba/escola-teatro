@@ -73,6 +73,38 @@
           "select": "media"
         }
       },
+      "document2": {
+        "type": "Link",
+        "config": {
+          "label": "Document2",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "document3": {
+        "type": "Link",
+        "config": {
+          "label": "Document3",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "document4": {
+        "type": "Link",
+        "config": {
+          "label": "Document4",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
+      "document5": {
+        "type": "Link",
+        "config": {
+          "label": "Document5",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
