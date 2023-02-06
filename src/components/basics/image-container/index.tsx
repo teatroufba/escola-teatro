@@ -5,9 +5,10 @@ import styled from "styled-components";
 import Button from './../button'
 
 const Container = styled.div`
-    width: 100vw;
+    width: 98vw;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5rem;
 
     &.left {
@@ -65,8 +66,8 @@ const Container = styled.div`
         }
 
         @media (max-width: 768px) {
-            width: 100vw;
-            height: 100vw;
+            width: 90vw;
+            height: 90vw;
         }
 
         .img {
@@ -112,8 +113,8 @@ const Container = styled.div`
         padding: 1.5rem 0;
 
         @media (max-width: 768px) {
-            width: 100vw;
-            max-width: 100vw;
+            width: 90vw;
+            max-width: 90vw;
             padding: 1.5rem 1.25rem;
         }
 

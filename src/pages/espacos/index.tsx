@@ -9,8 +9,7 @@ const EspacosStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 7.875rem;
-    width: 100vw;
-    max-width: 1920px;
+    overflow: hidden;
 
     @media (max-width: 1200px) {
         gap: 1.5rem;

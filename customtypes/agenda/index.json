@@ -52,16 +52,10 @@
         }
       },
       "local": {
-        "type": "Select",
+        "type": "Text",
         "config": {
           "label": "Local",
-          "placeholder": "",
-          "options": [
-            "Presencial",
-            "Híbrido",
-            "Online"
-          ],
-          "default_value": "Presencial"
+          "placeholder": ""
         }
       },
       "tipos": {

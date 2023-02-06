@@ -62,6 +62,7 @@ export const StyledPostNoticiaMain = styled.section`
       button {
         background-color: #2d2b78;
         border: none;
+        cursor: pointer;
         border-radius: 5px;
         padding: 15px 91px;
         margin: 3px;

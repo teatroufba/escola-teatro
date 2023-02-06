@@ -23,7 +23,9 @@ const CardStyle = styled.div`
   background-color: #ffffff;
   transform: scale(0.98);
   transition: .5s;
-
+  .baixo-local{
+    width:100%;
+  }
   &:hover {
     transform: scale(1.02);
     transition:transform 0.25s ease-in-out;
@@ -223,7 +225,7 @@ function CardAgenda({ date, title, local , imageUrl , imageAlt , uid , subtitle}
                   <div>
                   </div>
                   {local ? <div className="container-location">
-                      <Image className="img-icon" src='/location-azul.svg' alt="" width={24} height={24} />
+                      <img className="img-icon" src='/location-azul.svg' alt="" width={25} height={25} />
                       <p className='baixo-local'>{local}</p>
                   </div> : ''}
                 </div>

@@ -5,12 +5,11 @@ import { PreviewData } from "next";
 import { createClient } from "../../../prismic";
 
 const ExtensaoStyled = styled.div`
-    padding: 2rem 0;
+    padding: 2rem 0rem;
     display: flex;
     flex-direction: column;
     gap: 7.875rem;
-    width: 100vw;
-    max-width: 1920px;
+    overflow: hidden;
 
     @media (max-width: 1200px) {
         gap: 1.5rem;

@@ -1,47 +1,44 @@
 {
-  "id": "mock-doc-id",
-  "uid": "shoulder",
-  "url": "/shoulder",
+  "id": "c6798497-6ada-49fc-a3b2-2d1cf7bd51c6",
+  "uid": "suscipit-veritatis-sed",
   "type": "agenda",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
   "data": {
     "imagem": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": null,
+      "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88?w=900&h=500&fit=crop"
     },
     "miniatura": {
       "dimensions": {
         "width": 900,
         "height": 500
       },
-      "alt": null,
+      "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a"
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=900&h=500&fit=crop"
     },
-    "titulo": "usually",
-    "subtitulo": "middle",
+    "titulo": "cultivate sexy paradigms",
+    "subtitulo": "incentivize front-end infrastructures",
     "text": [
       {
         "type": "paragraph",
-        "text": "Mollit ipsum dolor fugiat.",
+        "text": "Nostrud sit dolore deserunt.",
         "spans": []
       }
     ],
-    "data": "2012-08-14T03:57:34+0000",
-    "local": "Presencial",
+    "data": "2018-09-25T17:19:28.913Z",
+    "local": "synthesize front-end synergies",
     "tipos": [
+      {
+        "tipo": "Formações"
+      },
+      {
+        "tipo": "Espetáculos"
+      },
       {
         "tipo": "Espetáculos"
       }
