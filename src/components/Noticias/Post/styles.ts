@@ -144,7 +144,7 @@ export const StyledPostNoticiaMain = styled.section`
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 1.375rem;
+            font-size: 1rem;
             line-height: 2.0625rem;
             font-family: 'Arial';
    
