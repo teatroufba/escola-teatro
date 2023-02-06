@@ -35,6 +35,30 @@ export default function Noticias({ post }: INoticias) {
     return timestamp(b.date) - timestamp(a.date);
   });
 
+	function scrollToTop() {
+		if (typeof window != "undefined") {
+			window.scrollTo({
+				top: 500,
+				behavior: "smooth",
+			});
+		}
+	}
+
+  function paginationPlus(){
+    scrollToTop()
+    setCurrentPage(currentPage + 1) 
+  }
+
+  function paginationSet(){
+    scrollToTop()
+    setCurrentPage(paginationBtn)
+  }
+
+  function paginationDecr(){
+    scrollToTop()
+    setCurrentPage(currentPage - 1)
+  }
+
   useEffect(() => {
     function resize() {
       setWidth(window.innerWidth)
@@ -364,7 +388,7 @@ export default function Noticias({ post }: INoticias) {
         <button
           type="button"
           onClick={() => {
-            if (currentPage > 1) setCurrentPage(currentPage - 1)
+            if (currentPage > 1) paginationDecr()
           }}
         >
           <Image
@@ -380,7 +404,7 @@ export default function Noticias({ post }: INoticias) {
           <span>de</span>
           <button
             type="button"
-            onClick={() => setCurrentPage(paginationBtn)}
+            onClick={paginationSet}
           >
             {paginationBtn}
           </button>
@@ -388,7 +412,7 @@ export default function Noticias({ post }: INoticias) {
         <button
           type="button"
           onClick={() => {
-            if (currentPage < paginationBtn) setCurrentPage(currentPage + 1)
+            if (currentPage < paginationBtn) paginationPlus()
           }}
         >
           <Image
