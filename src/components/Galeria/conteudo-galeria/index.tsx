@@ -23,6 +23,7 @@ export default function ConteudoGaleria({
 	linkGaleria,
 	conteudoFotos,
 }: IConteudoGaleria) {
+	console.log(conteudo)
 	function handleEnterHover(div: string) {
 		if (document) {
 			const layer = document.getElementById(`${div}-layer`);

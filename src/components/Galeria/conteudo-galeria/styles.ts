@@ -4,6 +4,10 @@ export const ConteudoStyled = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	iframe {
+		width: 100%;
+		height: 600px;
+	}
 
 	.conteudo-wrapper {
 		width: min(75%, 1500px);
