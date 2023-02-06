@@ -15,6 +15,10 @@ export const StyledPostNoticiaMain = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
+      text-decoration: none;
+    }
+    a.button-document-div{
+      cursor: inherit;
     }
     .documentDisplay{
       display: flex;
@@ -26,6 +30,7 @@ export const StyledPostNoticiaMain = styled.section`
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      cursor: pointer !important;
       padding: 20px;
       gap: 12px;
       width: 50%;
@@ -62,7 +67,6 @@ export const StyledPostNoticiaMain = styled.section`
         margin: 3px;
         font-size: 16x;
         width: 100%;
-        cursor: pointer;
         font-family: 'Merriweather';
 
           a {
@@ -72,6 +76,7 @@ export const StyledPostNoticiaMain = styled.section`
           font-family: arial;
           font-weight: 400;
           font-size: 16px;
+          cursor: inherit;
         }
         }
     
