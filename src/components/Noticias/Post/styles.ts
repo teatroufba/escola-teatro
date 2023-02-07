@@ -95,7 +95,7 @@ export const StyledPostNoticiaMain = styled.section`
         display: flex;
         flex-direction: column;
         padding: 2rem 1.25rem;
-        width: 80%;
+        width: 95%;
         pre{
           line-break: auto;
           white-space: normal;
@@ -152,11 +152,11 @@ export const StyledPostNoticiaMain = styled.section`
             
 
               p {
-                    margin: 16px 0;
+                    margin: 0px 0;
                 }
 
-                h1 , h2 , h3, h4 , h5 {
-                    margin: 8px 0;
+                h1 , h2 , h3, h4 , h5, {
+                    margin: 0px 0;
                     width: 100%;
                     display: flex;
                     align-items: flex-start;
@@ -227,8 +227,9 @@ export const StyledPostNoticiaMain = styled.section`
             #conteudo-post-noticia {
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
+                text-justify-content: center;
+                justify-content: flex-start;
+                align-items: flex-start;
                 font-size: 1.375rem;
                 line-height: 2.0625rem;
                 p {
