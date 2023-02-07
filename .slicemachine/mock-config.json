@@ -37,7 +37,9 @@
         }
       }
     },
-    "post-de-noticias": {}
+    "post-de-noticias": {
+      "categorias": {}
+    }
   },
   "slices": {
     "Membro": {

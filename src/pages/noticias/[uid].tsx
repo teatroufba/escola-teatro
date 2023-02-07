@@ -30,7 +30,6 @@ interface IPostagem {
   documentName6: string;
 }
 export default function Post({ postagem }: { postagem: IPostagem }) {
-  console.log(postagem)
   const d = new Date(postagem.first_publication_date);
   const publication = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`;
   const lastPublication = new Date(postagem.last_publication_date);

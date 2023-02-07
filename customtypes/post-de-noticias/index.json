@@ -65,6 +65,29 @@
           "placeholder": ""
         }
       },
+      "categorias": {
+        "type": "Group",
+        "config": {
+          "label": "Categorias",
+          "fields": {
+            "categoria": {
+              "type": "Select",
+              "config": {
+                "label": "Categoria",
+                "placeholder": "",
+                "options": [
+                  "Academico",
+                  "Avisos",
+                  "Concursos",
+                  "Eventos",
+                  "Notas",
+                  "Parcerias"
+                ]
+              }
+            }
+          }
+        }
+      },
       "document": {
         "type": "Link",
         "config": {

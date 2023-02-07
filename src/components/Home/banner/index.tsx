@@ -18,7 +18,6 @@ const BannerStyled = styled.div`
   .carousel {
     width: 100%;
     margin: 0 auto;
-    max-width: 1920px;
     overflow-x: scroll;
     display: flex;
     scroll-behavior: smooth;
@@ -212,7 +211,6 @@ const BannerStyled = styled.div`
   }
 
   .banner-control {
-    max-width: 1600px;
     position: relative;
     display: flex;
     justify-content: space-between;

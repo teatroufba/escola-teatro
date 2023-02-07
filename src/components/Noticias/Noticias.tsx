@@ -29,6 +29,7 @@ export default function Noticias({ post }: INoticias) {
   const [filter, setFilter] = useState('todos')
   const [idate, setIDate] = useState('')
   const [fdate, setFDate] = useState('')
+  console.log(post)
 
   const orderedPost = [...post].sort((a, b) => {
     const timestamp = (date: string) => new Date(date).getTime();
@@ -125,7 +126,7 @@ export default function Noticias({ post }: INoticias) {
 
     if (filter !== 'todos') {
       posts = posts.filter(
-        value => value.tags.includes(filter)
+        value => value?.tags?.includes(filter)
       )
     }
 
@@ -304,7 +305,7 @@ export default function Noticias({ post }: INoticias) {
               <button id="todos" onClick={() => setFilter('todos')}>
                 Todos
               </button>
-              <button id="acadêmico" onClick={() => setFilter('acadêmico')}>
+              <button id="academico" onClick={() => setFilter('academico')}>
                 Acadêmico
               </button>
               <button id="avisos" onClick={() => setFilter('avisos')}>
