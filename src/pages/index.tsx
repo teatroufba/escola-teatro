@@ -28,7 +28,7 @@ export async function getStaticProps({
 
   const items = await client.getAllByType("agenda");
 
-  const agenda = items.map((value: any) => ({
+  const agendaFiltered = items.map((value: any) => ({
     uid: value.uid || "",
     title: value.data.titulo,
     imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
@@ -41,8 +41,13 @@ export async function getStaticProps({
     descricao: value.data.subtitulo,
   } as unknown as IAgenda)).sort((a: IAgenda, b: IAgenda) => {
     const timestamp = (date: string) => new Date(date).getTime();
-    return timestamp(b.date) - timestamp(a.date);
+    return timestamp(a.date) - timestamp(b.date);
   });
+  const today = new Date().getTime() - 86400000
+  const agenda = agendaFiltered.filter(agend => {
+    const data = new Date(agend.date).getTime()
+    return data >= today;
+  })
 
   const itemsMural = await client.getAllByType("mural-estudantil", {
     orderings: {
