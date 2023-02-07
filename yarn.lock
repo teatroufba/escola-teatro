@@ -13732,6 +13732,11 @@ react-use-pagination@^2.0.1:
   resolved "https://registry.npmjs.org/react-use-pagination/-/react-use-pagination-2.0.1.tgz"
   integrity sha512-bo7vI2oZ/+PJJozN7DLWPkewrULLoHb8a6WO3dGudJfEKnj8BVZVbJPkvn5jtydhJ5xi0t0W7xI06XlWUe8Jbw==
 
+react-useonview@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-useonview/-/react-useonview-1.2.2.tgz#c2fe201d7e7d4dd5947b3e3f6e5ff927e3f82285"
+  integrity sha512-znTGIdhBx8N++aC7dGrCN7vJxZaq/ff/xgF2AHwbkY+ZlhmkbHubLCAvWm6Ll/PIfdmxr+2E0gdc26BXWVqwlw==
+
 react.dom@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/react.dom/-/react.dom-1.0.1.tgz"

@@ -27,8 +27,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     Message: ${body.message}\r\n
     `
   const data = {
-    to: 'Email do cliente',
-    from: 'Email do cliente',
+    to: 'ufba.escoladeteatro@gmail.com',
+    from: 'ufba.escoladeteatro@gmail.com',
     subject: 'Mensagem do form!',
     text: message,
     html: message.replace(/\r\n/g, '<br>'),
@@ -41,7 +41,7 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
       res.status(200).json({ sucess: true })
     })
     .catch((error: any) => {
-      console.error(error)
+      console.error(error.response.body)
       res.status(400).json({ sucess: false })
     })
 }

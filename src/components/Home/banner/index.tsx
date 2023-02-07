@@ -82,8 +82,51 @@ const BannerStyled = styled.div`
         }
       }
     }
+    @media (max-width: 550px) {
+      .contentMobile h1{
+        font-size: 1.2rem !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .contentMobile small{
+        width:2rem !important;
+        height:2rem !important;
+        font-size: .5rem !important;
+        display: flex;
+        align-items: center !important;
+      }
+      .contentMobile{
+        .content-button {
+          display: none;
+          justify-content: right;
+
+          a {
+            background-color: #9a1a4b;
+            width: 1.5rem !important;
+            height: 1.5rem !important;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+          }
+
+          small {
+            background-color: #282b62;
+            display: flex;
+            justify-content: center;
+            width: 1.5rem !important;
+            height: 1.5rem !important;
+            font-family: 'Merriweather';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
 
     .contentMobile {
+      width: 80%;
       color: white;
       display: flex;
       flex-direction: column;
@@ -93,14 +136,14 @@ const BannerStyled = styled.div`
           font-family: 'Merriweather';
           font-style: normal;
           font-weight: 400;
-          font-size: 3rem;
+          font-size: 2rem;
         }
 
         p {
           font-family: 'Arial';
           font-style: normal;
           font-weight: 400;
-          font-size: 1rem;
+          font-size: .8rem;
           max-width: 500px;
         }
 
@@ -144,7 +187,7 @@ const BannerStyled = styled.div`
       }
 
       @media screen and (max-width: 600px) {
-        top: calc(-39.06vw - 176px);
+        top: calc(-35.06vw - 176px);
 
         h1 {
           font-size: 2rem;
@@ -186,13 +229,13 @@ const BannerStyled = styled.div`
       color: white;
       display: flex;
       flex-direction: column;
-      gap: 25px;
+      gap: 20px;
 
       h1 {
         font-family: 'Merriweather';
         font-style: normal;
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
 
       p {
@@ -287,20 +330,10 @@ const BannerStyled = styled.div`
 
         .pagination-control {
           width: 300px;
-          padding: 0 20px;
         }
       }
     }
 
-    @media screen and (max-width: 374px) {
-      .pagination {
-        .pagination-control {
-          gap: 10px;
-          width: 280px;
-          padding: 0 10px;
-        }
-      }
-    }
 
     button {
       background-color: #9a1a4b;
@@ -456,8 +489,8 @@ function Banner({ banner }: { banner: IBanner[] }) {
         </div>
       </div>
       <div className='contentMobile'>
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie elit vitae odio blandit mauris ac aenean pellentesque.</p>
+          <h1>{banner[pagina-1].title}</h1>
+          <p>{banner[pagina-1].descricao}</p>
         <div className='content-button'>
           <a className='desktop'>
             <Image

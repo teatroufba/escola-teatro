@@ -1,6 +1,7 @@
 import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import { ConteudoStyled } from "./styles";
+import { useRef } from "react";
 
 interface IConteudoFoto {
 	imageURL: string;
@@ -23,7 +24,6 @@ export default function ConteudoGaleria({
 	linkGaleria,
 	conteudoFotos,
 }: IConteudoGaleria) {
-	console.log(conteudo)
 	function handleEnterHover(div: string) {
 		if (document) {
 			const layer = document.getElementById(`${div}-layer`);
