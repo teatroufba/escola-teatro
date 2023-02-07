@@ -98,7 +98,7 @@ function Card(props: CardProps) {
                 <p>{title}</p>
                 <small>{desc}</small>
             </div>
-            <Link href={link ?? ''}>Acesse</Link>
+            <a target="_blank" href={link ?? ''}>Acesse</a>
         </div>
     </Container>
   )

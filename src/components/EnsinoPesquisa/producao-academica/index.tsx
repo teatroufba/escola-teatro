@@ -137,32 +137,24 @@ function ProducaoAcademica({ monografias, espetaculosFormatura, dissertacoes, te
 					<h2>Trabalhos de Conclusão de Curso - TCC</h2>
 					<div className="links">
 						<div className="link">
-							<Link passHref href={monografias ?? ''}>
-								<a href="replace">
+							<a target="_blank" href={monografias ?? ''}>
 									<p>Monografias</p>
-								</a>
-							</Link>
+							</a>
 						</div>
 						<div className="link">
-							<Link passHref href={espetaculosFormatura ?? ''}>
-								<a href="replace">
+							<a target="_blank" href={espetaculosFormatura ?? ''}>
 									<p>Espetáculos de Formatura</p>
-								</a>
-							</Link>
+							</a>
 						</div>
 						<div className="link">
-							<Link passHref href={dissertacoes ?? ''}>
-								<a href="replace">
+							<a target="_blank" href={dissertacoes ?? ''}>
 									<p>Dissertações</p>
-								</a>
-							</Link>
+							</a>
 						</div>
 						<div className="link">
-							<Link passHref href={teses ?? ''}>
-								<a href="replace">
+							<a target="_blank" href={teses ?? ''}>
 									<p>Teses</p>
-								</a>
-							</Link>
+							</a>
 						</div>
 					</div>
 				</div>
