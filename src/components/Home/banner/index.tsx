@@ -374,7 +374,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
 
   const mudaPagina = () => {
     if (carousel.current != null) {
-      setPagina(Math.round(carousel.current.scrollWidth / (carousel.current.scrollWidth - carousel.current.scrollLeft)))
+      setPagina(Math.round((carousel.current.scrollLeft) / carousel.current.clientWidth) + 1)
     }
   }
 
