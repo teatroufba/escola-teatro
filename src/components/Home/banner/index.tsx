@@ -21,7 +21,7 @@ const BannerStyled = styled.div`
     overflow-x: scroll;
     display: flex;
     scroll-behavior: smooth;
-    align-items: stretch;
+    align-items: center;
 
     &::-webkit-scrollbar {
       display: none;
@@ -30,7 +30,7 @@ const BannerStyled = styled.div`
     scrollbar-width: none;
 
     .imagem-banner {
-      min-width: 100vw;
+      min-width: 100%;
       height: 39.06vw;
       position: relative;
     }
