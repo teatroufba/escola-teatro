@@ -5,7 +5,9 @@ import styled from 'styled-components'
 import { LineIcon } from './icons'
 
 const BannerStyled = styled.div`
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   max-height: 750px;
   height: 39.06vw;
   min-height: 200px;
@@ -16,12 +18,14 @@ const BannerStyled = styled.div`
   }
 
   .carousel {
+    position: absolute;
     width: 100%;
     margin: 0 auto;
     overflow-x: scroll;
     display: flex;
     scroll-behavior: smooth;
     align-items: center;
+    z-index: 0;
 
     &::-webkit-scrollbar {
       display: none;
@@ -37,16 +41,15 @@ const BannerStyled = styled.div`
   }
 
   .layer {
+    position: absolute;
     display: none;
     width: 100%;
     max-height: 750px;
     height: 39.06vw;
     background-color: #9a1a4b;
     opacity: 0.7;
-    position: relative;
     left: 0;
     right: 0;
-    top: -750px;
     bottom: 0;
   }
 
@@ -56,18 +59,11 @@ const BannerStyled = styled.div`
 
   &:hover {
     .layer {
-      display: block;
-    }
-
-    @media (min-width: 1300px) {
-      .banner-control {
-        top: max(calc(-39.06vw - 261px), -1011px);
-      }
+      display: unset;
     }
 
     @media (max-width: 1300px) {
       .banner-control {
-        top: -39.06vw;
         justify-content: right;
         position: relative;
         background-color: #282b62;
@@ -204,26 +200,22 @@ const BannerStyled = styled.div`
     }
   }
 
-  @media (max-width: 1920px) {
-    .layer {
-      top: -39.06vw;
-    }
-  }
-
   .banner-control {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: end;
     width: 75vw;
     left: 0;
     right: 0;
-    top: -261px;
     bottom: 0;
     margin: auto;
     gap: 10px;
+    height: 100%;
+    padding-bottom: 80px;
 
     .content {
+      max-width: 40vw;
       color: white;
       display: flex;
       flex-direction: column;
