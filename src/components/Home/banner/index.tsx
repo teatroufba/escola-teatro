@@ -10,7 +10,6 @@ const BannerStyled = styled.div`
   flex-direction: column;
   max-height: 750px;
   height: 39.06vw;
-  min-height: 200px;
   background-color: #282b62;
 
   @media screen and (max-width: 1300px) {
@@ -65,11 +64,10 @@ const BannerStyled = styled.div`
     @media (max-width: 1300px) {
       .banner-control {
         justify-content: right;
-        position: relative;
+        position: absolute;
         background-color: #282b62;
         width: 100vw;
         height: 40px;
-        padding: 0 25px;
         justify-content: center;
 
         .content {
@@ -264,11 +262,11 @@ const BannerStyled = styled.div`
 
     @media screen and (max-width: 1300px) {
       justify-content: right;
-      position: static;
+      position: absolute;
       width: 100vw;
       margin: 0 auto;
       justify-content: center;
-      top: -90px;
+      padding: 0;
 
       .content {
         display: none;
@@ -306,7 +304,6 @@ const BannerStyled = styled.div`
     }
 
     @media screen and (max-width: 1000px) {
-      height: auto;
 
       .mobile {
         display: block;
@@ -319,7 +316,7 @@ const BannerStyled = styled.div`
       .pagination {
 
         .pagination-control {
-          width: 300px;
+          max-width: 300px;
         }
       }
     }
