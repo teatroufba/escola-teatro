@@ -406,6 +406,42 @@ function Banner({ banner }: { banner: IBanner[] }) {
     }
   }
 
+  const scrollBack = () => {
+    if (carousel.current != null) {
+      setScrolling(true)
+      if (pagina < banner.length) {
+        setCarouselScrollLeft(
+          Number(carousel.current.scrollLeft + carousel.current.clientWidth)
+        )
+        carousel.current.scrollLeft += carousel.current.clientWidth
+      } else {
+        setCarouselScrollLeft(0)
+        carousel.current.scrollLeft = 0
+      }
+      setTimeout(() => {
+        setScrolling(false)
+      }, carousel.current.clientWidth*0.5);
+    }
+  }
+
+  const scrollBackMobile = () => {
+    if (carousel.current != null) {
+      setScrolling(true)
+      if (pagina < banner.length) {
+        setCarouselScrollLeft(
+          Number(carousel.current.scrollLeft + carousel.current.clientWidth)
+        )
+        carousel.current.scrollLeft += carousel.current.clientWidth
+      } else {
+        setCarouselScrollLeft(0)
+        carousel.current.scrollLeft = 0
+      }
+      setTimeout(() => {
+        setScrolling(false)
+      }, carousel.current.clientWidth + 400);
+    }
+  }
+
   return (
     <BannerStyled>
       <div ref={carousel} className="carousel">
@@ -442,6 +478,32 @@ function Banner({ banner }: { banner: IBanner[] }) {
           </div>
         </div>
         <div className="pagination">
+          <button
+            className={
+              carouselScrollLeft >= carouselTotalScroll
+                ? 'desktop desactive'
+                : 'desktop'
+            }
+            onClick={scrollBack}
+            disabled={scrolling}
+          >
+            <Image
+              alt="ícone de seta para esquerda"
+              height={14}
+              src="/arrow-right.svg"
+              width={7}
+              style={{transform: 'scaleX(-1)'}}
+            />
+          </button>
+          <button className="mobile" onClick={scrollBackMobile} disabled={scrolling}>
+            <Image
+              alt="ícone de seta para esquerda"
+              height={14}
+              src="/arrow-right.svg"
+              width={7}
+              style={{transform: 'scaleX(-1)'}}
+            />
+          </button>
           <div className="pagination-control">
             <p>1</p>
             {banner.map((item, index) => (
