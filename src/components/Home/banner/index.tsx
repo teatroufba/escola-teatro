@@ -50,6 +50,10 @@ const BannerStyled = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
+
+    @media (max-width: 1300px) {
+      margin-bottom: 40px;
+    }
   }
 
   .contentMobile {
@@ -82,16 +86,15 @@ const BannerStyled = styled.div`
     }
     @media (max-width: 768px) {
       .contentMobile small{
-        width:2rem !important;
         height:2rem !important;
         font-size: .5rem !important;
         display: flex;
+        flex-wrap: nowrap;
         align-items: center !important;
       }
       .contentMobile{
         .content-button {
           display: none;
-          justify-content: right;
 
           a {
             background-color: #9a1a4b;
@@ -107,7 +110,6 @@ const BannerStyled = styled.div`
             background-color: #282b62;
             display: flex;
             justify-content: center;
-            width: 1.5rem !important;
             height: 1.5rem !important;
             font-family: 'Merriweather';
             font-style: normal;
@@ -119,11 +121,13 @@ const BannerStyled = styled.div`
     }
 
     .contentMobile {
-      width: 80%;
       color: white;
+      height: calc(100% - 40px);
       display: flex;
       flex-direction: column;
+      justify-content: end;
       gap: 25px;
+      padding: 0 12vw 15px 12vw;
 
         h1 {
           font-family: 'Merriweather';
@@ -142,7 +146,6 @@ const BannerStyled = styled.div`
 
         .content-button {
           display: none;
-          justify-content: right;
 
           a {
             background-color: #9a1a4b;
@@ -163,15 +166,16 @@ const BannerStyled = styled.div`
             font-style: normal;
             font-weight: 700;
             font-size: 0.875rem;
+
+            @media (max-width: 768px) {
+              padding: 0 10px;
+            }
           }
         }
 
       @media (max-width: 1300px) {
-        position: relative;
-        top: calc(-39.06vw - 266px);
+        position: absolute;
         display: flex;
-        width: 86.667vw;
-        max-width: 500px;
         margin: 0 auto;
 
         .content-button {
@@ -180,7 +184,6 @@ const BannerStyled = styled.div`
       }
 
       @media screen and (max-width: 600px) {
-        top: calc(-35.06vw - 176px);
 
         h1 {
           font-size: 2rem;
