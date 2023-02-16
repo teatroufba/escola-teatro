@@ -409,14 +409,14 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const scrollBack = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (pagina < banner.length) {
+      if (pagina > 1) {
         setCarouselScrollLeft(
-          Number(carousel.current.scrollLeft + carousel.current.clientWidth)
+          Number(carousel.current.scrollLeft - carousel.current.clientWidth)
         )
-        carousel.current.scrollLeft += carousel.current.clientWidth
+        carousel.current.scrollLeft -= carousel.current.clientWidth
       } else {
-        setCarouselScrollLeft(0)
-        carousel.current.scrollLeft = 0
+        setCarouselScrollLeft(banner.length)
+        carousel.current.scrollLeft = carousel.current.clientWidth * banner.length
       }
       setTimeout(() => {
         setScrolling(false)
@@ -429,12 +429,12 @@ function Banner({ banner }: { banner: IBanner[] }) {
       setScrolling(true)
       if (pagina < banner.length) {
         setCarouselScrollLeft(
-          Number(carousel.current.scrollLeft + carousel.current.clientWidth)
+          Number(carousel.current.scrollLeft - carousel.current.clientWidth)
         )
-        carousel.current.scrollLeft += carousel.current.clientWidth
+        carousel.current.scrollLeft -= carousel.current.clientWidth
       } else {
-        setCarouselScrollLeft(0)
-        carousel.current.scrollLeft = 0
+        setCarouselScrollLeft(banner.length)
+        carousel.current.scrollLeft = carousel.current.clientWidth * banner.length
       }
       setTimeout(() => {
         setScrolling(false)
