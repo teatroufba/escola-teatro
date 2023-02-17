@@ -21,7 +21,7 @@ export default function Mural({ mural }: { mural: IMural[] }) {
 
   return (
     <StyledMural>
-      <h1>Mural Estudantil</h1>
+      <h1>Mural Acadêmico</h1>
       <div className="mural-posts">
         {mural.slice(0, 6).map(value => (
           <div className="mural-card" key={value.uid}>

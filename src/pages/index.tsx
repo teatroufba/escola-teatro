@@ -43,9 +43,11 @@ export async function getStaticProps({
     const timestamp = (date: string) => new Date(date).getTime();
     return timestamp(a.date) - timestamp(b.date);
   });
-  const today = new Date().getTime() - 86400000
   const agenda = agendaFiltered.filter(agend => {
-    const data = new Date(agend.date).getTime()
+    const todayMidnight = new Date();
+    todayMidnight.setUTCHours(0,0,0,0);
+    const today = new Date().getTime() - todayMidnight.getTime()
+    const data = new Date(agend.date).getTime() - todayMidnight.getTime()
     return data >= today;
   })
 
