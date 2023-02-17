@@ -101,9 +101,9 @@ export async function getStaticProps({
 	const setoresChecked = undefinedCheck(setores);
 
 	const docente = escola.data.slices3.map((item: any) => ({
-		imagemAlt: item.primary.image.alt,
+		imagemAlt: item.primary.image.alt ? item.primary.image.alt : '/',
 		email: item.primary.email,
-		imagemUrl: item.primary.image.url,
+		imagemUrl: item.primary.image.url ? item.primary.image.url : '/',
 		interesses: item.primary.interesses
 			? maxChar(item.primary.interesses, 150)
 			: "",
