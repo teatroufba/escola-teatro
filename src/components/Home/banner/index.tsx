@@ -5,10 +5,11 @@ import styled from 'styled-components'
 import { LineIcon } from './icons'
 
 const BannerStyled = styled.div`
-  display: block;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   max-height: 750px;
   height: 39.06vw;
-  min-height: 200px;
   background-color: #282b62;
 
   @media screen and (max-width: 1300px) {
@@ -16,12 +17,14 @@ const BannerStyled = styled.div`
   }
 
   .carousel {
+    position: absolute;
     width: 100%;
     margin: 0 auto;
     overflow-x: scroll;
     display: flex;
     scroll-behavior: smooth;
-    align-items: stretch;
+    align-items: center;
+    z-index: 0;
 
     &::-webkit-scrollbar {
       display: none;
@@ -30,24 +33,27 @@ const BannerStyled = styled.div`
     scrollbar-width: none;
 
     .imagem-banner {
-      min-width: 100vw;
+      min-width: 100%;
       height: 39.06vw;
       position: relative;
     }
   }
 
   .layer {
+    position: absolute;
     display: none;
     width: 100%;
     max-height: 750px;
     height: 39.06vw;
     background-color: #9a1a4b;
     opacity: 0.7;
-    position: relative;
     left: 0;
     right: 0;
-    top: -750px;
     bottom: 0;
+
+    @media (max-width: 1300px) {
+      margin-bottom: 40px;
+    }
   }
 
   .contentMobile {
@@ -56,24 +62,16 @@ const BannerStyled = styled.div`
 
   &:hover {
     .layer {
-      display: block;
-    }
-
-    @media (min-width: 1300px) {
-      .banner-control {
-        top: max(calc(-39.06vw - 261px), -1011px);
-      }
+      display: unset;
     }
 
     @media (max-width: 1300px) {
       .banner-control {
-        top: -39.06vw;
         justify-content: right;
-        position: relative;
+        position: absolute;
         background-color: #282b62;
         width: 100vw;
         height: 40px;
-        padding: 0 25px;
         justify-content: center;
 
         .content {
@@ -88,16 +86,15 @@ const BannerStyled = styled.div`
     }
     @media (max-width: 768px) {
       .contentMobile small{
-        width:2rem !important;
         height:2rem !important;
         font-size: .5rem !important;
         display: flex;
+        flex-wrap: nowrap;
         align-items: center !important;
       }
       .contentMobile{
         .content-button {
           display: none;
-          justify-content: right;
 
           a {
             background-color: #9a1a4b;
@@ -113,7 +110,6 @@ const BannerStyled = styled.div`
             background-color: #282b62;
             display: flex;
             justify-content: center;
-            width: 1.5rem !important;
             height: 1.5rem !important;
             font-family: 'Merriweather';
             font-style: normal;
@@ -125,11 +121,13 @@ const BannerStyled = styled.div`
     }
 
     .contentMobile {
-      width: 80%;
       color: white;
+      height: calc(100% - 40px);
       display: flex;
       flex-direction: column;
+      justify-content: end;
       gap: 25px;
+      padding: 0 12vw 15px 12vw;
 
         h1 {
           font-family: 'Merriweather';
@@ -148,7 +146,6 @@ const BannerStyled = styled.div`
 
         .content-button {
           display: none;
-          justify-content: right;
 
           a {
             background-color: #9a1a4b;
@@ -169,15 +166,16 @@ const BannerStyled = styled.div`
             font-style: normal;
             font-weight: 700;
             font-size: 0.875rem;
+
+            @media (max-width: 768px) {
+              padding: 0 10px;
+            }
           }
         }
 
       @media (max-width: 1300px) {
-        position: relative;
-        top: calc(-39.06vw - 266px);
+        position: absolute;
         display: flex;
-        width: 86.667vw;
-        max-width: 500px;
         margin: 0 auto;
 
         .content-button {
@@ -186,7 +184,6 @@ const BannerStyled = styled.div`
       }
 
       @media screen and (max-width: 600px) {
-        top: calc(-35.06vw - 176px);
 
         h1 {
           font-size: 2rem;
@@ -204,26 +201,22 @@ const BannerStyled = styled.div`
     }
   }
 
-  @media (max-width: 1920px) {
-    .layer {
-      top: -39.06vw;
-    }
-  }
-
   .banner-control {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: end;
     width: 75vw;
     left: 0;
     right: 0;
-    top: -261px;
     bottom: 0;
     margin: auto;
     gap: 10px;
+    height: 100%;
+    padding-bottom: 80px;
 
     .content {
+      max-width: 40vw;
       color: white;
       display: flex;
       flex-direction: column;
@@ -272,11 +265,11 @@ const BannerStyled = styled.div`
 
     @media screen and (max-width: 1300px) {
       justify-content: right;
-      position: static;
+      position: absolute;
       width: 100vw;
       margin: 0 auto;
       justify-content: center;
-      top: -90px;
+      padding: 0;
 
       .content {
         display: none;
@@ -314,7 +307,6 @@ const BannerStyled = styled.div`
     }
 
     @media screen and (max-width: 1000px) {
-      height: auto;
 
       .mobile {
         display: block;
@@ -327,7 +319,7 @@ const BannerStyled = styled.div`
       .pagination {
 
         .pagination-control {
-          width: 300px;
+          max-width: 300px;
         }
       }
     }
@@ -374,7 +366,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
 
   const mudaPagina = () => {
     if (carousel.current != null) {
-      setPagina(Math.round(carousel.current.scrollWidth / (carousel.current.scrollWidth - carousel.current.scrollLeft)))
+      setPagina(Math.round((carousel.current.scrollLeft) / carousel.current.clientWidth) + 1)
     }
   }
 
@@ -407,6 +399,42 @@ function Banner({ banner }: { banner: IBanner[] }) {
       } else {
         setCarouselScrollLeft(0)
         carousel.current.scrollLeft = 0
+      }
+      setTimeout(() => {
+        setScrolling(false)
+      }, carousel.current.clientWidth + 400);
+    }
+  }
+
+  const scrollBack = () => {
+    if (carousel.current != null) {
+      setScrolling(true)
+      if (pagina > 1) {
+        setCarouselScrollLeft(
+          Number(carousel.current.scrollLeft - carousel.current.clientWidth)
+        )
+        carousel.current.scrollLeft -= carousel.current.clientWidth
+      } else {
+        setCarouselScrollLeft(banner.length)
+        carousel.current.scrollLeft = carousel.current.clientWidth * banner.length
+      }
+      setTimeout(() => {
+        setScrolling(false)
+      }, carousel.current.clientWidth*0.5);
+    }
+  }
+
+  const scrollBackMobile = () => {
+    if (carousel.current != null) {
+      setScrolling(true)
+      if (pagina < banner.length) {
+        setCarouselScrollLeft(
+          Number(carousel.current.scrollLeft - carousel.current.clientWidth)
+        )
+        carousel.current.scrollLeft -= carousel.current.clientWidth
+      } else {
+        setCarouselScrollLeft(banner.length)
+        carousel.current.scrollLeft = carousel.current.clientWidth * banner.length
       }
       setTimeout(() => {
         setScrolling(false)
@@ -450,6 +478,32 @@ function Banner({ banner }: { banner: IBanner[] }) {
           </div>
         </div>
         <div className="pagination">
+          <button
+            className={
+              carouselScrollLeft >= carouselTotalScroll
+                ? 'desktop desactive'
+                : 'desktop'
+            }
+            onClick={scrollBack}
+            disabled={scrolling}
+          >
+            <Image
+              alt="ícone de seta para esquerda"
+              height={14}
+              src="/arrow-right.svg"
+              width={7}
+              style={{transform: 'scaleX(-1)'}}
+            />
+          </button>
+          <button className="mobile" onClick={scrollBackMobile} disabled={scrolling}>
+            <Image
+              alt="ícone de seta para esquerda"
+              height={14}
+              src="/arrow-right.svg"
+              width={7}
+              style={{transform: 'scaleX(-1)'}}
+            />
+          </button>
           <div className="pagination-control">
             <p>1</p>
             {banner.map((item, index) => (
