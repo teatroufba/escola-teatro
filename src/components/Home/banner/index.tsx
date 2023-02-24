@@ -427,7 +427,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
   const scrollBackMobile = () => {
     if (carousel.current != null) {
       setScrolling(true)
-      if (pagina < banner.length) {
+      if (pagina > 1) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft - carousel.current.clientWidth)
         )
