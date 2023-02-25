@@ -11,7 +11,10 @@ const BannerStyled = styled.div`
   max-height: 750px;
   height: 39.06vw;
   background-color: #282b62;
-
+  a{
+    all: unset;
+    cursor: pointer !important
+  }
   @media screen and (max-width: 1300px) {
     height: calc(39.06vw + 40px);
   }
@@ -91,12 +94,13 @@ const BannerStyled = styled.div`
         display: flex;
         flex-wrap: nowrap;
         align-items: center !important;
+        text-decoration: none !important;
       }
       .contentMobile{
         .content-button {
           display: none;
 
-          a {
+          #linkBanner {
             background-color: #9a1a4b;
             width: 1.5rem !important;
             height: 1.5rem !important;
@@ -104,6 +108,7 @@ const BannerStyled = styled.div`
             cursor: pointer;
             display: flex;
             justify-content: center;
+            text-decoration: none !important;
           }
 
           small {
@@ -115,6 +120,7 @@ const BannerStyled = styled.div`
             font-style: normal;
             font-weight: 700;
             font-size: 0.875rem;
+            text-decoration: none !important;
           }
         }
       }
@@ -147,7 +153,7 @@ const BannerStyled = styled.div`
         .content-button {
           display: none;
 
-          a {
+          #linkBanner {
             background-color: #9a1a4b;
             width: 40px;
             height: 40px;
@@ -166,6 +172,7 @@ const BannerStyled = styled.div`
             font-style: normal;
             font-weight: 700;
             font-size: 0.875rem;
+            text-decoration: none !important;
 
             @media (max-width: 768px) {
               padding: 0 10px;
@@ -240,7 +247,7 @@ const BannerStyled = styled.div`
       .content-button {
         display: flex;
 
-        a {
+        #linkBanner {
           background-color: #9a1a4b;
           width: 40px;
           height: 40px;
@@ -259,6 +266,7 @@ const BannerStyled = styled.div`
           font-style: normal;
           font-weight: 700;
           font-size: 0.875rem;
+          text-decoration: none !important;
         }
       }
     }
@@ -466,7 +474,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
             <a 
               href={banner[pagina-1].link ? 
                 `//${banner[pagina-1].link}/` : "/"}
-              className='desktop'>
+              className='desktop' id='linkBanner'>
               <Image
                 alt="ícone de seta para esquerda"
                 height={14}
@@ -474,7 +482,10 @@ function Banner({ banner }: { banner: IBanner[] }) {
                 width={7}
               />
             </a>
-            <small>Ver mais</small>
+            <a href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}>
+              <small>Ver mais</small>
+            </a>
           </div>
         </div>
         <div className="pagination">
@@ -544,7 +555,9 @@ function Banner({ banner }: { banner: IBanner[] }) {
           <h1>{banner[pagina-1].title}</h1>
           <p>{banner[pagina-1].descricao}</p>
         <div className='content-button'>
-          <a className='desktop'>
+          <a href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}
+                 className='desktop' id='linkBanner'>
             <Image
               alt="ícone de seta para esquerda"
               height={14}
@@ -552,7 +565,10 @@ function Banner({ banner }: { banner: IBanner[] }) {
               width={7}
             />
           </a>
-          <small>Ver mais</small>
+          <a href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}>
+              <small>Ver mais</small>
+          </a>
         </div>
       </div>
     </BannerStyled>

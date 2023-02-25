@@ -79,7 +79,7 @@ function Footer() {
 								src="/phone.svg"
 								width={20}
 							/>
-							<p>71 3200-0000</p>
+							<p>71 3283-7850</p>
 						</li>
 						<li>
 							<Image
