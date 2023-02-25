@@ -22,12 +22,11 @@ export const HeaderSuperior = styled.div`
 	width: 100%;
 
 	@media (max-width: 1200px) {
-		padding: 35px 50px;
 		padding: 0;
 		justify-content: start;
 		align-items: flex-start;
 		flex-direction: column-reverse;
-		gap: 25px;
+		gap: 5px;
 
 		position: relative;
 		//position: fixed;
@@ -39,7 +38,7 @@ export const HeaderSuperior = styled.div`
 		}
 
 		.header {
-			margin-bottom: 25px;
+			margin-bottom: 5px;
 			margin-left: 50px;
 		}
 	}
@@ -50,9 +49,10 @@ export const HeaderSuperior = styled.div`
 			align-items: center;
 			justify-content: space-between;
 			display: flex;
+			height: 4rem;
 
 			margin: 0px;
-			padding: 18px 25px;
+			padding: 0px 25px;
 
 			width: 100%;
 			//position: relative;

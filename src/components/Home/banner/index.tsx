@@ -11,6 +11,9 @@ const BannerStyled = styled.div`
   max-height: 750px;
   height: 39.06vw;
   background-color: #282b62;
+  .mobileAbsolute{
+    display: none;
+  }
   a{
     all: unset;
     cursor: pointer !important
@@ -76,7 +79,9 @@ const BannerStyled = styled.div`
         width: 100vw;
         height: 40px;
         justify-content: center;
-
+        .mobileAbsolute{
+          display: none;
+        }
         .content {
           display: none;
         }
@@ -279,6 +284,46 @@ const BannerStyled = styled.div`
       justify-content: center;
       padding: 0;
 
+      .mobileAbsolute{
+        background-color: #282b62;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        text-align: center;
+        flex-direction: column;
+        align-items:center;
+        justify-content: center;
+        bottom: 2.5rem;
+        position: absolute;
+        padding: 0 .5rem 0 .5rem;
+        color: #fff;
+      }
+
+      .mobileAbsolute h1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+      }
+
+      .mobileAbsolute p{
+        background-color: #282b62;
+        width: 100%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .8rem;
+        max-width: 500px;
+      }
+
       .content {
         display: none;
       }
@@ -315,6 +360,28 @@ const BannerStyled = styled.div`
     }
 
     @media screen and (max-width: 1000px) {
+      .mobileAbsolute h1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+      }
+
+      .mobileAbsolute p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .7rem;
+        max-width: 500px;
+      }
 
       .mobile {
         display: block;
@@ -331,6 +398,54 @@ const BannerStyled = styled.div`
         }
       }
     }
+    @media screen and (max-width: 650px) {
+      .mobileAbsolute h1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.2rem;
+      }
+
+      .mobileAbsolute p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .7rem;
+        max-width: 500px;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .mobileAbsolute h1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .9rem;
+      }
+
+      .mobileAbsolute p{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: .4rem;
+        max-width: 500px;
+      }
+    }
 
 
     button {
@@ -341,10 +456,10 @@ const BannerStyled = styled.div`
       cursor: pointer;
     }
   }
-
   .img {
     width: 100vw;
   }
+
 `
 
 interface IBanner {
@@ -461,6 +576,7 @@ function Banner({ banner }: { banner: IBanner[] }) {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
+              className='imageBannerHome'
             />
           </div>
         ))}
@@ -488,6 +604,10 @@ function Banner({ banner }: { banner: IBanner[] }) {
             </a>
           </div>
         </div>
+        <div className='mobileAbsolute'>
+          <h1>{banner[pagina-1].title}</h1>
+          <p>{banner[pagina-1].descricao}</p>
+      </div>
         <div className="pagination">
           <button
             className={
