@@ -60,9 +60,6 @@ export default function MenuMobile() {
 									<a href="/escola/#apresentacao">Apresentação</a>
 								</li>
 								<li>
-									<a href="/escola/#formas-de-ingresso">Ingresso</a>
-								</li>
-								<li>
 									<a href="/escola/#setores-e-instancias">
 										Setores e Instâncias
 									</a>
@@ -74,7 +71,7 @@ export default function MenuMobile() {
 									<a href="/escola/#corpo-tecnico">Corpo Técnico</a>
 								</li>
 								<li>
-									<a href="/escola/#como-chegar">Contato</a>
+									<a href="/escola/#como-chegar">Como Chegar</a>
 								</li>
 							</ul>
 						</div>
@@ -95,10 +92,13 @@ export default function MenuMobile() {
 									<a href="/ensino/#pos-graduacao">Pós-Graduação</a>
 								</li>
 								<li>
-									<a href="/ensino/#grupos-de-pesquisa">Grupos de Pesquisa</a>
+									<a href="/escola/#formas-de-ingresso">Ingresso</a>
 								</li>
 								<li>
 									<a href="/ensino/#producao-academica">Produção Acadêmica</a>
+								</li>
+								<li>
+									<a href="/ensino/#grupos-de-pesquisa">Grupos de Pesquisa</a>
 								</li>
 							</ul>
 						</div>

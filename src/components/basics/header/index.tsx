@@ -103,7 +103,7 @@ function Header() {
 					<p>Escola de Teatro | UFBA</p>
 				</div>
 
-				<div className="social-navbar">
+				<div className={isShowingMobile ? "social-menu-open" : "social-navbar" }>
 					<div id="ham-btn" onClick={() => showSubmenuMobile()}>
 						<div className="ham-btn-bar" />
 						<div className="ham-btn-bar" />

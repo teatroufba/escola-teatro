@@ -59,6 +59,35 @@ export const HeaderSuperior = styled.div`
 		}
 	}
 
+	.social-menu-open {
+		@media (max-width: 1200px) {
+			background-color: #282b62;
+			align-items: center;
+			justify-content: space-between;
+			display: flex;
+			height: 7.5rem;
+
+			margin: 0px;
+			padding: 0px 25px;
+
+			width: 100%;
+			//position: relative;
+		}
+		@media (max-width: 630px) {
+			background-color: #282b62;
+			align-items: center;
+			justify-content: space-between;
+			display: flex;
+			height: 5.5rem;
+
+			margin: 0px;
+			padding: 0px 25px;
+
+			width: 100%;
+			//position: relative;
+		}
+	}
+
 	.social {
 		gap: 25px;
 		display: flex;

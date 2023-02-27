@@ -10,7 +10,6 @@ const BannerStyled = styled.div`
   flex-direction: column;
   max-height: 750px;
   height: 39.06vw;
-  background-color: #282b62;
   .mobileAbsolute{
     display: none;
   }
@@ -66,25 +65,52 @@ const BannerStyled = styled.div`
     display: none;
   }
 
+  @media (max-width: 1300px) {
+    .pagination{
+      display: flex;
+      justify-content: space-between;
+      width:100%;
+      align-items: center;
+      display: none;
+      padding-bottom: 23%;
+    }
+    .pagination-control{
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 650px) {
+    button {
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      background-color: #9a1a4b;
+      width: 25px !important;
+      height: 25px !important;
+      border: none;
+      cursor: pointer;
+    }
+    .pagination{
+      display: flex;
+      justify-content: space-between;
+      width:100%;
+      align-items: center;
+      display: none;
+      padding-bottom: 28%;
+    }
+  }
+
   &:hover {
     .layer {
       display: unset;
     }
 
     @media (max-width: 1300px) {
-      .banner-control {
-        justify-content: right;
-        position: absolute;
-        background-color: #282b62;
-        width: 100vw;
-        height: 40px;
-        justify-content: center;
-        .mobileAbsolute{
-          display: none;
-        }
-        .content {
-          display: none;
-        }
+      .contentMobile{
+        display: none !important;
+      }
+      .layer {
+        display: none;
       }
     }
     @media (max-width: 550px) {
@@ -276,6 +302,10 @@ const BannerStyled = styled.div`
       }
     }
 
+    .mobileAbsoluteLink{
+      display: none;
+    }
+
     @media screen and (max-width: 1300px) {
       justify-content: right;
       position: absolute;
@@ -284,44 +314,83 @@ const BannerStyled = styled.div`
       justify-content: center;
       padding: 0;
 
-      .mobileAbsolute{
+      .mobileAbsoluteLink{
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        bottom: 3.5rem;
+        position: absolute;
+        color: #fff;
+        
+      }
+      .mobileAbsoluteLink small{
+        width: 100px;
         background-color: #282b62;
-        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem !important;
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 0.875rem;
+        text-decoration: none !important;
+      }
+      .imageLinkMobile{
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        height: 2rem !important;
+        font-family: 'Merriweather';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 0.875rem;
+        text-decoration: none !important;
+        background-color: #9a1a4b;
+      }
+      .mobileAbsolute{
+        width: 100% !important;
         display: flex;
         margin: 0 auto;
         text-align: center;
         flex-direction: column;
-        align-items:center;
-        justify-content: center;
         bottom: 2.5rem;
         position: absolute;
-        padding: 0 .5rem 0 .5rem;
         color: #fff;
       }
 
-      .mobileAbsolute h1 {
+      .mobileAbsoluteTitle {
+        width: 100% !important;
+        font-family: "Merriweather";
+        font-weight: 400;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
-        font-family: 'Merriweather';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.8rem;
+        font-size: 1.2rem;
       }
 
-      .mobileAbsolute p{
+      .mobileAbsoluteParagraph{
         background-color: #282b62;
-        width: 100%;
+        width: 100% !important;
         overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
         font-family: 'Arial';
         font-style: normal;
         font-weight: 400;
-        font-size: .8rem;
-        max-width: 500px;
+        font-size: 1rem;
+        align-items:flex-start;
+      }
+      .internDivParagraph{
+        width: 80% !important;
+        box-align: start;
+        -webkit-box-align: start;
+        margin: 0 auto;
+        text-align: left;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
       }
 
       .content {
@@ -343,7 +412,6 @@ const BannerStyled = styled.div`
         align-items: center;
         gap: 10px;
 
-
         p {
           font-family: 'Merriweather';
           font-weight: 700;
@@ -360,27 +428,12 @@ const BannerStyled = styled.div`
     }
 
     @media screen and (max-width: 1000px) {
-      .mobileAbsolute h1 {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        font-family: 'Merriweather';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.5rem;
+      .mobileAbsoluteTitle {
+        font-size: 1rem;
       }
 
-      .mobileAbsolute p{
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 400;
-        font-size: .7rem;
-        max-width: 500px;
+      .mobileAbsoluteParagraph{
+        font-size: 1rem;
       }
 
       .mobile {
@@ -399,18 +452,24 @@ const BannerStyled = styled.div`
       }
     }
     @media screen and (max-width: 650px) {
-      .mobileAbsolute h1 {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        font-family: 'Merriweather';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 1.2rem;
+
+      .mobileAbsoluteTitle {
+        font-size: .7rem;
+      }
+      .mobileAbsoluteLink small{
+        width: 90px;
+        font-size: 0.8rem;
+        height: 1.5rem !important;
+      }
+      .imageLinkMobile{
+        width: 30px;
+        height: 1.5rem !important;
+        
       }
 
-      .mobileAbsolute p{
+      .mobileAbsoluteParagraph{
+        background-color: #282b62;
+        width: 100% !important;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 1;
@@ -418,32 +477,19 @@ const BannerStyled = styled.div`
         font-family: 'Arial';
         font-style: normal;
         font-weight: 400;
-        font-size: .7rem;
-        max-width: 500px;
+        font-size: .8rem;
       }
     }
     @media screen and (max-width: 400px) {
-      .mobileAbsolute h1 {
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        font-family: 'Merriweather';
-        font-style: normal;
+
+      .mobileAbsoluteTitle {
+        font-size: .7rem;
         font-weight: 400;
-        font-size: .9rem;
       }
 
-      .mobileAbsolute p{
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
-        font-family: 'Arial';
-        font-style: normal;
+      .mobileAbsoluteParagraph{
         font-weight: 400;
-        font-size: .4rem;
-        max-width: 500px;
+        font-size: .7rem;
       }
     }
 
@@ -570,7 +616,8 @@ function Banner({ banner }: { banner: IBanner[] }) {
       <div ref={carousel} className="carousel">
         {banner.map((item, index) => (
           <div className='imagem-banner' key={`banner${index}`}>
-            <Image
+            {banner[pagina-1].title &&
+              <Image
               src={item.imageUrl ? item.imageUrl : '/'}
               alt={item.imageAlt ? item.imageAlt : '/'}
               layout="fill"
@@ -578,6 +625,20 @@ function Banner({ banner }: { banner: IBanner[] }) {
               objectPosition="center"
               className='imageBannerHome'
             />
+            }
+            {!banner[pagina-1].title &&
+              <a href={banner[pagina-1].link ? 
+                  `//${banner[pagina-1].link}/` : "/"}>
+              <Image
+              src={item.imageUrl ? item.imageUrl : '/'}
+              alt={item.imageAlt ? item.imageAlt : '/'}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              className='imageBannerHome'
+              />
+              </a>
+            }
           </div>
         ))}
       </div>
@@ -604,10 +665,40 @@ function Banner({ banner }: { banner: IBanner[] }) {
             </a>
           </div>
         </div>
-        <div className='mobileAbsolute'>
-          <h1>{banner[pagina-1].title}</h1>
-          <p>{banner[pagina-1].descricao}</p>
-      </div>
+            {!banner[pagina-1].title && !banner[pagina-1].descricao &&
+            <div className='mobileAbsoluteLink'>
+              <a 
+              href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}
+              className='imageLinkMobile'>
+              <Image
+                alt="ícone de seta para esquerda"
+                height={14}
+                src="/arrow-right.svg"
+                width={7}
+              />
+              </a>
+              <a href={banner[pagina-1].link ? 
+                  `//${banner[pagina-1].link}/` : "/"}>
+                <small>Ver mais</small>
+              </a>
+            </div>
+            }
+          <div className='mobileAbsolute'>
+          <a href={banner[pagina-1].link ? 
+                `//${banner[pagina-1].link}/` : "/"}>
+            <div className='mobileAbsoluteTitle'>
+              <div className='internDivParagraph'>
+                <h1>{banner[pagina-1].title}</h1>
+              </div>
+            </div>
+            <div className='mobileAbsoluteParagraph'>
+              <div className='internDivParagraph'>
+                <p>{banner[pagina-1].descricao}</p>
+              </div>
+            </div>
+            </a>
+          </div>
         <div className="pagination">
           <button
             className={
@@ -684,10 +775,6 @@ function Banner({ banner }: { banner: IBanner[] }) {
               src="/arrow-right.svg"
               width={7}
             />
-          </a>
-          <a href={banner[pagina-1].link ? 
-                `//${banner[pagina-1].link}/` : "/"}>
-              <small>Ver mais</small>
           </a>
         </div>
       </div>
