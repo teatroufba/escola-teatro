@@ -266,25 +266,25 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								hideTextFunction={hideText}
 							/>}
 							<div className={cardSelect === index ? "info" : "disable"} key={`curso-info${index}`}>
-								<Link href={value.ppp}>
+								<Link href={value.ppp ? value.ppp : '/'}>
 									<div>
 										<p>Projeto político Pedagógico</p>
 										<p className="link">Ver mais</p>
 									</div>
 								</Link>
-								<Link href={value.matrizCurricular}>
+								<Link href={value.matrizCurricular ? value.matrizCurricular : '/'}>
 									<div>
 										<p>Matriz Curricular</p>
 										<p className="link">Ver mais</p>
 									</div>
 								</Link>
-								<Link href={value.ementario}>
+								<Link href={value.ementario ? value.ementario : '/'}>
 									<div>
 										<p>Ementário</p>
 										<p className="link">Ver mais</p>
 									</div>
 								</Link>
-								<Link href={value.guiaEstudantil}>
+								<Link href={value.guiaEstudantil ? value.guiaEstudantil : '/'}>
 									<div>
 										<p>Guia Estudantil</p>
 										<p className="link">Ver mais</p>
