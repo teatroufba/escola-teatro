@@ -15,7 +15,7 @@ const Container = styled.div`
 	padding: 130px 0 80px 0;
 	text-align: center;
 
-	@media (max-width: 1300px) {
+	@media (max-width: 1200px) {
 		width: 100vw;
 		padding: 36px 25px;
 	}
@@ -29,10 +29,10 @@ const Container = styled.div`
 		display: flex;
 		justify-content: start;
 		width: 100vw;
-		max-width: 1235px;
+		max-width: 1100px;
 		gap: 1.5rem;
 
-		@media (max-width: 1300px) {
+		@media (max-width: 1200px) {
 			flex-direction: column;
 			width: 100%;
 		}
@@ -43,7 +43,7 @@ const Container = styled.div`
 			flex-direction: column;
 			gap: 2rem;
 
-			@media (max-width: 1300px) {
+			@media (max-width: 1200px) {
 				width: 100%;
 			}
 
@@ -79,7 +79,7 @@ const Container = styled.div`
 				gap: 3.25rem;
 			}
 
-			@media (max-width: 1300px) {
+			@media (max-width: 1200px) {
 				width: 100%;
 			}
 
@@ -109,7 +109,7 @@ const Container = styled.div`
 				display: flex;
 				gap: 1.5rem;
 
-				@media (max-width: 1300px) {
+				@media (max-width: 1200px) {
 					margin: auto;
 				}
 

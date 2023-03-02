@@ -87,7 +87,6 @@ export const StyledEntryFormsContainer = styled.div`
 		font-family: "Merriweather", serif;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 30px;
 		letter-spacing: 0em;
 		text-align: left;
 		color: #2B2B2B;
