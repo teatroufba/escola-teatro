@@ -86,6 +86,7 @@ export const StyledBannerApresentacaoContainer = styled.div`
 
 		.presentation-content-wrapper {
 			padding: 20px 30px;
+			padding-bottom: 10%;
 		}
 	}
 

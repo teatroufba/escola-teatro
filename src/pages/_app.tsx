@@ -4,6 +4,7 @@ import { PrismicProvider } from "@prismicio/react";
 import type { AppProps } from "next/app";
 import Link from "next/link";
 import Script from "next/script";
+import brasaoIco from '../../public/brasaoTitle.ico'
 
 import { GlobalStyles } from "@/styles/global";
 
@@ -25,6 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 					</Link>
 				)}
 			>
+				<Head>
+					<title>Escola de Teatro</title>
+				</Head>
 				<Script
 					defer
 					src="//barra.brasil.gov.br/barra.js"

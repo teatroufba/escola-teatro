@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Button from './../button'
 
 const Container = styled.div`
-    width: 98vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +123,7 @@ const Container = styled.div`
             font-style: normal;
             display: inline-block;
             font-weight: 600;
-            font-size: 3rem;
+            font-size: 2.9rem;
             color: #2D2B78;
             border-bottom: 5px solid #2D2B78;
             margin-bottom: 3rem;
