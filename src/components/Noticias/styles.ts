@@ -235,9 +235,12 @@ export const StyledNoticias = styled.div`
     }
   }
 
-  @media (min-width: 1285px) {
+  @media (min-width: 1220px) {
     .posts-flex {
       width: 1235px;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
     }
   }
 `;
