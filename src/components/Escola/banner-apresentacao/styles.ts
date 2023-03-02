@@ -66,6 +66,12 @@ export const StyledBannerApresentacaoContainer = styled.div`
 		line-height: 33px;
 		font-size: 18.5px;
 	}
+	@media screen and (max-width: 1300px) {
+		.presentation-content p {
+			line-height: 32px;
+			font-size: 16.5px !important;
+		}
+	}
 
 	.presentation-content button {
 		cursor: pointer;
@@ -90,7 +96,7 @@ export const StyledBannerApresentacaoContainer = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 1300px) {
+	@media screen and (max-width: 1200px) {
 		.hidden-text {
 			height:100vh;
 		}
@@ -159,7 +165,7 @@ export const StyledPagination = styled.div`
 		background-color: #24233a;
 	}
 
-	@media screen and (max-width: 1300px) {
+	@media screen and (max-width: 1200px) {
 		width: 100%;
 		padding-top: 0rem;
 	}
@@ -169,11 +175,11 @@ export const StyledPagination = styled.div`
 		padding-bottom: 1rem;
 	}
 
-	@media screen and (min-width: 1300px) {
+	@media screen and (min-width: 1200px) {
 		width: min(600px, 100%);
 	}
 
-	/* @media screen and (max-width: 1300px) {
+	/* @media screen and (max-width: 1200px) {
 		width: 100%;
 		margin-bottom: 80px;
 
