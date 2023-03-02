@@ -26,9 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 					</Link>
 				)}
 			>
-				<Head>
+				{/* <Head>
 					<title>Escola de Teatro</title>
-				</Head>
+				</Head> */}
 				<Script
 					defer
 					src="//barra.brasil.gov.br/barra.js"
