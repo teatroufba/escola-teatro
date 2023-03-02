@@ -58,7 +58,6 @@ export default function BackToTop() {
 			{isShowing ? (
 				<div className="back-to-top-wrapper">
 					<BackToTopIcon />
-					<span>TOPO</span>
 				</div>
 			) : null}
 		</BackToTopContainer>

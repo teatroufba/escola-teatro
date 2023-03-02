@@ -251,7 +251,7 @@ const BannerStyled = styled.div`
     margin: auto;
     gap: 10px;
     height: 100%;
-    padding-bottom: 80px;
+    padding-bottom: 25px;
 
     .content {
       max-width: 40vw;
