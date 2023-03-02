@@ -88,7 +88,7 @@ export default function BannerApresentacao({ conteudos }: IApresentacao) {
 										}}
 									/>
 								</div>
-								<ReadMore
+								{/* <ReadMore
 									textID="text-content"
 									mainContainerID="apresentacao"
 									buttonID="show-text-btn"
@@ -102,7 +102,7 @@ export default function BannerApresentacao({ conteudos }: IApresentacao) {
 									setIsShowingText={setIsShowingText}
 									setIsClampedText={setIsClampedText}
 									setIsLongText={setIsLongText}
-								/>
+								/> */}
 							</div>
 							<Pagination
 								currentPage={currentPage}

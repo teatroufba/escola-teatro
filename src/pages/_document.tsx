@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
             content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/10320"
             property="creator.productor"
           />
+          <title>Escola de Teatro</title>
           
 
           <link rel="preconnect" href="https://fonts.googleapis.com"/>

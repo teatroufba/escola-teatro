@@ -48,7 +48,7 @@ export const StyledBannerApresentacaoContainer = styled.div`
 		flex-direction: column;
 		padding: 60px 70px;
 		width: 40vw;
-		gap: 48px;
+		gap: 36px;
 	}
 
 	.presentation-content {
@@ -63,8 +63,8 @@ export const StyledBannerApresentacaoContainer = styled.div`
 	}
 
 	.presentation-content p {
-		line-height: 33.1px;
-		font-size: 20px;
+		line-height: 33px;
+		font-size: 18.5px;
 	}
 
 	.presentation-content button {
@@ -77,10 +77,6 @@ export const StyledBannerApresentacaoContainer = styled.div`
 
 	.hidden-text {
 		display: -webkit-box;
-		line-clamp: 10;
-		-webkit-line-clamp: 10;
-		-webkit-box-orient: vertical;
-		overflow: hidden;
 	}
 
 	@media screen and (max-width: 768px) {
@@ -93,7 +89,10 @@ export const StyledBannerApresentacaoContainer = styled.div`
 		}
 	}
 
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 1300px) {
+		.hidden-text {
+			height:100vh;
+		}
 		#presentation-section-title {
 			font-weight: 400;
 			font-size: 36px;
@@ -132,6 +131,7 @@ export const StyledBannerApresentacaoContainer = styled.div`
 
 export const StyledPagination = styled.div`
 	width: 70%;
+	padding-top: 5rem;
 	display: flex;
 	gap: 10px;
 	justify-content: space-between;
@@ -158,15 +158,21 @@ export const StyledPagination = styled.div`
 		background-color: #24233a;
 	}
 
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: 1300px) {
 		width: 100%;
+		padding-top: 0rem;
+	}
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		padding-top: 12rem;
+		padding-bottom: 1rem;
 	}
 
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: 1300px) {
 		width: min(600px, 100%);
 	}
 
-	/* @media screen and (max-width: 1200px) {
+	/* @media screen and (max-width: 1300px) {
 		width: 100%;
 		margin-bottom: 80px;
 
@@ -175,7 +181,6 @@ export const StyledPagination = styled.div`
 			padding: 7px 16px;
 		}
 	} */
-
 	@media screen and (max-width: 425px) {
 		.pagination-container {
 			display: none;
