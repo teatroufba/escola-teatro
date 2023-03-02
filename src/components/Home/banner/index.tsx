@@ -17,7 +17,7 @@ const BannerStyled = styled.div`
     all: unset;
     cursor: pointer !important
   }
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1220px) {
     height: calc(39.06vw + 40px);
   }
 
@@ -56,7 +56,7 @@ const BannerStyled = styled.div`
     right: 0;
     bottom: 0;
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1220px) {
       margin-bottom: 40px;
     }
   }
@@ -65,7 +65,7 @@ const BannerStyled = styled.div`
     display: none;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1220px) {
     .pagination{
       display: flex;
       justify-content: space-between;
@@ -105,7 +105,7 @@ const BannerStyled = styled.div`
       display: unset;
     }
 
-    @media (max-width: 1300px) {
+    @media (max-width: 1220px) {
       .contentMobile{
         display: none !important;
       }
@@ -211,7 +211,7 @@ const BannerStyled = styled.div`
           }
         }
 
-      @media (max-width: 1300px) {
+      @media (max-width: 1220px) {
         position: absolute;
         display: flex;
         margin: 0 auto;
@@ -306,7 +306,7 @@ const BannerStyled = styled.div`
       display: none;
     }
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1220px) {
       justify-content: right;
       position: absolute;
       width: 100vw;
