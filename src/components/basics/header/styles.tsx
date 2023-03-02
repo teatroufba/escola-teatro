@@ -95,6 +95,31 @@ export const HeaderSuperior = styled.div`
 		align-items: center;
 
 		@media (max-width: 1200px) {
+			display: none;
+			a input {
+				filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(345deg)
+					brightness(101%) contrast(102%);
+			}
+		}
+
+		@media (max-width: 600px) {
+			a input {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+	.socialMobileIcons {
+		gap: 25px;
+		display: none;
+
+		@media (max-width: 1200px) {
+			padding: 0px;
+			margin: 0px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
 			a input {
 				filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(345deg)
 					brightness(101%) contrast(102%);

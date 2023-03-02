@@ -152,6 +152,49 @@ function Header() {
 							</a>
 						</Link>
 					</ul>
+
+					<ul className="socialMobileIcons">
+						<Link passHref href="https://www.facebook.com/ufba.escoladeteatro/" >
+							<a className="desktop" href="replace" target="_blank">
+							<Image
+								alt="Icone do Facebook"
+								height={30}
+								src="/facebookMobileIcon.svg"
+								width={30}
+							/>
+							</a>
+						</Link>
+						<Link passHref href="https://www.instagram.com/escoladeteatro.ufba/" >
+							<a className="desktop" href="replace" target="_blank">
+							<Image
+								alt="Icone do Instagram"
+								height={30}
+								src="/instagramMobileIcon.svg"
+								width={30}
+							/>
+							</a>
+						</Link>
+						<Link passHref href="https://www.youtube.com/user/teatroufba" >
+							<a className="desktop" href="replace" target="_blank" >
+							<Image
+								alt="Icone do Youtube"
+								height={30}
+								src="/youtubeMobileIcon.svg"
+								width={30}
+							/>
+							</a>
+						</Link>
+						<Link passHref href="https://www.flickr.com/photos/128786324@N02/sets/" >
+							<a className="desktop" href="replace" target="_blank">
+							<Image
+								alt="Icone do Flickr"
+								height={30}
+								src="/flickrMobileIcon.svg"
+								width={30}
+							/>
+							</a>
+						</Link>
+					</ul>
 				</div>
 			</HeaderSuperior>
 
