@@ -31,12 +31,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					</Link>
 				)}
 			>
-				<Head>
-				<title>Escola de Teatro | UFBA</title>
-				<meta name='description' content='Escola de Teatro da Universidade Federal da Bahia.' />
-				<link rel="icon" type="image/ico" href="/favicon.ico" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				</Head>
+
 				<Script
 					defer
 					src="//barra.brasil.gov.br/barra.js"

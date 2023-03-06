@@ -56,6 +56,9 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
                         rel="stylesheet"
                     />
+                    <title>Escola de Teatro | UFBA</title>
+                    <link rel="icon" type="image/ico" href="/favicon.ico" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
                 </Head>
                 <body>
                     <Main />
