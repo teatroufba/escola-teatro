@@ -42,6 +42,7 @@
     "react-use-pagination": "^2.0.1",
     "react-useonview": "^1.2.2",
     "react.dom": "^1.0.1",
+    "sharp": "^0.31.3",
     "slicemachine": "^0.0.1",
     "storyboard": "3.3.2",
     "styled-components": "^5.3.5"
