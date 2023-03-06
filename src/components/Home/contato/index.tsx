@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { SetStateAction, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import styled from 'styled-components'
 
@@ -13,6 +14,19 @@ const ContatoStyled = styled.div`
   align-items: center;
   text-align: center;
   gap: 60px;
+  .checkboxSpan{
+    font-size: 18px;
+    font-family: 'Arial';
+    font-size: 1rem;
+  }
+
+  .checkboxDiv{
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
 
   .title {
     font-family: 'Merriweather';
@@ -35,6 +49,12 @@ const ContatoStyled = styled.div`
 
       @media screen and (max-width: 768px) {
         display: none;
+      }
+    }
+
+    @media screen and (max-width:452px){
+      .checkboxSpan{
+        font-size: 13px !important;
       }
     }
 
@@ -125,6 +145,11 @@ type FormData = {
 }
 
 function Contato() {
+  const [nameForm, setNameForm] = useState('')
+  const [nameEmpty, setNameEmpty] = useState(true)
+  const handleChange = (event: { target: { value: SetStateAction<string> } }) => {
+    setNameForm(event.target.value);
+  }
   const { register, handleSubmit, reset } = useForm<FormData>()
   const onSubmit: SubmitHandler<FormData> = data => {
     fetch('/api/mail', { method: 'post', body: JSON.stringify(data) }).then(
@@ -150,6 +175,7 @@ function Contato() {
             type="text"
             {...register('name', { required: true })}
             placeholder="Nome"
+            onChange={handleChange}
           />
           <input
             type="text"
@@ -165,6 +191,12 @@ function Contato() {
             })}
             placeholder="Mensagem"
           />
+          {nameForm.length > 0 && 
+          <div className='checkboxDiv'>
+            <input required type="checkbox"></input>
+            <p className='checkboxSpan'>Eu autorizo o uso desses dados como meios de contato.</p>
+          </div>
+          }
           <button type="submit">Enviar</button>
         </form>
       </div>
