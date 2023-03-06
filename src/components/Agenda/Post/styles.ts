@@ -33,7 +33,6 @@ export const StyledPostAgendaMain = styled.section`
 
             div {
                 display: flex;
-                align-items: center;
                 gap: 0.5rem;
 
                 p {
@@ -49,8 +48,6 @@ export const StyledPostAgendaMain = styled.section`
             line-height: 1.5rem;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
 
             p {
                     margin: 16px 0;
@@ -60,7 +57,6 @@ export const StyledPostAgendaMain = styled.section`
                     margin: 8px 0;
                     width: 100%;
                     display: flex;
-                    align-items: flex-start;
                 }
                 div[data-oembed-type=video] {
                     margin: 8px 0 ;
@@ -78,7 +74,11 @@ export const StyledPostAgendaMain = styled.section`
                 }
         }
     }
-
+    @media (max-width: 769px) {
+        #container-baixo-agenda{
+            width: 100%;
+        }
+    }
     @media (min-width: 769px) {
         #container-img-agenda {
             height: 39.06vw;
@@ -105,17 +105,10 @@ export const StyledPostAgendaMain = styled.section`
                 line-height: 2.0625rem;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                p {
-                    margin: 16px 0;
-                }
 
                 h1 , h2 , h3, h4 , h5 {
-                    margin: 32px 0;
                     width: 100%;
                     display: flex;
-                    align-items: flex-start;
                 }
                 div[data-oembed-type=video] {
 

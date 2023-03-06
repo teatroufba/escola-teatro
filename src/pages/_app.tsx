@@ -12,8 +12,14 @@ import Header from "@/components/basics/header";
 import Footer from "@/components/basics/footer";
 import Head from "next/head";
 import BackToTop from "@/components/basics/back-to-top/index";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+	const router = useRouter()
+	const url = router.pathname
+	const [options, setOptions] = useState('/');
+
 	return (
 		<>
 			<PrismicProvider
@@ -25,6 +31,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 					</Link>
 				)}
 			>
+				<Head>
+				<title>Escola de Teatro | UFBA</title>
+				<meta name='description' content='Escola de Teatro da Universidade Federal da Bahia.' />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				</Head>
 				<Script
 					defer
 					src="//barra.brasil.gov.br/barra.js"

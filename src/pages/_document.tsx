@@ -41,6 +41,7 @@ export default class MyDocument extends Document {
                         content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/10320"
                         property="creator.productor"
                     />
+                    <html lang="pt_BR"></html>
 
                     <link
                         rel="preconnect"
@@ -55,7 +56,7 @@ export default class MyDocument extends Document {
                         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap"
                         rel="stylesheet"
                     />
-                    <link rel="icon" type="image/x-icon" href="/brasao.png" />
+                    <link rel="icon" type="image/ico" href="/favicon.ico" />
                 </Head>
                 <body>
                     <Main />
