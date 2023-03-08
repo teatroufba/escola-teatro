@@ -1,5 +1,6 @@
 import Apresentacao from "@/components/Escola/apresentacao/Apresentacao";
 import BannerApresentacao from "@/components/Escola/banner-apresentacao";
+import image from "@/public/novoBrasaoHandler.png";
 import ComoChegar from "@/components/Escola/como-chegar/ComoChegar";
 import Docentes from "@/components/Escola/corpo-docente/Docentes";
 import CorpoTecnico from "@/components/Escola/corpo-tecnico/CorpoTecnico";
@@ -80,10 +81,10 @@ export async function getStaticProps({
 	const escola = await client.getSingle("escola");
 
 	const apresentacao = escola.data.slices.map((item: any) => ({
-		conteudo: item.primary.conteudo,
-		imageAlt: item.primary.image.alt,
-		imageUrl: item.primary.image.url,
-		titulo: item.primary.titulo,
+		conteudo: item.primary.conteudo ? item.primary.conteudo : '' ,
+		imageAlt: item.primary.image.alt ? item.primary.image.alt : image,
+		imageUrl: item.primary.image.url ? item.primary.image.url : image ,
+		titulo: item.primary.titulo ? item.primary.titulo : '',
 	}));
 
 	const apresentacaoChecked = undefinedCheck(apresentacao);
@@ -101,9 +102,9 @@ export async function getStaticProps({
 	const setoresChecked = undefinedCheck(setores);
 
 	const docente = escola.data.slices3.map((item: any) => ({
-		imagemAlt: item.primary.image.alt ? item.primary.image.alt : '/',
+		imagemAlt: item.primary.image.alt ? item.primary.image.alt : image,
 		email: item.primary.email,
-		imagemUrl: item.primary.image.url ? item.primary.image.url : '/',
+		imagemUrl: item.primary.image.url ? item.primary.image.url : image,
 		interesses: item.primary.interesses
 			? maxChar(item.primary.interesses, 150)
 			: "",
