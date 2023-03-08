@@ -10,15 +10,25 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+
 	color: #2d2b78;
 	font-family: "Merriweather", serif;
 	padding: 130px 0 80px 0;
 	text-align: center;
+	
+
+	@media (min-width: 768px) {
+		.paginationEntryForm{
+			display: none;
+		}
+	}
 
 	@media (max-width: 1200px) {
 		width: 100vw;
 		padding: 36px 25px;
 	}
+
+
 
 	h2 {
 		font-size: 2rem;
@@ -47,12 +57,22 @@ const Container = styled.div`
 				width: 100%;
 			}
 
+			@media (max-width: 768px) {
+				text-align: center;
+				gap: 0rem;
+			}
+
 			.courses {
 				display: flex;
 				flex-direction: column;
 				gap: 1.5rem;
 
+				@media (max-width: 768px) {
+					display: none;
+				}
+
 				.card {
+					line-height: 28px;
 					background-color: #9a1a4b;
 					color: white;
 					padding: 1.5rem;
@@ -90,6 +110,7 @@ const Container = styled.div`
 
 				.description {
 					color: #2b2b2b;
+					line-height: 28px;
 
 					button {
 						margin-top: 0.5rem;
@@ -190,6 +211,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 		setCardSelect(currentPage - 1);
 	}, [currentPage]);
 
+
 	function hideText() {
 		if (isShowingText) {
 			const text = document.getElementById("entry-form-text-content");
@@ -234,7 +256,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								onClick={() => setCardSelect(index)}
 							>
 								<h3>{value.titulo}</h3>
-								<p>{value.duracao ? `Duração: ${value.duracao} anos` : ''}</p>
+								<p className="displayMobile">{value.duracao ? `Duração: ${value.duracao} anos` : ''}</p>
 							</div>
 						))}
 					</div>
@@ -259,12 +281,16 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 									{value.descricao.length > 600 ? <button onClick={toggleSeeMore}>{seeMore ? 'Ver menos' : 'Ver mais'}</button> : ''}
 								</div>
 							</div>
-							{cardSelect === index && <Pagination
+							<div className="paginationEntryForm">
+							{cardSelect === index &&
+							<Pagination
 								currentPage={currentPage}
 								pages={pages}
 								paginationFunction={setCurrentPage}
 								hideTextFunction={hideText}
-							/>}
+							/>
+							}
+							</div>
 							<div className={cardSelect === index ? "info" : "disable"} key={`curso-info${index}`}>
 								<Link href={value.ppp ? value.ppp : '/'}>
 									<div>

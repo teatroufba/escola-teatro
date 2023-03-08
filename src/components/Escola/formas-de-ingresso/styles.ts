@@ -10,6 +10,9 @@ export const StyledEntryFormsContainer = styled.div`
 	background-color: #f7f6f5;
 	margin-bottom: 80px;
 	margin-top: 80px;
+	.paginationEntryForm{
+		display: none;
+	}
 
 	h1 {
 		box-sizing: border-box;
@@ -49,11 +52,12 @@ export const StyledEntryFormsContainer = styled.div`
 		background-color: transparent;
 		color: #fff;
 		text-decoration: none;
+		line-height: 28px;
 	}
 
 	.entry-form h3 {
-		font-size: 24px;
-		font-weight: 400;
+		font-size: 22px;
+		font-weight: 700;
 		margin-bottom: 1px solid #fff;
 		text-align: left;
 		margin-bottom: 10px;
@@ -87,8 +91,8 @@ export const StyledEntryFormsContainer = styled.div`
 		font-family: "Merriweather", serif;
 		font-size: 16px;
 		font-weight: 400;
-		letter-spacing: 0em;
 		text-align: left;
+		line-height: 28px;
 		color: #2B2B2B;
 	}
 
@@ -114,6 +118,11 @@ export const StyledEntryFormsContainer = styled.div`
 	}
 
 	@media screen and (max-width: 768px) {
+		.paginationEntryForm{
+			display: flex;
+			width: 100%;
+		}
+		margin-bottom: 0px;
 		h1 {
 			text-align: left;
 			width: 80%;
@@ -135,6 +144,9 @@ export const StyledEntryFormsContainer = styled.div`
 		}
 		.right-column {
 			max-width: 100%;
+		}
+		.left-column{
+			display: none;
 		}
 	}
 

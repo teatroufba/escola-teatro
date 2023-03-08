@@ -100,12 +100,14 @@ export default function FormasDeIngresso({
 									/> */}
 								</div>
 							</div>
+							<div className="paginationEntryForm">
 							<Pagination
 								currentPage={currentPage}
 								pages={pages}
 								paginationFunction={setCurrentPage}
 								hideTextFunction={hideText}
 							/>
+							</div>
 						</div>
 					))}
 				</div>

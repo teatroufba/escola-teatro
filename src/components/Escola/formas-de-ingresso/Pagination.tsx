@@ -70,7 +70,7 @@ export default function Pagination({currentPage, pages, paginationFunction, hide
               
               <div className="pagination-container">
                 {pages.map((page) => page === currentPage - 1 
-                ? <LineIcon key={page} hover size={20} /> 
+                ? <LineIcon key={page} hover={false} size={20} /> 
                 : <LineIcon key={page} hover={false} size={20} />)}
               </div>
               
