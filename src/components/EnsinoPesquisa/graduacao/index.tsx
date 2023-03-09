@@ -15,13 +15,7 @@ const Container = styled.div`
 	font-family: "Merriweather", serif;
 	padding: 130px 0 80px 0;
 	text-align: center;
-	
 
-	@media (min-width: 768px) {
-		.paginationEntryForm{
-			display: none;
-		}
-	}
 
 	@media (max-width: 1200px) {
 		width: 100vw;
@@ -211,24 +205,13 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 		setCardSelect(currentPage - 1);
 	}, [currentPage]);
 
-
+	function scrollGraduation(){
+		window.scrollTo({
+			top: document.getElementById("valueTitleGrad")?.offsetHeight
+		});
+	}
 	function hideText() {
-		if (isShowingText) {
-			const text = document.getElementById("entry-form-text-content");
-			const mainContainer = document.getElementById("formas-de-ingresso");
-
-			if (text && mainContainer) {
-				setIsShowingText(false);
-				text.classList.add("hidden-text");
-				mainContainer.style.height = window.innerWidth < 768 ? "100%" : "800px";
-				text.style.height = window.innerWidth < 768 ? "100%" : "300px";
-
-				window.scrollTo({
-					top: document.getElementById("entry-form-title")?.offsetTop,
-					behavior: "smooth",
-				});
-			}
-		}
+		console.log('')
 	}
 
 	function textFormater(str: string, numberMax: number) {
@@ -270,7 +253,7 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 								className={cardSelect === index ? "courseInfo" : "disable"}
 							>
 								<h2>{value.titulo}</h2>
-								<div className="description">
+								<div id="valueTitleGrad" className="description">
 								<PrismicRichText
 									field={value.descricao}
 									// field={seeMore ? value.descricao : textFormater(value.descricao, 600)}
@@ -278,10 +261,9 @@ function Graduacao({ cursos }: { cursos: IGraduacao[] }) {
 									paragraph: ({ children }) => <p>{children}</p>,
 									}}
 									/>
-									{value.descricao.length > 600 ? <button onClick={toggleSeeMore}>{seeMore ? 'Ver menos' : 'Ver mais'}</button> : ''}
 								</div>
 							</div>
-							<div className="paginationEntryForm">
+							<div onClick={scrollGraduation}>
 							{cardSelect === index &&
 							<Pagination
 								currentPage={currentPage}

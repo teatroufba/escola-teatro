@@ -42,7 +42,7 @@ export default function Pagination({currentPage, pages, sectionTitleID, paginati
 
         window.scrollTo({
           top: document.getElementById(sectionTitleID)?.offsetTop,
-          behavior: 'smooth',
+          behavior: 'auto',
       }); 
       }
 

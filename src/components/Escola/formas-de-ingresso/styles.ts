@@ -10,9 +10,6 @@ export const StyledEntryFormsContainer = styled.div`
 	background-color: #f7f6f5;
 	margin-bottom: 80px;
 	margin-top: 80px;
-	.paginationEntryForm{
-		display: none;
-	}
 
 	h1 {
 		box-sizing: border-box;
@@ -118,10 +115,6 @@ export const StyledEntryFormsContainer = styled.div`
 	}
 
 	@media screen and (max-width: 768px) {
-		.paginationEntryForm{
-			display: flex;
-			width: 100%;
-		}
 		margin-bottom: 0px;
 		h1 {
 			text-align: left;
@@ -166,6 +159,7 @@ export const StyledPagination = styled.div`
 	justify-content: space-between;
 	font-family: "Merriweather";
 	margin-top: 40px;
+	display: none;
 
 	.pagination-container {
 		display: flex;
@@ -198,6 +192,7 @@ export const StyledPagination = styled.div`
 	}
 
 	@media screen and (max-width: 768px) {
+		display: flex;
 		width: 100%;
 		.pagination-container {
 			gap: 10px;
