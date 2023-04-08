@@ -2,11 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        domains: [
-            'images.prismic.io',
-            'images.pexels.com',
-            'escola-de-teatro.cdn.prismic.io',
-        ],
+        unoptimized: true,
     },
     compiler: {
         styledComponents: true,
