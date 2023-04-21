@@ -18,7 +18,7 @@ const handler: Handler = async (
         return { statusCode: 405, body: 'Method Not Allowed' }
     }
 
-    const body = bodySchema.safeParse(event.body)
+    const body = bodySchema.safeParse(JSON.parse(event.body ?? ''))
 
     if (!body.success) {
         console.log(body.error)
