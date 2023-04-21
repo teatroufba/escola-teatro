@@ -9,6 +9,7 @@ on:
 
 jobs:
     build:
+        env: ${{ vars.sendgrid_api_key }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
@@ -44,7 +45,7 @@ jobs:
                   # password: ${{ secrets.ftp_password }}
                   # local-dir: out/
                   # server-dir: ./teatro.ufba.br/public_html
-                  server: ftp://ftp.dlptest.com
+                  server: ftp.dlptest.com
                   username: dlpuser
                   password: rNrKYTX9g7z3RgJRmxWuGHbeu
                   local-dir: out/
