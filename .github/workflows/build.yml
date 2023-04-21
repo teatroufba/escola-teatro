@@ -7,9 +7,10 @@ on:
     repository_dispatch:
         types: [build]
 
+env: ${{ vars.sendgrid_api_key }}
+
 jobs:
     build:
-        env: ${{ vars.sendgrid_api_key }}
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
