@@ -3,9 +3,9 @@ import { z } from 'zod'
 import sgMail from '@sendgrid/mail'
 
 const bodySchema = z.object({
-    name: z.string().min(1),
-    email: z.string().email(),
-    message: z.string().min(1),
+    name: z.string(),
+    email: z.string(),
+    message: z.string(),
 })
 
 sgMail.setApiKey(process.env.SENDGRID_KEY!)
@@ -21,6 +21,8 @@ const handler: Handler = async (
     const body = bodySchema.safeParse(event.body)
 
     if (!body.success) {
+        console.log(body.error)
+
         return {
             statusCode: 400,
             body: JSON.stringify({
