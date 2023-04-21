@@ -21,7 +21,9 @@ jobs:
             - uses: actions/cache@v3
               id: yarn-cache
               with:
-                  path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                  path: |
+                      ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                      ${{ github.workspace }}/.next/cache
                   key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-yarn-
@@ -47,5 +49,5 @@ jobs:
                   server: ftp.dlptest.com
                   username: dlpuser
                   password: rNrKYTX9g7z3RgJRmxWuGHbeu
-                  local-dir: out/
+                  local-dir: public/
                   server-dir: ./teatro/
