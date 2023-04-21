@@ -7,8 +7,6 @@ on:
     repository_dispatch:
         types: [build]
 
-env: ${{ vars.sendgrid_api_key }}
-
 jobs:
     build:
         runs-on: ubuntu-latest
