@@ -15,7 +15,13 @@ const handler: Handler = async (
     context: HandlerContext
 ) => {
     if (event.httpMethod !== 'POST') {
-        return { statusCode: 405, body: 'Method Not Allowed' }
+        return {
+            statusCode: 405,
+            body: 'Method Not Allowed',
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
+        }
     }
 
     const body = bodySchema.safeParse(JSON.parse(event.body ?? ''))
@@ -29,6 +35,9 @@ const handler: Handler = async (
                 error: 'Bad request',
                 details: body.error.issues,
             }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+            },
         }
     }
 
@@ -51,12 +60,18 @@ const handler: Handler = async (
             return {
                 statusCode: 200,
                 body: JSON.stringify({ sucess: true }),
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                },
             }
         })
         .catch((error: any) => {
             return {
                 statusCode: 500,
                 body: JSON.stringify({ sucess: false, error }),
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                },
             }
         })
 }
