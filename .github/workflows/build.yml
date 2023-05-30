@@ -50,3 +50,4 @@ jobs:
                   password: ${{ secrets.ftp_password }}
                   local-dir: out/
                   server-dir: ./teatro.ufba.br/public_html/
+                  dangerous-clean-slate: true
