@@ -36,9 +36,16 @@ export default function Page({
     imageUrl: items.data.image.url ? items.data.image.url : image,
     miniaturaAlt: items.data.miniatura.alt ? items.data.miniatura.alt : image,
     miniaturaUrl: items.data.miniatura.url ? items.data.miniatura.url : image,
-    subtitle: items.data.subtitle ? items.data.subtitle : '',
-    tags: items.data?.categorias?.map((categorias: { categoria: any; }) => (categorias.categoria)) == '' ? '' : items.data?.categorias?.map((categorias: { categoria: any; }) => (categorias.categoria.toLowerCase())),
-    title: items.data.title ? items.data.title : '',
+    subtitle: items.data.subtitle ? items.data.subtitle : "",
+    tags:
+      items.data?.categorias?.map(
+        (categorias: { categoria: any }) => categorias.categoria
+      ) == ""
+        ? ""
+        : items.data?.categorias?.map((categorias: { categoria: any }) =>
+            categorias.categoria.toLowerCase()
+          ),
+    title: items.data.title ? items.data.title : "",
     uid: items.uid || "",
   }));
   return (

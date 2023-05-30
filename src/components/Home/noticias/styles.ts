@@ -1,18 +1,18 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledNoticias = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  
+
   padding: 5%;
   text-align: center;
 
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
 
   h1 {
-    font-family: 'Merriweather';
+    font-family: "Merriweather";
     color: #282b62;
     font-size: 48px;
     font-weight: 400;
@@ -37,7 +37,7 @@ export const StyledNoticias = styled.div`
       flex-direction: column;
       gap: 25px;
 
-      .mobile{
+      .mobile {
         display: none;
       }
     }
@@ -52,7 +52,7 @@ export const StyledNoticias = styled.div`
 
   button {
     background-color: #2d2b78;
-    font-style: 'Merriweather';
+    font-style: "Merriweather";
     font-weight: 400;
     border: none;
     border-radius: 5%;
@@ -65,7 +65,7 @@ export const StyledNoticias = styled.div`
       background-color: #9a1a4b;
     }
   }
-`
+`;
 
 export const StyledNoticiaCard = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
@@ -74,18 +74,18 @@ export const StyledNoticiaCard = styled.div`
   align-items: flex-start;
   max-width: 395px;
 
-  -webkit-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
-  -moz-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
-  box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.49);
+  -webkit-box-shadow: 0px 4px 15px -7px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 4px 15px -7px rgba(0, 0, 0, 0.49);
+  box-shadow: 0px 4px 15px -7px rgba(0, 0, 0, 0.49);
   transform: scale(0.95);
 
   @media (max-width: 768px) {
     max-height: none;
   }
 
-  &:hover{
+  &:hover {
     transform: scale(1);
-    transition:transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
   }
   .noticias-post-img {
     position: relative;
@@ -110,7 +110,7 @@ export const StyledNoticiaCard = styled.div`
     }
 
     p {
-      font-family: arial;
+      font-family: Arial;
       font-weight: 400;
       font-size: 16px;
       display: -webkit-box;
@@ -119,7 +119,6 @@ export const StyledNoticiaCard = styled.div`
       text-overflow: ellipsis;
       overflow: hidden;
       text-overflow: ellipsis;
-    
     }
   }
   .container-data {
@@ -130,11 +129,11 @@ export const StyledNoticiaCard = styled.div`
     padding: 0 16px;
 
     p {
-        font-size: 1rem;
-        line-height: 1.3125rem;
-        font-family: Arial;
+      font-size: 1rem;
+      line-height: 1.3125rem;
+      font-family: Arial;
     }
-}
+  }
 
   a {
     text-decoration: none;
@@ -146,7 +145,6 @@ export const StyledNoticiaCard = styled.div`
     text-align: left;
     padding: 0 16px;
     color: rgba(40, 43, 98, 1);
-
   }
 
   @media (min-width: 768px) {
@@ -156,4 +154,4 @@ export const StyledNoticiaCard = styled.div`
       height: 172px;
     }
   }
-`
+`;

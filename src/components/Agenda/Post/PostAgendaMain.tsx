@@ -68,8 +68,8 @@ export default function PostAgendaMain({
     <StyledPostAgendaMain>
       <div id="container-img-agenda">
         <Image
-          src={imageUrl ? imageUrl : '/'}
-          alt={imageAlt ? imageAlt : '/'}
+          src={imageUrl ? imageUrl : "/"}
+          alt={imageAlt ? imageAlt : "/"}
           layout="fill"
           objectFit="cover"
           objectPosition="center"

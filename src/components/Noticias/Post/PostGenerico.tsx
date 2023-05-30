@@ -1,23 +1,23 @@
 /* eslint-disable no-multi-assign */
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { formatDistance } from 'date-fns'
-import { ptBR} from 'date-fns/locale'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
-import { PrismicRichText } from "@prismicio/react"
+import { formatDistance } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { PrismicRichText } from "@prismicio/react";
 
-import { StyledPostNoticiaMain } from './styles';
+import { StyledPostNoticiaMain } from "./styles";
 
 interface IPostagem {
-  author: string
-  first_publication_date?: string
-  imageAlt?: string
-  imageUrl: string
-  last_publication_date: Date
-  subtitle: string
-  text: []
-  title: string
+  author: string;
+  first_publication_date?: string;
+  imageAlt?: string;
+  imageUrl: string;
+  last_publication_date: Date;
+  subtitle: string;
+  text: [];
+  title: string;
   document: string;
   document2: string;
   document3: string;
@@ -53,29 +53,32 @@ export default function PostagemGenerica({
   documentName5,
   documentName6,
 }: IPostagem) {
-  const oneMinute = 1000 * 60
+  const oneMinute = 1000 * 60;
 
-  const primeiraData = first_publication_date?.replace(/\/(\d{1,2})/, (match, p1) => `/${+p1 + 1}`) // substitui o numero do mes pelo numero correto
+  const primeiraData = first_publication_date?.replace(
+    /\/(\d{1,2})/,
+    (match, p1) => `/${+p1 + 1}`
+  ); // substitui o numero do mes pelo numero correto
   // nao sei pq mas o first_publication_date vem sempre com o mes errado
 
   const calculateLastAtt = () =>
     formatDistance(last_publication_date, new Date(), {
       addSuffix: true,
       locale: ptBR,
-    })
+    });
 
-  const [lastAtt, setLastAtt] = useState(calculateLastAtt())
+  const [lastAtt, setLastAtt] = useState(calculateLastAtt());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLastAtt(calculateLastAtt())
-    }, oneMinute)
-    return () => clearInterval(interval)
-  }, [])
+      setLastAtt(calculateLastAtt());
+    }, oneMinute);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
-    {/* <StyledPost>
+      {/* <StyledPost>
       <div id='img-post'>
         {imageUrl ? (
           <Image
@@ -116,60 +119,92 @@ export default function PostagemGenerica({
         </div>
       </div>
     </StyledPost> */}
-    
-    <StyledPostNoticiaMain>
-      <div id="container-img-noticia">
-        <Image
-          src={imageUrl}
-          alt={imageAlt}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-        />
-      </div>
-      <div id="container-baixo-noticia">
-        <div id="container-info-noticia">
-          <div id="container-header-noticia">
-            <h1 className='title'>{title}</h1>
-            <p className='subtitle'>{subtitle}</p>
 
-            <span className="hr-line"></span>
-          </div>
-        </div>
-        <div id="conteudo-post-noticia">
-          <PrismicRichText
-            field={text}
-            components={{
-              paragraph: ({ children }) => <p className="">{children}</p>,
-            }}
+      <StyledPostNoticiaMain>
+        <div id="container-img-noticia">
+          <Image
+            src={imageUrl}
+            alt={imageAlt}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
           />
         </div>
-        <div className="documentDisplay">
-          {document ? <a className='button-document-div' href={document}>
-            <button className='button-document'><p>{documentName}</p></button></a>
-            : ''}
-          {document2 ? <a className='button-document-div' href={document2}>
-            <button className='button-document'><p>{documentName2}</p></button></a>
-            : ''}
-          {document3 ? <a className='button-document-div' href={document3}>
-            <button className='button-document'><p>{documentName3}</p></button></a>
-            : ''}
-          {document4 ? <a className='button-document-div' href={document4}>
-            <button className='button-document'><p>{documentName4}</p></button></a>
-            : ''}
-          {document5 ? <a className='button-document-div' href={document5}>
-            <button className='button-document'><p>{documentName5}</p></button></a>
-            : ''}
-          {document6 ? <a className='button-document-div' href={document6}>
-            <button className='button-document'><p>{documentName6}</p></button></a>
-            : ''}
+        <div id="container-baixo-noticia">
+          <div id="container-info-noticia">
+            <div id="container-header-noticia">
+              <h1 className="title">{title}</h1>
+              <p className="subtitle">{subtitle}</p>
+
+              <span className="hr-line"></span>
+            </div>
+          </div>
+          <div id="conteudo-post-noticia">
+            <PrismicRichText
+              field={text}
+              components={{
+                paragraph: ({ children }) => <p className="">{children}</p>,
+              }}
+            />
+          </div>
+          <div className="documentDisplay">
+            {document ? (
+              <a className="button-document-div" href={document}>
+                <button className="button-document">
+                  <p>{documentName}</p>
+                </button>
+              </a>
+            ) : (
+              ""
+            )}
+            {document2 ? (
+              <a className="button-document-div" href={document2}>
+                <button className="button-document">
+                  <p>{documentName2}</p>
+                </button>
+              </a>
+            ) : (
+              ""
+            )}
+            {document3 ? (
+              <a className="button-document-div" href={document3}>
+                <button className="button-document">
+                  <p>{documentName3}</p>
+                </button>
+              </a>
+            ) : (
+              ""
+            )}
+            {document4 ? (
+              <a className="button-document-div" href={document4}>
+                <button className="button-document">
+                  <p>{documentName4}</p>
+                </button>
+              </a>
+            ) : (
+              ""
+            )}
+            {document5 ? (
+              <a className="button-document-div" href={document5}>
+                <button className="button-document">
+                  <p>{documentName5}</p>
+                </button>
+              </a>
+            ) : (
+              ""
+            )}
+            {document6 ? (
+              <a className="button-document-div" href={document6}>
+                <button className="button-document">
+                  <p>{documentName6}</p>
+                </button>
+              </a>
+            ) : (
+              ""
+            )}
+          </div>
         </div>
-      </div>
-    </StyledPostNoticiaMain>
-
-
-
-      
+      </StyledPostNoticiaMain>
     </>
   );
 }

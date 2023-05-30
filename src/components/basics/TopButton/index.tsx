@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { IoIosArrowUp } from 'react-icons/io'
+import React, { useEffect, useState } from "react";
+import { IoIosArrowUp } from "react-icons/io";
 
-import { Container } from './styles'
+import { Container } from "./styles";
 
 function GoToTop() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      const isTop = window.scrollY > 20
+    window.addEventListener("scroll", () => {
+      const isTop = window.scrollY > 20;
       if (isTop !== scrolled) {
-        setScrolled(isTop)
+        setScrolled(isTop);
       }
-    })
-  })
+    });
+  });
 
   function handleGoToTop() {
     window.scrollTo({
-      behavior: 'smooth',
+      behavior: "smooth",
       top: 0,
-    })
+    });
   }
 
   return (
@@ -30,7 +30,7 @@ function GoToTop() {
         </button>
       )}
     </Container>
-  )
+  );
 }
 
-export default GoToTop
+export default GoToTop;

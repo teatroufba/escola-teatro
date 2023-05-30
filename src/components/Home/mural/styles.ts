@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledMural = styled.div`
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
   text-align: center;
   padding: 5%;
   display: flex;
@@ -14,7 +14,7 @@ export const StyledMural = styled.div`
     border-bottom: 5px solid #282b62;
     margin-bottom: 5%;
     font-size: 48px;
-    font-family: 'Merriweather';
+    font-family: "Merriweather";
     font-weight: 400;
   }
 
@@ -64,15 +64,15 @@ export const StyledMural = styled.div`
     }
 
     .text-area {
-      background-color: #282B62 ;
+      background-color: #282b62;
       width: 100%;
       height: 80px;
       max-height: 96px;
       padding: 15px 15px;
       border-radius: 0px 0px 10px 10px;
-      color: #FFFFFF;
+      color: #ffffff;
       text-decoration: none;
-      font-family: 'Merriweather';
+      font-family: "Merriweather";
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -102,6 +102,5 @@ export const StyledMural = styled.div`
         height: 64px;
       }
     }
-	}
-
-`
+  }
+`;

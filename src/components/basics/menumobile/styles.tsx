@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ContainerButton = styled.div`
   background-color: #282b62;
   @media (min-width: 700px) {
     display: none;
   }
-`
+`;
 
 export const MenuButton = styled.button`
   height: 60px;
@@ -14,10 +14,10 @@ export const MenuButton = styled.button`
   @media (min-width: 700px) {
     display: none;
   }
-`
+`;
 
 export const ContainerSub = styled.div`
-  font-family: 'Merriweather';
+  font-family: "Merriweather";
   font-size: 18px;
   line-height: 22.63px;
   color: white;
@@ -25,11 +25,11 @@ export const ContainerSub = styled.div`
   @media (min-width: 700px) {
     display: none;
   }
-`
+`;
 
 export const Sociais = styled.div`
   background-color: #282b62;
   @media (min-width: 700px) {
     display: none;
   }
-`
+`;

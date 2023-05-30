@@ -1,10 +1,10 @@
-import '@szhsin/react-menu/dist/index.css'
-import '@szhsin/react-menu/dist/transitions/slide.css'
+import "@szhsin/react-menu/dist/index.css";
+import "@szhsin/react-menu/dist/transitions/slide.css";
 
-import { Menu, MenuItem, SubMenu } from '@szhsin/react-menu'
-import { GoThreeBars } from 'react-icons/go'
+import { Menu, MenuItem, SubMenu } from "@szhsin/react-menu";
+import { GoThreeBars } from "react-icons/go";
 
-import { ContainerButton, ContainerSub, MenuButton } from './styles'
+import { ContainerButton, ContainerSub, MenuButton } from "./styles";
 
 function StyledDropdown() {
   return (
@@ -54,7 +54,7 @@ function StyledDropdown() {
         <MenuItem>Galeria Virtual</MenuItem>
       </ContainerSub>
     </Menu>
-  )
+  );
 }
 
-export default StyledDropdown
+export default StyledDropdown;

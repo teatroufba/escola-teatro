@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const AgendaStyled = styled.div`
   background-color: #2d2b78;
@@ -20,7 +20,7 @@ export const AgendaStyled = styled.div`
       justify-content: center;
     }
     .title {
-      font-family: 'Merriweather';
+      font-family: "Merriweather";
       color: #fff;
       font-size: 48px;
       font-weight: 400;
@@ -74,11 +74,11 @@ export const AgendaStyled = styled.div`
         flex: 1;
         padding: 5px 10px;
         gap: 10px;
-        color: #9A1A4B;
-        background-color: #24233A;
+        color: #9a1a4b;
+        background-color: #24233a;
         background-image: none;
         cursor: pointer;
-        border: 1px solid #9A1A4B;
+        border: 1px solid #9a1a4b;
         border-radius: 5px;
       }
     }
@@ -103,8 +103,6 @@ export const AgendaStyled = styled.div`
         display: none;
       }
     }
-
-    
   }
 
   .eventos {
@@ -145,7 +143,6 @@ export const AgendaStyled = styled.div`
       -ms-overflow-style: none;
       scrollbar-width: none;
 
-
       &::-webkit-scrollbar {
         display: none;
       }
@@ -167,7 +164,6 @@ export const AgendaStyled = styled.div`
     }
   }
 
-
   .agenda-btn {
     display: flex;
     width: 100%;
@@ -175,8 +171,8 @@ export const AgendaStyled = styled.div`
     justify-content: center;
 
     button {
-      background-color:#9a1a4b;
-      font-style: 'Merriweather';
+      background-color: #9a1a4b;
+      font-style: "Merriweather";
       font-weight: 400;
       border: none;
       border-radius: 5%;
@@ -187,6 +183,4 @@ export const AgendaStyled = styled.div`
       float: right;
     }
   }
-
- 
-`
+`;

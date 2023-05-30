@@ -3,47 +3,47 @@ import { useEffect, useState } from "react";
 import DocentesGrid from "./DocentesGrid";
 import DocentesCarousel from "./DocentesCarousel";
 import {
-	StyledStaff,
-	StyledStaffCarousel,
-	StyledStaffContainer,
+  StyledStaff,
+  StyledStaffCarousel,
+  StyledStaffContainer,
 } from "./styles";
 
 interface IDocente {
-	imagemAlt: string;
-	email: string;
-	imagemUrl: string;
-	interesses: string;
-	link: string;
-	nome: string;
+  imagemAlt: string;
+  email: string;
+  imagemUrl: string;
+  interesses: string;
+  link: string;
+  nome: string;
 }
 interface IDocentes {
-	docentes: IDocente[];
+  docentes: IDocente[];
 }
 
 export default function Docentes({ docentes }: IDocentes) {
-	const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(0);
 
-	useEffect(() => {
-		function handleResize() {
-			setWidth(window.innerWidth);
-		}
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
 
-		window.addEventListener("resize", handleResize);
-		handleResize();
+    window.addEventListener("resize", handleResize);
+    handleResize();
 
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-	return (
-		<StyledStaffContainer id="corpo-docente">
-			<div className="wrap-staff-container">
-				<h1 id="staff-title">Corpo Docente</h1>
-				{width > 775 ? (
-					<DocentesGrid docentes={docentes} tituloID={"staff-title"} />
-				) : (
-					<DocentesCarousel docentes={docentes} />
-				)}
-			</div>
-		</StyledStaffContainer>
-	);
+  return (
+    <StyledStaffContainer id="corpo-docente">
+      <div className="wrap-staff-container">
+        <h1 id="staff-title">Corpo Docente</h1>
+        {width > 775 ? (
+          <DocentesGrid docentes={docentes} tituloID={"staff-title"} />
+        ) : (
+          <DocentesCarousel docentes={docentes} />
+        )}
+      </div>
+    </StyledStaffContainer>
+  );
 }

@@ -70,9 +70,8 @@ export const StyledPostNoticiaMain = styled.section`
 
           a {
           text-decoration: none;
-          font-family: 'Merriweather';
+          font-family: 'Merriweather', Arial;
           color: #ffffff;
-          font-family: arial;
           font-weight: 400;
           font-size: 16px;
           cursor: inherit;

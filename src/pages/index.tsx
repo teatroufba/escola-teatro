@@ -19,8 +19,8 @@ export async function getStaticProps({
   const itemsBanner = await client.getAllByType("post_do_banner");
 
   const banner = itemsBanner.map((value) => ({
-    imageUrl: value.data.image.url ? value.data.image.url : '/',
-    imageAlt: value.data.image.alt ? value.data.image.alt : '/',
+    imageUrl: value.data.image.url ? value.data.image.url : "/",
+    imageAlt: value.data.image.alt ? value.data.image.alt : "/",
     title: value.data.titulo,
     descricao: value.data.descricao,
     link: value.data.link,
@@ -28,28 +28,37 @@ export async function getStaticProps({
 
   const items = await client.getAllByType("agenda");
 
-  const agendaFiltered = items.map((value: any) => ({
-    uid: value.uid || "",
-    title: value.data.titulo,
-    imageUrl: value.data.imagem.url ? value.data.imagem.url : '/',
-    imageAlt: value.data.imagem.alt ? value.data.imagem.alt : '/',
-    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : '/',
-    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : '/',
-    date: value.data.data,
-    tipo: value.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
-    local: value.data.local,
-    descricao: value.data.subtitulo,
-  } as unknown as IAgenda)).sort((a: IAgenda, b: IAgenda) => {
-    const timestamp = (date: string) => new Date(date).getTime();
-    return timestamp(a.date) - timestamp(b.date);
-  });
-  const agenda = agendaFiltered.filter(agend => {
+  const agendaFiltered = items
+    .map(
+      (value: any) =>
+        ({
+          uid: value.uid || "",
+          title: value.data.titulo,
+          imageUrl: value.data.imagem.url ? value.data.imagem.url : "/",
+          imageAlt: value.data.imagem.alt ? value.data.imagem.alt : "/",
+          miniaturaUrl: value.data.miniatura.url
+            ? value.data.miniatura.url
+            : "/",
+          miniaturaAlt: value.data.miniatura.url
+            ? value.data.miniatura.alt
+            : "/",
+          date: value.data.data,
+          tipo: value.data.tipos.map((tipos: { tipo: any }) => tipos.tipo),
+          local: value.data.local,
+          descricao: value.data.subtitulo,
+        } as unknown as IAgenda)
+    )
+    .sort((a: IAgenda, b: IAgenda) => {
+      const timestamp = (date: string) => new Date(date).getTime();
+      return timestamp(a.date) - timestamp(b.date);
+    });
+  const agenda = agendaFiltered.filter((agend) => {
     const todayMidnight = new Date();
-    todayMidnight.setUTCHours(0,0,0,0);
-    const today = new Date().getTime() - todayMidnight.getTime()
-    const data = new Date(agend.date).getTime() - todayMidnight.getTime()
+    todayMidnight.setUTCHours(0, 0, 0, 0);
+    const today = new Date().getTime() - todayMidnight.getTime();
+    const data = new Date(agend.date).getTime() - todayMidnight.getTime();
     return data >= today;
-  })
+  });
 
   const itemsMural = await client.getAllByType("mural-estudantil", {
     orderings: {
@@ -78,8 +87,8 @@ export async function getStaticProps({
     subtitle: value.data.subtitle,
     imageUrl: value.data.image.url ? value.data.image.url : null,
     imageAlt: value.data.image.alt ? value.data.image.alt : null,
-    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : '/',
-    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : '/',
+    miniaturaUrl: value.data.miniatura.url ? value.data.miniatura.url : "/",
+    miniaturaAlt: value.data.miniatura.url ? value.data.miniatura.alt : "/",
     date: value.data.data,
   }));
   return {
@@ -92,7 +101,7 @@ interface IBanner {
   imageUrl: string;
   title: string;
   descricao: string;
-  link: string
+  link: string;
 }
 
 interface IMural {
@@ -107,8 +116,8 @@ interface INoticias {
   imageAlt: string;
   imageUrl: string;
   subtitle: string;
-  miniaturaUrl: string
-  miniaturaAlt: string
+  miniaturaUrl: string;
+  miniaturaAlt: string;
   title: string;
   uid: string;
 }
@@ -123,8 +132,8 @@ interface IAgenda {
   uid: string;
   subtitulo: string;
   descricao: string;
-  miniaturaUrl: string
-  miniaturaAlt: string
+  miniaturaUrl: string;
+  miniaturaAlt: string;
 }
 
 export default function Home({

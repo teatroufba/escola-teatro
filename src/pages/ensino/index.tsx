@@ -24,59 +24,58 @@ const Container = styled.div`
 `;
 
 interface IGraduacao {
-  titulo: string,
-  duracao: number,
-  descricao: [],
-  ppp: string,
-  matrizCurricular: string,
-  ementario: string,
-  guiaEstudantil: string,
+  titulo: string;
+  duracao: number;
+  descricao: [];
+  ppp: string;
+  matrizCurricular: string;
+  ementario: string;
+  guiaEstudantil: string;
 }
 
 interface IGrupoPesquisa {
-  nome: string,
-  descricao: string,
-  lider: string,
-  email: string,
-  telefone: string,
-  website: string,
+  nome: string;
+  descricao: string;
+  lider: string;
+  email: string;
+  telefone: string;
+  website: string;
 }
 interface IFormaIngresso {
-	link: string;
-	titulo: string;
+  link: string;
+  titulo: string;
 }
 
 interface IConteudo {
-	conteudo: [];
-	titulo: string;
+  conteudo: [];
+  titulo: string;
 }
 interface IRevista {
-  descricao: string,
-  titulo: string,
-  imageUrl: string,
-  imageAlt: string,
-  link: string,
+  descricao: string;
+  titulo: string;
+  imageUrl: string;
+  imageAlt: string;
+  link: string;
 }
 
 interface IEnsinoProps {
-  imageUrl: string,
-  imageAlt: string,
-  conteudo: [],
-  link: string,
-  monografias: string,
-  espetaculosFormatura: string,
-  dissertacoes: string,
-  teses: string,
-  graduacao: IGraduacao[],
-  gruposPesquisa: IGrupoPesquisa[],
-  revistas: IRevista[],
-  livros: IRevista[],
-  ingressoConteudo: IConteudo[],
-	ingressoLinks: IFormaIngresso[];
+  imageUrl: string;
+  imageAlt: string;
+  conteudo: [];
+  link: string;
+  monografias: string;
+  espetaculosFormatura: string;
+  dissertacoes: string;
+  teses: string;
+  graduacao: IGraduacao[];
+  gruposPesquisa: IGrupoPesquisa[];
+  revistas: IRevista[];
+  livros: IRevista[];
+  ingressoConteudo: IConteudo[];
+  ingressoLinks: IFormaIngresso[];
 }
 
-function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
-
+function EnsinoePesquisa({ ensinoProps }: { ensinoProps: IEnsinoProps }) {
   return (
     <>
       <Container>
@@ -84,7 +83,12 @@ function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
           <Graduacao cursos={ensinoProps.graduacao} />
         </section>
         <section>
-          <PosGraduacao imageUrl={ensinoProps.imageUrl} imageAlt={ensinoProps.imageAlt} conteudo={ensinoProps.conteudo} link={ensinoProps.link} />
+          <PosGraduacao
+            imageUrl={ensinoProps.imageUrl}
+            imageAlt={ensinoProps.imageAlt}
+            conteudo={ensinoProps.conteudo}
+            link={ensinoProps.link}
+          />
         </section>
         <section>
           <FormasDeIngresso
@@ -93,7 +97,14 @@ function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
           />
         </section>
         <section>
-          <ProducaoAcademica monografias={ensinoProps.monografias} espetaculosFormatura={ensinoProps.espetaculosFormatura} dissertacoes={ensinoProps.dissertacoes} teses={ensinoProps.teses} livros={ensinoProps.livros} revistas={ensinoProps.revistas} />
+          <ProducaoAcademica
+            monografias={ensinoProps.monografias}
+            espetaculosFormatura={ensinoProps.espetaculosFormatura}
+            dissertacoes={ensinoProps.dissertacoes}
+            teses={ensinoProps.teses}
+            livros={ensinoProps.livros}
+            revistas={ensinoProps.revistas}
+          />
         </section>
         <section className="grey">
           <GruposPesquisa grupos={ensinoProps.gruposPesquisa} />
@@ -106,38 +117,38 @@ function EnsinoePesquisa({ ensinoProps }: {ensinoProps: IEnsinoProps}) {
 export default EnsinoePesquisa;
 
 export async function getStaticProps({
-	previewData,
+  previewData,
 }: {
-	previewData: PreviewData;
+  previewData: PreviewData;
 }) {
-	const client = createClient({ previewData });
-	const ensino = await client.getSingle('ensino')
+  const client = createClient({ previewData });
+  const ensino = await client.getSingle("ensino");
   const escola = await client.getSingle("escola");
 
   const ingressoLinksAuxiliar: any[] = [];
-	const ingressoConteudo = escola.data.slices1
-		.filter((item: any) => {
-			if (item.slice_type !== "conteudo_forma_ingresso") {
-				ingressoLinksAuxiliar.push(item);
-				return false;
-			}
+  const ingressoConteudo = escola.data.slices1
+    .filter((item: any) => {
+      if (item.slice_type !== "conteudo_forma_ingresso") {
+        ingressoLinksAuxiliar.push(item);
+        return false;
+      }
 
-			return true;
-		})
-		.map((item: any) => ({
-			conteudo: item.primary.conteudo,
-			titulo: item.primary.titulo,
-		}));
+      return true;
+    })
+    .map((item: any) => ({
+      conteudo: item.primary.conteudo,
+      titulo: item.primary.titulo,
+    }));
 
-	const ingressoLinksAuxiliarChecked = undefinedCheck(ingressoLinksAuxiliar);
-	const ingressoConteudoChecked = undefinedCheck(ingressoConteudo);
+  const ingressoLinksAuxiliarChecked = undefinedCheck(ingressoLinksAuxiliar);
+  const ingressoConteudoChecked = undefinedCheck(ingressoConteudo);
 
-	const ingressoLinks = ingressoLinksAuxiliar.map((item: any) => ({
-		link: item.primary.link.url,
-		titulo: item.primary.titulo,
-	}));
+  const ingressoLinks = ingressoLinksAuxiliar.map((item: any) => ({
+    link: item.primary.link.url,
+    titulo: item.primary.titulo,
+  }));
 
-	const ingressoLinksChecked = undefinedCheck(ingressoLinks);
+  const ingressoLinksChecked = undefinedCheck(ingressoLinks);
 
   const graduacao = ensino.data.slices.map((item: any) => ({
     titulo: item.primary.titulo,
@@ -147,7 +158,7 @@ export async function getStaticProps({
     matrizCurricular: item.primary.matrizCurricular,
     ementario: item.primary.ementario,
     guiaEstudantil: item.primary.guiaEstudantil,
-  }))
+  }));
 
   const gruposPesquisa = ensino.data.slices2.map((item: any) => ({
     nome: item.primary.nome,
@@ -156,34 +167,35 @@ export async function getStaticProps({
     email: item.primary.email,
     telefone: item.primary.telefone,
     website: item.primary.website,
-  }))
+  }));
 
-  const livrosAuxiliar: any[] = []
-	const revistas = ensino.data.slices3.filter((item: any) => {
-		if (item.slice_type !== 'revista_ou_publicacao') {
-			livrosAuxiliar.push(item)
-			return false
-		}
-		
-		return true
-	})
-	.map((item: any) => ({
-		descricao: item.primary.descricao,
-		titulo: item.primary.titulo,
-    imageUrl: item.primary.image.url,
-    imageAlt: item.primary.image.alt,
+  const livrosAuxiliar: any[] = [];
+  const revistas = ensino.data.slices3
+    .filter((item: any) => {
+      if (item.slice_type !== "revista_ou_publicacao") {
+        livrosAuxiliar.push(item);
+        return false;
+      }
+
+      return true;
+    })
+    .map((item: any) => ({
+      descricao: item.primary.descricao,
+      titulo: item.primary.titulo,
+      imageUrl: item.primary.image.url,
+      imageAlt: item.primary.image.alt,
+      link: item.primary.link,
+    }));
+
+  const livros = livrosAuxiliar.map((item: any) => ({
     link: item.primary.link,
-	}))
-
-	const livros = livrosAuxiliar.map((item: any) => ({
-		link: item.primary.link,
-		titulo: item.primary.titulo,
+    titulo: item.primary.titulo,
     imageUrl: item.primary.capa.url,
     imageAlt: item.primary.capa.alt,
     descricao: item.primary.descricao,
-	}))
+  }));
 
-	const ensinoProps = {
+  const ensinoProps = {
     imageUrl: ensino.data.image.url,
     imageAlt: ensino.data.image.alt,
     conteudo: ensino.data.conteudo,
@@ -197,10 +209,10 @@ export async function getStaticProps({
     revistas: revistas,
     livros: livros,
     ingressoConteudo: ingressoConteudoChecked,
-		ingressoLinks: ingressoConteudoChecked,
-	}
-  
-	return {
-	  props: { ensinoProps },
-	};
+    ingressoLinks: ingressoConteudoChecked,
+  };
+
+  return {
+    props: { ensinoProps },
+  };
 }

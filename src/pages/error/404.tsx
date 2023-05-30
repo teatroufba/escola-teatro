@@ -31,7 +31,7 @@ function ErrorPage404() {
   return (
     <Container>
       <Link passHref href="/">
-        <a href="replace" id='brasao' > 
+        <a id="brasao">
           <Image
             alt="Brasão da Escola de Teatro"
             height={105}
@@ -45,7 +45,7 @@ function ErrorPage404() {
         A página solicitada não existe ou não se encontra mais em nossa base.
       </p>
       <Link passHref href="/">
-        <a href="replace">
+        <a>
           <Button>Voltar para o início</Button>
         </a>
       </Link>

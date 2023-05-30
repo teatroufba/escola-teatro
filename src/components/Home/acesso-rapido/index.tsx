@@ -11,7 +11,7 @@ const AcessoRapidoStyled = styled.div`
   justify-content: center;
   gap: 17.55%;
 
-  @media(max-width:1000px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     gap: 64px;
     align-items: center;
@@ -34,9 +34,9 @@ const AcessoRapidoStyled = styled.div`
     color: #9a1a4b;
   }
 
-  @media(max-width:1000px) {
+  @media (max-width: 1000px) {
     div {
-      flex-direction:row;
+      flex-direction: row;
       gap: 30px;
       align-items: center;
       justify-content: center;
@@ -44,10 +44,7 @@ const AcessoRapidoStyled = styled.div`
       h3 {
         max-width: 141px;
       }
-
-      
     }
-   
   }
 `;
 
@@ -73,22 +70,28 @@ function AcessoRapido() {
   return (
     <AcessoRapidoStyled>
       <Link href="/publicacoes/solicitacoes" passHref>
-        <div onMouseEnter={handleMouseEnterS} onMouseLeave={handleMouseLeave}>
-          <SolicitacoesIcon size={100} hover={hover[0]} />
-          <h3>Solicitações</h3>
-        </div>
+        <a>
+          <div onMouseEnter={handleMouseEnterS} onMouseLeave={handleMouseLeave}>
+            <SolicitacoesIcon size={100} hover={hover[0]} />
+            <h3>Solicitações</h3>
+          </div>
+        </a>
       </Link>
       <Link href="/publicacoes/selecoes-e-concursos" passHref>
-        <div onMouseEnter={handleMouseEnterC} onMouseLeave={handleMouseLeave}>
-          <ConcursoIcon size={100} hover={hover[1]} />
-          <h3>Seleções e Concursos</h3>
-        </div>
+        <a>
+          <div onMouseEnter={handleMouseEnterC} onMouseLeave={handleMouseLeave}>
+            <ConcursoIcon size={100} hover={hover[1]} />
+            <h3>Seleções e Concursos</h3>
+          </div>
+        </a>
       </Link>
       <Link href="/galeria" passHref>
-        <div onMouseEnter={handleMouseEnterG} onMouseLeave={handleMouseLeave}>
-          <GaleriaIcon size={100} hover={hover[2]} />
-          <h3>Galeria Virtual</h3>
-        </div>
+        <a>
+          <div onMouseEnter={handleMouseEnterG} onMouseLeave={handleMouseLeave}>
+            <GaleriaIcon size={100} hover={hover[2]} />
+            <h3>Galeria Virtual</h3>
+          </div>
+        </a>
       </Link>
     </AcessoRapidoStyled>
   );

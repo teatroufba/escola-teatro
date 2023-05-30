@@ -1,134 +1,134 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable react/destructuring-assignment */
-import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
-import CardAgenda from '../cardagenda'
-import { AgendaStyled } from './styles'
+import CardAgenda from "../cardagenda";
+import { AgendaStyled } from "./styles";
 
 interface IAgenda {
-  uid: string
-  title: string
-  imageUrl: string
-  imageAlt: string
-  miniaturaUrl: string
-  miniaturaAlt: string
-  date: string
-  tipo: string
-  local: string
-  descricao: string
-  subtitulo: string
+  uid: string;
+  title: string;
+  imageUrl: string;
+  imageAlt: string;
+  miniaturaUrl: string;
+  miniaturaAlt: string;
+  date: string;
+  tipo: string;
+  local: string;
+  descricao: string;
+  subtitulo: string;
 }
 
 export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
-  const carousel = useRef<HTMLInputElement>(null)
-  const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
-  const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
-  const [scrolling, setScrolling] = useState(false)
-  const [filter, setFilter] = useState('Tudo')
+  const carousel = useRef<HTMLInputElement>(null);
+  const [carouselScrollLeft, setCarouselScrollLeft] = useState(0);
+  const [carouselTotalScroll, setCarouselTotalScroll] = useState(0);
+  const [scrolling, setScrolling] = useState(false);
+  const [filter, setFilter] = useState("Tudo");
 
   useEffect(() => {
     if (carousel.current != null) {
       setCarouselTotalScroll(
         Number(carousel.current.scrollWidth - carousel.current.clientWidth)
-      )
-      setCarouselScrollLeft(carousel.current.scrollLeft)
+      );
+      setCarouselScrollLeft(carousel.current.scrollLeft);
     }
-  }, [carouselScrollLeft, filter])
+  }, [carouselScrollLeft, filter]);
 
   const scrollLeft = () => {
     if (carousel.current != null && carousel.current.scrollLeft > 0) {
-      let numberOfElements = Math.floor(carousel.current.clientWidth/395);
-      setScrolling(true)
-      setCarouselScrollLeft(Number(carousel.current.scrollLeft) - 278)
-      carousel.current.scrollLeft -= 278
+      let numberOfElements = Math.floor(carousel.current.clientWidth / 395);
+      setScrolling(true);
+      setCarouselScrollLeft(Number(carousel.current.scrollLeft) - 278);
+      carousel.current.scrollLeft -= 278;
 
       setTimeout(() => {
-        setScrolling(false)
-      }, numberOfElements*240);
+        setScrolling(false);
+      }, numberOfElements * 240);
     }
-  }
+  };
 
   const filterArray = (value: string) => {
-    if (filter !== 'Tudo') return value === filter
-    return agenda
-  }
+    if (filter !== "Tudo") return value === filter;
+    return agenda;
+  };
   const scrollRight = () => {
     if (
       carousel.current != null &&
       carousel.current.scrollLeft < carousel.current.scrollWidth
     ) {
-      let numberOfElements = Math.floor(carousel.current.clientWidth/395);
-      setScrolling(true)
-      setCarouselScrollLeft(Number(carousel.current.scrollLeft) + 278)
-      carousel.current.scrollLeft += 278
+      let numberOfElements = Math.floor(carousel.current.clientWidth / 395);
+      setScrolling(true);
+      setCarouselScrollLeft(Number(carousel.current.scrollLeft) + 278);
+      carousel.current.scrollLeft += 278;
 
       setTimeout(() => {
-        setScrolling(false)
-      }, numberOfElements*240);
+        setScrolling(false);
+      }, numberOfElements * 240);
     }
-  }
+  };
 
   return (
     <AgendaStyled>
       <div className="header">
         <div className="title-box">
-          <h1 className='title'>Agenda</h1>
+          <h1 className="title">Agenda</h1>
         </div>
-        
+
         <div className="filtro">
           <button
-            className={filter === "Tudo" ? 'active' : ''}
+            className={filter === "Tudo" ? "active" : ""}
             onClick={() => {
-              setFilter('Tudo')
+              setFilter("Tudo");
             }}
           >
             TUDO
           </button>
           <button
-            className={filter === "Eventos" ? 'active' : ''}
+            className={filter === "Eventos" ? "active" : ""}
             onClick={() => {
-              setFilter('Eventos')
+              setFilter("Eventos");
             }}
           >
             EVENTOS
           </button>
           <button
-            className={filter === "Espetáculos" ? 'active' : ''}
+            className={filter === "Espetáculos" ? "active" : ""}
             onClick={() => {
-              setFilter('Espetáculos')
+              setFilter("Espetáculos");
             }}
           >
             ESPETÁCULOS
           </button>
           <button
-            className={filter === "Defesas" ? 'active' : ''}
+            className={filter === "Defesas" ? "active" : ""}
             onClick={() => {
-              setFilter('Defesas')
+              setFilter("Defesas");
             }}
           >
             DEFESAS
           </button>
           <button
-            className={filter === "Formações" ? 'active' : ''}
+            className={filter === "Formações" ? "active" : ""}
             onClick={() => {
-              setFilter('Formações')
+              setFilter("Formações");
             }}
           >
             FORMAÇÕES
           </button>
           <button
-            className={filter === "Outros" ? 'active' : ''}
+            className={filter === "Outros" ? "active" : ""}
             onClick={() => {
-              setFilter('Outros')
+              setFilter("Outros");
             }}
           >
             OUTROS
           </button>
         </div>
         <div className="filtroMobile">
-          <div className='img'>
+          <div className="img">
             <Image
               src="/arrow-down-red.svg"
               alt="ícone de seta para baixo"
@@ -136,15 +136,17 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
               height={8}
             />
           </div>
-          <select onChange={(e) => {
-              setFilter(e.target.value)
-            }}>
-            <option value='Tudo'>TUDO</option>
-            <option value='Eventos'>EVENTOS</option>
-            <option value='Espetáculos'>ESPETÁCULOS</option>
-            <option value='Defesas'>DEFESAS</option>
-            <option value='Formações'>FORMAÇÕES</option>
-            <option value='Outros'>OUTROS</option>
+          <select
+            onChange={(e) => {
+              setFilter(e.target.value);
+            }}
+          >
+            <option value="Tudo">TUDO</option>
+            <option value="Eventos">EVENTOS</option>
+            <option value="Espetáculos">ESPETÁCULOS</option>
+            <option value="Defesas">DEFESAS</option>
+            <option value="Formações">FORMAÇÕES</option>
+            <option value="Outros">OUTROS</option>
           </select>
         </div>
       </div>
@@ -152,7 +154,7 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
         <button
           disabled={scrolling}
           onClick={scrollLeft}
-          className={carouselScrollLeft <= 0 ? 'desactive' : ''}
+          className={carouselScrollLeft <= 0 ? "desactive" : ""}
         >
           <Image
             src="/arrow-left.svg"
@@ -170,24 +172,24 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
 
               return item.tipo.includes(filter);
             })
-            .map(value => (
-                <CardAgenda
-                  key={value.uid ? value.uid : ""}
-                  date={value.date ? value.date : ""}
-                  title={value.title ? value.title : ""}
-                  local={value.local ? value.local : ""}
-                  imageUrl={value.miniaturaUrl ? value.miniaturaUrl : "/"}
-                  imageAlt={value.miniaturaAlt ? value.miniaturaAlt : "/"}
-                  uid = {value.uid ? value.uid : ""}
-                  subtitle = {value.descricao ? value.descricao : ""}
-                />
+            .map((value) => (
+              <CardAgenda
+                key={value.uid ? value.uid : ""}
+                date={value.date ? value.date : ""}
+                title={value.title ? value.title : ""}
+                local={value.local ? value.local : ""}
+                imageUrl={value.miniaturaUrl ? value.miniaturaUrl : "/"}
+                imageAlt={value.miniaturaAlt ? value.miniaturaAlt : "/"}
+                uid={value.uid ? value.uid : ""}
+                subtitle={value.descricao ? value.descricao : ""}
+              />
             ))}
         </div>
         <button
           disabled={scrolling}
           onClick={scrollRight}
           className={
-            carouselScrollLeft >= carouselTotalScroll ? 'desactive' : ''
+            carouselScrollLeft >= carouselTotalScroll ? "desactive" : ""
           }
         >
           <Image
@@ -199,11 +201,13 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
         </button>
       </div>
 
-      <div className='agenda-btn'>
-          <Link href="/agenda" passHref>
+      <div className="agenda-btn">
+        <Link href="/agenda" passHref>
+          <a>
             <button>Veja mais</button>
-          </Link>
+          </a>
+        </Link>
       </div>
     </AgendaStyled>
-  )
+  );
 }

@@ -1,86 +1,99 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction } from "react";
 
-import { StyledPagination } from './styles';
+import { StyledPagination } from "./styles";
 
 type IconProps = {
-    hover: boolean,
-    size: number
-}
+  hover: boolean;
+  size: number;
+};
 
 type PaginationProps = {
-    currentPage: number,
-    pages: number[],
-    sectionTitleID: string, 
-    paginationFunction: Dispatch<SetStateAction<number>>
-}
+  currentPage: number;
+  pages: number[];
+  sectionTitleID: string;
+  paginationFunction: Dispatch<SetStateAction<number>>;
+};
 
 export function LineIcon({ size, hover }: IconProps) {
-    return (
-      <svg
-        fill="none"
-        height="2"
-        viewBox="0 0 20 2"
-        width={size}
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <line
-          stroke={hover ? '#E3598E' : '#FFFFFF'}
-          strokeWidth="2"
-          x2="20"
-          y1="1"
-          y2="1"
-        />
-      </svg>
-    )
+  return (
+    <svg
+      fill="none"
+      height="2"
+      viewBox="0 0 20 2"
+      width={size}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        stroke={hover ? "#E3598E" : "#FFFFFF"}
+        strokeWidth="2"
+        x2="20"
+        y1="1"
+        y2="1"
+      />
+    </svg>
+  );
+}
+
+export default function Pagination({
+  currentPage,
+  pages,
+  sectionTitleID,
+  paginationFunction,
+}: PaginationProps) {
+  function handlePagination(page: number) {
+    if (page > 0 && page <= pages.length) paginationFunction(page);
+
+    window.scrollTo({
+      top: document.getElementById(sectionTitleID)?.offsetTop,
+      behavior: "auto",
+    });
   }
 
-export default function Pagination({currentPage, pages, sectionTitleID, paginationFunction} : PaginationProps) {
+  function isLastPage() {
+    return currentPage === pages.length;
+  }
 
-    function handlePagination (page: number) {
-        if(page > 0 && page <= pages.length)
-        paginationFunction(page);
+  function isFirstPage() {
+    return currentPage === 1;
+  }
 
-        window.scrollTo({
-          top: document.getElementById(sectionTitleID)?.offsetTop,
-          behavior: 'auto',
-      }); 
-      }
+  function setPaginationBtnClassName(direction: string) {
+    if (direction === "left") {
+      return isFirstPage() ? "pagination-btn" : "pagination-btn active";
+    }
 
-      function isLastPage () {
-        return currentPage === pages.length;
-      }
-    
-      function isFirstPage () {
-        return currentPage === 1;
-      }
-    
-      function setPaginationBtnClassName(direction: string) {
-        if(direction === 'left') {
-          return isFirstPage()
-          ? 'pagination-btn' 
-          : 'pagination-btn active'
-        }
-    
-        return isLastPage()
-          ? 'pagination-btn'
-          : 'pagination-btn active'
-      }
-    
-    return (
-        <StyledPagination>
-            <div className="width">
-              <button className= {setPaginationBtnClassName('left')} 
-                onClick={() => handlePagination(currentPage - 1)}> Anterior </button>
-              
-              <div className="pagination-container">
-                {pages.map((page) => page === currentPage - 1 
-                ? <LineIcon key={page} hover size={20} /> 
-                : <LineIcon key={page} hover={false} size={20} />)}
-              </div>
-              
-              <button className= {setPaginationBtnClassName('right')} 
-                onClick={() => handlePagination(currentPage + 1)}> Próximo </button>
-            </div>
-        </StyledPagination>
-    )
+    return isLastPage() ? "pagination-btn" : "pagination-btn active";
+  }
+
+  return (
+    <StyledPagination>
+      <div className="width">
+        <button
+          className={setPaginationBtnClassName("left")}
+          onClick={() => handlePagination(currentPage - 1)}
+        >
+          {" "}
+          Anterior{" "}
+        </button>
+
+        <div className="pagination-container">
+          {pages.map((page) =>
+            page === currentPage - 1 ? (
+              <LineIcon key={page} hover size={20} />
+            ) : (
+              <LineIcon key={page} hover={false} size={20} />
+            )
+          )}
+        </div>
+
+        <button
+          className={setPaginationBtnClassName("right")}
+          onClick={() => handlePagination(currentPage + 1)}
+        >
+          {" "}
+          Próximo{" "}
+        </button>
+      </div>
+    </StyledPagination>
+  );
 }

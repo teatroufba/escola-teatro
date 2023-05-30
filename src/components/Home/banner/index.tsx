@@ -1,8 +1,9 @@
-import Image from 'next/image'
-import { useEffect, useRef, useState } from 'react'
-import styled from 'styled-components'
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
 
-import { LineIcon } from './icons'
+import { LineIcon } from "./icons";
+import Link from "next/link";
 
 const BannerStyled = styled.div`
   position: relative;
@@ -10,12 +11,12 @@ const BannerStyled = styled.div`
   flex-direction: column;
   max-height: 750px;
   height: 39.06vw;
-  .mobileAbsolute{
+  .mobileAbsolute {
     display: none;
   }
-  a{
+  a {
     all: unset;
-    cursor: pointer !important
+    cursor: pointer !important;
   }
   @media screen and (max-width: 1220px) {
     height: calc(39.06vw + 40px);
@@ -66,15 +67,15 @@ const BannerStyled = styled.div`
   }
 
   @media (max-width: 1220px) {
-    .pagination{
+    .pagination {
       display: flex;
       justify-content: space-between;
-      width:100%;
+      width: 100%;
       align-items: center;
       display: none;
       padding-bottom: 23%;
     }
-    .pagination-control{
+    .pagination-control {
       display: none !important;
     }
   }
@@ -83,17 +84,17 @@ const BannerStyled = styled.div`
     button {
       display: flex;
       align-items: center;
-      justify-content:center;
+      justify-content: center;
       background-color: #9a1a4b;
       width: 25px !important;
       height: 25px !important;
       border: none;
       cursor: pointer;
     }
-    .pagination{
+    .pagination {
       display: flex;
       justify-content: space-between;
-      width:100%;
+      width: 100%;
       align-items: center;
       display: none;
       padding-bottom: 28%;
@@ -106,7 +107,7 @@ const BannerStyled = styled.div`
     }
 
     @media (max-width: 1220px) {
-      .contentMobile{
+      .contentMobile {
         display: none !important;
       }
       .layer {
@@ -114,20 +115,20 @@ const BannerStyled = styled.div`
       }
     }
     @media (max-width: 550px) {
-      .contentMobile h1{
+      .contentMobile h1 {
         font-size: 1.2rem !important;
       }
     }
     @media (max-width: 768px) {
-      .contentMobile small{
-        height:2rem !important;
-        font-size: .5rem !important;
+      .contentMobile small {
+        height: 2rem !important;
+        font-size: 0.5rem !important;
         display: flex;
         flex-wrap: nowrap;
         align-items: center !important;
         text-decoration: none !important;
       }
-      .contentMobile{
+      .contentMobile {
         .content-button {
           display: none;
 
@@ -147,7 +148,7 @@ const BannerStyled = styled.div`
             display: flex;
             justify-content: center;
             height: 1.5rem !important;
-            font-family: 'Merriweather';
+            font-family: "Merriweather";
             font-style: normal;
             font-weight: 700;
             font-size: 0.875rem;
@@ -166,50 +167,50 @@ const BannerStyled = styled.div`
       gap: 25px;
       padding: 0 12vw 15px 12vw;
 
-        h1 {
-          font-family: 'Merriweather';
+      h1 {
+        font-family: "Merriweather";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2rem;
+      }
+
+      p {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.8rem;
+        max-width: 500px;
+      }
+
+      .content-button {
+        display: none;
+
+        #linkBanner {
+          background-color: #9a1a4b;
+          width: 40px;
+          height: 40px;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+        }
+
+        small {
+          background-color: #282b62;
+          display: flex;
+          justify-content: center;
+          padding: 10px 20px;
+          font-family: "Merriweather";
           font-style: normal;
-          font-weight: 400;
-          font-size: 2rem;
-        }
+          font-weight: 700;
+          font-size: 0.875rem;
+          text-decoration: none !important;
 
-        p {
-          font-family: 'Arial';
-          font-style: normal;
-          font-weight: 400;
-          font-size: .8rem;
-          max-width: 500px;
-        }
-
-        .content-button {
-          display: none;
-
-          #linkBanner {
-            background-color: #9a1a4b;
-            width: 40px;
-            height: 40px;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-          }
-
-          small {
-            background-color: #282b62;
-            display: flex;
-            justify-content: center;
-            padding: 10px 20px;
-            font-family: 'Merriweather';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 0.875rem;
-            text-decoration: none !important;
-
-            @media (max-width: 768px) {
-              padding: 0 10px;
-            }
+          @media (max-width: 768px) {
+            padding: 0 10px;
           }
         }
+      }
 
       @media (max-width: 1220px) {
         position: absolute;
@@ -222,7 +223,6 @@ const BannerStyled = styled.div`
       }
 
       @media screen and (max-width: 600px) {
-
         h1 {
           font-size: 2rem;
         }
@@ -261,14 +261,14 @@ const BannerStyled = styled.div`
       gap: 20px;
 
       h1 {
-        font-family: 'Merriweather';
+        font-family: "Merriweather";
         font-style: normal;
         font-weight: 400;
         font-size: 2.5rem;
       }
 
       p {
-        font-family: 'Arial';
+        font-family: "Arial";
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
@@ -293,7 +293,7 @@ const BannerStyled = styled.div`
           display: flex;
           justify-content: center;
           padding: 10px 20px;
-          font-family: 'Merriweather';
+          font-family: "Merriweather";
           font-style: normal;
           font-weight: 700;
           font-size: 0.875rem;
@@ -302,7 +302,7 @@ const BannerStyled = styled.div`
       }
     }
 
-    .mobileAbsoluteLink{
+    .mobileAbsoluteLink {
       display: none;
     }
 
@@ -314,7 +314,7 @@ const BannerStyled = styled.div`
       justify-content: center;
       padding: 0;
 
-      .mobileAbsoluteLink{
+      .mobileAbsoluteLink {
         width: 80%;
         display: flex;
         justify-content: flex-end;
@@ -322,9 +322,8 @@ const BannerStyled = styled.div`
         bottom: 3.5rem;
         position: absolute;
         color: #fff;
-        
       }
-      .mobileAbsoluteLink small{
+      .mobileAbsoluteLink small {
         width: 100px;
         background-color: #282b62;
         margin: 0 auto;
@@ -332,25 +331,25 @@ const BannerStyled = styled.div`
         justify-content: center;
         align-items: center;
         height: 2rem !important;
-        font-family: 'Merriweather';
+        font-family: "Merriweather";
         font-style: normal;
         font-weight: 700;
         font-size: 0.875rem;
         text-decoration: none !important;
       }
-      .imageLinkMobile{
+      .imageLinkMobile {
         width: 40px;
         display: flex;
         justify-content: center;
         height: 2rem !important;
-        font-family: 'Merriweather';
+        font-family: "Merriweather";
         font-style: normal;
         font-weight: 700;
         font-size: 0.875rem;
         text-decoration: none !important;
         background-color: #9a1a4b;
       }
-      .mobileAbsolute{
+      .mobileAbsolute {
         width: 100% !important;
         display: flex;
         margin: 0 auto;
@@ -372,17 +371,17 @@ const BannerStyled = styled.div`
         font-size: 1.2rem;
       }
 
-      .mobileAbsoluteParagraph{
+      .mobileAbsoluteParagraph {
         background-color: #282b62;
         width: 100% !important;
         overflow: hidden;
-        font-family: 'Arial';
+        font-family: "Arial";
         font-style: normal;
         font-weight: 400;
         font-size: 1rem;
-        align-items:flex-start;
+        align-items: flex-start;
       }
-      .internDivParagraph{
+      .internDivParagraph {
         width: 80% !important;
         box-align: start;
         -webkit-box-align: start;
@@ -413,7 +412,7 @@ const BannerStyled = styled.div`
         gap: 10px;
 
         p {
-          font-family: 'Merriweather';
+          font-family: "Merriweather";
           font-weight: 700;
         }
       }
@@ -432,7 +431,7 @@ const BannerStyled = styled.div`
         font-size: 1rem;
       }
 
-      .mobileAbsoluteParagraph{
+      .mobileAbsoluteParagraph {
         font-size: 1rem;
       }
 
@@ -445,54 +444,49 @@ const BannerStyled = styled.div`
       }
 
       .pagination {
-
         .pagination-control {
           max-width: 300px;
         }
       }
     }
     @media screen and (max-width: 650px) {
-
       .mobileAbsoluteTitle {
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
-      .mobileAbsoluteLink small{
+      .mobileAbsoluteLink small {
         width: 90px;
         font-size: 0.8rem;
         height: 1.5rem !important;
       }
-      .imageLinkMobile{
+      .imageLinkMobile {
         width: 30px;
         height: 1.5rem !important;
-        
       }
 
-      .mobileAbsoluteParagraph{
+      .mobileAbsoluteParagraph {
         background-color: #282b62;
         width: 100% !important;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
-        font-family: 'Arial';
+        font-family: "Arial";
         font-style: normal;
         font-weight: 400;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
     @media screen and (max-width: 400px) {
-
       .mobileAbsoluteTitle {
-        font-size: .7rem;
+        font-size: 0.7rem;
         font-weight: 400;
       }
 
-      .mobileAbsoluteParagraph{
+      .mobileAbsoluteParagraph {
         font-weight: 400;
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
     }
-
 
     button {
       background-color: #9a1a4b;
@@ -505,206 +499,244 @@ const BannerStyled = styled.div`
   .img {
     width: 100vw;
   }
-
-`
+`;
 
 interface IBanner {
   imageAlt: string;
   imageUrl: string;
   title: string;
   descricao: string;
-  link: string
+  link: string;
 }
 
 function Banner({ banner }: { banner: IBanner[] }) {
-  const carousel = useRef<HTMLInputElement>(null)
-  const [scrolling, setScrolling] = useState(false)
-  const [carouselScrollLeft, setCarouselScrollLeft] = useState(0)
-  const [carouselTotalScroll, setCarouselTotalScroll] = useState(0)
-  const [pagina, setPagina] = useState(1)
+  const carousel = useRef<HTMLInputElement>(null);
+  const [scrolling, setScrolling] = useState(false);
+  const [carouselScrollLeft, setCarouselScrollLeft] = useState(0);
+  const [carouselTotalScroll, setCarouselTotalScroll] = useState(0);
+  const [pagina, setPagina] = useState(1);
 
   useEffect(() => {
     if (carousel.current != null) {
       setCarouselTotalScroll(
         Number(carousel.current.scrollWidth - carousel.current.clientWidth)
-      )
+      );
 
-      carousel.current.addEventListener('scroll', mudaPagina)
+      carousel.current.addEventListener("scroll", mudaPagina);
     }
-  }, [carouselScrollLeft])
+  }, [carouselScrollLeft]);
 
   const mudaPagina = () => {
     if (carousel.current != null) {
-      setPagina(Math.round((carousel.current.scrollLeft) / carousel.current.clientWidth) + 1)
+      setPagina(
+        Math.round(carousel.current.scrollLeft / carousel.current.clientWidth) +
+          1
+      );
     }
-  }
+  };
 
   const scroll = () => {
     if (carousel.current != null) {
-      setScrolling(true)
+      setScrolling(true);
       if (pagina < banner.length) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
-        )
-        carousel.current.scrollLeft += carousel.current.clientWidth
+        );
+        carousel.current.scrollLeft += carousel.current.clientWidth;
       } else {
-        setCarouselScrollLeft(0)
-        carousel.current.scrollLeft = 0
+        setCarouselScrollLeft(0);
+        carousel.current.scrollLeft = 0;
       }
       setTimeout(() => {
-        setScrolling(false)
-      }, carousel.current.clientWidth*0.5);
+        setScrolling(false);
+      }, carousel.current.clientWidth * 0.5);
     }
-  }
+  };
 
   const scrollMobile = () => {
     if (carousel.current != null) {
-      setScrolling(true)
+      setScrolling(true);
       if (pagina < banner.length) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft + carousel.current.clientWidth)
-        )
-        carousel.current.scrollLeft += carousel.current.clientWidth
+        );
+        carousel.current.scrollLeft += carousel.current.clientWidth;
       } else {
-        setCarouselScrollLeft(0)
-        carousel.current.scrollLeft = 0
+        setCarouselScrollLeft(0);
+        carousel.current.scrollLeft = 0;
       }
       setTimeout(() => {
-        setScrolling(false)
+        setScrolling(false);
       }, carousel.current.clientWidth + 400);
     }
-  }
+  };
 
   const scrollBack = () => {
     if (carousel.current != null) {
-      setScrolling(true)
+      setScrolling(true);
       if (pagina > 1) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft - carousel.current.clientWidth)
-        )
-        carousel.current.scrollLeft -= carousel.current.clientWidth
+        );
+        carousel.current.scrollLeft -= carousel.current.clientWidth;
       } else {
-        setCarouselScrollLeft(banner.length)
-        carousel.current.scrollLeft = carousel.current.clientWidth * banner.length
+        setCarouselScrollLeft(banner.length);
+        carousel.current.scrollLeft =
+          carousel.current.clientWidth * banner.length;
       }
       setTimeout(() => {
-        setScrolling(false)
-      }, carousel.current.clientWidth*0.5);
+        setScrolling(false);
+      }, carousel.current.clientWidth * 0.5);
     }
-  }
+  };
 
   const scrollBackMobile = () => {
     if (carousel.current != null) {
-      setScrolling(true)
+      setScrolling(true);
       if (pagina > 1) {
         setCarouselScrollLeft(
           Number(carousel.current.scrollLeft - carousel.current.clientWidth)
-        )
-        carousel.current.scrollLeft -= carousel.current.clientWidth
+        );
+        carousel.current.scrollLeft -= carousel.current.clientWidth;
       } else {
-        setCarouselScrollLeft(banner.length)
-        carousel.current.scrollLeft = carousel.current.clientWidth * banner.length
+        setCarouselScrollLeft(banner.length);
+        carousel.current.scrollLeft =
+          carousel.current.clientWidth * banner.length;
       }
       setTimeout(() => {
-        setScrolling(false)
+        setScrolling(false);
       }, carousel.current.clientWidth + 400);
     }
-  }
+  };
 
   return (
     <BannerStyled>
       <div ref={carousel} className="carousel">
         {banner.map((item, index) => (
-          <div className='imagem-banner' key={`banner${index}`}>
-            {banner[pagina-1].title &&
+          <div className="imagem-banner" key={`banner${index}`}>
+            {banner[pagina - 1].title && (
               <Image
-              src={item.imageUrl ? item.imageUrl : '/'}
-              alt={item.imageAlt ? item.imageAlt : '/'}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              className='imageBannerHome'
-            />
-            }
-            {!banner[pagina-1].title &&
-              <a href={banner[pagina-1].link ? 
-                  `//${banner[pagina-1].link}/` : "/"}>
-              <Image
-              src={item.imageUrl ? item.imageUrl : '/'}
-              alt={item.imageAlt ? item.imageAlt : '/'}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              className='imageBannerHome'
+                src={item.imageUrl ? item.imageUrl : "/"}
+                alt={item.imageAlt ? item.imageAlt : "/"}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+                className="imageBannerHome"
               />
-              </a>
-            }
+            )}
+            {!banner[pagina - 1].title && (
+              <Link
+                href={
+                  banner[pagina - 1].link
+                    ? `//${banner[pagina - 1].link}/`
+                    : "/"
+                }
+                passHref
+              >
+                <a>
+                  <Image
+                    src={item.imageUrl ? item.imageUrl : "/"}
+                    alt={item.imageAlt ? item.imageAlt : "/"}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    className="imageBannerHome"
+                  />
+                </a>
+              </Link>
+            )}
           </div>
         ))}
       </div>
-      <div className='layer' />
+      <div className="layer" />
       <div className="banner-control">
-        <div className='content'>
-          <h1>{banner[pagina-1].title}</h1>
-          <p>{banner[pagina-1].descricao}</p>
-          <div className='content-button'>
-            <a 
-              href={banner[pagina-1].link ? 
-                `//${banner[pagina-1].link}/` : "/"}
-              className='desktop' id='linkBanner'>
-              <Image
-                alt="ícone de seta para esquerda"
-                height={14}
-                src="/arrow-right.svg"
-                width={7}
-              />
-            </a>
-            <a href={banner[pagina-1].link ? 
-                `//${banner[pagina-1].link}/` : "/"}>
-              <small>Ver mais</small>
-            </a>
-          </div>
-        </div>
-            {!banner[pagina-1].title && !banner[pagina-1].descricao &&
-            <div className='mobileAbsoluteLink'>
-              <a 
-              href={banner[pagina-1].link ? 
-                `//${banner[pagina-1].link}/` : "/"}
-              className='imageLinkMobile'>
-              <Image
-                alt="ícone de seta para esquerda"
-                height={14}
-                src="/arrow-right.svg"
-                width={7}
-              />
+        <div className="content">
+          <h1>{banner[pagina - 1].title}</h1>
+          <p>{banner[pagina - 1].descricao}</p>
+          <div className="content-button">
+            <Link
+              href={
+                banner[pagina - 1].link ? `//${banner[pagina - 1].link}/` : "/"
+              }
+              passHref
+            >
+              <a className="desktop" id="linkBanner">
+                <Image
+                  alt="ícone de seta para esquerda"
+                  height={14}
+                  src="/arrow-right.svg"
+                  width={7}
+                />
               </a>
-              <a href={banner[pagina-1].link ? 
-                  `//${banner[pagina-1].link}/` : "/"}>
+            </Link>
+            <Link
+              passHref
+              href={
+                banner[pagina - 1].link ? `//${banner[pagina - 1].link}/` : "/"
+              }
+            >
+              <a>
                 <small>Ver mais</small>
               </a>
-            </div>
-            }
-          <div className='mobileAbsolute'>
-          <a href={banner[pagina-1].link ? 
-                `//${banner[pagina-1].link}/` : "/"}>
-            <div className='mobileAbsoluteTitle'>
-              <div className='internDivParagraph'>
-                <h1>{banner[pagina-1].title}</h1>
-              </div>
-            </div>
-            <div className='mobileAbsoluteParagraph'>
-              <div className='internDivParagraph'>
-                <p>{banner[pagina-1].descricao}</p>
-              </div>
-            </div>
-            </a>
+            </Link>
           </div>
+        </div>
+        {!banner[pagina - 1].title && !banner[pagina - 1].descricao && (
+          <div className="mobileAbsoluteLink">
+            <Link
+              passHref
+              href={
+                banner[pagina - 1].link ? `//${banner[pagina - 1].link}/` : "/"
+              }
+            >
+              <a className="imageLinkMobile">
+                <Image
+                  alt="ícone de seta para esquerda"
+                  height={14}
+                  src="/arrow-right.svg"
+                  width={7}
+                />
+              </a>
+            </Link>
+            <Link
+              passHref
+              href={
+                banner[pagina - 1].link ? `//${banner[pagina - 1].link}/` : "/"
+              }
+            >
+              <a>
+                <small>Ver mais</small>
+              </a>
+            </Link>
+          </div>
+        )}
+        <div className="mobileAbsolute">
+          <Link
+            href={
+              banner[pagina - 1].link ? `//${banner[pagina - 1].link}/` : "/"
+            }
+            passHref
+          >
+            <a>
+              <div className="mobileAbsoluteTitle">
+                <div className="internDivParagraph">
+                  <h1>{banner[pagina - 1].title}</h1>
+                </div>
+              </div>
+              <div className="mobileAbsoluteParagraph">
+                <div className="internDivParagraph">
+                  <p>{banner[pagina - 1].descricao}</p>
+                </div>
+              </div>
+            </a>
+          </Link>
+        </div>
         <div className="pagination">
           <button
             className={
               carouselScrollLeft >= carouselTotalScroll
-                ? 'desktop desactive'
-                : 'desktop'
+                ? "desktop desactive"
+                : "desktop"
             }
             onClick={scrollBack}
             disabled={scrolling}
@@ -714,22 +746,29 @@ function Banner({ banner }: { banner: IBanner[] }) {
               height={14}
               src="/arrow-right.svg"
               width={7}
-              style={{transform: 'scaleX(-1)'}}
+              style={{ transform: "scaleX(-1)" }}
             />
           </button>
-          <button className="mobile" onClick={scrollBackMobile} disabled={scrolling}>
+          <button
+            className="mobile"
+            onClick={scrollBackMobile}
+            disabled={scrolling}
+          >
             <Image
               alt="ícone de seta para esquerda"
               height={14}
               src="/arrow-right.svg"
               width={7}
-              style={{transform: 'scaleX(-1)'}}
+              style={{ transform: "scaleX(-1)" }}
             />
           </button>
           <div className="pagination-control">
             <p>1</p>
             {banner.map((item, index) => (
-              <div key={`paginacao-banner${index}`} className={index > 6 ? 'desktop' : ''}>
+              <div
+                key={`paginacao-banner${index}`}
+                className={index > 6 ? "desktop" : ""}
+              >
                 <LineIcon hover={pagina == index + 1} size={20} />
               </div>
             ))}
@@ -739,8 +778,8 @@ function Banner({ banner }: { banner: IBanner[] }) {
           <button
             className={
               carouselScrollLeft >= carouselTotalScroll
-                ? 'desktop desactive'
-                : 'desktop'
+                ? "desktop desactive"
+                : "desktop"
             }
             onClick={scroll}
             disabled={scrolling}
@@ -752,7 +791,11 @@ function Banner({ banner }: { banner: IBanner[] }) {
               width={7}
             />
           </button>
-          <button className="mobile" onClick={scrollMobile} disabled={scrolling}>
+          <button
+            className="mobile"
+            onClick={scrollMobile}
+            disabled={scrolling}
+          >
             <Image
               alt="ícone de seta para esquerda"
               height={14}
@@ -762,24 +805,29 @@ function Banner({ banner }: { banner: IBanner[] }) {
           </button>
         </div>
       </div>
-      <div className='contentMobile'>
-          <h1>{banner[pagina-1].title}</h1>
-          <p>{banner[pagina-1].descricao}</p>
-        <div className='content-button'>
-          <a href={banner[pagina-1].link ? 
-                `//${banner[pagina-1].link}/` : "/"}
-                 className='desktop' id='linkBanner'>
-            <Image
-              alt="ícone de seta para esquerda"
-              height={14}
-              src="/arrow-right.svg"
-              width={7}
-            />
-          </a>
+      <div className="contentMobile">
+        <h1>{banner[pagina - 1].title}</h1>
+        <p>{banner[pagina - 1].descricao}</p>
+        <div className="content-button">
+          <Link
+            passHref
+            href={
+              banner[pagina - 1].link ? `//${banner[pagina - 1].link}/` : "/"
+            }
+          >
+            <a className="desktop" id="linkBanner">
+              <Image
+                alt="ícone de seta para esquerda"
+                height={14}
+                src="/arrow-right.svg"
+                width={7}
+              />
+            </a>
+          </Link>
         </div>
       </div>
     </BannerStyled>
-  )
+  );
 }
 
-export default Banner
+export default Banner;

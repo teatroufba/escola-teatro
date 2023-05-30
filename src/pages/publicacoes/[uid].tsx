@@ -66,9 +66,11 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
   const posts = await client.getByUID("post-generico", params.uid);
 
   const postagem = {
-    author: posts.data.author ? posts.data.author : '',
-    first_publication_date: posts.first_publication_date ? posts.first_publication_date : '',
-    id: posts.id ? posts.id : '',
+    author: posts.data.author ? posts.data.author : "",
+    first_publication_date: posts.first_publication_date
+      ? posts.first_publication_date
+      : "",
+    id: posts.id ? posts.id : "",
     imageAlt: posts.data.image.alt ? posts.data.image.alt : image,
     imageUrl: posts.data.image.url ? posts.data.image.url : image,
     last_publication_date: posts.last_publication_date,
@@ -76,18 +78,18 @@ export async function getStaticProps({ params }: { params: { uid: string } }) {
     text: posts.data.text,
     title: posts.data.title,
     uid: posts.uid,
-    document: posts.data.document.url ? posts.data.document.url : '',
-    documentName: posts.data.document.name ? posts.data.document.name : '',
-    document2: posts.data.document2?.url ? posts.data.document2.url : '',
-    document3: posts.data.document3?.url ? posts.data.document3.url : '',
-    document4: posts.data.document4?.url ? posts.data.document4.url : '',
-    document5: posts.data.document5?.url ? posts.data.document5.url : '',
-    document6: posts.data.document6?.url ? posts.data.document6.url : '',
-    documentName2: posts.data.document2?.name ? posts.data.document2.name : '',
-    documentName3: posts.data.document3?.name ? posts.data.document3.name : '',
-    documentName4: posts.data.document4?.name ? posts.data.document4.name : '',
-    documentName5: posts.data.document5?.name ? posts.data.document5.name : '',
-    documentName6: posts.data.document6?.name ? posts.data.document6.name : '',
+    document: posts.data.document.url ? posts.data.document.url : "",
+    documentName: posts.data.document.name ? posts.data.document.name : "",
+    document2: posts.data.document2?.url ? posts.data.document2.url : "",
+    document3: posts.data.document3?.url ? posts.data.document3.url : "",
+    document4: posts.data.document4?.url ? posts.data.document4.url : "",
+    document5: posts.data.document5?.url ? posts.data.document5.url : "",
+    document6: posts.data.document6?.url ? posts.data.document6.url : "",
+    documentName2: posts.data.document2?.name ? posts.data.document2.name : "",
+    documentName3: posts.data.document3?.name ? posts.data.document3.name : "",
+    documentName4: posts.data.document4?.name ? posts.data.document4.name : "",
+    documentName5: posts.data.document5?.name ? posts.data.document5.name : "",
+    documentName6: posts.data.document6?.name ? posts.data.document6.name : "",
   };
   return {
     props: { postagem },

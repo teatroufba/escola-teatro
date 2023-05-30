@@ -1,107 +1,116 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import Image from 'next/image';
-import Link from 'next/link';
-import styled from 'styled-components'
+import Image from "next/image";
+import Link from "next/link";
+import styled from "styled-components";
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 395px;
+  min-width: 395px;
+  height: 400px;
+  border: 1px solid rgba(45, 43, 120, 0.3);
+  font-family: "Merriweather";
+
+  @media screen and (max-width: 600px) {
+    min-width: 250px;
+    .content {
+      padding: 1rem 1.25rem !important;
+      p {
+        font-size: 1rem !important;
+      }
+    }
+  }
+
+  .img {
+    position: relative;
+    height: 42.5%;
+    background-color: #f7f6f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content {
+    height: 57.5%;
+    padding: 1.5rem 1.75rem;
     display: flex;
     flex-direction: column;
-    text-align: left;
-    width: 395px;
-    min-width: 395px;
-    height: 400px;
-    border: 1px solid rgba(45, 43, 120, 0.3);
-    font-family: 'Merriweather';
-
-    @media screen and (max-width: 600px) {
-        min-width: 250px;
-        .content{
-            padding: 1rem 1.25rem !important;
-            p{
-                font-size: 1rem !important;
-            }
-        }
+    gap: 1rem;
+    .info {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      p {
+        font-size: 1.25rem;
+        white-space: nowrap;
+        font-weight: 700;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #9a1a4b;
+      }
+      small {
+        max-height: 6rem;
+        font-family: "Arial";
+        font-size: 0.875rem;
+        text-overflow: ellipsis;
+        color: #000000;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+      }
     }
 
-    .img {
-        position: relative;
-        height: 42.5%;
-        background-color: #F7F6F5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    a {
+      width: 55px;
+      text-decoration: underline;
+      color: #2d2b78;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1rem;
     }
-
-    .content {
-        height: 57.5%;
-        padding: 1.5rem 1.75rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        .info {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            p {
-                font-size: 1.25rem;
-                white-space: nowrap;
-                font-weight: 700;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                color: #9A1A4B;
-            }
-            small {
-                max-height: 6rem;
-                font-family: 'Arial';
-                font-size: 0.875rem;
-                text-overflow: ellipsis;
-                color: #000000;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                -webkit-line-clamp: 4;
-                -webkit-box-orient: vertical;
-            }
-        }
-
-        a {
-            width: 55px;
-            text-decoration: underline;
-            color: #2D2B78;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-    }
-`
+  }
+`;
 
 type CardProps = {
-  desc: string,
-  img: string,
-  imgAlt: string,
-  link: string,
-  title: string,
-}
+  desc: string;
+  img: string;
+  imgAlt: string;
+  link: string;
+  title: string;
+};
 
 function Card(props: CardProps) {
   const { desc, img, imgAlt, link, title } = props;
 
   return (
     <Container>
-        <div className='img'>
-            <Image src={img} alt={imgAlt} layout='fill' objectFit='cover' objectPosition='center' draggable={false} />
+      <div className="img">
+        <Image
+          src={img}
+          alt={imgAlt}
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          draggable={false}
+        />
+      </div>
+      <div className="content">
+        <div className="info">
+          <p>{title}</p>
+          <small>{desc}</small>
         </div>
-        <div className='content'>
-            <div className='info'>
-                <p>{title}</p>
-                <small>{desc}</small>
-            </div>
-            <a target="_blank" href={link ?? ''}>Acesse</a>
-        </div>
+        <a target="_blank" href={link ?? ""}>
+          Acesse
+        </a>
+      </div>
     </Container>
-  )
+  );
 }
 
-export default Card
+export default Card;

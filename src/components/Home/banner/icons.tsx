@@ -1,7 +1,7 @@
 type IconProps = {
-  size: number
-  hover: boolean
-}
+  size: number;
+  hover: boolean;
+};
 
 export function LineIcon({ size, hover }: IconProps) {
   return (
@@ -16,9 +16,9 @@ export function LineIcon({ size, hover }: IconProps) {
         y1="1"
         x2="20"
         y2="1"
-        stroke={hover ? '#9A1A4B' : '#24233A'}
+        stroke={hover ? "#9A1A4B" : "#24233A"}
         strokeWidth="2"
       />
     </svg>
-  )
+  );
 }

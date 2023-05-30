@@ -43,8 +43,8 @@ export async function getStaticProps({
     miniaturaUrl: item.data.miniatura.url ? item.data.miniatura.url : image,
     miniaturaAlt: item.data.miniatura.url ? item.data.miniatura.alt : image,
     date: item.data.data,
-    tipo: item.data.tipos.map((tipos: { tipo: any; }) => (tipos.tipo)),
-    local: item.data.local ? item.data.local : 'Local não informado',
+    tipo: item.data.tipos.map((tipos: { tipo: any }) => tipos.tipo),
+    local: item.data.local ? item.data.local : "Local não informado",
     subtitulo: item.data.subtitulo,
   }));
 

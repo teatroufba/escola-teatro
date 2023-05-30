@@ -31,7 +31,7 @@ function ErrorPage502() {
   return (
     <Container>
       <Link passHref href="/">
-        <a href="replace" id='brasao' > 
+        <a id="brasao">
           <Image
             alt="Brasão da Escola de Teatro"
             height={105}
@@ -45,7 +45,7 @@ function ErrorPage502() {
         Ocorreu um erro em nosso servidor, tente novamente ou volte mais tarde.
       </p>
       <Link passHref href="/">
-        <a href="replace">
+        <a>
           <Button>Voltar para o início</Button>
         </a>
       </Link>

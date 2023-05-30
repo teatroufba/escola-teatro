@@ -8,16 +8,16 @@ export default function Error() {
     <>
       <ErrorContainer>
         <div className="content">
-        <Link passHref href="/">
-          <a href="replace" id='brasao' > 
-            <Image
-              alt="Brasão da Escola de Teatro"
-              height={105}
-              src={image}
-              width={120}
-            />
-          </a>
-        </Link>
+          <Link passHref href="/">
+            <a id="brasao">
+              <Image
+                alt="Brasão da Escola de Teatro"
+                height={105}
+                src={image}
+                width={120}
+              />
+            </a>
+          </Link>
           <h1>Error 404</h1>
 
           <p>
@@ -25,7 +25,9 @@ export default function Error() {
             base.
           </p>
           <button>
-            <a href="/">Voltar para o início</a>
+            <Link href="/" passHref>
+              <a>Voltar para o início</a>
+            </Link>
           </button>
         </div>
       </ErrorContainer>

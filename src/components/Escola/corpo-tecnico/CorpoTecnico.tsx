@@ -3,57 +3,57 @@ import CardCorpoTecnico from "./CardCorpoTecnico";
 import { StyledStaffTable, StyledStaffTableContainer } from "./styles";
 
 interface ICorpoTecnico {
-	email: string;
-	nome: string;
-	funcao: string;
+  email: string;
+  nome: string;
+  funcao: string;
 }
 
 interface ICorpoTecnicoArray {
-	corpoTecnico: ICorpoTecnico[];
+  corpoTecnico: ICorpoTecnico[];
 }
 
 export default function CorpoTecnico({ corpoTecnico }: ICorpoTecnicoArray) {
-	const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(0);
 
-	useEffect(() => {
-		function handleResize() {
-			setWidth(window.innerWidth);
-		}
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
 
-		window.addEventListener("resize", handleResize);
-		handleResize();
+    window.addEventListener("resize", handleResize);
+    handleResize();
 
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-	return (
-		<StyledStaffTableContainer>
-			<h1 id="corpo-tecnico">Corpo Técnico</h1>
-			<div className="table-container">
-				{width > 775 ? (
-					<StyledStaffTable>
-						<thead>
-							<tr>
-								<th>Nome</th>
-								<th>Função</th>
-								<th>E-mail</th>
-							</tr>
-						</thead>
+  return (
+    <StyledStaffTableContainer>
+      <h1 id="corpo-tecnico">Corpo Técnico</h1>
+      <div className="table-container">
+        {width > 775 ? (
+          <StyledStaffTable>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Função</th>
+                <th>E-mail</th>
+              </tr>
+            </thead>
 
-						<tbody>
-							{corpoTecnico.map((item, index) => (
-								<tr key={`membro${index}`}>
-									{item.nome ? <td>{item.nome}</td> : <td>-</td>}
-									{item.funcao ? <td>{item.funcao}</td>: <td>-</td>}
-									{item.email ? <td>{item.email}</td> : <td>-</td>}
-								</tr>
-							))}
-						</tbody>
-					</StyledStaffTable>
-				) : (
-					<CardCorpoTecnico corpoTecnico={corpoTecnico} />
-				)}
-			</div>
-		</StyledStaffTableContainer>
-	);
+            <tbody>
+              {corpoTecnico.map((item, index) => (
+                <tr key={`membro${index}`}>
+                  {item.nome ? <td>{item.nome}</td> : <td>-</td>}
+                  {item.funcao ? <td>{item.funcao}</td> : <td>-</td>}
+                  {item.email ? <td>{item.email}</td> : <td>-</td>}
+                </tr>
+              ))}
+            </tbody>
+          </StyledStaffTable>
+        ) : (
+          <CardCorpoTecnico corpoTecnico={corpoTecnico} />
+        )}
+      </div>
+    </StyledStaffTableContainer>
+  );
 }

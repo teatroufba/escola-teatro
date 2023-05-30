@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Container = styled.div`
   .goToTop {
@@ -20,11 +20,11 @@ export const Container = styled.div`
   }
 
   .goToTop:hover:after {
-    font-family: 'Merriweather';
+    font-family: "Merriweather";
     bottom: 5px;
     position: absolute;
     width: 120px;
-    content: 'Voltar ao topo';
+    content: "Voltar ao topo";
     color: white;
   }
-`
+`;
