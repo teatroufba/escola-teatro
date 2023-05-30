@@ -118,6 +118,11 @@ export const GlobalStyles = styled.createGlobalStyle`
         min-height: 100vh;
         text-rendering: optimizeSpeed;
         line-height: 1.5;
+
+        font-family: 'Merriweather' ui-sans-serif, system-ui, -apple-system,
+            BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+            'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+            'Segoe UI Symbol', 'Noto Color Emoji';
     }
 
     /* Allow percentage-based heights in the application */
