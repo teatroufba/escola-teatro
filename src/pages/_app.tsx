@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         strategy="beforeInteractive"
                         src="https://vlibras.gov.br/app/vlibras-plugin.js"
                     />
-                    <Script>
+                    <Script defer>
                         new window.VLibras.Widget('https://vlibras.gov.br/app');
                     </Script>
                 </PrismicPreview>
