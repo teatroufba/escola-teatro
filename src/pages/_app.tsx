@@ -54,9 +54,9 @@ function MyApp({ Component, pageProps }: AppProps) {
                 </PrismicPreview>
             </PrismicProvider>
             <Script
-                defer
                 src="//barra.brasil.gov.br/barra.js"
                 type="text/javascript"
+                strategy="lazyOnload"
             />
         </>
     )
