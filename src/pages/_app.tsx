@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
             <Head>
-                <meta charSet="utf-8" />
                 <meta
                     content="http://estruturaorganizacional.dados.gov.br/id/unidade-organizacional/10320"
                     property="creator.productor"
