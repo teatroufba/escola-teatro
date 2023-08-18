@@ -305,7 +305,7 @@ function Header() {
         />
       ) : null}
 
-      {isShowingMobile ? <MenuMobile></MenuMobile> : null}
+      {isShowingMobile ? <MenuMobile setActionMobile={setIsShowingMobile} isShowingMobile={isShowingMobile}></MenuMobile> : null}
     </HeaderContainer>
   );
 }

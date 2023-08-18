@@ -19,7 +19,12 @@ function ArrowIcon() {
   );
 }
 
-export default function MenuMobile() {
+interface IsetActionMobile{
+  setActionMobile: React.Dispatch<React.SetStateAction<boolean>>
+  isShowingMobile: boolean
+}
+
+export default function MenuMobile({setActionMobile, isShowingMobile}:IsetActionMobile) {
   const router = useRouter();
   const url = router.pathname;
   function showSubmenu(section: string) {
@@ -33,6 +38,15 @@ export default function MenuMobile() {
       }
     }
   }
+
+  function desativeMenuMobile(){
+    setActionMobile(false)
+    const body = document.querySelector("body");
+    if (body) {
+      body.style.overflow = !isShowingMobile ? "hidden" : "scroll";
+    }
+  }
+
 
   return (
     <MenuMobileContainer>
@@ -58,7 +72,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button onClick={() => showSubmenu("escola")}>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/escola" passHref>
                     <a>A Escola</a>
                   </Link>
@@ -68,27 +82,27 @@ export default function MenuMobile() {
             </div>
             <div id="escola-submenu" className="submenu-mobile hidden">
               <ul>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/escola/#apresentacao" passHref>
                     <a>Apresentação</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/escola/#setores-e-instancias" passHref>
                     <a>Setores e Instâncias</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/escola/#corpo-docente" passHref>
                     <a>Corpo Docente</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/escola/#corpo-tecnico" passHref>
                     <a>Corpo Técnico</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/escola/#como-chegar" passHref>
                     <a>Como Chegar</a>
                   </Link>
@@ -102,7 +116,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button onClick={() => showSubmenu("ensino")}>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/ensino" passHref>
                     <a>Ensino e Pesquisa</a>
                   </Link>
@@ -112,27 +126,27 @@ export default function MenuMobile() {
             </div>
             <div id="ensino-submenu" className="submenu-mobile hidden">
               <ul>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/ensino/#graduacao" passHref>
                     <a>Graduação</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/ensino/#pos-graduacao" passHref>
                     <a>Pós-Graduação</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/escola/#formas-de-ingresso" passHref>
                     <a>Ingresso</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/ensino/#producao-academica" passHref>
                     <a>Produção Acadêmica</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/ensino/#grupos-de-pesquisa" passHref>
                     <a>Grupos de Pesquisa</a>
                   </Link>
@@ -146,7 +160,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button onClick={() => showSubmenu("extensao")}>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/extensao" passHref>
                     <a>Extensão</a>
                   </Link>
@@ -156,22 +170,22 @@ export default function MenuMobile() {
             </div>
             <div id="extensao-submenu" className="submenu-mobile hidden">
               <ul>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/extensao/#cia-de-teatro" passHref>
                     <a>Cia de Teatro</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/extensao/#curso-livre" passHref>
                     <a>Curso Livre</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/extensao/#ato-de-4" passHref>
                     <a>Ato de Quatro</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/extensao/#outros-projetos" passHref>
                     <a>Outros Projetos</a>
                   </Link>
@@ -185,7 +199,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button onClick={() => showSubmenu("espacos")}>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/espacos" passHref>
                     <a>Espaços</a>
                   </Link>
@@ -195,12 +209,12 @@ export default function MenuMobile() {
             </div>
             <div id="espacos-submenu" className="submenu-mobile hidden">
               <ul>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/espacos/#main" passHref>
                     <a>Teatro Martim Gonçalves</a>
                   </Link>
                 </li>
-                <li>
+                <li onClick={desativeMenuMobile}>
                   <Link href="/espacos/#outros" passHref>
                     <a>Outros Espaços</a>
                   </Link>
@@ -214,7 +228,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/agenda" passHref>
                     <a>Agenda</a>
                   </Link>
@@ -229,7 +243,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/noticias" passHref>
                     <a>Notícias</a>
                   </Link>
@@ -243,7 +257,7 @@ export default function MenuMobile() {
           >
             <div className="menu-option">
               <button>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/galeria" passHref>
                     <a>Galeria Virtual</a>
                   </Link>

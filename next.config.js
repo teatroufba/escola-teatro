@@ -4,7 +4,6 @@ const nextConfig = {
     trailingSlash: true,
     images: {
         unoptimized: true,
-        domains: ['images.prismic.io'],
     },
     compiler: {
         styledComponents: true,
