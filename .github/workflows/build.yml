@@ -31,7 +31,6 @@ jobs:
                   key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
                   restore-keys: |
                       ${{ runner.os }}-yarn-
-
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v1
               with:
@@ -41,12 +40,13 @@ jobs:
               run: |
                   yarn install
                   yarn export
+            - name: 📦 Get NCFTP and lftp
+              run: |
+                  sudo apt install ncftp
+                  sudo apt install lftp
 
-            - name: Sync files
-              uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-              with:
-                  server: ${{ secrets.ftp_server }}
-                  username: ${{ secrets.ftp_username }}
-                  password: ${{ secrets.ftp_password }}
-                  local-dir: out/
-                  server-dir: ./teatro.ufba.br/public_html/
+            - name: 🗑️ Delete _next
+              run: lftp -e "user ${{ secrets.ftp_username }} ${{ secrets.ftp_password }}; rm -rf ./teatro.ufba.br/public_html/_next;quit" ${{ secrets.ftp_server }}
+
+            - name: 📁 Sync files
+              run: ncftpput -R -v -u ${{ secrets.ftp_username }} -p ${{ secrets.ftp_password }} ${{ secrets.ftp_server }} ./teatro.ufba.br/public_html/ ./out/*
