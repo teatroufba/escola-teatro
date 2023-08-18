@@ -58,7 +58,7 @@ export default function MenuMobile({setActionMobile, isShowingMobile}:IsetAction
           >
             <div className="menu-option">
               <button>
-                <span>
+                <span onClick={desativeMenuMobile}>
                   <Link href="/" passHref>
                     <a>Início</a>
                   </Link>
@@ -137,7 +137,7 @@ export default function MenuMobile({setActionMobile, isShowingMobile}:IsetAction
                   </Link>
                 </li>
                 <li onClick={desativeMenuMobile}>
-                  <Link href="/escola/#formas-de-ingresso" passHref>
+                  <Link href="/ensino/#formas-de-ingresso" passHref>
                     <a>Ingresso</a>
                   </Link>
                 </li>
