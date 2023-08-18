@@ -2,7 +2,6 @@ import "@szhsin/react-menu/dist/index.css";
 import "@szhsin/react-menu/dist/transitions/slide.css";
 
 import { Menu, MenuItem, SubMenu } from "@szhsin/react-menu";
-import { GoThreeBars } from "react-icons/go";
 
 import { ContainerButton, ContainerSub, MenuButton } from "./styles";
 
@@ -11,9 +10,6 @@ function StyledDropdown() {
     <Menu
       menuButton={
         <ContainerButton>
-          <MenuButton>
-            <GoThreeBars color="white" height={100} width={100} />
-          </MenuButton>
         </ContainerButton>
       }
     >
