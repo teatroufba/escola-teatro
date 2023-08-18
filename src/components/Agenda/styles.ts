@@ -160,7 +160,7 @@ export const StyledAgendaCard = styled.div`
     h4 {
       width: 100%;
       display: -webkit-box;
-      height: 3.875rem;
+      height: 3.8rem;
       overflow: hidden;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -182,7 +182,9 @@ export const StyledAgendaCard = styled.div`
       p {
         font-size: 0.875rem;
         line-height: 1.3125rem;
-        font-family: Arial;
+        text-decoration: none !important;
+        font-family: 'Merriweather';
+        color: black !important;
       }
     }
 
@@ -195,7 +197,9 @@ export const StyledAgendaCard = styled.div`
       p {
         font-size: 0.875rem;
         line-height: 1.3125rem;
-        font-family: Arial;
+        text-decoration: none !important;
+        font-family: 'Merriweather';
+        color: black !important;
       }
     }
 
@@ -209,7 +213,9 @@ export const StyledAgendaCard = styled.div`
       font-size: 0.875rem;
       line-height: 1.3125rem;
       margin-bottom: 1rem;
-      font-family: Arial;
+      text-decoration: none !important;
+        font-family: 'Merriweather';
+        color: black !important;
     }
 
     a {

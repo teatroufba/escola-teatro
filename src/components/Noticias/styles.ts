@@ -44,20 +44,26 @@ export const StyledPosts = styled.div`
         width: 25rem;
         padding: 1.5rem 1rem 0 1rem;
         h3 {
-            font-family: 'Merriweather';
-            font-weight: 400;
-            font-size: 20px;
-            margin-bottom: 8px;
-            max-height: 100%;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
+            width: 100%;
+      display: -webkit-box;
+      height: 3.8rem;
+      overflow: hidden;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      font-family: Merriweather;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #9a1a4b;
+      line-height: 1.875rem;
+      margin-bottom: 0.5rem;
         }
 
         p {
             font-family: Arial;
+            text-decoration: none !important;
+            font-family: 'Merriweather';
+            color: black !important;
             font-weight: 400;
             font-size: 15px;
             max-height: 95%;
@@ -75,9 +81,9 @@ export const StyledPosts = styled.div`
     }
 
     a {
-        text-decoration: none;
+        text-decoration: none !important;
         font-family: 'Merriweather';
-        color: black;
+        color: black !important;
         font-weight: 400;
         font-size: 18px;
         margin-top: 5%;
