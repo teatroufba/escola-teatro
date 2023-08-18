@@ -9,7 +9,7 @@ function SliceSimulatorPage() {
   return (
     <SliceSimulator
       state={state}
-      sliceZone={({ slices }) => (
+      sliceZone={({ slices }:any) => (
         <SliceZone components={components} slices={slices} />
       )}
     />
