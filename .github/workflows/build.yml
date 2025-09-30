@@ -48,5 +48,19 @@ jobs:
             - name: 🗑️ Delete _next
               run: lftp -e "user ${{ secrets.ftp_username }} ${{ secrets.ftp_password }}; rm -rf ./teatro.ufba.br/public_html/_next;quit" ${{ secrets.ftp_server }}
 
+            - name: 🧪 Test FTP connection
+              run: |
+                  echo "Testing FTP connection..."
+                  ncftp -u ${{ secrets.ftp_username }} -p ${{ secrets.ftp_password }} ${{ secrets.ftp_server }} <<EOF
+                  pwd
+                  quit
+                  EOF
+
             - name: 📁 Sync files
-              run: ncftpput -R -v -u ${{ secrets.ftp_username }} -p ${{ secrets.ftp_password }} ${{ secrets.ftp_server }} ./teatro.ufba.br/public_html/ ./out/*
+              run: |
+                ncftpput -R -v \
+                  -u "${{ secrets.ftp_username }}" \
+                  -p "${{ secrets.ftp_password }}" \
+                  ${{ secrets.ftp_server }} \
+                  /teatro.ufba.br/public_html/ \
+                  ./out/*
