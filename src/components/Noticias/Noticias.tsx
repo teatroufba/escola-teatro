@@ -32,7 +32,11 @@ export default function Noticias({ post }: INoticias) {
   console.log(post);
 
   const orderedPost = [...post].sort((a, b) => {
-    const timestamp = (date: string) => new Date(date).getTime();
+    const timestamp = (date: string) => {
+      if (!date) return 0;
+      const parsedDate = new Date(date);
+      return isNaN(parsedDate.getTime()) ? 0 : parsedDate.getTime();
+    };
     return timestamp(b.date) - timestamp(a.date);
   });
 
@@ -88,13 +92,19 @@ export default function Noticias({ post }: INoticias) {
       const iInput = new Date(idate);
       const fInput = new Date(fdate);
 
-      iInput.setHours(24); // inicio do dia
-      fInput.setHours(47); // fim do dia
+      iInput.setHours(0, 0, 0); 
+      fInput.setHours(23, 59, 59);
 
       posts = posts.filter((value) => {
-        const date = new Date(value.date);
-
-        return date >= iInput && date <= fInput;
+        if (!value.date) return false;
+        
+        try {
+          const date = new Date(value.date);
+          if (isNaN(date.getTime())) return false;
+          return date >= iInput && date <= fInput;
+        } catch (e) {
+          return false;
+        }
       });
     }
 
