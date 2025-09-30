@@ -50,7 +50,7 @@ jobs:
 
             - name: 📁 Sync files with lftp
               run: |
-                lftp -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" ${{ secrets.FTP_SERVER }} << EOF
+                lftp -u "${{ secrets.ftp_username }},${{ secrets.ftp_password }}" ${{ secrets.ftp_server }} << EOF
                 set ssl:verify-certificate no
                 mirror -R ./out/ ./teatro.ufba.br/public_html/ --verbose --delete
                 quit
