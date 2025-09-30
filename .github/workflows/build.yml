@@ -1,62 +1,58 @@
 name: Site build and deploy
 
 on:
-  push:
-    branches: [main]
+    push:
+        branches: [main]
 
-  repository_dispatch:
-    types: [build]
+    repository_dispatch:
+        types: [build]
 
 concurrency:
-  group: build and deploy
-  cancel-in-progress: true
+    group: build and deploy
+    cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2.3.1
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+            - name: Get yarn cache directory path
+              id: yarn-cache-dir-path
+              run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
-        id: yarn-cache
-        with:
-          path: |
-            ${{ steps.yarn-cache-dir-path.outputs.dir }}
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: "18.x"
+            - uses: actions/cache@v3
+              id: yarn-cache
+              with:
+                  path: |
+                      ${{ steps.yarn-cache-dir-path.outputs.dir }}
+                      ${{ github.workspace }}/.next/cache
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '18.x'
 
-      - name: Install dependencies, build and export static site
-        run: |
-          yarn install
-          yarn export
-      - name: 📦 Get NCFTP and lftp
-        run: |
-          sudo apt install ncftp
-          sudo apt install lftp
+            - name: Install dependencies, build and export static site
+              run: |
+                  yarn install
+                  yarn export
+            - name: 📦 Get NCFTP and lftp
+              run: |
+                  sudo apt install ncftp
+                  sudo apt install lftp
 
-      - name: 🗑️ Delete _next
-        run: lftp -e "user ${{ secrets.ftp_username }} ${{ secrets.ftp_password }}; rm -rf ./teatro.ufba.br/public_html/_next;quit" ${{ secrets.ftp_server }}
+            - name: 🔍 Debug FTP credentials (partial)
+              run: |
+                echo "FTP Server: ${{ secrets.FTP_SERVER }}"
+                echo "Username: $(echo '${{ secrets.FTP_USERNAME }}')***"
+                echo "Password: length: $(echo '${{ secrets.FTP_PASSWORD }}') "
 
-      - name: 🧪 Test FTP connection
-        run: |
-          echo "Testing FTP connection..."
-          lftp -e "user ${{ secrets.ftp_username }} ${{ secrets.ftp_password }}; pwd; quit" ${{ secrets.ftp_server }}
+            - name: 🗑️ Delete _next
+              run: lftp -e "user ${{ secrets.ftp_username }} ${{ secrets.ftp_password }}; rm -rf ./teatro.ufba.br/public_html/_next;quit" ${{ secrets.ftp_server }}
 
-      - name: 📁 Sync files
-        run: |
-          lftp -e "
-          user ${{ secrets.ftp_username }} ${{ secrets.ftp_password }};
-          mirror -R ./out/ ./teatro.ufba.br/public_html/ --verbose --delete;
-          quit
-          " ${{ secrets.ftp_server }}
+            - name: 📁 Sync files
+              run: ncftpput -R -v -u ${{ secrets.ftp_username }} -p ${{ secrets.ftp_password }} ${{ secrets.ftp_server }} ./teatro.ufba.br/public_html/ ./out/*
