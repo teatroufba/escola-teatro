@@ -49,9 +49,4 @@ jobs:
         run: lftp -e "user ${{ secrets.USER_POS_FIX }} ${{ secrets.PASSWORD_POS_FIX }}; rm -rf ./teatro.ufba.br/public_html/_next;quit" ${{ secrets.FTP_SERVER }}
 
       - name: 📁 Sync files with lftp
-        run: |
-          lftp -u "${{ secrets.USER_POS_FIX }},${{ secrets.PASSWORD_POS_FIX }}" ${{ secrets.FTP_SERVER }} << EOF
-          set ssl:verify-certificate no
-          mirror -R ./out/ ./teatro.ufba.br/public_html/ --verbose --delete
-          quit
-          EOF
+        run: ncftpput -R -v -u ${{ secrets.USER_POS_FIX }} -p ${{ secrets.PASSWORD_POS_FIX }} ${{ secrets.FTP_SERVER }} ./teatro.ufba.br/public_html/ ./out/*
