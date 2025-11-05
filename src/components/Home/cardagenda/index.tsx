@@ -7,40 +7,31 @@ import { StyledAgendaCard } from "@/components/Agenda/styles";
 import Link from "next/link";
 
 const CardStyle = styled.div`
-  width: 450px;
-  height: 450px;
-  min-width: 235px;
-  max-width: 235px;
-  min-height: 450px;
-
-  border-radius: 5px;
+  width: 100%;
+  max-width: 280px;
+  min-width: 280px;
+  max-height: 400px;
+  border-radius: 8px;
   cursor: pointer;
-
   display: flex;
   flex-direction: column;
-  gap: 10px;
-
   background-color: #ffffff;
-  transform: scale(0.98);
-  transition: 0.5s;
-  .baixo-local {
-    width: 100%;
-  }
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+
   &:hover {
-    transform: scale(1.02);
-    transition: transform 0.25s ease-in-out;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+
     .container-baixo {
-      overflow: hidden;
       .title {
         color: #9a1a4b;
       }
-      .baixo-data {
-        color: #9a1a4b;
-      }
+      .baixo-data,
       .baixo-local {
         color: #9a1a4b;
       }
-
       .img-icon {
         filter: brightness(0) saturate(100%) invert(14%) sepia(54%)
           saturate(4320%) hue-rotate(321deg) brightness(96%) contrast(92%);
@@ -48,96 +39,195 @@ const CardStyle = styled.div`
     }
   }
 
-  .container-img {
-    min-width: 15.625rem;
-    background-color: #ffffff;
-    position: relative;
-    height: 15.625rem;
+  .card {
     display: flex;
-    align-items: flex-end;
-    margin-bottom: 10px;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container-img {
+    width: 100%;
+    position: relative;
+    height: 200px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+    }
 
     .img-date {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       background-color: #9a1a4b;
-      padding: 15px;
-      z-index: 0;
+      padding: 12px 16px;
       color: #ffffff;
-      position: relative;
+      font-family: "Merriweather", serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.2;
+      z-index: 2;
 
-      h3 {
-        font-family: "Merriweather", serif;
-      }
-
-      small {
-        font-family: "Merriweather", serif;
+      span {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 2px;
       }
     }
   }
 
   .container-baixo {
-    min-width: 15.625rem;
-    padding: 0 15px 15px 15px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    min-height: 50%;
-    height: 50%;
-    gap: 10px;
-    font-family: "Arial";
+    gap: 12px;
+    flex: 1;
     background-color: #ffffff;
 
     .divTitle {
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      max-width: 98%;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .title {
-      font-family: "Merriweather", serif;
-      font-weight: 400;
-      color: #282b62;
-      line-height: 120%;
-      font-size: 16px;
-      text-overflow: ellipsis;
-      scrollbar-width: none;
+      min-height: 38px;
     }
 
-    .title::-webkit-scrollbar {
-      display: none;
+    .title {
+      font-family: "Merriweather", serif;
+      font-weight: 700;
+      color: #282b62;
+      line-height: 1.3;
+      font-size: 16px;
+      margin: 0;
+      transition: color 0.3s ease;
     }
+
     .divSubtitle {
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
-      text-overflow: ellipsis;
-      max-width: 98%;
-      max-height: 3rem;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .subtitle {
-      font-size: 14px;
+      flex: 1;
     }
 
-    .container-title {
-      height: 150px;
+    .subtitle {
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 1.4;
+      margin: 0;
     }
+
     .dataLocation {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 0.3rem;
+      gap: 8px;
+      margin-top: auto;
     }
 
-    div {
+    .container-data,
+    .container-location {
       display: flex;
-      gap: 15px;
       align-items: center;
+      gap: 8px;
 
-      h4 {
-        font-family: "Arial";
+      .img-icon {
+        flex-shrink: 0;
+        transition: filter 0.3s ease;
+      }
+
+      p {
+        font-family: "Inter", sans-serif;
+        font-size: 13px;
+        color: #555;
+        margin: 0;
+        line-height: 1.4;
+        transition: color 0.3s ease;
+      }
+    }
+
+    .baixo-local {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 260px;
+    min-width: 260px;
+    max-height: 380px;
+
+    .container-img {
+      height: 160px;
+    }
+
+    .container-baixo {
+      padding: 14px;
+
+      .divTitle {
+        min-height: 36px;
+      }
+
+      .title {
+        font-size: 15px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    max-width: 240px;
+    min-width: 240px;
+    max-height: 340px;
+
+    .container-img {
+      height: 140px;
+
+      .img-date {
+        padding: 8px 12px;
+        font-size: 15px;
+
+        span {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .container-baixo {
+      padding: 12px;
+      gap: 10px;
+
+      .divTitle {
+        min-height: 34px;
+      }
+
+      .title {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      .divSubtitle {
+        -webkit-line-clamp: 1;
+        max-height: 18px;
+      }
+
+      .subtitle {
+        font-size: 12px;
+      }
+
+      .container-data p,
+      .container-location p {
+        font-size: 12px;
       }
     }
   }
@@ -205,54 +295,52 @@ function CardAgenda({
         <a>
           <div className="card">
             <div className="container-img">
-              <Image src={imageUrl} alt={imageAlt} layout="fill" />
-
-              {data ? (
+              <Image
+                src={imageUrl}
+                alt={imageAlt}
+                layout="fill"
+                objectFit="cover"
+              />
+              {date && (
                 <p className="img-date">
                   {dia}
-                  <br />
                   <span>{meses[mes - 1]}</span>
                 </p>
-              ) : (
-                ""
               )}
             </div>
             <div className="container-baixo">
               <div className="divTitle">
                 <h4 className="title">{title}</h4>
               </div>
-              <div className="divSubtitle">
-                <p className="subtitle">{subtitle}</p>
-              </div>
+              {subtitle && (
+                <div className="divSubtitle">
+                  <p className="subtitle">{subtitle}</p>
+                </div>
+              )}
               <div className="dataLocation">
-                {data ? (
+                {date && (
                   <div className="container-data">
                     <Image
                       className="img-icon"
                       src="/calendar.svg"
-                      alt=""
-                      width={24}
-                      height={24}
+                      alt="Ícone de calendário"
+                      width={20}
+                      height={20}
                     />
                     <p className="baixo-data">{`${dia}/${mesNumero}/${ano}`}</p>
                   </div>
-                ) : (
-                  ""
                 )}
-                <div></div>
-                {local ? (
+                {local && (
                   <div className="container-location">
-                    <img
+                    <Image
                       className="img-icon"
                       src="/location-azul.svg"
-                      alt=""
-                      width={25}
-                      height={25}
+                      alt="Ícone de localização"
+                      width={20}
+                      height={20}
                     />
                     <p className="baixo-local">{local}</p>
                   </div>
-                ) : (
-                  ""
                 )}
               </div>
             </div>

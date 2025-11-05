@@ -28,6 +28,8 @@ export default function Agenda({ agenda }: { agenda: IAgenda[] }) {
   const [scrolling, setScrolling] = useState(false);
   const [filter, setFilter] = useState("Tudo");
 
+ 
+
   useEffect(() => {
     if (carousel.current != null) {
       setCarouselTotalScroll(
